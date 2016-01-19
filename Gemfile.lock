@@ -13,7 +13,6 @@ PATH
 
 GEM
   remote: https://rubygems.org/
-  remote: http://gems.despegar.com/
   specs:
     backports (3.6.7)
     bson (4.0.0)

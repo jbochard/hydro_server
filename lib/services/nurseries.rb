@@ -26,46 +26,51 @@ class Nurseries
 		end
 		nursery["_id"] = BSON::ObjectId.new
 		nursery["creation_date"] = Date.new
-		nursery["buckets"] = {}
 		@mongo_client[:nurseries].insert_one(nursery)
 		nursery["_id"]
 	end
 
 	def update(name, operation)
 		nursery = get(name)
- 
+ 		bucket = operation["value"]
+
 		case operation["op"].upcase
-		when "ADD_BUCKET"
-			pos = operation['value']['position']
+		when "SET_BUCKET"
+			pos = bucket['position']
+        	plant_id = bucket["plant_id"]
+
         	# Valido que la posición sea dentro del cajón
         	if pos >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
         		raise WrongIndexException.new :nursery, name
         	end
 
         	# Valido que la planta exista
-        	plant_id = operation["value"]["plant_id"]
         	if ! Implementation[:plants].exists?(plant_id)
         		raise NotFoundException.new :plant, plant_id
         	end
 
         	# reemplazo la planta en el cajón
-        	operation["value"]["plant_id"] = BSON::ObjectId(plant_id)
-        	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{pos}", "value" => operation["value"] } ]
+        	bucket["plant_id"] = BSON::ObjectId(plant_id)
+        	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{pos}", "value" => bucket } ]
+        	Implementation[:plants].insert_bucket()
 	    when "REMOVE_BUCKET"
+			pos = bucket['position']
+
            	# Valido que la posición sea dentro del cajón
-        	if operation["value"]["position"] >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+        	if bucket["position"] >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
         		raise WrongIndexException.new :nursery, name
         	end
-	        patch = Hana::Patch.new [ { "op" => "remove", "path" => "/buckets/#{operation['value']}" } ]
+        	# remuevo la planta del cajón
+	        patch = Hana::Patch.new [ { "op" => "remove", "path" => "/buckets/#{pos}" } ]
 	    when "SET_MEASUREMENT"
 	    	# Seteo la fecha de medición a la que se pasó u hoy
-	    	operation["value"]["date"] ||= Date.new
+	    	bucket["date"] ||= Date.new
 	    	# Seteo la medición en el cajón
-	        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/measurement", "value" => operation["value"] } ]
+	        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/measurement", "value" => bucket } ]
 	        # Agrego la última medición al cajón y agrego la medición en cada planta del cajón.
-	        Implementation[:plants].add_measurement(nursery["buckets"], operation["value"])
+	        Implementation[:plants].add_measurement(nursery["buckets"], bucket)
 	    else
-	    	raise WrongOperationException.new :nursery, name, [ "ADD_BUCKET", "REMOVE_BUCKET", "SET_MEASUREMENT" ] 
+	    	raise WrongOperationException.new :nursery, name, [ "SET_BUCKET", "REMOVE_BUCKET", "SET_MEASUREMENT" ] 
 		end
         nursery = patch.apply(nursery)
         @mongo_client[:nurseries].find({ :name => name }).replace_one(nursery)

@@ -1376,3 +1376,200 @@ D, [2016-01-19T17:09:25.449372 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | ru
 D, [2016-01-19T17:09:25.450209 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e94d3c4b32d4943000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
 D, [2016-01-19T17:09:25.450863 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.00045799999999999997s
 127.0.0.1 - - [19/Jan/2016:17:09:25 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0097
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T18:32:02.506128 #99579] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T18:32:02.510995 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:02.511494 #99579] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T18:32:02.513031 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T18:32:12.532439 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:12.533120 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:22.535959 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:22.536524 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:32.541634 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:32.542109 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:42.549687 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:42.550271 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:52.553376 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:32:52.553927 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:02.558106 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:02.558676 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:12.566944 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:12.567267 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:22.569981 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:22.570412 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:32.574932 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:32.575360 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:42.578893 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:42.579216 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:52.585931 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:33:52.586506 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:02.589334 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:02.589902 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:12.597382 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:12.597845 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:22.600953 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:22.601518 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:32.608507 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:32.608955 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:42.615055 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:42.615609 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:52.623400 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:52.623957 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:53.125179 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:53.626164 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:54.126388 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:54.627943 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:55.130305 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:55.630788 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:56.133460 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:56.633111 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:57.135209 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:57.636365 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:58.138965 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:58.640629 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:59.143358 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:34:59.648148 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:00.151001 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:00.651777 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:01.152330 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:01.652714 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:02.153214 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:02.626808 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:02.653348 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:02.655370 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:03.168405 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:03.653788 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:04.154476 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:04.655897 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:05.155946 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:05.658062 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:06.160655 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:06.660858 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:07.161383 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:07.663921 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:08.166621 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:08.667846 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:09.170508 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:09.671895 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:10.171672 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:10.672467 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:11.172619 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:11.674125 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:12.176110 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:12.630565 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:12.677114 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:12.679969 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:13.178523 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:13.679854 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:14.181616 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:14.682576 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:15.184004 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:15.685632 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:16.186691 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:16.688050 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:17.190578 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:17.695632 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:18.200076 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:18.704885 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:19.208777 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:19.709864 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:20.215432 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:20.715806 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:21.219702 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:21.720750 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:22.223409 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:22.637496 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:22.727116 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:22.729651 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:23.230497 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+2016-01-19 18:35:23 - Mongo::Error::NoServerAvailable - No server is available matching preference: #<Mongo::ServerSelector::Primary:0x70174137862560 tag_sets=[] server_selection_timeout=30 local_threshold=0.015>:
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/server_selector/selectable.rb:109:in `select_server'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/collection/view/iterable.rb:40:in `block in each'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/retryable.rb:51:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/retryable.rb:51:in `read_with_retry'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/collection/view/iterable.rb:39:in `each'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:13:in `to_a'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:13:in `get_all'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/nurseries.rb:10:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+D, [2016-01-19T18:35:32.641867 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:32.733690 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:42.647438 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:42.741875 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:52.650874 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:35:52.747150 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:02.658829 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:02.750182 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:12.666668 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:12.755955 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:22.670766 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:22.770580 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:32.674005 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:32.779337 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:42.677186 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+D, [2016-01-19T18:36:42.786839 #99579] DEBUG -- : MONGODB | Connection refused - connect(2)
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T19:12:50.714339 #726] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T19:12:50.718337 #726] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T19:13:19.546621 #726] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "dimensions"=>1, "creation_date"=>1}}
+D, [2016-01-19T19:13:19.548635 #726] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001688s
+127.0.0.1 - - [19/Jan/2016:19:13:19 -0300] "GET /nurseries HTTP/1.1" 200 2 0.0193
