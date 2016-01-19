@@ -1,0 +1,11 @@
+{
+	"web": {
+		"port": 9390,
+		"host": "http://localhost"
+	},
+	"mongodb": {
+		"host": "127.0.0.1",
+		"port": 27017,
+		"db": "rubyponia"
+	}
+}

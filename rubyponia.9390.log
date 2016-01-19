@@ -1,0 +1,1179 @@
+Writing PID to ./rubyponia.9390.pid
+Exiting!
+./lib/config.ru:18:in `block in <main>': uninitialized constant Implementation (NameError)
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- implementation (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:8:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- services/implementation (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:8:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+./lib/..
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- services/implementation (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:10:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+./lib/..
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- services/implementation (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:10:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+./lib
+Exiting!
+./lib/config.ru:22:in `block (2 levels) in <main>': uninitialized constant Almacigos (NameError)
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/services/implementation.rb:7:in `call'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/services/implementation.rb:7:in `register'
+	from ./lib/config.ru:21:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+./lib
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Exiting!
+/Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:206:in `set': may not set almacigos (ArgumentError)
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:6:in `block (2 levels) in <top (required)>'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1410:in `configure'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:272:in `method_missing'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:5:in `block in <top (required)>'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:128:in `class_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:128:in `block in new'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:118:in `initialize'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:118:in `new'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:118:in `new'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-contrib-1.4.6/lib/sinatra/namespace.rb:144:in `namespace'
+	from /Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1989:in `block (2 levels) in delegate'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:3:in `<top (required)>'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/routes/init.rb:3:in `require_relative'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/routes/init.rb:3:in `<top (required)>'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/app.rb:17:in `require_relative'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/app.rb:17:in `<top (required)>'
+	from ./lib/config.ru:26:in `load'
+	from ./lib/config.ru:26:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+./lib
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+Exiting!
+/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:534:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:534:in `start_server'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/backends/base.rb:63:in `block in start'
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:193:in `call'
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:193:in `run_machine'
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:193:in `run'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/backends/base.rb:73:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/server.rb:162:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:87:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+./lib
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+127.0.0.1 - - [19/Jan/2016:10:47:29 -0300] "POST /almacigos HTTP/1.1" 200 353 0.0084
+2016-01-19 10:47:39 - NoMethodError - undefined method `get_all' for :almacigos:Symbol:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:10:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+./lib
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+{:almacigos=>#<Almacigos:0x007fa9bc1b9f50>}
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+2016-01-19 10:48:45 - NoMethodError - undefined method `get_all' for :almacigos:Symbol:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:10:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+./lib
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+127.0.0.1 - - [19/Jan/2016:10:50:29 -0300] "GET /almacigos HTTP/1.1" 200 45 0.0063
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+./lib
+D, [2016-01-19T11:02:00.700840 #45589] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T11:02:27.720408 #45589] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"almacigos", "documents"=>[{"name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}, :_id=>BSON::ObjectId('569e41f3c4b32db215000000')}], "ordered"=>true}
+D, [2016-01-19T11:02:28.207548 #45589] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.486822s
+127.0.0.1 - - [19/Jan/2016:11:02:28 -0300] "POST /almacigos HTTP/1.1" 200 - 0.4983
+D, [2016-01-19T11:03:43.667225 #45589] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{}}
+D, [2016-01-19T11:03:43.668570 #45589] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00087s
+127.0.0.1 - - [19/Jan/2016:11:03:43 -0300] "GET /almacigos HTTP/1.1" 200 101 0.0046
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- exceptions (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/services/almacigos.rb:3:in `<top (required)>'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:9:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:20:00.995839 #47510] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+2016-01-19 11:20:09 - NoMethodError - undefined method `find' for #<Mongo::Client:0x70365617250940 cluster=127.0.0.1:27017>:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/almacigos.rb:23:in `exists?'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/almacigos.rb:16:in `create'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:16:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:21:04.072879 #47682] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+2016-01-19 11:21:12 - NoMethodError - undefined method `n' for #<Mongo::Collection::View:0x007f80f3134c20>:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/almacigos.rb:23:in `exists?'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/almacigos.rb:16:in `create'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/almacigos.rb:16:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:21:46.799458 #47730] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T11:21:50.906956 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>nil}}
+D, [2016-01-19T11:21:50.908449 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001225s
+D, [2016-01-19T11:21:50.909011 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"almacigos", "documents"=>[{"name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}, :_id=>BSON::ObjectId('569e467ec4b32dba72000000')}], "ordered"=>true}
+D, [2016-01-19T11:21:50.909735 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.0005560000000000001s
+127.0.0.1 - - [19/Jan/2016:11:21:50 -0300] "POST /almacigos HTTP/1.1" 200 15 0.0134
+D, [2016-01-19T11:21:56.309076 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>nil}}
+D, [2016-01-19T11:21:56.309891 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000566s
+D, [2016-01-19T11:21:56.310676 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"almacigos", "documents"=>[{"name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}, :_id=>BSON::ObjectId('569e4684c4b32dba72000001')}], "ordered"=>true}
+D, [2016-01-19T11:21:56.311516 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000509s
+127.0.0.1 - - [19/Jan/2016:11:21:56 -0300] "POST /almacigos HTTP/1.1" 200 15 0.0040
+D, [2016-01-19T11:22:40.858995 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{}}
+D, [2016-01-19T11:22:40.861358 #47730] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00154s
+127.0.0.1 - - [19/Jan/2016:11:22:40 -0300] "GET /almacigos HTTP/1.1" 200 301 0.0091
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:23:31.129845 #47929] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T11:23:44.086573 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>nil}}
+D, [2016-01-19T11:23:44.088283 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001271s
+#<Mongo::Collection::View:0x007fdf3c9c5d88>
+D, [2016-01-19T11:23:44.089642 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>nil}}
+D, [2016-01-19T11:23:44.090940 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000865s
+D, [2016-01-19T11:23:44.092086 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"almacigos", "documents"=>[{"name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}, :_id=>BSON::ObjectId('569e46f0c4b32dbb39000000')}], "ordered"=>true}
+D, [2016-01-19T11:23:44.093153 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000785s
+127.0.0.1 - - [19/Jan/2016:11:23:44 -0300] "POST /almacigos HTTP/1.1" 200 15 0.0147
+D, [2016-01-19T11:23:54.249462 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>nil}}
+D, [2016-01-19T11:23:54.250691 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007340000000000001s
+#<Mongo::Collection::View:0x007fdf3c1b7808>
+D, [2016-01-19T11:23:54.251533 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>nil}}
+D, [2016-01-19T11:23:54.252044 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00036500000000000004s
+D, [2016-01-19T11:23:54.252675 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"almacigos", "documents"=>[{"name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}, :_id=>BSON::ObjectId('569e46fac4b32dbb39000001')}], "ordered"=>true}
+D, [2016-01-19T11:23:54.253389 #47929] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000508s
+127.0.0.1 - - [19/Jan/2016:11:23:54 -0300] "POST /almacigos HTTP/1.1" 200 15 0.0069
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:24:47.389631 #48107] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T11:24:50.997867 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T11:24:50.999452 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001189s
+{"_id"=>BSON::ObjectId('569e41f3c4b32db215000000'), "name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}}
+{"_id"=>BSON::ObjectId('569e467ec4b32dba72000000'), "name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}}
+{"_id"=>BSON::ObjectId('569e4684c4b32dba72000001'), "name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}}
+{"_id"=>BSON::ObjectId('569e46f0c4b32dbb39000000'), "name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}}
+{"_id"=>BSON::ObjectId('569e46fac4b32dbb39000001'), "name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}}
+#<Mongo::Collection::View:0x007f8c6b1816f0>
+D, [2016-01-19T11:24:51.000247 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T11:24:51.000794 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00039000000000000005s
+127.0.0.1 - - [19/Jan/2016:11:24:51 -0300] "POST /almacigos HTTP/1.1" 400 31 0.0118
+D, [2016-01-19T11:26:21.877269 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T11:26:21.878289 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005070000000000001s
+#<Mongo::Collection::View:0x007f8c6b991098>
+D, [2016-01-19T11:26:21.879051 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"almacigos", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T11:26:21.880233 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000505s
+D, [2016-01-19T11:26:21.882121 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"almacigos", "documents"=>[{"name"=>"almacigo 1", "dimentions"=>{"length"=>3, "width"=>6}, :_id=>BSON::ObjectId('569e478dc4b32dbbeb000000')}], "ordered"=>true}
+D, [2016-01-19T11:26:21.883321 #48107] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000754s
+127.0.0.1 - - [19/Jan/2016:11:26:21 -0300] "POST /almacigos HTTP/1.1" 200 15 0.0085
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': /Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:23: syntax error, unexpected =>, expecting '}' (SyntaxError)
+			data["buckets"].push { "position" => n, "bucket" => nil }
+			                                    ^
+/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:23: syntax error, unexpected =>, expecting :: or '[' or '.'
+			data["buckets"].push { "position" => n, "bucket" => nil }
+			                                                   ^
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:9:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': /Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:23: syntax error, unexpected =>, expecting '}' (SyntaxError)
+			data["buckets"].push { "position" => n }
+			                                    ^
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:9:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:57:55.719286 #51755] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+127.0.0.1 - - [19/Jan/2016:11:58:11 -0300] "POST /almacigos HTTP/1.1" 404 472 0.0118
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T11:59:38.695869 #51958] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T12:00:04.282457 #51958] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}}
+D, [2016-01-19T12:00:04.284149 #51958] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00134s
+127.0.0.1 - - [19/Jan/2016:12:00:04 -0300] "GET /nurseries HTTP/1.1" 200 2 0.0105
+D, [2016-01-19T12:00:32.927670 #51958] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T12:00:32.928428 #51958] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000508s
+2016-01-19 12:00:32 - NameError - undefined local variable or method `n' for #<Nurseries:0x007fc562a09130>:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:23:in `block in create'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:22:in `times'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:22:in `create'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:16:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T12:01:05.133341 #52142] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T12:01:06.936244 #52142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T12:01:06.937613 #52142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0010710000000000001s
+D, [2016-01-19T12:01:06.941760 #52142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"almacigo 1", "dimensions"=>{"length"=>3, "width"=>6}, "_id"=>BSON::ObjectId('569e4fb2c4b32dcbae000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=>[{"position"=>0}, {"po...
+D, [2016-01-19T12:01:06.971964 #52142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.0297s
+127.0.0.1 - - [19/Jan/2016:12:01:06 -0300] "POST /nurseries HTTP/1.1" 200 15 0.0443
+D, [2016-01-19T12:04:57.336599 #52142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}}
+D, [2016-01-19T12:04:57.339604 #52142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002574s
+127.0.0.1 - - [19/Jan/2016:12:04:57 -0300] "GET /nurseries HTTP/1.1" 200 418 0.0294
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T12:05:43.524271 #52915] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T12:05:46.222038 #52915] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "dimensions"=>1, "creation_date"=>1}}
+D, [2016-01-19T12:05:46.272425 #52915] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.049977999999999995s
+127.0.0.1 - - [19/Jan/2016:12:05:46 -0300] "GET /nurseries HTTP/1.1" 200 144 0.0755
+2016-01-19 12:05:56 - NoMethodError - undefined method `find_one' for #<Mongo::Collection:0x007fe134102cd8>:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:16:in `get'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:16:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+2016-01-19 12:06:06 - NoMethodError - undefined method `find_one' for #<Mongo::Collection:0x007fe133a79740>:
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:16:in `get'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:16:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T12:06:33.339535 #52980] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+127.0.0.1 - - [19/Jan/2016:12:06:38 -0300] "GET /nurseries/%22almacigo%201%22 HTTP/1.1" 200 45 0.0107
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T12:08:20.845921 #53187] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T12:08:26.635864 #53187] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"\"almacigo 1\""}}
+D, [2016-01-19T12:08:26.637207 #53187] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001013s
+127.0.0.1 - - [19/Jan/2016:12:08:26 -0300] "GET /nurseries/%22almacigo%201%22 HTTP/1.1" 200 4 0.0100
+D, [2016-01-19T12:08:34.157882 #53187] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T12:08:34.159132 #53187] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000907s
+127.0.0.1 - - [19/Jan/2016:12:08:34 -0300] "GET /nurseries/almacigo%201 HTTP/1.1" 200 416 0.0043
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T15:12:17.332701 #73058] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Exiting!
+./lib/config.ru:22:in `block (2 levels) in <main>': uninitialized constant Plants (NameError)
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/services/implementation.rb:7:in `call'
+	from /Users/jbochard/Documents/workspace/rubyponia/lib/services/implementation.rb:7:in `register'
+	from ./lib/config.ru:20:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T15:13:19.288401 #73121] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T15:13:19.317284 #73121] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T15:14:02.659248 #73121] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:14:02.661348 #73121] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000992s
+D, [2016-01-19T15:14:02.667025 #73121] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"almacigo 1", "dimensions"=>{"length"=>3, "width"=>6}, "_id"=>BSON::ObjectId('569e7ceac4b32d1da1000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=>[]}], "ordered"=>true}...
+D, [2016-01-19T15:14:02.669016 #73121] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.0017569999999999999s
+127.0.0.1 - - [19/Jan/2016:15:14:02 -0300] "POST /nurseries HTTP/1.1" 200 43 0.0182
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T15:33:13.449958 #75305] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T15:33:13.452304 #75305] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T15:33:21.361882 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:33:21.369883 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.007611000000000001s
+D, [2016-01-19T15:33:21.370673 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "_id"=>BSON::ObjectId('569e8171c4b32d2629000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=>[]}...
+D, [2016-01-19T15:33:21.386764 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.015883s
+127.0.0.1 - - [19/Jan/2016:15:33:21 -0300] "POST /nurseries HTTP/1.1" 200 43 0.0361
+D, [2016-01-19T15:36:07.943104 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:36:07.945460 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001913s
+D, [2016-01-19T15:36:07.946526 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:36:07.947449 #75305] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000711s
+2016-01-19 15:36:07 - NoMethodError - undefined method `sub' for nil:NilClass:
+	/Library/Ruby/Gems/2.0.0/gems/hana-1.3.1/lib/hana.rb:34:in `parse'
+	/Library/Ruby/Gems/2.0.0/gems/hana-1.3.1/lib/hana.rb:8:in `initialize'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:39:in `new'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:39:in `update'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:39:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T15:39:07.034599 #76003] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T15:39:07.039188 #76003] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T15:39:14.218035 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:39:14.225457 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.007073s
+D, [2016-01-19T15:39:14.226204 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:39:14.226868 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000491s
+D, [2016-01-19T15:39:14.227522 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e8171c4b32d2629000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T15:39:14.246234 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.018512999999999998s
+127.0.0.1 - - [19/Jan/2016:15:39:14 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0517
+D, [2016-01-19T15:39:47.032171 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:39:47.033347 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000547s
+D, [2016-01-19T15:39:47.034060 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:39:47.034637 #76003] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000426s
+127.0.0.1 - - [19/Jan/2016:15:39:47 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 400 139 0.0064
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T15:41:27.057735 #76233] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T15:41:27.059990 #76233] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T15:41:31.816279 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:41:31.818998 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001878s
+D, [2016-01-19T15:41:31.819757 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:41:31.820474 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00046699999999999997s
+127.0.0.1 - - [19/Jan/2016:15:41:31 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 400 139 0.0202
+D, [2016-01-19T15:41:43.052183 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:41:43.053715 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001157s
+D, [2016-01-19T15:41:43.054396 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:41:43.055181 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005149999999999999s
+127.0.0.1 - - [19/Jan/2016:15:41:43 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 400 62 0.0074
+D, [2016-01-19T15:41:51.978572 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:41:51.979542 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000644s
+D, [2016-01-19T15:41:51.980261 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:41:51.980965 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000474s
+D, [2016-01-19T15:41:51.981603 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e8171c4b32d2629000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T15:41:51.982677 #76233] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.0008650000000000001s
+127.0.0.1 - - [19/Jan/2016:15:41:51 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0064
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T15:50:21.199461 #77181] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T15:50:21.201546 #77181] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T15:50:35.693052 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:50:35.701967 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00836s
+D, [2016-01-19T15:50:35.703364 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T15:50:35.705548 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001381s
+D, [2016-01-19T15:50:35.707053 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>"ee"}}
+D, [2016-01-19T15:50:35.714955 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0076089999999999994s
+127.0.0.1 - - [19/Jan/2016:15:50:35 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 404 35 0.0342
+D, [2016-01-19T16:06:16.790716 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"plants", "documents"=>[{"type"=>"albahaca", "_id"=>BSON::ObjectId('569e8928c4b32d2d7d000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "mesurements"=>[]}], "ordered"=>true}
+D, [2016-01-19T16:06:16.841685 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.050482s
+127.0.0.1 - - [19/Jan/2016:16:06:16 -0300] "POST /plants HTTP/1.1" 200 43 0.0552
+D, [2016-01-19T16:06:25.624814 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{}, "projection"=>{"_id"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-19T16:06:25.625914 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000916s
+127.0.0.1 - - [19/Jan/2016:16:06:25 -0300] "GET /plants HTTP/1.1" 200 106 0.0125
+D, [2016-01-19T16:06:47.017943 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:06:47.021142 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002339s
+D, [2016-01-19T16:06:47.022662 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:06:47.025209 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0019s
+D, [2016-01-19T16:06:47.026115 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>"ee"}}
+D, [2016-01-19T16:06:47.027877 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001346s
+127.0.0.1 - - [19/Jan/2016:16:06:47 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 404 35 0.0122
+D, [2016-01-19T16:07:12.603854 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:07:12.605579 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0010170000000000001s
+D, [2016-01-19T16:07:12.606132 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:07:12.606664 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000384s
+D, [2016-01-19T16:07:12.607117 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>{"$oid"=>"569e8928c4b32d2d7d000000"}}}
+D, [2016-01-19T16:07:12.659687 #77181] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | FAILED | Can't canonicalize query: BadValue unknown operator: $oid (17287) | 0.052332s
+2016-01-19 16:07:12 - Mongo::Error::OperationFailure - Can't canonicalize query: BadValue unknown operator: $oid (17287):
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/operation/result.rb:256:in `validate!'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/operation/executable.rb:36:in `block in execute'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/server/connection_pool.rb:108:in `with_connection'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/server/context.rb:63:in `with_connection'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/operation/executable.rb:34:in `execute'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/collection/view/iterable.rb:79:in `send_initial_query'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/collection/view/iterable.rb:41:in `block in each'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/retryable.rb:51:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/retryable.rb:51:in `read_with_retry'
+	/Library/Ruby/Gems/2.0.0/gems/mongo-2.2.1/lib/mongo/collection/view/iterable.rb:39:in `each'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `to_a'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `exists?'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:46:in `update'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:40:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T16:44:27.042118 #83168] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T16:44:27.049659 #83168] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T16:44:29.933255 #83168] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:44:29.935191 #83168] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0015480000000000001s
+D, [2016-01-19T16:44:29.935797 #83168] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:44:29.936417 #83168] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000379s
+2016-01-19 16:44:29 - ArgumentError - wrong number of arguments (1 for 0):
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `initialize'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `new'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `exists?'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:47:in `update'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:40:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T16:46:25.949614 #83377] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T16:46:25.957061 #83377] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T16:46:30.809678 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:46:30.818495 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.008189s
+D, [2016-01-19T16:46:30.819206 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:46:30.819800 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000416s
+D, [2016-01-19T16:46:30.820637 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>BSON::ObjectId('569e8928c4b32d2d7d000000')}}
+D, [2016-01-19T16:46:30.821738 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000892s
+D, [2016-01-19T16:46:30.822440 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e8171c4b32d2629000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T16:46:30.823419 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.000775s
+127.0.0.1 - - [19/Jan/2016:16:46:30 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0257
+D, [2016-01-19T16:46:54.819132 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:46:54.820260 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000736s
+D, [2016-01-19T16:46:54.821262 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:46:54.822526 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000856s
+127.0.0.1 - - [19/Jan/2016:16:46:54 -0300] "GET /nurseries/almacigo%201 HTTP/1.1" 200 296 0.0064
