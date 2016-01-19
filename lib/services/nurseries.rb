@@ -37,33 +37,20 @@ class Nurseries
 		case operation["op"].upcase
 		when "ADD_BUCKET"
 			pos = operation['value']['position']
-            if nursery["buckets"][pos].nil?
-            	# Valido que la posición sea dentro del cajón
-	        	if pos >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
-	        		raise WrongIndexException.new :nursery, name
-	        	end
-	        	# Valido que la planta exista
-	        	plant_id = operation["value"]["plant_id"]
-	        	if ! Implementation[:plants].exists?(plant_id)
-	        		raise NotFoundException.new :plant, plant_id
-	        	end
-	        	# Agrega la planta al cajón
-	        	operation["value"]["plant_id"] = BSON::ObjectId.from_string(plant_id)
-	        	patch = Hana::Patch.new [ { "op" => "add", 	"path" => "/buckets/-", "value" => operation["value"] } ]
-	        else
-            	# Valido que la posición sea dentro del cajón
-	        	if pos >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
-	        		raise WrongIndexException.new :nursery, name
-	        	end
-	        	# Valido que la planta exista
-	        	plant_id = operation["value"]["plant_id"]
-	        	if ! Implementation[:plants].exists?(plant_id)
-	        		raise NotFoundException.new :plant, plant_id
-	        	end
-	        	# reemplazo la planta en el cajón
-	        	operation["value"]["plant_id"] = BSON::ObjectId.from_string(plant_id)
-	        	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{pos}", "value" => operation["value"] } ]
-	        end
+        	# Valido que la posición sea dentro del cajón
+        	if pos >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+        		raise WrongIndexException.new :nursery, name
+        	end
+
+        	# Valido que la planta exista
+        	plant_id = operation["value"]["plant_id"]
+        	if ! Implementation[:plants].exists?(plant_id)
+        		raise NotFoundException.new :plant, plant_id
+        	end
+
+        	# reemplazo la planta en el cajón
+        	operation["value"]["plant_id"] = BSON::ObjectId(plant_id)
+        	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{pos}", "value" => operation["value"] } ]
 	    when "REMOVE_BUCKET"
            	# Valido que la posición sea dentro del cajón
         	if operation["value"]["position"] >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])

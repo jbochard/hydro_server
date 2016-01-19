@@ -1177,3 +1177,202 @@ D, [2016-01-19T16:46:54.820260 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | ru
 D, [2016-01-19T16:46:54.821262 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
 D, [2016-01-19T16:46:54.822526 #83377] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000856s
 127.0.0.1 - - [19/Jan/2016:16:46:54 -0300] "GET /nurseries/almacigo%201 HTTP/1.1" 200 296 0.0064
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T16:54:36.754722 #84291] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T16:54:36.758006 #84291] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T16:54:52.130547 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:54:52.138008 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00703s
+D, [2016-01-19T16:54:52.138726 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:54:52.139481 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000484s
+D, [2016-01-19T16:54:52.140492 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>BSON::ObjectId('569e8928c4b32d2d7d000000')}}
+D, [2016-01-19T16:54:52.141687 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000992s
+D, [2016-01-19T16:54:52.142947 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e8171c4b32d2629000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T16:54:52.144233 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.000932s
+127.0.0.1 - - [19/Jan/2016:16:54:52 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0302
+D, [2016-01-19T16:56:03.521419 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:56:03.522569 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00057s
+D, [2016-01-19T16:56:03.524745 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "_id"=>BSON::ObjectId('569e94d3c4b32d4943000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=>{}}...
+D, [2016-01-19T16:56:03.526165 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.0008190000000000001s
+127.0.0.1 - - [19/Jan/2016:16:56:03 -0300] "POST /nurseries HTTP/1.1" 200 43 0.0074
+D, [2016-01-19T16:57:12.641136 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"plants", "documents"=>[{"type"=>"albahaca", "_id"=>BSON::ObjectId('569e9518c4b32d4943000001'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "mesurements"=>[]}], "ordered"=>true}
+D, [2016-01-19T16:57:12.642071 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.0006649999999999999s
+127.0.0.1 - - [19/Jan/2016:16:57:12 -0300] "POST /plants HTTP/1.1" 200 43 0.0029
+D, [2016-01-19T16:57:29.576773 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:57:29.577879 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007160000000000001s
+D, [2016-01-19T16:57:29.578835 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:57:29.579580 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000492s
+D, [2016-01-19T16:57:29.580161 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>BSON::ObjectId('569e8928c4b32d2d7d000000')}}
+D, [2016-01-19T16:57:29.580671 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000352s
+127.0.0.1 - - [19/Jan/2016:16:57:29 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 404 57 0.0060
+D, [2016-01-19T16:57:50.914245 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:57:50.915264 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005499999999999999s
+D, [2016-01-19T16:57:50.915967 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:57:50.916708 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000554s
+2016-01-19 16:57:50 - BSON::ObjectId::Invalid - '569e9518c4b32d494300000' is an invalid ObjectId.:
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson/object_id.rb:251:in `from_string'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `exists?'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:47:in `update'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:40:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+D, [2016-01-19T16:59:28.705074 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:59:28.706463 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000994s
+D, [2016-01-19T16:59:28.707785 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T16:59:28.708388 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000422s
+2016-01-19 16:59:28 - BSON::ObjectId::Invalid - '569e9518c4b32d494300000' is an invalid ObjectId.:
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson/object_id.rb:251:in `from_string'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/plants.rb:11:in `exists?'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/services/nurseries.rb:47:in `update'
+	/Users/jbochard/Documents/workspace/rubyponia/lib/routes/nurseries.rb:40:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+D, [2016-01-19T17:04:43.362253 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{}, "projection"=>{"_id"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-19T17:04:43.363540 #84291] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000747s
+127.0.0.1 - - [19/Jan/2016:17:04:43 -0300] "GET /plants HTTP/1.1" 200 106 0.0047
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to ./rubyponia.9390.pid
+D, [2016-01-19T17:06:35.020043 #85606] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-19T17:06:35.029556 #85606] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-01-19T17:06:49.358858 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:06:49.367558 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.007745s
+D, [2016-01-19T17:06:49.368451 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:06:49.369692 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000955s
+D, [2016-01-19T17:06:49.370608 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>BSON::ObjectId('569e9518c4b32d4943000001')}}
+D, [2016-01-19T17:06:49.371877 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001097s
+D, [2016-01-19T17:06:49.372596 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e94d3c4b32d4943000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T17:06:49.373445 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.0006789999999999999s
+127.0.0.1 - - [19/Jan/2016:17:06:49 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0259
+D, [2016-01-19T17:07:05.916811 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:07:05.918138 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000703s
+D, [2016-01-19T17:07:05.918708 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:07:05.919299 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00043s
+127.0.0.1 - - [19/Jan/2016:17:07:05 -0300] "GET /nurseries/almacigo%201 HTTP/1.1" 200 237 0.0048
+D, [2016-01-19T17:07:34.177065 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"plants", "documents"=>[{"type"=>"albahaca", "_id"=>BSON::ObjectId('569e9786c4b32d4e66000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "mesurements"=>[]}], "ordered"=>true}
+D, [2016-01-19T17:07:34.178412 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000718s
+127.0.0.1 - - [19/Jan/2016:17:07:34 -0300] "POST /plants HTTP/1.1" 200 43 0.0034
+D, [2016-01-19T17:07:47.736954 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{}, "projection"=>{"_id"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-19T17:07:47.738290 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000829s
+127.0.0.1 - - [19/Jan/2016:17:07:47 -0300] "GET /plants HTTP/1.1" 200 211 0.0045
+D, [2016-01-19T17:08:15.626936 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:08:15.629643 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001607s
+D, [2016-01-19T17:08:15.630615 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:08:15.632278 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001159s
+D, [2016-01-19T17:08:15.634013 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>BSON::ObjectId('569e9518c4b32d4943000001')}}
+D, [2016-01-19T17:08:15.635787 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001258s
+D, [2016-01-19T17:08:15.636467 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e94d3c4b32d4943000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T17:08:15.637971 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.0012389999999999999s
+127.0.0.1 - - [19/Jan/2016:17:08:15 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0141
+D, [2016-01-19T17:09:25.443923 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:09:25.445049 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000731s
+D, [2016-01-19T17:09:25.446522 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"almacigo 1"}}
+D, [2016-01-19T17:09:25.447848 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005690000000000001s
+D, [2016-01-19T17:09:25.448593 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{"_id"=>BSON::ObjectId('569e9518c4b32d4943000001')}}
+D, [2016-01-19T17:09:25.449372 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00044100000000000004s
+D, [2016-01-19T17:09:25.450209 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"nurseries", "updates"=>[{"q"=>{"name"=>"almacigo 1"}, "u"=>{"_id"=>BSON::ObjectId('569e94d3c4b32d4943000000'), "name"=>"almacigo 1", "type"=>"nursery", "dimensions"=>{"length"=>6, "width"=>3}, "creation_date"=>-4712-01-01 00:00:00 UTC, "bu...
+D, [2016-01-19T17:09:25.450863 #85606] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.00045799999999999997s
+127.0.0.1 - - [19/Jan/2016:17:09:25 -0300] "PATCH /nurseries/almacigo%201 HTTP/1.1" 200 43 0.0097

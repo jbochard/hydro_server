@@ -8,7 +8,7 @@ class Plants
 	end
 
 	def exists?(id)
-       	plant_id = BSON::ObjectId.from_string(id)
+       	plant_id = BSON::ObjectId(id)
 		@mongo_client[:plants].find({ :_id => plant_id }).to_a.length > 0
 	end
 
@@ -20,7 +20,7 @@ class Plants
 		if ! exists?(id)
 			raise NotFoundException.new :plant, id
 		end
-       	plant_id = BSON::ObjectId.from_string(id)
+       	plant_id = BSON::ObjectId(id)
         @mongo_client[:plants].find({:_id => plant_id }).to_a.first
 	end
 
