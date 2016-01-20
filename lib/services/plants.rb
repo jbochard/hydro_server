@@ -27,17 +27,30 @@ class Plants
 	def create(plant)
 		plant["_id"] = BSON::ObjectId.new
 		plant["creation_date"] = Date.new
-		plant["mesurements"] = []
+		plant["events"] = []
 		@mongo_client[:plants].insert_one(plant)
 		plant["_id"]
 	end
 
-	def add_measurement(buckets, mesurement)
+	def insert_in_bucket(id, nursery_id, pos)
+		plant = get(id)
+		plant["bucket"] = { :nursery_id => nursery_id, :position => pos }
+        @mongo_client[:plants].replace_one(plant)
+	end
+
+	def remove_from_bucket(id, nursery_id, pos)
+		plant = get(id)
+		plant["bucket"] = nil
+        @mongo_client[:plants].replace_one(plant)
+	end
+
+	def add_mesurement(buckets, mesurement)
 		result = []
-		buckets.each do |bucket|
+		buckets.each do |pos, bucket|
 			id = bucket["plant_id"]
 			plant = get(id.to_s)
-			plant["mesurements"].push(mesurement)
+			mesurement["type"] = "mesurement"
+			plant["events"].push(mesurement)
 	        @mongo_client[:plants].replace_one(plant)
 	        result << plant["_id"]
 		end

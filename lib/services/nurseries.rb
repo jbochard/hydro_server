@@ -26,6 +26,7 @@ class Nurseries
 		end
 		nursery["_id"] = BSON::ObjectId.new
 		nursery["creation_date"] = Date.new
+		nursery["buckets"] = {}
 		@mongo_client[:nurseries].insert_one(nursery)
 		nursery["_id"]
 	end
@@ -51,8 +52,9 @@ class Nurseries
 
         	# reemplazo la planta en el cajón
         	bucket["plant_id"] = BSON::ObjectId(plant_id)
+        	bucket["position"] = pos
         	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{pos}", "value" => bucket } ]
-        	Implementation[:plants].insert_bucket()
+        	Implementation[:plants].insert_in_bucket(plant_id, nursery["_id"], pos)
 	    when "REMOVE_BUCKET"
 			pos = bucket['position']
 
@@ -62,13 +64,14 @@ class Nurseries
         	end
         	# remuevo la planta del cajón
 	        patch = Hana::Patch.new [ { "op" => "remove", "path" => "/buckets/#{pos}" } ]
-	    when "SET_MEASUREMENT"
+        	Implementation[:plants].remove_from_bucket(plant_id, nursery["_id"], pos)
+	    when "ADD_MESUREMENT"
 	    	# Seteo la fecha de medición a la que se pasó u hoy
 	    	bucket["date"] ||= Date.new
 	    	# Seteo la medición en el cajón
-	        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/measurement", "value" => bucket } ]
+	        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/mesurement", "value" => bucket } ]
 	        # Agrego la última medición al cajón y agrego la medición en cada planta del cajón.
-	        Implementation[:plants].add_measurement(nursery["buckets"], bucket)
+	        Implementation[:plants].add_mesurement(nursery["buckets"], bucket)
 	    else
 	    	raise WrongOperationException.new :nursery, name, [ "SET_BUCKET", "REMOVE_BUCKET", "SET_MEASUREMENT" ] 
 		end
