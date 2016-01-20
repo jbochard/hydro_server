@@ -1,8 +1,8 @@
 # coding: utf-8
 
 set :plants, Implementation[:plants]
-set :post_schema, 				JSON.parse(File.read("lib/schemas/plants_post.schema"))
-set :patch_add_event_schema, 	JSON.parse(File.read("lib/schemas/plants_patch_add_event.schema"))
+set :post_schema, 					JSON.parse(File.read("lib/schemas/plants_post.schema"))
+set :patch_add_mesurement_schema, 	JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
 
 namespace '/plants' do
  
@@ -48,9 +48,9 @@ namespace '/plants' do
 		begin
 			body = JSON.parse(request.body.read)
 			case body["op"].upcase
-			when "ADD_EVENT"
-				JSON::Validator.validate!(settings.patch_add_event_schema, body)
-				id = settings.plants.create(JSON.parse(request.body.read))
+			when "ADD_MESUREMENT"
+				JSON::Validator.validate!(settings.patch_add_mesurement_schema, body)
+				id = settings.plants.add_mesurement(id, body["value"])
 			end
 			status 200
 			{ :_id => id }.to_json

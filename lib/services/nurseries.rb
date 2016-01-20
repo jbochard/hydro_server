@@ -79,20 +79,22 @@ class Nurseries
     end
 
 
-	def set_mesurement(nursery_name, bucket)
+	def set_mesurement(nursery_name, mesurement)
 		nursery = get(nursery_name)
  
     	# Seteo la fecha de medición a la que se pasó u hoy
-    	bucket["date"] ||= Date.new
+    	mesurement["date"] ||= Date.new
 
     	# Seteo la medición en el cajón
-        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/last_mesurement", "value" => bucket } ]
+        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/last_mesurement", "value" => mesurement } ]
         nursery = patch.apply(nursery)
         @mongo_client[:nurseries].find({ :name => nursery_name }).replace_one(nursery)
 
         # Agrego la última medición al cajón y agrego la medición en cada planta del cajón.
-        @plants.set_mesurement(nursery["buckets"], bucket)
-	
+        nursery["buckets"].each do |pos, bucket|
+            plant_id = bucket["plant_id"]
+            @plants.add_mesurement(plant_id, mesurement)
+        end
 	    nursery["_id"]
 	end
 

@@ -5,7 +5,7 @@
     "op": { "type": { "enum": [ "SET_MESUREMENT" ] } },
     "value": {
       "type": "object",
-      "required": [ "position", "plant_id" ],
+      "required": [ "electrical_conductivity", "temperature" ],
       "properties": {
         "electrical_conductivity":  { "type": "number" },
         "temperature":              { "type": "number" }

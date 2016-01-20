@@ -2,10 +2,9 @@
   "type": "object",
   "required": [ "op", "value" ],
   "properties": {
-    "op": { "type": { "enum": [ "ADD_EVENT" ] } },
+    "op": { "type": { "enum": [ "ADD_MESUREMENT" ] } },
     "value": {
       "type": "object",
-      "required": [ "electrical_conductivity", "temperature" ],
       "properties": {
         "electrical_conductivity":  { "type": "number" },
         "temperature":              { "type": "number" }

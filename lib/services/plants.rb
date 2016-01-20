@@ -27,7 +27,7 @@ class Plants
 	def create(plant)
 		plant["_id"] = BSON::ObjectId.new
 		plant["creation_date"] = Date.new
-		plant["events"] = []
+		plant["mesurements"] = []
 		@mongo_client[:plants].insert_one(plant)
 		plant["_id"]
 	end
@@ -44,17 +44,13 @@ class Plants
         @mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
 	end
 
-	def set_mesurement(buckets, mesurement)
-		result = []
-		buckets.each do |pos, bucket|
-			plant_id = bucket["plant_id"]
-			plant = get(plant_id.to_s)
-
-			mesurement["type"] = "mesurement"
-			plant["events"].push(mesurement)
-	        @mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
-	        result << plant["_id"]
-		end
-		result
+	def add_mesurement(id, mesurement)
+		plant = get(id)
+		mesurements = []
+		mesurements << { "type" => "temperature", "value" => mesurement["temperature"] } if mesurement.has_key?("temperature")
+		mesurements << { "type" => "electrical_conductivity", "value" => mesurement["electrical_conductivity"] } if mesurement.has_key?("electrical_conductivity")
+		plant["mesurements"] = plant["mesurements"] + mesurements
+		@mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
+		plant_id
 	end
 end
