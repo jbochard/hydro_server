@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [ "name", "type", "dimensions" ],
+  "properties": {
+    "name": { "type": "string" },
+    "type": { "enum": [ "nursery", "crisper" ] },
+    "dimensions": {
+      "type": "object",
+      "required": [ "length", "width" ],
+      "properties": {
+        "length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

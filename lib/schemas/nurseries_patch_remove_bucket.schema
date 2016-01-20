@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "REMOVE_BUCKET" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "position" ],
+      "properties": {
+        "position": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

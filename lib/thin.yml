@@ -1,7 +1,7 @@
 # user: www-data
 # group: www-data
 servers: 1
-pid: ./rubyponia.pid
+pid: rubyponia.pid
 timeout: 30
 wait: 30
 log: rubyponia.log

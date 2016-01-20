@@ -7,6 +7,7 @@ class Nurseries
 
 	def initialize
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
+        @plants = Implementation[:plants]
 	end
 
 	def get_all
@@ -31,53 +32,68 @@ class Nurseries
 		nursery["_id"]
 	end
 
-	def update(name, operation)
-		nursery = get(name)
- 		bucket = operation["value"]
 
-		case operation["op"].upcase
-		when "SET_BUCKET"
-			pos = bucket['position']
-        	plant_id = bucket["plant_id"]
+	def set_bucket(nursery_name, position, plant_id)
+		nursery = get(nursery_name)
 
-        	# Valido que la posición sea dentro del cajón
-        	if pos >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
-        		raise WrongIndexException.new :nursery, name
-        	end
+    	# Valido que la posición sea dentro del cajón
+    	if position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+    		raise WrongIndexException.new :nursery, nursery_name
+    	end
 
-        	# Valido que la planta exista
-        	if ! Implementation[:plants].exists?(plant_id)
-        		raise NotFoundException.new :plant, plant_id
-        	end
+    	# Valido que la planta exista
+    	if ! @plants.exists?(plant_id)
+    		raise NotFoundException.new :plant, plant_id
+    	end
 
-        	# reemplazo la planta en el cajón
-        	bucket["plant_id"] = BSON::ObjectId(plant_id)
-        	bucket["position"] = pos
-        	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{pos}", "value" => bucket } ]
-        	Implementation[:plants].insert_in_bucket(plant_id, nursery["_id"], pos)
-	    when "REMOVE_BUCKET"
-			pos = bucket['position']
-
-           	# Valido que la posición sea dentro del cajón
-        	if bucket["position"] >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
-        		raise WrongIndexException.new :nursery, name
-        	end
-        	# remuevo la planta del cajón
-	        patch = Hana::Patch.new [ { "op" => "remove", "path" => "/buckets/#{pos}" } ]
-        	Implementation[:plants].remove_from_bucket(plant_id, nursery["_id"], pos)
-	    when "ADD_MESUREMENT"
-	    	# Seteo la fecha de medición a la que se pasó u hoy
-	    	bucket["date"] ||= Date.new
-	    	# Seteo la medición en el cajón
-	        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/mesurement", "value" => bucket } ]
-	        # Agrego la última medición al cajón y agrego la medición en cada planta del cajón.
-	        Implementation[:plants].add_mesurement(nursery["buckets"], bucket)
-	    else
-	    	raise WrongOperationException.new :nursery, name, [ "SET_BUCKET", "REMOVE_BUCKET", "SET_MEASUREMENT" ] 
-		end
+    	# reemplazo la planta en el cajón
+    	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{position}", "value" => { :position => position, :plant_id => plant_id} } ]
         nursery = patch.apply(nursery)
-        @mongo_client[:nurseries].find({ :name => name }).replace_one(nursery)
+        @mongo_client[:nurseries].find({ :name => nursery_name }).replace_one(nursery)
+
+    	@plants.insert_in_bucket(plant_id, nursery["_id"], position)
         nursery["_id"]
+	end
+
+	def remove_bucket(nursery_name, position)
+		nursery = get(nursery_name)
+
+       	# Valido que la posición sea dentro del cajón
+    	if position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+    		raise WrongIndexException.new :nursery, nursery_name
+    	end
+
+    	if nursery["buckets"][position].nil?
+    		raise WrongIndexException.new :nursery, nursery_name
+    	end
+
+    	plant_id = nursery["buckets"][position]["plant_id"]
+
+    	# remuevo la planta del cajón
+        patch = Hana::Patch.new [ { "op" => "remove", "path" => "/buckets/#{position}" } ]
+        nursery = patch.apply(nursery)
+        @mongo_client[:nurseries].find({ :name => nursery_name }).replace_one(nursery)
+
+    	@plants.remove_from_bucket(plant_id, nursery["_id"], position)
+        nursery["_id"]
+    end
+
+
+	def set_mesurement(nursery_name, bucket)
+		nursery = get(nursery_name)
+ 
+    	# Seteo la fecha de medición a la que se pasó u hoy
+    	bucket["date"] ||= Date.new
+
+    	# Seteo la medición en el cajón
+        patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/last_mesurement", "value" => bucket } ]
+        nursery = patch.apply(nursery)
+        @mongo_client[:nurseries].find({ :name => nursery_name }).replace_one(nursery)
+
+        # Agrego la última medición al cajón y agrego la medición en cada planta del cajón.
+        @plants.set_mesurement(nursery["buckets"], bucket)
+	
+	    nursery["_id"]
 	end
 
 	def delete(name)

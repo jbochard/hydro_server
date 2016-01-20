@@ -5,6 +5,7 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 
 require 'sinatra'
 require 'json'
+require 'json-schema'
 require 'services/implementation'
 require 'services/nurseries'
 require 'services/plants'

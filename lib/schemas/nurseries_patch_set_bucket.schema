@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "SET_BUCKET" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "position", "plant_id" ],
+      "properties": {
+        "position": {
+          "type": "integer",
+           "minimum": 0
+       },
+        "plant_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

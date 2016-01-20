@@ -1,6 +1,8 @@
 # coding: utf-8
 
 set :plants, Implementation[:plants]
+set :post_schema, 				JSON.parse(File.read("lib/schemas/plants_post.schema"))
+set :patch_add_event_schema, 	JSON.parse(File.read("lib/schemas/plants_patch_add_event.schema"))
 
 namespace '/plants' do
  
@@ -24,6 +26,9 @@ namespace '/plants' do
 	post '/?' do
 		content_type :json
 		begin
+			body = JSON.parse(request.body.read)
+			JSON::Validator.validate!(settings.post_schema, body)
+
 			id = settings.plants.create(JSON.parse(request.body.read))
 			
 			status 200
@@ -31,6 +36,31 @@ namespace '/plants' do
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json
+
+		end
+	end
+
+	patch '/:id' do |id|
+		content_type :json
+		begin
+			body = JSON.parse(request.body.read)
+			case body["op"].upcase
+			when "ADD_EVENT"
+				JSON::Validator.validate!(settings.patch_add_event_schema, body)
+				id = settings.plants.create(JSON.parse(request.body.read))
+			end
+			status 200
+			{ :_id => id }.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json
+
 		end
 	end
 end
