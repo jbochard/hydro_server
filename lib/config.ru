@@ -9,6 +9,7 @@ require 'json-schema'
 require 'services/implementation'
 require 'services/nurseries'
 require 'services/plants'
+require 'services/mesurements'
 
 class Environment
 	class << self
@@ -20,8 +21,9 @@ end
 Environment.config = JSON.parse(File.read("config/configuration.json"))
 
 Implementation.register do |i|
-  i[:nurseries] = Nurseries.new
-  i[:plants] 	= Plants.new
+  i[:nurseries] 	= Nurseries.new
+  i[:plants] 		= Plants.new
+  i[:mesurements] 	= Mesurements.new
 end
 
 load 'app.rb'

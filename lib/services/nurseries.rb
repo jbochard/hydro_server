@@ -11,14 +11,14 @@ class Nurseries
 	end
 
 	def get_all
-        @mongo_client[:nurseries].find.projection({ _id: 1, name: 1, dimensions: 1, creation_date: 1 }).to_a
+        @mongo_client[:nurseries].find.projection({ _id: 1, name: 1, type: 1, creation_date: 1 }).to_a
 	end
 
-	def get(name)
-		if ! exists?(name)
-			raise NotFoundException.new :nursery, name
+	def get(id)
+		if ! exists?(id)
+			raise NotFoundException.new :nursery, id
 		end
-        @mongo_client[:nurseries].find({:name => name }).to_a.first
+        @mongo_client[:nurseries].find({:_id => BSON::ObjectId(id) }).to_a.first
 	end
 
 	def create(nursery)
@@ -104,7 +104,7 @@ class Nurseries
 		nursery["_id"]
 	end
 
-	def exists?(name)
-		@mongo_client[:nurseries].find({ :name => name }).to_a.length > 0
+	def exists?(id)
+		@mongo_client[:nurseries].find({ :_id => BSON::ObjectId(id) }).to_a.length > 0
 	end
 end

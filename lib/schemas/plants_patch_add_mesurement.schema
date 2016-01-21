@@ -4,11 +4,7 @@
   "properties": {
     "op": { "type": { "enum": [ "ADD_MESUREMENT" ] } },
     "value": {
-      "type": "object",
-      "properties": {
-        "electrical_conductivity":  { "type": "number" },
-        "temperature":              { "type": "number" }
-      }
+      "type": "object"
     }
   }
 }

@@ -14,11 +14,11 @@ namespace '/nurseries' do
 		settings.nurseries.get_all.to_json
 	end
 
-	get '/:name' do |name|
+	get '/:id' do |id|
 		content_type :json
 		begin
 			status 200
-			settings.nurseries.get(name).to_json
+			settings.nurseries.get(id).to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json

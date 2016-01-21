@@ -5,6 +5,7 @@ class Plants
 
 	def initialize
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
+        @mesurements = Implementation[:mesurements]
 	end
 
 	def exists?(id)
@@ -46,9 +47,14 @@ class Plants
 
 	def add_mesurement(id, mesurement)
 		plant = get(id)
+		mesurement["date"] ||= Date.new
+		mesurement_types = @mesurements.get_all.map { |m| m["type"] }
+
 		mesurements = []
-		mesurements << { "type" => "temperature", "value" => mesurement["temperature"] } if mesurement.has_key?("temperature")
-		mesurements << { "type" => "electrical_conductivity", "value" => mesurement["electrical_conductivity"] } if mesurement.has_key?("electrical_conductivity")
+		mesurement.each do |k, v|
+			mesurements << { "type" => k, "value" => mesurement[k], "date" => mesurement["date"] } if mesurement_types.contain k
+		end
+
 		plant["mesurements"] = plant["mesurements"] + mesurements
 		@mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
 		plant_id

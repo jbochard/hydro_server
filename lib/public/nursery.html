@@ -1,0 +1,10 @@
+<div>
+	<h2>{{nursery.name}}</h2>
+	<table class="nursery">
+		<tbody>
+			<tr ng-repeat="r in range(nursery.dimensions.width)">
+				<td ng-repeat="c in range(nursery.dimensions.length)">{{r * nursery.dimensions.length + c}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

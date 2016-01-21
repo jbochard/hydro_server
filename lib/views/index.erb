@@ -1,94 +1,55 @@
-<!DOCTYPE html >
-<html ng-app='carsProxyTestApp' lang="es">
+<!DOCTYPE HTML>
+<html ng-app="hydroponicApp" lang="es">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Registro hidropónico</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <title>Hidroponia</title>
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+
+        <script type="text/javascript">
+            host = "<%= @host %>"
+        </script>
+
         <link rel="icon" type="image/png" href="<%= @host %>/img/favicon.png" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="<%= @host %>/styles/snap.css">
         <link rel="stylesheet" href="<%= @host %>/styles/styles.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            host = "<%= @host %>"
-        </script>        
         <script src="<%= @host %>/js/ui-bootstrap-0.13.0.js"></script>
-        <script src="<%= @host %>/js/app.js"></script>        
-        <script src="<%= @host %>/js/files.js"></script>        
-        <script src="<%= @host %>/js/variables.js"></script>        
+
+        <script src="<%= @host %>/js/snap.js"></script>
+        <script src="<%= @host %>/js/app.js"></script>
+        <script src="<%= @host %>/js/services.js"></script>
+        <script src="<%= @host %>/js/controllers.js"></script>
     </head>
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2><img src="<%= @host %>/img/title.png" /></h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#mocks" role="tab" data-toggle="tab">Mocks</a></li>
-                        <li role="presentation"><a href="#variables" role="tab" data-toggle="tab">Variables</a></li>
+    <body  ng-controller="HydroponicController">
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div>
+                    <div class="search">
+                        <input id="search" type="text" ng-model='queryNursery' class="form-control" placeholder="Buscar cajones"/>
+                    </div>
+                    <h4>Cajones</h4>
+                    <ul ng-repeat="nursery in nurseries | orderBy: ['name']">
+                        <li><a ng-click="show_nursery(nursery._id)">{{nursery.name}}</a></li>
                     </ul>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade active in" id="mocks" ng-include="'<%= @host %>/web/mocks-tab'"></div>
-                        <div role="tabpanel" class="tab-pane fade" id="variables" ng-include="'<%= @host %>/web/variables-tab'"></div>
-                   </div>
-                </div>
-            </div>
-            <div class="row" style="padding-top: 20px">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><b>Headers utilizados</b></div>
-                        <div class="panel-body">
-                            <dl class="dl-horizontal">
-                                <dt>X-MOCK-MODE</dt>
-                                <dd><i>PROXY|MOCKER</i></dd>
-                                <dd style="padding: 0 0 10px">Indica si el proxy va a actuar como proxy registrando los request/response o como mocker retornando las respuestas pre-guardadas.</dd>
-
-                                <dt>X-MOCK-URL</dt>
-                                <dd><i><%= @proxy %>/proxy</i></dd>
-                                <dd style="padding: 0 0 10px">Url del proxy por donde se enviarán las comunicaciones a sistemas externos.</dd>                      
-
-                                <dt>X-MOCK-PROXY-CASE</dt>
-                                <dd><i>OSS, DVAULT</i></dd>
-                                <dd style="padding: 0 0 10px">Es la lista de módulos que se registrarán en el proxy. Si no se especifica este header todas las comunicaciones se guardarán.</dd> 
-
-                                <dt>X-MOCK-MOCKER-CASE</dt>
-                                <dd><i>OSS -> CASO1, CASO2; DVAULT -> CASO3, CASO4</i></dd>
-                                <dd style="padding: 0 0 10px">Para cada módulo especiffica una lista de archivos de mock que se utilizarán con ese módulo.</dd>
-
-                                <dt>X-MOCK-CONTEXT-KEY</dt>
-                                <dd><i>KEY</i></dd>
-                                <dd style="padding: 0 0 10px">Identifica un contexto que se abre en el proxy. Este conexto almacena variables que pueden ser usadas luego por el mocker.</dd>
-
-                                <dt>X-MOCK-CONTEXT-SET</dt>
-                                <dd><i>key1 -> value1; key2 -> value2</i></dd>
-                                <dd style="padding: 0 0 10px">Permite setear una variable en un contexto declarado con el header X-MOCK-CONTEXT-KEY.</dd>
-
-                                <dt>X-MOCK-DEBUG</dt>
-                                <dd><i>TRUE | FALSE</i></dd>
-                                <dd style="padding: 0 0 10px">Indica si el proxy está en modo debug. False es el comportamiento por defecto.</dd>                      
-
-                            </dl>
-                            <b>NOTA:</b> Las captura de valores en jsons se realizan con la siguiente sintaxis: <i>${nombre de variable}</i>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><b>Uso de variables en jsons</b></div>
-                        <div class="panel-body" style="padding-left: 50px">
-                            Se puede utilizar en los request variables como por ej. ${transactionId}. El sistema capturará los valores correspondientes a estas variables y podrá aplicar dicho valor en la respuesta retornada por el proxy.
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+        
+        <div id="content" class="snap-content">
+            <div id="do-drag" class="toolbar">
+                <a ng-click="open_left()" class="open-left"></a>
+                <h1>Default</h1>
+            </div>
+            <div class="panel" ng-include="template"></div>
+        </div>
+
+        <script src="<%= @host %>/js/index.js"></script>
     </body>
 </html>

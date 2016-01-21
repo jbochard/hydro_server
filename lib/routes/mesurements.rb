@@ -1,26 +1,15 @@
 # coding: utf-8
 
-set :plants, Implementation[:plants]
-set :post_schema, 					JSON.parse(File.read("lib/schemas/plants_post.schema"))
-set :patch_add_mesurement_schema, 	JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
+set :mesurements, Implementation[:mesurements]
+set :post_schema, 					JSON.parse(File.read("lib/schemas/mesurements_post.schema"))
+#set :patch_add_mesurement_schema, 	JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
 
-namespace '/plants' do
+namespace '/mesurements' do
  
 	get '/?' do
 		content_type :json
 		status 200
-		settings.plants.get_all.to_json
-	end
-
-	get '/:id' do |id|
-		content_type :json
-		begin
-			status 200
-			settings.plants.get(id).to_json
-		rescue AbstractApplicationExcpetion => e
-			status e.code
-			{ :error => e.message }.to_json
-		end
+		settings.mesurements.get_all.to_json
 	end
 
 	post '/?' do
@@ -29,7 +18,7 @@ namespace '/plants' do
 			body = JSON.parse(request.body.read)
 			JSON::Validator.validate!(settings.post_schema, body)
 
-			id = settings.plants.create(body)
+			id = settings.mesurements.create(body)
 			
 			status 200
 			{ :_id => id }.to_json
