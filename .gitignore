@@ -10,6 +10,7 @@
 /test/version_tmp/
 /tmp/
 .DS_Store
+rubyponia.9390*
 
 ## Specific to RubyMotion:
 .dat*
