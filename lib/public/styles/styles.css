@@ -15,9 +15,20 @@
     background: #BFC7D8;
 }
 
+.nursery  {
+  background-color: rgb(83, 110, 167);
+}
+
 .nursery tr td {
-  padding: 10px;
-  border: 1px solid black;
+    border: 2px solid black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #ddd;
+    cursor: pointer;
 }
 
 .panel {
@@ -25,6 +36,10 @@
   padding-top: 50px;
   padding-left: 10px;
 }
+
+.bodycontainer { max-height: 450px; width: 100%; margin: 0; overflow-y: auto; }
+
+.table-scrollable { margin: 0; padding: 0; }
 
 /* Demo toolbar styles */
 .toolbar {
@@ -169,16 +184,20 @@
   text-decoration: none;
   color: #ccc;
   text-indent: 20px;
+  cursor: pointer;
+
 }
 
 .snap-drawer .list .list-item-remove {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: bold;
   color: #ccc;
   background-color: red;
+  cursor: pointer;
+
 }
 
 .snap-drawer p {

@@ -4208,3 +4208,352 @@ D, [2016-01-21T21:27:46.605512 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | ru
 D, [2016-01-21T21:27:46.613962 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
 D, [2016-01-21T21:27:46.615063 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007819999999999999s
 127.0.0.1 - - [21/Jan/2016:21:27:46 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0038
+D, [2016-01-21T23:00:53.058458 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a1778235cd166726000000')}}
+D, [2016-01-21T23:00:53.059867 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000889s
+D, [2016-01-21T23:00:53.060658 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a1778235cd166726000000')}}
+D, [2016-01-21T23:00:53.061452 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000552s
+127.0.0.1 - - [21/Jan/2016:23:00:53 -0300] "GET /nurseries/56a1778235cd166726000000 HTTP/1.1" 200 177 0.0055
+127.0.0.1 - - [21/Jan/2016:23:00:53 -0300] "GET /nursery-show.html HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T23:09:07.139698 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a1778235cd166726000000')}}
+D, [2016-01-21T23:09:07.140777 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000802s
+D, [2016-01-21T23:09:07.141515 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a1778235cd166726000000')}}
+D, [2016-01-21T23:09:07.142350 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000504s
+D, [2016-01-21T23:09:07.143046 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.delete | STARTED | {"delete"=>"nurseries", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('56a1778235cd166726000000')}, "limit"=>1}], "ordered"=>true}
+D, [2016-01-21T23:09:07.144006 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.delete | SUCCEEDED | 0.000755s
+127.0.0.1 - - [21/Jan/2016:23:09:07 -0300] "DELETE /nurseries/56a1778235cd166726000000 HTTP/1.1" 200 49 0.0070
+D, [2016-01-21T23:09:07.156955 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:09:07.157711 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000523s
+127.0.0.1 - - [21/Jan/2016:23:09:07 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0051
+D, [2016-01-21T23:09:20.461947 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 1"}}
+D, [2016-01-21T23:09:20.462963 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000634s
+D, [2016-01-21T23:09:20.463985 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"Almácigo 1", "type"=>"nursery", "dimensions"=>{"length"=>"5", "width"=>"3"}, "_id"=>BSON::ObjectId('56a18f5035cd166726000001'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=...
+D, [2016-01-21T23:09:20.465065 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000718s
+127.0.0.1 - - [21/Jan/2016:23:09:20 -0300] "POST /nurseries HTTP/1.1" 200 43 0.0084
+D, [2016-01-21T23:09:20.484193 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:09:20.484761 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000386s
+127.0.0.1 - - [21/Jan/2016:23:09:20 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0019
+D, [2016-01-21T23:09:47.418939 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 2"}}
+D, [2016-01-21T23:09:47.420215 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000863s
+D, [2016-01-21T23:09:47.421270 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"Almácigo 2", "type"=>"nursery", "dimensions"=>{"length"=>"8", "width"=>"3"}, "_id"=>BSON::ObjectId('56a18f6b35cd166726000002'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=...
+D, [2016-01-21T23:09:47.422402 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000857s
+127.0.0.1 - - [21/Jan/2016:23:09:47 -0300] "POST /nurseries HTTP/1.1" 200 43 0.0071
+D, [2016-01-21T23:09:47.429975 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:09:47.430536 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000386s
+127.0.0.1 - - [21/Jan/2016:23:09:47 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0021
+D, [2016-01-21T23:09:51.982052 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:09:51.983080 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000705s
+D, [2016-01-21T23:09:51.983835 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:09:51.985171 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0009270000000000001s
+127.0.0.1 - - [21/Jan/2016:23:09:51 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0059
+D, [2016-01-21T23:10:25.064575 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:25.065585 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000734s
+D, [2016-01-21T23:10:25.066293 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:25.067052 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005329999999999999s
+127.0.0.1 - - [21/Jan/2016:23:10:25 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0049
+D, [2016-01-21T23:10:25.736112 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:25.737101 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000686s
+D, [2016-01-21T23:10:25.737846 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:25.738499 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000498s
+127.0.0.1 - - [21/Jan/2016:23:10:25 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0048
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /web HTTP/1.1" 200 3593 0.0069
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0054
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0050
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0045
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0044
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0039
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:23:10:26 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T23:10:27.602437 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:10:27.603151 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000517s
+127.0.0.1 - - [21/Jan/2016:23:10:27 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0022
+127.0.0.1 - - [21/Jan/2016:23:10:28 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0032
+D, [2016-01-21T23:10:29.618824 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:29.619843 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000708s
+D, [2016-01-21T23:10:29.620537 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:29.621269 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000546s
+127.0.0.1 - - [21/Jan/2016:23:10:29 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0047
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /web HTTP/1.1" 200 3593 0.0042
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0034
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0028
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:23:10:35 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T23:10:36.513631 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:10:36.514595 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000666s
+127.0.0.1 - - [21/Jan/2016:23:10:36 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0030
+127.0.0.1 - - [21/Jan/2016:23:10:37 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0015
+D, [2016-01-21T23:10:38.363251 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:38.364290 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000741s
+D, [2016-01-21T23:10:38.365169 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:10:38.365893 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005380000000000001s
+127.0.0.1 - - [21/Jan/2016:23:10:38 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0050
+D, [2016-01-21T23:10:39.018144 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:10:39.019103 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000659s
+D, [2016-01-21T23:10:39.019825 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:10:39.020575 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000561s
+127.0.0.1 - - [21/Jan/2016:23:10:39 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0048
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /web HTTP/1.1" 200 3593 0.0049
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0039
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:23:10:58 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T23:10:59.345457 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:10:59.346216 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000546s
+127.0.0.1 - - [21/Jan/2016:23:10:59 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0022
+127.0.0.1 - - [21/Jan/2016:23:10:59 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0020
+D, [2016-01-21T23:11:07.855155 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:07.856067 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006039999999999999s
+D, [2016-01-21T23:11:07.856870 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:07.857614 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000526s
+127.0.0.1 - - [21/Jan/2016:23:11:07 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0049
+D, [2016-01-21T23:11:33.830912 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:33.831780 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006020000000000001s
+D, [2016-01-21T23:11:33.832579 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:33.833355 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005510000000000001s
+127.0.0.1 - - [21/Jan/2016:23:11:33 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0049
+D, [2016-01-21T23:11:34.441407 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:34.442435 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000714s
+D, [2016-01-21T23:11:34.443149 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:34.443884 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000535s
+127.0.0.1 - - [21/Jan/2016:23:11:34 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0050
+D, [2016-01-21T23:11:35.323856 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:35.324790 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000625s
+D, [2016-01-21T23:11:35.325718 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:35.326660 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000642s
+127.0.0.1 - - [21/Jan/2016:23:11:35 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0056
+D, [2016-01-21T23:11:35.737299 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:35.738236 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000571s
+D, [2016-01-21T23:11:35.739020 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:35.739782 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000512s
+127.0.0.1 - - [21/Jan/2016:23:11:35 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0048
+D, [2016-01-21T23:11:36.136060 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:36.137155 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007639999999999999s
+D, [2016-01-21T23:11:36.137960 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:11:36.138783 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006159999999999999s
+127.0.0.1 - - [21/Jan/2016:23:11:36 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0052
+D, [2016-01-21T23:11:36.650931 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:11:36.651932 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000703s
+D, [2016-01-21T23:11:36.652745 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:11:36.653562 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005939999999999999s
+127.0.0.1 - - [21/Jan/2016:23:11:36 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0051
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /web HTTP/1.1" 200 3593 0.0134
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /styles/styles.css HTTP/1.1" 200 3877 0.0012
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0042
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T23:17:27.939632 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:17:27.940473 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000603s
+127.0.0.1 - - [21/Jan/2016:23:17:27 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0026
+D, [2016-01-21T23:17:29.983270 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:17:29.984275 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000684s
+D, [2016-01-21T23:17:29.984902 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:17:29.985714 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000546s
+127.0.0.1 - - [21/Jan/2016:23:17:29 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0059
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /web HTTP/1.1" 200 3593 0.0035
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /styles/styles.css HTTP/1.1" 200 4085 0.0013
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T23:25:34.874969 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:25:34.875892 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006010000000000001s
+127.0.0.1 - - [21/Jan/2016:23:25:34 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0031
+D, [2016-01-21T23:25:42.722967 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:25:42.723980 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000724s
+D, [2016-01-21T23:25:42.724651 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:25:42.725307 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000472s
+127.0.0.1 - - [21/Jan/2016:23:25:42 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0045
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /web HTTP/1.1" 200 3593 0.0167
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:23:45:18 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T23:45:19.581382 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:45:19.582128 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000546s
+127.0.0.1 - - [21/Jan/2016:23:45:19 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0023
+127.0.0.1 - - [21/Jan/2016:23:45:20 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0014
+D, [2016-01-21T23:45:21.085532 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:45:21.086496 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000703s
+D, [2016-01-21T23:45:21.087193 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:45:21.087870 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000495s
+127.0.0.1 - - [21/Jan/2016:23:45:21 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0047
+127.0.0.1 - - [21/Jan/2016:23:45:21 -0300] "GET /nursery-show.html HTTP/1.1" 200 361 0.0009
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /web HTTP/1.1" 200 3593 0.0046
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0039
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0041
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0035
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:23:52:02 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0017
+D, [2016-01-21T23:52:03.087121 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:52:03.087874 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000549s
+127.0.0.1 - - [21/Jan/2016:23:52:03 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0022
+127.0.0.1 - - [21/Jan/2016:23:52:03 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0013
+D, [2016-01-21T23:52:05.661827 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:52:05.662862 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000713s
+D, [2016-01-21T23:52:05.663571 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:52:05.664228 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000458s
+127.0.0.1 - - [21/Jan/2016:23:52:05 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0050
+127.0.0.1 - - [21/Jan/2016:23:52:05 -0300] "GET /nursery-show.html HTTP/1.1" 200 650 0.0009
+127.0.0.1 - - [21/Jan/2016:23:52:38 -0300] "GET /web HTTP/1.1" 200 3593 0.0206
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0053
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0051
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T23:52:39.697520 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:52:39.698247 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000541s
+127.0.0.1 - - [21/Jan/2016:23:52:39 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0023
+127.0.0.1 - - [21/Jan/2016:23:52:40 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0012
+D, [2016-01-21T23:52:43.971492 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:52:43.972443 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000645s
+D, [2016-01-21T23:52:43.973180 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:52:43.973951 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005560000000000001s
+127.0.0.1 - - [21/Jan/2016:23:52:43 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0048
+127.0.0.1 - - [21/Jan/2016:23:52:43 -0300] "GET /nursery-show.html HTTP/1.1" 200 650 0.0009
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /web HTTP/1.1" 200 3593 0.0047
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:23:52:58 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T23:52:59.334328 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:52:59.335071 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00053s
+127.0.0.1 - - [21/Jan/2016:23:52:59 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0022
+127.0.0.1 - - [21/Jan/2016:23:52:59 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0017
+D, [2016-01-21T23:53:01.215521 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:53:01.216510 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000721s
+D, [2016-01-21T23:53:01.217160 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:53:01.217770 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000435s
+127.0.0.1 - - [21/Jan/2016:23:53:01 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0047
+127.0.0.1 - - [21/Jan/2016:23:53:01 -0300] "GET /nursery-show.html HTTP/1.1" 200 650 0.0008
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /web HTTP/1.1" 200 3593 0.0031
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0019
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:23:53:41 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T23:53:42.523578 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:53:42.524295 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000544s
+127.0.0.1 - - [21/Jan/2016:23:53:42 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0164
+127.0.0.1 - - [21/Jan/2016:23:53:43 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0016
+D, [2016-01-21T23:53:43.794441 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:53:43.795439 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000679s
+D, [2016-01-21T23:53:43.796406 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:53:43.797177 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005560000000000001s
+127.0.0.1 - - [21/Jan/2016:23:53:43 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0051
+127.0.0.1 - - [21/Jan/2016:23:53:43 -0300] "GET /nursery-show.html HTTP/1.1" 200 753 0.0009
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /web HTTP/1.1" 200 3593 0.0051
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0041
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:23:54:08 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T23:54:09.361147 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:54:09.361835 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0004930000000000001s
+127.0.0.1 - - [21/Jan/2016:23:54:09 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0024
+127.0.0.1 - - [21/Jan/2016:23:54:09 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0014
+D, [2016-01-21T23:54:11.103288 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:54:11.104197 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000593s
+D, [2016-01-21T23:54:11.104885 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:54:11.105519 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00045400000000000003s
+127.0.0.1 - - [21/Jan/2016:23:54:11 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0044
+127.0.0.1 - - [21/Jan/2016:23:54:11 -0300] "GET /nursery-show.html HTTP/1.1" 200 856 0.0008
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /web HTTP/1.1" 200 3593 0.0046
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0042
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0030
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0023
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:23:54:29 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T23:54:30.582409 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:54:30.583408 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006619999999999999s
+127.0.0.1 - - [21/Jan/2016:23:54:30 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0028
+127.0.0.1 - - [21/Jan/2016:23:54:31 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0018
+D, [2016-01-21T23:54:32.323755 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:54:32.324519 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005290000000000001s
+D, [2016-01-21T23:54:32.325057 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:54:32.325719 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000481s
+127.0.0.1 - - [21/Jan/2016:23:54:32 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0039
+127.0.0.1 - - [21/Jan/2016:23:54:32 -0300] "GET /nursery-show.html HTTP/1.1" 200 842 0.0008
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /web HTTP/1.1" 200 3593 0.0143
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /styles/styles.css HTTP/1.1" 200 4212 0.0048
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:23:56:39 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:23:56:40 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T23:56:40.234683 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:56:40.235592 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000664s
+127.0.0.1 - - [21/Jan/2016:23:56:40 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0033
+127.0.0.1 - - [21/Jan/2016:23:56:40 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0015
+D, [2016-01-21T23:56:41.952082 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:56:41.953054 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000688s
+D, [2016-01-21T23:56:41.953745 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:56:41.954406 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000476s
+127.0.0.1 - - [21/Jan/2016:23:56:41 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0046
+127.0.0.1 - - [21/Jan/2016:23:56:41 -0300] "GET /nursery-show.html HTTP/1.1" 200 842 0.0008
+D, [2016-01-21T23:56:52.858437 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:56:52.859399 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000664s
+D, [2016-01-21T23:56:52.860310 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f6b35cd166726000002')}}
+D, [2016-01-21T23:56:52.861061 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000534s
+127.0.0.1 - - [21/Jan/2016:23:56:52 -0300] "GET /nurseries/56a18f6b35cd166726000002 HTTP/1.1" 200 177 0.0050
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /web HTTP/1.1" 200 3593 0.0054
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0026
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:23:57:48 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T23:57:49.170774 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T23:57:49.171511 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000538s
+127.0.0.1 - - [21/Jan/2016:23:57:49 -0300] "GET /nurseries/ HTTP/1.1" 200 251 0.0023
+127.0.0.1 - - [21/Jan/2016:23:57:50 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0013
+D, [2016-01-21T23:57:52.667404 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:57:52.668396 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006580000000000001s
+D, [2016-01-21T23:57:52.669103 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a18f5035cd166726000001')}}
+D, [2016-01-21T23:57:52.669740 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000451s
+127.0.0.1 - - [21/Jan/2016:23:57:52 -0300] "GET /nurseries/56a18f5035cd166726000001 HTTP/1.1" 200 177 0.0047
+127.0.0.1 - - [21/Jan/2016:23:57:52 -0300] "GET /nursery-show.html HTTP/1.1" 200 3108 0.0014
