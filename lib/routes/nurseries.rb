@@ -47,8 +47,6 @@ namespace '/nurseries' do
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			JSON::Validator.validate!(settings.patch_schema, body)
-
 			case body["op"].upcase			
 			when "SET_BUCKET"
 				JSON::Validator.validate!(settings.patch_set_bucket_schema, body)

@@ -14,7 +14,7 @@ class Plants
 	end
 
 	def get_all
-        @mongo_client[:plants].find.projection({ _id: 1, type: 1, creation_date: 1 }).to_a
+        @mongo_client[:plants].find.projection({ _id: 1, type: 1, creation_date: 1, bucket: 1 }).to_a
 	end
 
 	def get(id)
@@ -29,20 +29,22 @@ class Plants
 		plant["_id"] = BSON::ObjectId.new
 		plant["creation_date"] = Date.new
 		plant["mesurements"] = []
+		plant["bucket"] = {}
 		@mongo_client[:plants].insert_one(plant)
 		plant["_id"]
 	end
 
-	def insert_in_bucket(id, nursery_id, pos)
-		plant = get(id)
-		plant["bucket"] = { :nursery_id => nursery_id, :position => pos }
-        @mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
+	def insert_in_bucket(id, nursery_id, nursery_name, nursery_pos)
+		if ! exists?(id)
+			raise NotFoundException.new :plant, id
+		end
+        @mongo_client[:plants].find({ :bucket => {:nursery_id => BSON::ObjectId(nursery_id), :nursery_position => nursery_pos } }).update_many({ '$set' => { :bucket => {} } })
+        @mongo_client[:plants].find({ :_id => BSON::ObjectId(id) }).update_one({ '$set' => { :bucket => { :nursery_id => BSON::ObjectId(nursery_id), :nursery_name => nursery_name, :nursery_position => nursery_pos } } })
 	end
 
 	def remove_from_bucket(id, nursery_id, pos)
 		plant = get(id)
-		plant["bucket"] = nil
-        @mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
+        @mongo_client[:plants].find({ :_id => BSON::ObjectId(id) }).update_one({ '$set' => { :bucket => {} } })
 	end
 
 	def add_mesurement(id, mesurement)

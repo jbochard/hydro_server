@@ -31,6 +31,14 @@
     cursor: pointer;
 }
 
+.nursery_taken {
+  background-color: green;
+}
+
+.bucket_selected {
+  background-color: cornflowerblue;
+}
+
 .panel {
   background: #BFC7D8;
   padding-top: 50px;

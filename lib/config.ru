@@ -21,9 +21,9 @@ end
 Environment.config = JSON.parse(File.read("config/configuration.json"))
 
 Implementation.register do |i|
-  i[:nurseries] 	= Nurseries.new
-  i[:plants] 		= Plants.new
   i[:mesurements] 	= Mesurements.new
+  i[:plants] 		= Plants.new
+  i[:nurseries] 	= Nurseries.new
 end
 
 load 'app.rb'

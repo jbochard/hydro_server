@@ -27,7 +27,7 @@ class Nurseries
 		end
 		nursery["_id"] = BSON::ObjectId.new
 		nursery["creation_date"] = Date.new
-		nursery["buckets"] = {}
+		nursery["buckets"] = []
 		@mongo_client[:nurseries].insert_one(nursery)
 		nursery["_id"]
 	end
@@ -41,17 +41,28 @@ class Nurseries
     		raise WrongIndexException.new :nursery, nursery["name"]
     	end
 
-    	# Valido que la planta exista
-    	if ! @plants.exists?(plant_id)
-    		raise NotFoundException.new :plant, plant_id
-    	end
+    	# Obtengo la planta a ingresar en el bucket
+        plant = @plants.get(plant_id)
 
-    	# reemplazo la planta en el cajón
-    	patch = Hana::Patch.new [ { "op" => "replace", "path" => "/buckets/#{position}", "value" => { :position => position, :plant_id => plant_id} } ]
-        nursery = patch.apply(nursery)
-        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(id) }).replace_one(nursery)
+        puts plant
+        # Si la planta esta en un bucket, la remuevo del bucket
+        if plant["bucket"].has_key?("nursery_id")
+            remove_bucket(plant["bucket"]["nursery_id"].to_s, plant["bucket"]["nursery_position"])
+        end
 
-    	@plants.insert_in_bucket(plant_id, id, position)
+        bucket_to_empty = nursery["buckets"].select { |b| b["position"] == position }.first
+        
+        # Si el bucket donde inserto la planta esta ocupado, lo remuevo
+        if ! bucket_to_empty.nil?
+            remove_bucket(id, position)
+        end
+
+        #inserto la planta en el bucket seleccionado
+         @mongo_client[:nurseries]
+            .find({ :_id => BSON::ObjectId(id) })
+            .update_one({ '$push' => { :buckets => { :position => position, :plant_id => BSON::ObjectId(plant_id) } } })       
+        @plants.insert_in_bucket(plant_id, id, nursery["name"], position)
+
         nursery["_id"]
 	end
 
@@ -63,18 +74,15 @@ class Nurseries
     		raise WrongIndexException.new :nursery, nursery["name"]
     	end
 
-    	if nursery["buckets"][position].nil?
-    		raise WrongIndexException.new :nursery, nursery["name"]
+        bucket_to_empty = nursery["buckets"].select { |b| b["position"] == position }.first
+        puts "bucket_to_empty: #{bucket_to_empty}"
+    	if ! bucket_to_empty.nil?
+            @mongo_client[:nurseries]
+                .find({ :_id => BSON::ObjectId(id), :buckets => { '$elemMatch' => { :position => position } } })
+                .update_many({ '$pull' => { :buckets => {  :position => position  } } })
+
+            @plants.remove_from_bucket(bucket_to_empty["plant_id"], id, position)
     	end
-
-    	plant_id = nursery["buckets"][position]["plant_id"]
-
-    	# remuevo la planta del cajón
-        patch = Hana::Patch.new [ { "op" => "remove", "path" => "/buckets/#{position}" } ]
-        nursery = patch.apply(nursery)
-        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(id) }).replace_one(nursery)
-
-    	@plants.remove_from_bucket(plant_id, id, position)
         nursery["_id"]
     end
 

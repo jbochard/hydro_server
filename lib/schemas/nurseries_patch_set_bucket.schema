@@ -9,7 +9,7 @@
       "properties": {
         "position": {
           "type": "integer",
-           "minimum": 0
+           "minimum": 1
        },
         "plant_id": {
           "type": "string"

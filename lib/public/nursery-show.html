@@ -1,10 +1,10 @@
 <div class="row">
-	<div class="col-lg-6">
+	<div class="col-lg-5">
 		<h2>{{nursery.name}}</h2>
 		<table class="nursery">
 			<tbody>
 				<tr ng-repeat="r in range(nursery.dimensions.width)">
-					<td ng-repeat="c in range(nursery.dimensions.length)">{{r * nursery.dimensions.length + c + 1 }}</td>
+					<td class="bucket" ng-click="select_bucket(r * nursery.dimensions.length + c + 1) " ng-class="{ nursery_taken: has_bucket(nursery, r * nursery.dimensions.length + c + 1), bucket_selected : selected_bucket == (r * nursery.dimensions.length + c + 1) } "  ng-repeat="c in range(nursery.dimensions.length)">{{r * nursery.dimensions.length + c + 1 }}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -14,130 +14,11 @@
 		<div class="bodycontainer scrollable">
 			<table class="table table-hover table-condensed table-scrollable">
 			    <tbody>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
-			    	</tr>
-			    	<tr>
-			    		<td>Albahaca</td>
-			    		<td>Almacigo 1</td>
-			    		<td>1</td>
+			    	<tr ng-repeat="plant in plants">
+			    		<td>{{plant.type}}</td>
+			    		<td>{{plant.creation_date}}</td>
+			    		<td>{{plant.bucket.nursery_id}}</td>
+			    		<td>{{plant.bucket.nursery_position}}</td>
 			    	</tr>
 			    </tbody>
 			</table>
