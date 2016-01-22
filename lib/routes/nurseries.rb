@@ -43,7 +43,7 @@ namespace '/nurseries' do
 		end
 	end
 
-	patch '/:name' do |name|
+	patch '/:id' do |id|
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
@@ -52,13 +52,13 @@ namespace '/nurseries' do
 			case body["op"].upcase			
 			when "SET_BUCKET"
 				JSON::Validator.validate!(settings.patch_set_bucket_schema, body)
-				id = settings.nurseries.set_bucket(name, body["value"]["position"], body["value"]["plant_id"])
+				id = settings.nurseries.set_bucket(id, body["value"]["position"], body["value"]["plant_id"])
 		    when "REMOVE_BUCKET"
 				JSON::Validator.validate!(settings.patch_remove_bucket_schema, body)
-				id = settings.nurseries.remove_bucket(name, body["value"]["position"])
+				id = settings.nurseries.remove_bucket(id, body["value"]["position"])
 		    when "SET_MESUREMENT"
 				JSON::Validator.validate!(settings.patch_set_mesurement_schema, body)
-				id = settings.nurseries.set_mesurement(name, body["value"])
+				id = settings.nurseries.set_mesurement(id, body["value"])
 			end			
 			status 200
 			{ :_id => id }.to_json
@@ -71,10 +71,10 @@ namespace '/nurseries' do
 		end
 	end
 
-	delete '/:name' do |name|
+	delete '/:id' do |id|
 		content_type :json
 		begin
-			id = settings.nurseries.delete(name).to_json
+			id = settings.nurseries.delete(id).to_json
 
 			status 200
 			{ :_id => id }.to_json

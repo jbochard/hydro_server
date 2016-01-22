@@ -3305,3 +3305,906 @@ D, [2016-01-21T16:30:02.326564 #3045] DEBUG -- : MONGODB | 127.0.0.1:27017 | rub
 D, [2016-01-21T16:30:02.327500 #3045] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('569fa771c4b32d4681000000')}}
 D, [2016-01-21T16:30:02.328268 #3045] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000545s
 127.0.0.1 - - [21/Jan/2016:16:30:02 -0300] "GET /nurseries/569fa771c4b32d4681000000 HTTP/1.1" 200 172 0.0048
+Writing PID to rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- json-schema (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:8:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- json-schema (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:8:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- json-schema (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:8:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to rubyponia.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- json-schema (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:8:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to rubyponia.9390.pid
+D, [2016-01-21T18:14:30.443770 #16681] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T18:14:30.449044 #16681] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T18:14:30.453238 #16681] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /web HTTP/1.1" 200 2669 0.0301
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /styles/snap.css HTTP/1.1" 200 1297 0.0016
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /styles/styles.css HTTP/1.1" 200 3802 0.0010
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 200 140135 0.0122
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /js/controllers.js HTTP/1.1" 200 828 0.0116
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /js/index.js HTTP/1.1" 200 422 0.0112
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /js/snap.js HTTP/1.1" 200 25730 0.0107
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /js/app.js HTTP/1.1" 200 3118 0.0102
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /js/services.js HTTP/1.1" 200 577 0.0098
+127.0.0.1 - - [21/Jan/2016:18:14:56 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0029
+127.0.0.1 - - [21/Jan/2016:18:14:58 -0300] "GET /web HTTP/1.1" 200 2669 0.0040
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0006
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0006
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0006
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0143
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /styles/open.png HTTP/1.1" 200 944 0.0009
+D, [2016-01-21T18:14:59.195719 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T18:14:59.215493 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.019495s
+127.0.0.1 - - [21/Jan/2016:18:14:59 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0222
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /web HTTP/1.1" 200 2838 0.0130
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0047
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0040
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0030
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0023
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:18:35:21 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T18:35:22.101276 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T18:35:22.101876 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000419s
+127.0.0.1 - - [21/Jan/2016:18:35:22 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0021
+127.0.0.1 - - [21/Jan/2016:18:35:22 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0011
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /web HTTP/1.1" 200 2943 0.0052
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0058
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0056
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:18:36:01 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T18:36:02.112700 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T18:36:02.113316 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000433s
+127.0.0.1 - - [21/Jan/2016:18:36:02 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0022
+127.0.0.1 - - [21/Jan/2016:18:36:02 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0014
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /web HTTP/1.1" 200 2943 0.0205
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0047
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0052
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0047
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0030
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0020
+D, [2016-01-21T18:47:10.773882 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T18:47:10.774517 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000401s
+127.0.0.1 - - [21/Jan/2016:18:47:10 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0021
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /web HTTP/1.1" 200 2967 0.0027
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0055
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0049
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0028
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /js/controllers.js HTTP/1.1" 200 1072 0.0008
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T19:06:50.798347 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:06:50.799522 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0008749999999999999s
+127.0.0.1 - - [21/Jan/2016:19:06:50 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0031
+127.0.0.1 - - [21/Jan/2016:19:06:55 -0300] "GET /nursery-add.html HTTP/1.1" 200 1003 0.0020
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /web HTTP/1.1" 200 2967 0.0038
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T19:07:06.998135 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:07:06.998736 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00042s
+127.0.0.1 - - [21/Jan/2016:19:07:06 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0022
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /web HTTP/1.1" 200 2967 0.0048
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0030
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0035
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:19:19:17 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0191
+D, [2016-01-21T19:19:18.015506 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:19:18.016118 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000379s
+127.0.0.1 - - [21/Jan/2016:19:19:18 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0020
+127.0.0.1 - - [21/Jan/2016:19:19:24 -0300] "GET /nursery-add.html HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /web HTTP/1.1" 200 2967 0.0032
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /js/controllers.js HTTP/1.1" 200 1041 0.0015
+127.0.0.1 - - [21/Jan/2016:19:22:04 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T19:22:05.144985 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:22:05.145810 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000499s
+127.0.0.1 - - [21/Jan/2016:19:22:05 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0023
+127.0.0.1 - - [21/Jan/2016:19:22:10 -0300] "GET /nursery-add.html HTTP/1.1" 200 1001 0.0024
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /web HTTP/1.1" 200 2967 0.0024
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0066
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0065
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0006
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T19:26:07.971220 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:26:07.971935 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000446s
+127.0.0.1 - - [21/Jan/2016:19:26:07 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0034
+127.0.0.1 - - [21/Jan/2016:19:26:10 -0300] "GET /nursery-add.html HTTP/1.1" 200 997 0.0014
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /web HTTP/1.1" 200 2967 0.0171
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0042
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0057
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0051
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0053
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0044
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0035
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:19:27:11 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T19:27:12.665277 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:27:12.665991 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000449s
+127.0.0.1 - - [21/Jan/2016:19:27:12 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0023
+127.0.0.1 - - [21/Jan/2016:19:27:15 -0300] "GET /nursery-add.html HTTP/1.1" 200 996 0.0019
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /web HTTP/1.1" 200 2967 0.0037
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0058
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0051
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0026
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:19:28:02 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0012
+D, [2016-01-21T19:28:03.407111 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:28:03.407779 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000409s
+127.0.0.1 - - [21/Jan/2016:19:28:03 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0023
+127.0.0.1 - - [21/Jan/2016:19:28:04 -0300] "GET /nursery-add.html HTTP/1.1" 200 1072 0.0015
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /web HTTP/1.1" 200 2967 0.0024
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [21/Jan/2016:19:28:28 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T19:28:29.058073 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:28:29.058686 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000388s
+127.0.0.1 - - [21/Jan/2016:19:28:29 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0021
+127.0.0.1 - - [21/Jan/2016:19:28:31 -0300] "GET /nursery-add.html HTTP/1.1" 200 1098 0.0017
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /web HTTP/1.1" 200 2967 0.0024
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0055
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0047
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0041
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:19:29:01 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0011
+D, [2016-01-21T19:29:02.059909 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:29:02.060643 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00048499999999999997s
+127.0.0.1 - - [21/Jan/2016:19:29:02 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0028
+127.0.0.1 - - [21/Jan/2016:19:29:03 -0300] "GET /nursery-add.html HTTP/1.1" 200 1132 0.0016
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /web HTTP/1.1" 200 2967 0.0045
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0068
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0023
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0103
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T19:29:28.889889 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:29:28.890605 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000487s
+127.0.0.1 - - [21/Jan/2016:19:29:28 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0027
+127.0.0.1 - - [21/Jan/2016:19:29:29 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0036
+127.0.0.1 - - [21/Jan/2016:19:29:32 -0300] "GET /nursery-add.html HTTP/1.1" 200 1135 0.0013
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /web HTTP/1.1" 200 2967 0.0027
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0051
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0040
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0026
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:19:30:54 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T19:30:55.378249 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:30:55.378846 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00039799999999999997s
+127.0.0.1 - - [21/Jan/2016:19:30:55 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0020
+127.0.0.1 - - [21/Jan/2016:19:30:58 -0300] "GET /nursery-add.html HTTP/1.1" 200 1154 0.0018
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /web HTTP/1.1" 200 2967 0.0153
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0053
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0046
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0034
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /js/services.js HTTP/1.1" 200 801 0.0011
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /js/controllers.js HTTP/1.1" 200 1242 0.0020
+127.0.0.1 - - [21/Jan/2016:19:34:02 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0011
+D, [2016-01-21T19:34:03.084633 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:34:03.085314 #16681] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000457s
+127.0.0.1 - - [21/Jan/2016:19:34:03 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0026
+127.0.0.1 - - [21/Jan/2016:19:34:05 -0300] "GET /nursery-add.html HTTP/1.1" 200 1154 0.0012
+2016-01-21 19:34:39 - BSON::ObjectId::Invalid - 'Almácigo 1' is an invalid ObjectId.:
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson/object_id.rb:251:in `from_string'
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson.rb:35:in `ObjectId'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:108:in `exists?'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:25:in `create'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/nurseries.rb:33:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+2016-01-21 19:35:57 - BSON::ObjectId::Invalid - 'Almácigo 1' is an invalid ObjectId.:
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson/object_id.rb:251:in `from_string'
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson.rb:35:in `ObjectId'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:108:in `exists?'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:25:in `create'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/nurseries.rb:33:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1610:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to rubyponia.9390.pid
+D, [2016-01-21T19:39:02.679177 #20854] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T19:39:02.684002 #20854] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T19:39:02.688181 #20854] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /web HTTP/1.1" 200 2967 0.0372
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0046
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0042
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:39:06 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0017
+D, [2016-01-21T19:39:07.056616 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:39:07.058282 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001443s
+127.0.0.1 - - [21/Jan/2016:19:39:07 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0035
+127.0.0.1 - - [21/Jan/2016:19:39:11 -0300] "GET /nursery-add.html HTTP/1.1" 304 - 0.0015
+D, [2016-01-21T19:39:21.452385 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 1"}}
+D, [2016-01-21T19:39:21.453157 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000492s
+D, [2016-01-21T19:39:21.461024 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"Almácigo 1", "type"=>"nursery", "dimensions"=>{"length"=>"5", "width"=>"3"}, "_id"=>BSON::ObjectId('56a15e1935cd165176000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=...
+D, [2016-01-21T19:39:21.733161 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.271783s
+127.0.0.1 - - [21/Jan/2016:19:39:21 -0300] "POST /nurseries HTTP/1.1" 200 43 0.2863
+D, [2016-01-21T19:39:21.739927 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:39:21.740623 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0004930000000000001s
+127.0.0.1 - - [21/Jan/2016:19:39:21 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0021
+D, [2016-01-21T19:39:22.200136 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 1"}}
+D, [2016-01-21T19:39:22.201466 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000968s
+127.0.0.1 - - [21/Jan/2016:19:39:22 -0300] "POST /nurseries HTTP/1.1" 400 42 0.0049
+D, [2016-01-21T19:39:26.780263 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 1"}}
+D, [2016-01-21T19:39:26.781360 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000767s
+127.0.0.1 - - [21/Jan/2016:19:39:26 -0300] "POST /nurseries HTTP/1.1" 400 42 0.0054
+D, [2016-01-21T19:39:28.592002 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 1"}}
+D, [2016-01-21T19:39:28.593233 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0008s
+127.0.0.1 - - [21/Jan/2016:19:39:28 -0300] "POST /nurseries HTTP/1.1" 400 42 0.0053
+D, [2016-01-21T19:39:31.976019 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T19:39:31.977433 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001043s
+D, [2016-01-21T19:39:31.978389 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T19:39:31.979033 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000475s
+127.0.0.1 - - [21/Jan/2016:19:39:31 -0300] "GET /nurseries/56a15e1935cd165176000000 HTTP/1.1" 200 177 0.0062
+127.0.0.1 - - [21/Jan/2016:19:39:31 -0300] "GET /nursery-show.html HTTP/1.1" 200 262 0.0029
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /web HTTP/1.1" 200 3014 0.0025
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0086
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0063
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0055
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0048
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0023
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:19:43:10 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0014
+D, [2016-01-21T19:43:11.718028 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:43:11.719194 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000822s
+127.0.0.1 - - [21/Jan/2016:19:43:11 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0034
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /web HTTP/1.1" 200 3024 0.0028
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0014
+D, [2016-01-21T19:44:00.825726 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:44:00.826423 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000501s
+127.0.0.1 - - [21/Jan/2016:19:44:00 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0022
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /web HTTP/1.1" 200 3067 0.0025
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0041
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0023
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:46:21 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T19:46:22.487749 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:46:22.488435 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00048300000000000003s
+127.0.0.1 - - [21/Jan/2016:19:46:22 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0021
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /web HTTP/1.1" 200 3067 0.0051
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0052
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /styles/styles.css HTTP/1.1" 200 3591 0.0037
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:19:52:21 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:52:22 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:19:52:22 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:19:52:22 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T19:52:22.667188 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:52:22.667886 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000494s
+127.0.0.1 - - [21/Jan/2016:19:52:22 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0021
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /web HTTP/1.1" 200 3067 0.0159
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /styles/styles.css HTTP/1.1" 200 3620 0.0016
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0028
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:19:55:05 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:19:55:06 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T19:55:06.443484 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:55:06.444271 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000569s
+127.0.0.1 - - [21/Jan/2016:19:55:06 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0028
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /web HTTP/1.1" 200 3067 0.0028
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /styles/styles.css HTTP/1.1" 200 3641 0.0052
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0045
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0040
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0023
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:19:56:06 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:19:56:07 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T19:56:07.668634 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:56:07.669335 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00051s
+127.0.0.1 - - [21/Jan/2016:19:56:07 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0022
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /web HTTP/1.1" 200 3024 0.0028
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0062
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /styles/styles.css HTTP/1.1" 200 3561 0.0050
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0047
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:19:57:13 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:19:57:14 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T19:57:14.841478 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T19:57:14.842189 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005110000000000001s
+127.0.0.1 - - [21/Jan/2016:19:57:14 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0022
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /web HTTP/1.1" 200 3020 0.0027
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0049
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:20:00:54 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T20:00:54.998675 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:00:54.999449 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000553s
+127.0.0.1 - - [21/Jan/2016:20:00:55 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0028
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /web HTTP/1.1" 200 3026 0.0027
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0055
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0028
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:20:01:18 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T20:01:19.229148 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:01:19.230070 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000684s
+127.0.0.1 - - [21/Jan/2016:20:01:19 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0031
+D, [2016-01-21T20:01:21.600465 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T20:01:21.601369 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000635s
+D, [2016-01-21T20:01:21.602000 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T20:01:21.602613 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00041900000000000005s
+127.0.0.1 - - [21/Jan/2016:20:01:21 -0300] "GET /nurseries/56a15e1935cd165176000000 HTTP/1.1" 200 177 0.0043
+127.0.0.1 - - [21/Jan/2016:20:01:21 -0300] "GET /nursery-show.html HTTP/1.1" 304 - 0.0007
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /web HTTP/1.1" 200 3044 0.0047
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0035
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /styles/styles.css HTTP/1.1" 200 3570 0.0027
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0020
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0019
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T20:02:38.858769 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:02:38.859548 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005470000000000001s
+127.0.0.1 - - [21/Jan/2016:20:02:38 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0025
+D, [2016-01-21T20:02:41.101591 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T20:02:41.102819 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000866s
+D, [2016-01-21T20:02:41.103702 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T20:02:41.104680 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000767s
+127.0.0.1 - - [21/Jan/2016:20:02:41 -0300] "GET /nurseries/56a15e1935cd165176000000 HTTP/1.1" 200 177 0.0064
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /web HTTP/1.1" 200 3044 0.0071
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0052
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /styles/styles.css HTTP/1.1" 200 3565 0.0045
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0043
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0039
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0042
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:20:06:53 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:20:06:54 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T20:06:54.348714 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:06:54.349409 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005s
+127.0.0.1 - - [21/Jan/2016:20:06:54 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0025
+127.0.0.1 - - [21/Jan/2016:20:07:23 -0300] "GET /web HTTP/1.1" 200 3044 0.0026
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /styles/styles.css HTTP/1.1" 200 3565 0.0017
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0045
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0041
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T20:07:24.728923 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:07:24.729575 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00045s
+127.0.0.1 - - [21/Jan/2016:20:07:24 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0021
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /web HTTP/1.1" 200 3069 0.0040
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /styles/styles.css HTTP/1.1" 200 3867 0.0216
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0209
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0022
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:20:09:08 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0008
+127.0.0.1 - - [21/Jan/2016:20:09:09 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T20:09:09.521770 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:09:09.522547 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005380000000000001s
+127.0.0.1 - - [21/Jan/2016:20:09:09 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0026
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /web HTTP/1.1" 200 3069 0.0048
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /styles/styles.css HTTP/1.1" 200 3750 0.0029
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0050
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0045
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0035
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:20:11:24 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:20:11:25 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T20:11:25.466450 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:11:25.467118 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000471s
+127.0.0.1 - - [21/Jan/2016:20:11:25 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0021
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /web HTTP/1.1" 200 3165 0.0065
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0013
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /styles/styles.css HTTP/1.1" 200 3823 0.0041
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0037
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0034
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0005
+D, [2016-01-21T20:53:13.800161 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:53:13.800933 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005480000000000001s
+127.0.0.1 - - [21/Jan/2016:20:53:13 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0024
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /web HTTP/1.1" 200 3165 0.0052
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0056
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /styles/styles.css HTTP/1.1" 200 3823 0.0063
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0051
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0047
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0038
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:20:57:29 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:20:57:30 -0300] "GET /styles/open.png HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T20:57:30.392418 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T20:57:30.393167 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000516s
+127.0.0.1 - - [21/Jan/2016:20:57:30 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0024
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /web HTTP/1.1" 200 3560 0.0040
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0016
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0027
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0029
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0019
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0015
+127.0.0.1 - - [21/Jan/2016:21:11:09 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T21:11:10.589353 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:11:10.590065 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000505s
+127.0.0.1 - - [21/Jan/2016:21:11:10 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0022
+127.0.0.1 - - [21/Jan/2016:21:11:11 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0037
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /web HTTP/1.1" 200 3573 0.0027
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0031
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0030
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0021
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:21:11:32 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0008
+D, [2016-01-21T21:11:33.401251 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:11:33.402100 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000581s
+127.0.0.1 - - [21/Jan/2016:21:11:33 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0026
+127.0.0.1 - - [21/Jan/2016:21:11:34 -0300] "GET /img/favicon.png HTTP/1.1" 200 6028 0.0019
+D, [2016-01-21T21:14:09.088566 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:14:09.089537 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000669s
+D, [2016-01-21T21:14:09.090093 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:14:09.090759 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000495s
+127.0.0.1 - - [21/Jan/2016:21:14:09 -0300] "GET /nurseries/56a15e1935cd165176000000 HTTP/1.1" 200 177 0.0048
+127.0.0.1 - - [21/Jan/2016:21:14:09 -0300] "GET /nursery-show.html HTTP/1.1" 304 - 0.0010
+D, [2016-01-21T21:14:09.911965 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:14:09.912715 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000508s
+D, [2016-01-21T21:14:09.913299 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:14:09.914466 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000365s
+127.0.0.1 - - [21/Jan/2016:21:14:09 -0300] "GET /nurseries/56a15e1935cd165176000000 HTTP/1.1" 200 177 0.0043
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /web HTTP/1.1" 200 3593 0.0284
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0144
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0019
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0018
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0010
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0009
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [21/Jan/2016:21:15:39 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0007
+D, [2016-01-21T21:15:41.369035 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:15:41.369743 #20854] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000523s
+127.0.0.1 - - [21/Jan/2016:21:15:41 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0022
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to rubyponia.9390.pid
+D, [2016-01-21T21:24:08.197350 #26220] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T21:24:08.202653 #26220] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T21:24:08.207235 #26220] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /web HTTP/1.1" 200 3593 0.0335
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0040
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0033
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0028
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0024
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0017
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /js/services.js HTTP/1.1" 200 1027 0.0015
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /js/controllers.js HTTP/1.1" 200 1437 0.0034
+127.0.0.1 - - [21/Jan/2016:21:24:13 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0009
+D, [2016-01-21T21:24:14.221042 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:24:14.223464 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002137s
+127.0.0.1 - - [21/Jan/2016:21:24:14 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0057
+2016-01-21 21:24:17 - BSON::ObjectId::Invalid - '[object Object]' is an invalid ObjectId.:
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson/object_id.rb:251:in `from_string'
+	/Library/Ruby/Gems/2.0.0/gems/bson-4.0.0/lib/bson.rb:35:in `ObjectId'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:108:in `exists?'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:18:in `get'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:102:in `delete'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/nurseries.rb:77:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /web HTTP/1.1" 200 3593 0.0029
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0044
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0040
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0036
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0034
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0032
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0025
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /js/controllers.js HTTP/1.1" 200 1442 0.0013
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0006
+D, [2016-01-21T21:26:12.881707 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:26:12.882514 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000565s
+127.0.0.1 - - [21/Jan/2016:21:26:12 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0027
+D, [2016-01-21T21:26:15.892522 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:26:15.893553 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007329999999999999s
+D, [2016-01-21T21:26:15.894145 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:26:15.894851 #26220] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000508s
+2016-01-21 21:26:15 - NoMethodError - undefined method `delete' for #<Mongo::Collection:0x007ff18c13f0f8>:
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/services/nurseries.rb:103:in `delete'
+	/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/nurseries.rb:77:in `block (2 levels) in <top (required)>'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1609:in `block in compile!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `[]'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (3 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:993:in `route_eval'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:974:in `block (2 levels) in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1014:in `block in process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1012:in `process_route'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:972:in `block in route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `each'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:971:in `route!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1084:in `block in dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1081:in `dispatch!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `block in call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `block in invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1066:in `invoke'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:906:in `call!'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:894:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/logger.rb:15:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:218:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:211:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb:21:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:181:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:2021:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `block in call'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1795:in `synchronize'
+	/Library/Ruby/Gems/2.0.0/gems/sinatra-1.4.6/lib/sinatra/base.rb:1486:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:86:in `block in pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `catch'
+	/Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/connection.rb:84:in `pre_process'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `call'
+	/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:1067:in `block in spawn_threadpool'
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to rubyponia.9390.pid
+D, [2016-01-21T21:27:24.692713 #26406] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T21:27:24.696190 #26406] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-01-21T21:27:24.698784 #26406] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://localhost/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /web HTTP/1.1" 200 3593 0.0111
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /styles/snap.css HTTP/1.1" 304 - 0.0074
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /styles/styles.css HTTP/1.1" 304 - 0.0065
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /js/ui-bootstrap-0.13.0.js HTTP/1.1" 304 - 0.0057
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /js/snap.js HTTP/1.1" 304 - 0.0050
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /js/app.js HTTP/1.1" 304 - 0.0042
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /js/services.js HTTP/1.1" 304 - 0.0030
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /js/controllers.js HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [21/Jan/2016:21:27:31 -0300] "GET /js/index.js HTTP/1.1" 304 - 0.0014
+D, [2016-01-21T21:27:32.124465 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:27:32.126016 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001344s
+127.0.0.1 - - [21/Jan/2016:21:27:32 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0034
+D, [2016-01-21T21:27:34.224824 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:27:34.225966 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007840000000000001s
+D, [2016-01-21T21:27:34.226872 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}}
+D, [2016-01-21T21:27:34.228020 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000768s
+D, [2016-01-21T21:27:34.229165 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.delete | STARTED | {"delete"=>"nurseries", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('56a15e1935cd165176000000')}, "limit"=>1}], "ordered"=>true}
+D, [2016-01-21T21:27:34.233564 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.delete | SUCCEEDED | 0.004078s
+127.0.0.1 - - [21/Jan/2016:21:27:34 -0300] "DELETE /nurseries/56a15e1935cd165176000000 HTTP/1.1" 200 49 0.0111
+D, [2016-01-21T21:27:34.243295 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:27:34.244201 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000561s
+127.0.0.1 - - [21/Jan/2016:21:27:34 -0300] "GET /nurseries/ HTTP/1.1" 200 2 0.0032
+127.0.0.1 - - [21/Jan/2016:21:27:35 -0300] "GET /nursery-add.html HTTP/1.1" 304 - 0.0015
+D, [2016-01-21T21:27:46.602409 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"name"=>"Almácigo 1"}}
+D, [2016-01-21T21:27:46.603232 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000575s
+D, [2016-01-21T21:27:46.604355 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"nurseries", "documents"=>[{"name"=>"Almácigo 1", "type"=>"nursery", "dimensions"=>{"length"=>"5", "width"=>"3"}, "_id"=>BSON::ObjectId('56a1778235cd166726000000'), "creation_date"=>#<Date: -4712-01-01 ((0j,0s,0n),+0s,2299161j)>, "buckets"=...
+D, [2016-01-21T21:27:46.605512 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000886s
+127.0.0.1 - - [21/Jan/2016:21:27:46 -0300] "POST /nurseries HTTP/1.1" 200 43 0.0229
+D, [2016-01-21T21:27:46.613962 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-01-21T21:27:46.615063 #26406] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007819999999999999s
+127.0.0.1 - - [21/Jan/2016:21:27:46 -0300] "GET /nurseries/ HTTP/1.1" 200 126 0.0038

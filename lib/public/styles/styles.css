@@ -122,20 +122,6 @@
     opacity: 0;
 }
 
-/* Styles for the "Settings" demo */
-.opt {
-    padding: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.opt p {
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 5px;
-    color: #222;
-    color: rgba(0, 0, 0, 0.6);
-}
-
 /* Default demo styles */
 .snap-content {
   background: #BFC7D8;
@@ -168,7 +154,12 @@
   list-style-type: none;
 }
 
-.snap-drawer li > a {
+.snap-drawer .list {
+  display: grid;
+  line-height: 0px;
+}
+
+.snap-drawer .list .list-item {
   display: block;
   border-bottom: 1px solid rgba(0,0,0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -178,6 +169,16 @@
   text-decoration: none;
   color: #ccc;
   text-indent: 20px;
+}
+
+.snap-drawer .list .list-item-remove {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #ccc;
+  background-color: red;
 }
 
 .snap-drawer p {
