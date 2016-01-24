@@ -7,85 +7,75 @@ class Nurseries
 
 	def initialize
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
-        @plants = Implementation[:plants]
 	end
+
+    def exists?(nursery_id)
+        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(nursery_id) }).to_a.length > 0
+    end
+
+    def exists_by_name?(nursery_name)
+        @mongo_client[:nurseries].find({ :name => nursery_name }).to_a.length > 0
+    end
 
 	def get_all
         @mongo_client[:nurseries].find.projection({ _id: 1, name: 1, type: 1, creation_date: 1 }).to_a
 	end
 
-	def get(id)
-		if ! exists?(id)
-			raise NotFoundException.new :nursery, id
+	def get(nursery_id)
+		if ! exists?(nursery_id)
+			raise NotFoundException.new :nursery, nursery_id
 		end
-        @mongo_client[:nurseries].find({:_id => BSON::ObjectId(id) }).to_a.first
+        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(nursery_id) }).to_a.first
 	end
 
 	def create(nursery)
-		if existsByName?(nursery["name"])
+		if exists_by_name?(nursery["name"])
 			raise AlreadyExistException.new :nursery, nursery["name"]
 		end
 		nursery["_id"] = BSON::ObjectId.new
-		nursery["creation_date"] = Date.new
+		nursery["creation_date"] = Time.new
 		nursery["buckets"] = []
 		@mongo_client[:nurseries].insert_one(nursery)
 		nursery["_id"]
 	end
 
+    def delete(nursery_id)
+        if ! exists?(nursery_id)
+            raise NotFoundException.new :nursery, nursery_id
+        end
+        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(nursery_id) }).delete_one
+        nursery_id
+    end
 
-	def set_bucket(id, position, plant_id)
-		nursery = get(id)
+    def empty_bucket(nursery_id, nursery_position)
+        nursery = get(nursery_id)
+
+        # Valido que la posición sea dentro del cajón
+        if nursery_position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+            raise WrongIndexException.new :nursery, nursery["name"]
+        end
+
+        @mongo_client[:nurseries]
+            .find({ :_id => BSON::ObjectId(nursery_id), :buckets => { '$elemMatch' => { :position => nursery_position } } })
+            .update_many({ '$pull' => { :buckets => {  :position => nursery_position  } } })
+        nursery_id
+    end
+
+	def insert_plant_in_bucket(nursery_id, nursery_position, plant_id)
+		nursery = get(nursery_id)
 
     	# Valido que la posición sea dentro del cajón
-    	if position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+     	if nursery_position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
     		raise WrongIndexException.new :nursery, nursery["name"]
     	end
-
-    	# Obtengo la planta a ingresar en el bucket
-        plant = @plants.get(plant_id)
-
-        puts plant
-        # Si la planta esta en un bucket, la remuevo del bucket
-        if plant["bucket"].has_key?("nursery_id")
-            remove_bucket(plant["bucket"]["nursery_id"].to_s, plant["bucket"]["nursery_position"])
-        end
-
-        bucket_to_empty = nursery["buckets"].select { |b| b["position"] == position }.first
-        
-        # Si el bucket donde inserto la planta esta ocupado, lo remuevo
-        if ! bucket_to_empty.nil?
-            remove_bucket(id, position)
-        end
 
         #inserto la planta en el bucket seleccionado
          @mongo_client[:nurseries]
-            .find({ :_id => BSON::ObjectId(id) })
-            .update_one({ '$push' => { :buckets => { :position => position, :plant_id => BSON::ObjectId(plant_id) } } })       
-        @plants.insert_in_bucket(plant_id, id, nursery["name"], position)
-
+            .find({ :_id => BSON::ObjectId(nursery_id) })
+            .update_one({ '$push' => { :buckets => { :position => nursery_position, :plant_id => BSON::ObjectId(plant_id) } } })       
+ 
         nursery["_id"]
 	end
-
-	def remove_bucket(id, position)
-		nursery = get(id)
-
-       	# Valido que la posición sea dentro del cajón
-    	if position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
-    		raise WrongIndexException.new :nursery, nursery["name"]
-    	end
-
-        bucket_to_empty = nursery["buckets"].select { |b| b["position"] == position }.first
-        puts "bucket_to_empty: #{bucket_to_empty}"
-    	if ! bucket_to_empty.nil?
-            @mongo_client[:nurseries]
-                .find({ :_id => BSON::ObjectId(id), :buckets => { '$elemMatch' => { :position => position } } })
-                .update_many({ '$pull' => { :buckets => {  :position => position  } } })
-
-            @plants.remove_from_bucket(bucket_to_empty["plant_id"], id, position)
-    	end
-        nursery["_id"]
-    end
-
 
 	def set_mesurement(id, mesurement)
 		nursery = get(id)
@@ -105,18 +95,4 @@ class Nurseries
         end
 	    nursery["_id"]
 	end
-
-	def delete(id)
-		nursery = get(id)
-		@mongo_client[:nurseries].find({ :_id => BSON::ObjectId(id) }).delete_one
-		nursery["_id"]
-	end
-
-	def exists?(id)
-		@mongo_client[:nurseries].find({ :_id => BSON::ObjectId(id) }).to_a.length > 0
-	end
-
-    def existsByName?(name)
-        @mongo_client[:nurseries].find({ :name => name }).to_a.length > 0
-    end
 end

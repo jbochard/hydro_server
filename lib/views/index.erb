@@ -35,28 +35,24 @@
                         <input id="search" type="text" ng-model='queryNursery' class="form-control" placeholder="Buscar cajones"/>
                     </div>
                     <div>
-                    <h4>Cajones</h4>
-                    <table style="width: 100%">
-                        <tbody>
-                            <tr class="list" ng-repeat="nursery in nurseries | orderBy: ['name']">
-                                <td>
-                                    <span class="list-item" ng-click="show_nursery(nursery._id)">{{nursery.name}}</span>  
-                                </td>
-                                <td>
-                                    <span class="list-item-remove" ng-click="remove_nursery(nursery._id)">-</span>                                    
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <ul >
-                        <li class="list">
-                         </li>
-                    </ul>
+                        <h4>Cajones</h4>
+                        <table style="width: 100%">
+                            <tbody>
+                                <tr class="list" ng-repeat="n in nurseries | orderBy: ['name']">
+                                    <td>
+                                        <span class="list-item" ng-click="show_nursery(n._id)">{{n.name}}</span>  
+                                    </td>
+                                    <td>
+                                        <span class="list-item-remove" ng-click="remove_nursery(n._id)">-</span>                                    
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div style="padding: 10px;">
-                    <button ng-click='add_nursery()' class="btn-primary">
-                        <i class="glyphicon glyphicon-plus"></i>
-                    </button>
+                        <button ng-click='add_nursery()' class="btn-primary">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
                     </div>
                 </div>
             </div>

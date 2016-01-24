@@ -4,25 +4,25 @@
   		<div class="row" style="margin-bottom: 10px">
       		<div class="col-lg-6">
       			<label>Nombre</label>
-      			<input type="text" ng-model='nursery.name' class="form-control" />
+      			<input type="text" ng-model='new_nursery.name' class="form-control" />
       		</div>
     	</div>
   		<div class="row" style="margin-bottom: 10px">
       		<div class="col-lg-6">
       			<label>Tipo</label>
-      			<select ng-model="nursery.type" ng-options="nursery.type as nursery.name for nursery in nursery_types" class="form-control" />
+      			<select ng-model="new_nursery.type" ng-options="nursery.type as nursery.name for nursery in nursery_types" class="form-control" />
       		</div>
     	</div>
   		<div class="row" style="margin-bottom: 10px">
       		<div class="col-lg-6">
       			<label>Largo</label>
-      			<input type="text" ng-model='nursery.dimensions.length' class="form-control" />
+      			<input type="number" min="1" ng-model='new_nursery.dimensions.length' class="form-control" />
       		</div>
     	</div>
   		<div class="row" style="margin-bottom: 10px">
       		<div class="col-lg-6">
       			<label>Ancho</label>
-      			<input type="text" ng-model='nursery.dimensions.width' class="form-control" />
+      			<input type="number" min="1" ng-model='new_nursery.dimensions.width' class="form-control" />
       		</div>
     	</div>
   		<div class="row" style="padding-top: 10px; padding-left: 15px;">

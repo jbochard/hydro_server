@@ -1,22 +1,23 @@
 # coding: utf-8
 
-set :plants, Implementation[:plants]
-set :post_schema, 					JSON.parse(File.read("lib/schemas/plants_post.schema"))
-set :patch_add_mesurement_schema, 	JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
+set :hydroponicSerivces, Implementation[:hydroponic]
+set :plant_post_schema, 							JSON.parse(File.read("lib/schemas/plant_post.schema"))
+set :plant_patch_add_mesurement_schema, 			JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
+set :plant_patch_remove_plant_from_bucket_schema, 	JSON.parse(File.read("lib/schemas/plant_patch_remove_plant_from_bucket.schema"))
 
 namespace '/plants' do
  
 	get '/?' do
 		content_type :json
 		status 200
-		settings.plants.get_all.to_json
+		settings.hydroponicSerivces.get_all_plants.to_json
 	end
 
-	get '/:id' do |id|
+	get '/:plant_id' do |plant_id|
 		content_type :json
 		begin
 			status 200
-			settings.plants.get(id).to_json
+			settings.hydroponicSerivces.get_plant(plant_id).to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
@@ -27,10 +28,9 @@ namespace '/plants' do
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			JSON::Validator.validate!(settings.post_schema, body)
+			JSON::Validator.validate!(settings.plant_post_schema, body)
 
-			id = settings.plants.create(body)
-			
+			id = settings.hydroponicSerivces.create_plant(body)
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -43,15 +43,15 @@ namespace '/plants' do
 		end
 	end
 
-	patch '/:id' do |id|
+	patch '/:plant_id' do |plant_id|
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			case body["op"].upcase
-			when "ADD_MESUREMENT"
-				JSON::Validator.validate!(settings.patch_add_mesurement_schema, body)
-				id = settings.plants.add_mesurement(id, body["value"])
-			end
+			case body["op"].upcase			
+		    when "REMOVE_PLANT_FROM_BUCKET"
+				JSON::Validator.validate!(settings.plant_patch_remove_plant_from_bucket_schema, body)
+				id = settings.hydroponicSerivces.remove_plant_from_bucket(plant_id)
+			end			
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -59,8 +59,19 @@ namespace '/plants' do
 			{ :error => e.message }.to_json
 		rescue JSON::Schema::ValidationError => e
 			status 400
-			{ :error => e.message }.to_json
-
+			{ :error => e.message }.to_json			
 		end
+	end
+
+	delete '/:plant_id' do |plant_id|
+		content_type :json
+		begin
+			id = settings.hydroponicSerivces.delete_plant(plant_id)
+			status 200
+			{ :_id => id }.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		end		
 	end
 end

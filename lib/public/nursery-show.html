@@ -1,24 +1,55 @@
 <div class="row">
 	<div class="col-lg-5">
-		<h2>{{nursery.name}}</h2>
+		<h2>{{sel_nursery.name}}</h2>
 		<table class="nursery">
 			<tbody>
-				<tr ng-repeat="r in range(nursery.dimensions.width)">
-					<td class="bucket" ng-click="select_bucket(r * nursery.dimensions.length + c + 1) " ng-class="{ nursery_taken: has_bucket(nursery, r * nursery.dimensions.length + c + 1), bucket_selected : selected_bucket == (r * nursery.dimensions.length + c + 1) } "  ng-repeat="c in range(nursery.dimensions.length)">{{r * nursery.dimensions.length + c + 1 }}</td>
+				<tr ng-repeat="r in range(sel_nursery.dimensions.width)">
+					<td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-click="select_bucket(r, c)" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<div class="col-lg-4">
+	<div class="col-lg-6">
 		<h2>Plantas</h2>
+		<div class="form-inline" style="padding-bottom: 20px;">
+			<div class="form-group">
+				<label style="padding-right: 5px;" for="plant_add">Agregar planta: </label>
+		   		<input id="plant_add" type="text" ng-model='plant.type' class="form-control" />
+				<button ng-click='add_plant()' class="btn-primary">
+	            	<i class="glyphicon glyphicon-plus"></i>
+	            </button>
+            </div>
+		</div>
 		<div class="bodycontainer scrollable">
 			<table class="table table-hover table-condensed table-scrollable">
+				<thead>
+  					<tr>
+    					<th>Código</th>
+     					<th>Tipo</th>
+     					<th>Creación</th>
+     					<th>Cajón</th>
+     					<th>Posición</th>
+     					<th></th>
+  					</tr>
+ 				</thead>
 			    <tbody>
 			    	<tr ng-repeat="plant in plants">
+			    		<td>{{plant.code}}</td>
 			    		<td>{{plant.type}}</td>
 			    		<td>{{plant.creation_date}}</td>
-			    		<td>{{plant.bucket.nursery_id}}</td>
+			    		<td>{{plant.bucket.nursery_name}}</td>
 			    		<td>{{plant.bucket.nursery_position}}</td>
+			    		<td>
+			    			<a ng-click='set_plant_in_bucket(plant._id)' style="padding-right: 5px;">
+	            				<img style="width: 30px;" src="/img/plantar.png"/>
+	            			</a>
+			    			<a ng-click='remove_plant_from_bucket(plant._id)' style="padding-right: 5px;">
+	            				<img style="width: 30px;" src="/img/desplantar.png"/>
+	            			</a>
+			    			<button ng-click='remove_plant(plant._id)' class="btn-primary">
+	            				<i class="glyphicon glyphicon-minus"></i>
+	            			</button>
+			    		</td>
 			    	</tr>
 			    </tbody>
 			</table>

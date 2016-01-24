@@ -3,53 +3,63 @@ require 'services/exceptions'
 
 class Plants
 
-	def initialize
+	def initialize(configurationService, mesurementService)
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
-        @mesurements = Implementation[:mesurements]
+        @mesurementService = mesurementService
+        @configurationService = configurationService
 	end
 
-	def exists?(id)
-       	plant_id = BSON::ObjectId(id)
+	def exists?(plant_id)
+       	plant_id = BSON::ObjectId(plant_id)
 		@mongo_client[:plants].find({ :_id => plant_id }).to_a.length > 0
 	end
 
 	def get_all
-        @mongo_client[:plants].find.projection({ _id: 1, type: 1, creation_date: 1, bucket: 1 }).to_a
+        @mongo_client[:plants].find.projection({ _id: 1, code: 1, type: 1, creation_date: 1, bucket: 1 }).to_a
 	end
 
-	def get(id)
-		if ! exists?(id)
-			raise NotFoundException.new :plant, id
+	def get(plant_id)
+		if ! exists?(plant_id)
+			raise NotFoundException.new :plant, plant_id
 		end
-       	plant_id = BSON::ObjectId(id)
-        @mongo_client[:plants].find({:_id => plant_id }).to_a.first
+        @mongo_client[:plants].find({:_id => BSON::ObjectId(plant_id) }).to_a.first
 	end
 
 	def create(plant)
 		plant["_id"] = BSON::ObjectId.new
-		plant["creation_date"] = Date.new
+		plant["code"] = @configurationService.get_plant_code
+		plant["creation_date"] = Time.new
 		plant["mesurements"] = []
 		plant["bucket"] = {}
 		@mongo_client[:plants].insert_one(plant)
 		plant["_id"]
 	end
 
-	def insert_in_bucket(id, nursery_id, nursery_name, nursery_pos)
-		if ! exists?(id)
-			raise NotFoundException.new :plant, id
+	def delete(plant_id)
+		if ! exists?(plant_id)
+			raise NotFoundException.new :plant, plant_id
 		end
-        @mongo_client[:plants].find({ :bucket => {:nursery_id => BSON::ObjectId(nursery_id), :nursery_position => nursery_pos } }).update_many({ '$set' => { :bucket => {} } })
-        @mongo_client[:plants].find({ :_id => BSON::ObjectId(id) }).update_one({ '$set' => { :bucket => { :nursery_id => BSON::ObjectId(nursery_id), :nursery_name => nursery_name, :nursery_position => nursery_pos } } })
+        @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).delete_one
+        plant_id
 	end
 
-	def remove_from_bucket(id, nursery_id, pos)
-		plant = get(id)
-        @mongo_client[:plants].find({ :_id => BSON::ObjectId(id) }).update_one({ '$set' => { :bucket => {} } })
+	def quit_plant_from_bucket(plant_id)
+		if ! exists?(plant_id)
+			raise NotFoundException.new :plant, plant_id
+		end
+        @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).update_one({ '$set' => { :bucket => {} } })
+	end
+
+	def insert_plant_in_bucket(plant_id, nursery_id, nursery_name, nursery_position)
+		if ! exists?(plant_id)
+			raise NotFoundException.new :plant, plant_id
+		end
+        @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).update_one({ '$set' => { :bucket => { :nursery_id => BSON::ObjectId(nursery_id), :nursery_name => nursery_name, :nursery_position => nursery_position } } })
 	end
 
 	def add_mesurement(id, mesurement)
 		plant = get(id)
-		mesurement["date"] ||= Date.new
+		mesurement["date"] ||= Time.new
 		mesurement_types = @mesurements.get_all.map { |m| m["type"] }
 
 		mesurements = []

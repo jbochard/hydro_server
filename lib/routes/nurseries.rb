@@ -1,9 +1,8 @@
 # coding: utf-8
 
-set :nurseries, Implementation[:nurseries]
-set :post_schema, 					JSON.parse(File.read("lib/schemas/nurseries_post.schema"))
-set :patch_set_bucket_schema, 		JSON.parse(File.read("lib/schemas/nurseries_patch_set_bucket.schema"))
-set :patch_remove_bucket_schema, 	JSON.parse(File.read("lib/schemas/nurseries_patch_remove_bucket.schema"))
+set :hydroponicSerivces, Implementation[:hydroponic]
+set :nursery_post_schema, 							JSON.parse(File.read("lib/schemas/nursery_post.schema"))
+set :nursery_patch_set_plant_in_bucket_schema, 		JSON.parse(File.read("lib/schemas/nursery_patch_set_plant_in_bucket.schema"))
 set :patch_set_mesurement_schema, 	JSON.parse(File.read("lib/schemas/nurseries_patch_set_mesurement.schema"))
 
 namespace '/nurseries' do
@@ -11,14 +10,14 @@ namespace '/nurseries' do
 	get '/?' do
 		content_type :json
 		status 200
-		settings.nurseries.get_all.to_json
+		settings.hydroponicSerivces.get_all_nurseries.to_json
 	end
 
 	get '/:id' do |id|
 		content_type :json
 		begin
 			status 200
-			settings.nurseries.get(id).to_json
+			settings.hydroponicSerivces.get_nursery(id).to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
@@ -29,8 +28,8 @@ namespace '/nurseries' do
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			JSON::Validator.validate!(settings.post_schema, body)
-			id = settings.nurseries.create(body)
+			JSON::Validator.validate!(settings.nursery_post_schema, body)
+			id = settings.hydroponicSerivces.create_nursery(body)
 			
 			status 200
 			{ :_id => id }.to_json
@@ -43,17 +42,19 @@ namespace '/nurseries' do
 		end
 	end
 
-	patch '/:id' do |id|
+	patch '/:nursery_id' do |nursery_id|
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
 			case body["op"].upcase			
-			when "SET_BUCKET"
-				JSON::Validator.validate!(settings.patch_set_bucket_schema, body)
-				id = settings.nurseries.set_bucket(id, body["value"]["position"], body["value"]["plant_id"])
-		    when "REMOVE_BUCKET"
-				JSON::Validator.validate!(settings.patch_remove_bucket_schema, body)
-				id = settings.nurseries.remove_bucket(id, body["value"]["position"])
+			when "SET_PLANT_IN_BUCKET"
+				JSON::Validator.validate!(settings.nursery_patch_set_plant_in_bucket_schema, body)
+				id = settings.hydroponicSerivces.set_plant_in_bucket(body["value"]["plant_id"], nursery_id, body["value"]["position"])
+
+		    when "REMOVE_PLANT_FROM_BUCKET"
+				JSON::Validator.validate!(settings.nursery_patch_remove_plant_from_bucket_schema, body)
+				id = settings.hydroponicSerivces.remove_plant_from_bucket(body["value"]["plant_id"])
+
 		    when "SET_MESUREMENT"
 				JSON::Validator.validate!(settings.patch_set_mesurement_schema, body)
 				id = settings.nurseries.set_mesurement(id, body["value"])
@@ -69,10 +70,10 @@ namespace '/nurseries' do
 		end
 	end
 
-	delete '/:id' do |id|
+	delete '/:nursery_id' do |nursery_id|
 		content_type :json
 		begin
-			id = settings.nurseries.delete(id).to_json
+			id = settings.hydroponicSerivces.delete_nursery(nursery_id).to_json
 
 			status 200
 			{ :_id => id }.to_json

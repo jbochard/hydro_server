@@ -2,15 +2,11 @@
   "type": "object",
   "required": [ "op", "value" ],
   "properties": {
-    "op": { "type": { "enum": [ "SET_BUCKET" ] } },
+    "op": { "type": { "enum": [ "REMOVE_PLANT_FROM_BUCKET" ] } },
     "value": {
       "type": "object",
-      "required": [ "position", "plant_id" ],
+      "required": [ "plant_id" ],
       "properties": {
-        "position": {
-          "type": "integer",
-           "minimum": 1
-       },
         "plant_id": {
           "type": "string"
         }
