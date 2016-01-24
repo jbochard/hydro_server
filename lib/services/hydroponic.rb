@@ -62,6 +62,18 @@ class Hydroponic
         plant_id
     end
 
+    def register_mesurement(nursery_id, mesurement)
+        nursery = @nurseriesService.get(nursery_id)
+ 
+        # Seteo la fecha de medición a la que se pasó u hoy
+        mesurement["date"] ||= Time.new
+
+        nursery["buckets"].each do |bucket|
+            @plantsService.register_mesurement(bucket["plant_id"]["$oid"], mesurement)
+        end
+        nursery_id
+    end 
+
     def get_all_plants
         @plantsService.get_all
     end

@@ -51,7 +51,7 @@ class Nurseries
         nursery = get(nursery_id)
 
         # Valido que la posición sea dentro del cajón
-        if nursery_position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+        if nursery_position > (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
             raise WrongIndexException.new :nursery, nursery["name"]
         end
 
@@ -65,7 +65,7 @@ class Nurseries
 		nursery = get(nursery_id)
 
     	# Valido que la posición sea dentro del cajón
-     	if nursery_position >= (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
+     	if nursery_position > (nursery["dimensions"]["length"] * nursery["dimensions"]["width"])
     		raise WrongIndexException.new :nursery, nursery["name"]
     	end
 

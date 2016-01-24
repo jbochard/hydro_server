@@ -1,24 +1,38 @@
 <div class="row">
-	<div class="col-lg-5">
-		<h2>{{sel_nursery.name}}</h2>
-		<table class="nursery">
-			<tbody>
-				<tr ng-repeat="r in range(sel_nursery.dimensions.width)">
-					<td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-click="select_bucket(r, c)" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="col-lg-5" style="padding-left: 20px;">
+		<div>
+			<h2>{{sel_nursery.name}}</h2>
+			<table class="nursery">
+				<tbody>
+					<tr ng-repeat="r in range(sel_nursery.dimensions.width)">
+						<td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-click="select_bucket(r, c)" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h2>Medición</h2>
+			<div class="form-inline" style="padding-bottom: 40px;">
+				<div class="form-group">
+					<label style="padding-right: 5px;" for="plant_add">Agregar planta: </label>
+			   		<input id="plant_add" type="text" ng-model='plant.type' class="form-control" />
+					<button ng-click='add_plant()' class="btn-primary">
+		            	<i class="glyphicon glyphicon-plus"></i>
+		            </button>
+	            </div>
+			</div>	
+		</div>	
 	</div>
 	<div class="col-lg-6">
-		<h2>Plantas</h2>
-		<div class="form-inline" style="padding-bottom: 20px;">
-			<div class="form-group">
-				<label style="padding-right: 5px;" for="plant_add">Agregar planta: </label>
-		   		<input id="plant_add" type="text" ng-model='plant.type' class="form-control" />
+		<div layout="row" class="layout-row">
+			<div>
+				<h2 >Plantas</h2>
+			</div>
+			<div>
 				<button ng-click='add_plant()' class="btn-primary">
 	            	<i class="glyphicon glyphicon-plus"></i>
 	            </button>
-            </div>
+	        </div>
 		</div>
 		<div class="bodycontainer scrollable">
 			<table class="table table-hover table-condensed table-scrollable">
@@ -33,10 +47,10 @@
   					</tr>
  				</thead>
 			    <tbody>
-			    	<tr ng-repeat="plant in plants">
+			    	<tr ng-repeat="plant in plants" ng-click="show_plant(plant._id)">
 			    		<td>{{plant.code}}</td>
 			    		<td>{{plant.type}}</td>
-			    		<td>{{plant.creation_date}}</td>
+			    		<td>{{plant.creation_date | date: 'dd-MM-yyyy'}}</td>
 			    		<td>{{plant.bucket.nursery_name}}</td>
 			    		<td>{{plant.bucket.nursery_position}}</td>
 			    		<td>

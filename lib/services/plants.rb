@@ -57,18 +57,16 @@ class Plants
         @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).update_one({ '$set' => { :bucket => { :nursery_id => BSON::ObjectId(nursery_id), :nursery_name => nursery_name, :nursery_position => nursery_position } } })
 	end
 
-	def add_mesurement(id, mesurement)
-		plant = get(id)
-		mesurement["date"] ||= Time.new
-		mesurement_types = @mesurements.get_all.map { |m| m["type"] }
+	def register_mesurement(plant_id, mesurement)
+		plant = get(plant_id)
 
-		mesurements = []
-		mesurement.each do |k, v|
-			mesurements << { "type" => k, "value" => mesurement[k], "date" => mesurement["date"] } if mesurement_types.contain k
+		if ! @mesurementService.exists?(mesurement["type"])
+			raise NotFoundException.new :mesurement, mesurement["type"]
 		end
 
-		plant["mesurements"] = plant["mesurements"] + mesurements
-		@mongo_client[:plants].find({ :_id => plant["_id"] }).replace_one(plant)
+         @mongo_client[:plants]
+            .find({ :_id => BSON::ObjectId(plant_id) })
+            .update_one({ '$push' => { :mesurements => mesurement } })
 		plant_id
 	end
 end

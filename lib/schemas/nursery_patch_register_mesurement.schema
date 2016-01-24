@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "REGISTER_MESUREMENT" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "type", "value" ],
+      "properties": {
+      	"type": { "type": "string" },
+      	"value": { "type": "number" }
+      }
+    }
+  }
+}
