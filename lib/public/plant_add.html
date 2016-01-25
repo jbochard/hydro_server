@@ -10,7 +10,7 @@
     </div>
 	<div class="form-group">
 		<label style="padding-right: 5px;" for="plant_type">Tipo: </label>
-   		<input id="plant_type" type="text" ng-model='plant_selected.type' class="form-control" />
-    </div>
-    <button ng-click='save_plant()' class="btn-primary">Guardar</button>
+    <select ng-model="plant_selected.type_id" ng-options="plant_type._id as plant_type.name for plant_type in plant_types" class="form-control" /> 
+  </div>
+  <button ng-click='save_plant()' class="btn-primary">Guardar</button>
 </div>

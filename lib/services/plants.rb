@@ -3,10 +3,11 @@ require 'services/exceptions'
 
 class Plants
 
-	def initialize(configurationService, mesurementService)
+	def initialize(configurationService, mesurementService, plantTypesService)
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
         @mesurementService = mesurementService
         @configurationService = configurationService
+        @plantTypesService = plantTypesService
 	end
 
 	def exists?(plant_id)
@@ -15,14 +16,32 @@ class Plants
 	end
 
 	def get_all
-        @mongo_client[:plants].find.projection({ _id: 1, code: 1, type: 1, creation_date: 1, bucket: 1 }).to_a
+        @mongo_client[:plants].
+        	find.
+        	projection({ _id: 1, code: 1, type: 1, type_id: 1, creation_date: 1, bucket: 1 }).
+        	to_a.map do |plant|
+        		if plant.has_key?("type")
+        			plant_type = @plantTypesService.get_by_name(plant["type"])
+	        		plant["type_id"] 	= plant_type["_id"]
+	       			plant.delete("type")
+	       			@mongo_client[:plants].find({ :_id => plant["_id"] }).update_one(plant)
+
+	        		plant["type_name"] 	= plant_type["name"]
+	       			plant
+	       		else
+	       			plant["type_name"] = @plantTypesService.get(plant['type_id'].to_s)["name"]
+	       			plant
+	       		end
+        	end
 	end
 
 	def get(plant_id)
 		if ! exists?(plant_id)
 			raise NotFoundException.new :plant, plant_id
 		end
-        @mongo_client[:plants].find({:_id => BSON::ObjectId(plant_id) }).to_a.first
+        plant = @mongo_client[:plants].find({:_id => BSON::ObjectId(plant_id) }).to_a.first
+		plant["type_name"] = @plantTypesService.get(plant["type_id"])["type_name"]
+		plant
 	end
 
 	def create(plant)
