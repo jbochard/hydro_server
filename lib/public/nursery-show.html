@@ -47,12 +47,12 @@
   					</tr>
  				</thead>
 			    <tbody>
-			    	<tr ng-repeat="plant in plants" ng-click="show_plant(plant._id)">
-			    		<td>{{plant.code}}</td>
-			    		<td>{{plant.type}}</td>
-			    		<td>{{plant.creation_date | date: 'dd-MM-yyyy'}}</td>
-			    		<td>{{plant.bucket.nursery_name}}</td>
-			    		<td>{{plant.bucket.nursery_position}}</td>
+			    	<tr ng-repeat="plant in plants">
+			    		<td ng-click="show_plant(plant._id)">{{plant.code}}</td>
+			    		<td ng-click="show_plant(plant._id)">{{plant.type_name}}</td>
+			    		<td ng-click="show_plant(plant._id)">{{plant.creation_date | date: 'dd-MM-yyyy'}}</td>
+			    		<td ng-click="show_plant(plant._id)">{{plant.bucket.nursery_name}}</td>
+			    		<td ng-click="show_plant(plant._id)">{{plant.bucket.nursery_position}}</td>
 			    		<td>
 			    			<a ng-click='set_plant_in_bucket(plant._id)' style="padding-right: 5px;">
 	            				<img style="width: 30px;" src="/img/plantar.png"/>

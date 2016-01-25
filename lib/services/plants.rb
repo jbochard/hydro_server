@@ -29,7 +29,11 @@ class Plants
 	        		plant["type_name"] 	= plant_type["name"]
 	       			plant
 	       		else
-	       			plant["type_name"] = @plantTypesService.get(plant['type_id'].to_s)["name"]
+	       			puts "Plant: #{plant}"
+	       			puts "Type ID: #{plant['type_id']}"
+	       			puts "ID class: #{plant['type_id'].class.to_s}"
+	       			puts "ID: #{plant['type_id'].inspect}"
+	       			plant["type_name"] = @plantTypesService.get(plant['type_id'])["name"]
 	       			plant
 	       		end
         	end
@@ -47,6 +51,7 @@ class Plants
 	def create(plant)
 		plant["_id"] = BSON::ObjectId.new
 		plant["code"] = @configurationService.get_plant_code
+		plant["type_id"] = BSON::ObjectId(plant["type_id"]["$oid"])
 		plant["creation_date"] = Time.new
 		plant["mesurements"] = []
 		plant["bucket"] = {}
