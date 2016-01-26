@@ -9,6 +9,7 @@ class Migration
 
 	def migrate
 		migrate_plants
+		migrate_mesurements	
 		migrate_nurseries
 		migrate_plant_types		
 	end
@@ -49,6 +50,18 @@ class Migration
 				@mongo_client[:plant_types].insert_one(plant_type)
 
 				@mongo_client[:plant_types].find({ :_id => BSON::ObjectId(plant_type["_id"]) }).delete_one
+			end
+		end
+	end
+
+	def migrate_mesurements
+		puts "Migrando mesurements"
+		@mongo_client[:mesurements].find.to_a.each do |mesurement|
+			if ! mesurement["_id"].is_a? String
+				mesurement["_id"] = mesurement["_id"].to_s
+				@mongo_client[:mesurements].insert_one(mesurement)
+
+				@mongo_client[:mesurements].find({ :_id => BSON::ObjectId(mesurement["_id"]) }).delete_one
 			end
 		end
 	end
