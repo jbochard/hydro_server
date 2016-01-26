@@ -12,5 +12,5 @@
 		<label style="padding-right: 5px;" for="plant_type_id">Tipo: </label>
     <select id="plant_type_id" ng-model="plant_selected.type_id" ng-options="pt._id as pt.name for pt in plant_types" class="form-control" /> 
   </div>
-  <button ng-click='save_plant()' class="btn-primary">Guardar</button>
+  <button ng-click='update_plant()' class="btn-primary">Guardar</button>
 </div>

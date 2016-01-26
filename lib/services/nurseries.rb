@@ -10,7 +10,7 @@ class Nurseries
 	end
 
     def exists?(nursery_id)
-        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(nursery_id) }).to_a.length > 0
+        @mongo_client[:nurseries].find({ :_id => nursery_id }).to_a.length > 0
     end
 
     def exists_by_name?(nursery_name)
@@ -25,14 +25,14 @@ class Nurseries
 		if ! exists?(nursery_id)
 			raise NotFoundException.new :nursery, nursery_id
 		end
-        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(nursery_id) }).to_a.first
+        @mongo_client[:nurseries].find({ :_id => nursery_id }).to_a.first
 	end
 
 	def create(nursery)
 		if exists_by_name?(nursery["name"])
 			raise AlreadyExistException.new :nursery, nursery["name"]
 		end
-		nursery["_id"] = BSON::ObjectId.new
+		nursery["_id"] = BSON::ObjectId.new.to_s
 		nursery["creation_date"] = Time.new
 		nursery["buckets"] = []
 		@mongo_client[:nurseries].insert_one(nursery)
@@ -43,7 +43,7 @@ class Nurseries
         if ! exists?(nursery_id)
             raise NotFoundException.new :nursery, nursery_id
         end
-        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(nursery_id) }).delete_one
+        @mongo_client[:nurseries].find({ :_id => nursery_id }).delete_one
         nursery_id
     end
 
@@ -56,7 +56,7 @@ class Nurseries
         end
 
         @mongo_client[:nurseries]
-            .find({ :_id => BSON::ObjectId(nursery_id), :buckets => { '$elemMatch' => { :position => nursery_position } } })
+            .find({ :_id => nursery_id, :buckets => { '$elemMatch' => { :position => nursery_position } } })
             .update_many({ '$pull' => { :buckets => {  :position => nursery_position  } } })
         nursery_id
     end
@@ -71,14 +71,14 @@ class Nurseries
 
         #inserto la planta en el bucket seleccionado
          @mongo_client[:nurseries]
-            .find({ :_id => BSON::ObjectId(nursery_id) })
-            .update_one({ '$push' => { :buckets => { :position => nursery_position, :plant_id => BSON::ObjectId(plant_id) } } })       
+            .find({ :_id => nursery_id })
+            .update_one({ '$push' => { :buckets => { :position => nursery_position, :plant_id => plant_id } } })       
  
         nursery["_id"]
 	end
 
-	def set_mesurement(id, mesurement)
-		nursery = get(id)
+	def set_mesurement(nursery_id, mesurement)
+		nursery = get(nursery_id)
  
     	# Seteo la fecha de medición a la que se pasó u hoy
     	mesurement["date"] ||= Date.new
@@ -86,7 +86,7 @@ class Nurseries
     	# Seteo la medición en el cajón
         patch = Hana::Patch.new [ { "op" => "replace", 	"path" => "/last_mesurement", "value" => mesurement } ]
         nursery = patch.apply(nursery)
-        @mongo_client[:nurseries].find({ :_id => BSON::ObjectId(id) }).replace_one(nursery)
+        @mongo_client[:nurseries].find({ :_id => nursery_id }).replace_one(nursery)
 
         # Agrego la última medición al cajón y agrego la medición en cada planta del cajón.
         nursery["buckets"].each do |pos, bucket|

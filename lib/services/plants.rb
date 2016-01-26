@@ -11,7 +11,7 @@ class Plants
 	end
 
 	def exists?(plant_id)
-       	plant_id = BSON::ObjectId(plant_id)
+       	plant_id = plant_id
 		@mongo_client[:plants].find({ :_id => plant_id }).to_a.length > 0
 	end
 
@@ -29,10 +29,6 @@ class Plants
 	        		plant["type_name"] 	= plant_type["name"]
 	       			plant
 	       		else
-	       			puts "Plant: #{plant}"
-	       			puts "Type ID: #{plant['type_id']}"
-	       			puts "ID class: #{plant['type_id'].class.to_s}"
-	       			puts "ID: #{plant['type_id'].inspect}"
 	       			plant["type_name"] = @plantTypesService.get(plant['type_id'])["name"]
 	       			plant
 	       		end
@@ -43,15 +39,14 @@ class Plants
 		if ! exists?(plant_id)
 			raise NotFoundException.new :plant, plant_id
 		end
-        plant = @mongo_client[:plants].find({:_id => BSON::ObjectId(plant_id) }).to_a.first
+        plant = @mongo_client[:plants].find({:_id => plant_id }).to_a.first
 		plant["type_name"] = @plantTypesService.get(plant["type_id"])["type_name"]
 		plant
 	end
 
 	def create(plant)
-		plant["_id"] = BSON::ObjectId.new
+		plant["_id"] = BSON::ObjectId.new.to_s
 		plant["code"] = @configurationService.get_plant_code
-		plant["type_id"] = BSON::ObjectId(plant["type_id"]["$oid"])
 		plant["creation_date"] = Time.new
 		plant["mesurements"] = []
 		plant["bucket"] = {}
@@ -59,11 +54,19 @@ class Plants
 		plant["_id"]
 	end
 
+	def update(plant_id, plant)
+		if ! exists?(plant_id)
+			raise NotFoundException.new :plant, plant_id
+		end
+		@mongo_client[:plants].find({ :_id => plant_id }).replace_one(plant)
+		plant_id
+	end
+
 	def delete(plant_id)
 		if ! exists?(plant_id)
 			raise NotFoundException.new :plant, plant_id
 		end
-        @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).delete_one
+        @mongo_client[:plants].find({ :_id => plant_id }).delete_one
         plant_id
 	end
 
@@ -71,14 +74,14 @@ class Plants
 		if ! exists?(plant_id)
 			raise NotFoundException.new :plant, plant_id
 		end
-        @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).update_one({ '$set' => { :bucket => {} } })
+        @mongo_client[:plants].find({ :_id => plant_id }).update_one({ '$set' => { :bucket => {} } })
 	end
 
 	def insert_plant_in_bucket(plant_id, nursery_id, nursery_name, nursery_position)
 		if ! exists?(plant_id)
 			raise NotFoundException.new :plant, plant_id
 		end
-        @mongo_client[:plants].find({ :_id => BSON::ObjectId(plant_id) }).update_one({ '$set' => { :bucket => { :nursery_id => BSON::ObjectId(nursery_id), :nursery_name => nursery_name, :nursery_position => nursery_position } } })
+        @mongo_client[:plants].find({ :_id => plant_id }).update_one({ '$set' => { :bucket => { :nursery_id => nursery_id, :nursery_name => nursery_name, :nursery_position => nursery_position } } })
 	end
 
 	def register_mesurement(plant_id, mesurement)
@@ -89,7 +92,7 @@ class Plants
 		end
 
          @mongo_client[:plants]
-            .find({ :_id => BSON::ObjectId(plant_id) })
+            .find({ :_id => plant_id })
             .update_one({ '$push' => { :mesurements => mesurement } })
 		plant_id
 	end

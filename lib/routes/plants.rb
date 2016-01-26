@@ -2,6 +2,7 @@
 
 set :hydroponicSerivces, Implementation[:hydroponic]
 set :plant_post_schema, 							JSON.parse(File.read("lib/schemas/plant_post.schema"))
+set :plant_put_schema, 								JSON.parse(File.read("lib/schemas/plant_put.schema"))
 set :plant_patch_add_mesurement_schema, 			JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
 set :plant_patch_remove_plant_from_bucket_schema, 	JSON.parse(File.read("lib/schemas/plant_patch_remove_plant_from_bucket.schema"))
 
@@ -31,6 +32,25 @@ namespace '/plants' do
 			JSON::Validator.validate!(settings.plant_post_schema, body)
 
 			id = settings.hydroponicSerivces.create_plant(body)
+			status 200
+			{ :_id => id }.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json
+
+		end
+	end
+
+	put '/:plant_id' do |plant_id| 
+		content_type :json
+		begin
+			body = JSON.parse(request.body.read)
+			JSON::Validator.validate!(settings.plant_put_schema, body)
+
+			id = settings.hydroponicSerivces.update_plant(plant_id, body)
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e

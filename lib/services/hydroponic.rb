@@ -86,6 +86,10 @@ class Hydroponic
         @plantsService.create(plant)
     end
 
+    def update_plant(plant_id, plant)
+        @plantsService.update(plant_id, plant)
+    end
+
     def delete_plant(plant_id)
         plant = @plantsService.get(plant_id)
         if plant["bucket"].has_key?("nursery_id")

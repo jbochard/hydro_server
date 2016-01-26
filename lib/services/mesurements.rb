@@ -7,17 +7,17 @@ class Mesurements
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
 		if @mongo_client[:mesurements].find.to_a.length == 0
 			@mongo_client[:mesurements].insert_many([ 
-				{ :type => "environment temperature", :name => "Temperatura ambiente"}, 
-				{ :type => "PH", :name => "PH"}, 
-				{ :type => "electrical conductivity ", :name => "Conductividad eléctrica"}, 
-				{ :type => "flow temperature", :name => "Temperatura del fluído"}, 
-				{ :type => "air humidity", :name => "Humedad ambiente"} 
+				{ :_id => BSON::ObjectId.new.to_s, :type => "environment temperature", :name => "Temperatura ambiente"}, 
+				{ :_id => BSON::ObjectId.new.to_s, :type => "PH", :name => "PH"}, 
+				{ :_id => BSON::ObjectId.new.to_s, :type => "electrical conductivity ", :name => "Conductividad eléctrica"}, 
+				{ :_id => BSON::ObjectId.new.to_s, :type => "flow temperature", :name => "Temperatura del fluído"}, 
+				{ :_id => BSON::ObjectId.new.to_s, :type => "air humidity", :name => "Humedad ambiente"} 
 				])
 		end
 	end
 
 	def create(mesurement)
-		mesurement[:_id] = BSON::ObjectId.new
+		mesurement[:_id] = BSON::ObjectId.new.to_s
 		@mongo_client[:mesurements].insert_one(mesurement)
 		mesurement[:_id]
 	end
