@@ -69,7 +69,7 @@ class Hydroponic
         mesurement["date"] ||= Time.new
 
         nursery["buckets"].each do |bucket|
-            @plantsService.register_mesurement(bucket["plant_id"]["$oid"], mesurement)
+            @plantsService.register_mesurement(bucket["plant_id"], mesurement)
         end
         nursery_id
     end 

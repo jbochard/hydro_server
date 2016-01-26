@@ -5,6 +5,8 @@ set :plant_post_schema, 							JSON.parse(File.read("lib/schemas/plant_post.sche
 set :plant_put_schema, 								JSON.parse(File.read("lib/schemas/plant_put.schema"))
 set :plant_patch_add_mesurement_schema, 			JSON.parse(File.read("lib/schemas/plants_patch_add_mesurement.schema"))
 set :plant_patch_remove_plant_from_bucket_schema, 	JSON.parse(File.read("lib/schemas/plant_patch_remove_plant_from_bucket.schema"))
+set :plant_patch_set_plant_in_bucket_schema, 		JSON.parse(File.read("lib/schemas/plant_patch_set_plant_in_bucket.schema"))
+
 
 namespace '/plants' do
  
@@ -67,7 +69,10 @@ namespace '/plants' do
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			case body["op"].upcase			
+			case body["op"].upcase		
+			when "SET_PLANT_IN_BUCKET"
+				JSON::Validator.validate!(settings.plant_patch_set_plant_in_bucket_schema, body)
+				id = settings.hydroponicSerivces.set_plant_in_bucket(plant_id, body["value"]["nursery_id"], body["value"]["nursery_position"])				
 		    when "REMOVE_PLANT_FROM_BUCKET"
 				JSON::Validator.validate!(settings.plant_patch_remove_plant_from_bucket_schema, body)
 				id = settings.hydroponicSerivces.remove_plant_from_bucket(plant_id)

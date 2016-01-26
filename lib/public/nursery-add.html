@@ -10,7 +10,7 @@
   		<div class="row" style="margin-bottom: 10px">
       		<div class="col-lg-6">
       			<label>Tipo</label>
-      			<select ng-model="new_nursery.type" ng-options="nursery.type as nursery.name for nursery in nursery_types" class="form-control" />
+      			<select ng-model="new_nursery.type" ng-options="nursery.type as nursery.name for nursery in nursery_types | orderBy: ['name']" class="form-control" />
       		</div>
     	</div>
   		<div class="row" style="margin-bottom: 10px">
