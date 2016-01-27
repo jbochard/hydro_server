@@ -17,12 +17,17 @@ class Migration
 	def migrate_plants
 		puts "Migrando plants"
 		@mongo_client[:plants].find.to_a.each do |plant|
-			if ! plant["_id"].is_a? String
+			if ! plant["_id"].is_a? String 
 				plant["_id"] = plant["_id"].to_s
 				plant["type_id"] = plant["type_id"].to_s
 				@mongo_client[:plants].insert_one(plant)
 
 				@mongo_client[:plants].find({ :_id => BSON::ObjectId(plant["_id"]) }).delete_one
+			end
+			if plant["bucket"].has_key?("nursery_id") && ! plant["bucket"]["nursery_id"].is_a?(String) 
+				plant["bucket"]["nursery_id"] = plant["bucket"]["nursery_id"].to_s
+				@mongo_client[:plants].find({ :_id => plant["_id"] }).delete_one
+				@mongo_client[:plants].insert_one(plant)
 			end
 		end
 	end 

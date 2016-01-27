@@ -2,7 +2,6 @@
 
 set :hydroponicSerivces, Implementation[:hydroponic]
 set :nursery_post_schema, 							JSON.parse(File.read("lib/schemas/nursery_post.schema"))
-set :nursery_patch_set_plant_in_bucket_schema, 		JSON.parse(File.read("lib/schemas/nursery_patch_set_plant_in_bucket.schema"))
 set :nursery_patch_register_mesurement_schema, 		JSON.parse(File.read("lib/schemas/nursery_patch_register_mesurement.schema"))
 
 namespace '/nurseries' do
@@ -47,14 +46,6 @@ namespace '/nurseries' do
 		begin
 			body = JSON.parse(request.body.read)
 			case body["op"].upcase			
-			when "SET_PLANT_IN_BUCKET"
-				JSON::Validator.validate!(settings.nursery_patch_set_plant_in_bucket_schema, body)
-				id = settings.hydroponicSerivces.set_plant_in_bucket(body["value"]["plant_id"], nursery_id, body["value"]["position"])
-
-		    when "REMOVE_PLANT_FROM_BUCKET"
-				JSON::Validator.validate!(settings.nursery_patch_remove_plant_from_bucket_schema, body)
-				id = settings.hydroponicSerivces.remove_plant_from_bucket(body["value"]["plant_id"])
-
 		    when "REGISTER_MESUREMENT"
 				JSON::Validator.validate!(settings.nursery_patch_register_mesurement_schema, body)
 				id = settings.hydroponicSerivces.register_mesurement(nursery_id, body["value"])

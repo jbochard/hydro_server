@@ -14,9 +14,9 @@
 			<h2>Medición</h2>
 			<div class="form-inline" style="padding-bottom: 40px;">
 				<div class="form-group">
-					<label style="padding-right: 5px;" for="plant_add">Agregar planta: </label>
-			   		<input id="plant_add" type="text" ng-model='plant.type' class="form-control" />
-					<button ng-click='add_plant()' class="btn-primary">
+				    <select ng-model="sel_mesurement.type" ng-options="m.type as m.name for m in mesurements | orderBy: ['name']" class="form-control" /> 
+			   		<input type="number" ng-model='sel_mesurement.value' class="form-control" />
+					<button ng-click='register_mesurement()' class="btn-primary">
 		            	<i class="glyphicon glyphicon-plus"></i>
 		            </button>
 	            </div>
