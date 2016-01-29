@@ -35,9 +35,20 @@ class Nurseries
 		nursery["_id"] = BSON::ObjectId.new.to_s
 		nursery["creation_date"] = Time.new
 		nursery["buckets"] = []
+        nursery["dimensions"]["length"] = 1 if nursery["type"] == "plantpot"
+        nursery["dimensions"]["width"]  = 1 if nursery["type"] == "plantpot"
 		@mongo_client[:nurseries].insert_one(nursery)
 		nursery["_id"]
 	end
+
+    def update(nursery_id, nursery)
+        if ! exists?(nursery_id)
+            raise NotFoundException.new :nursery, nursery_id
+        end
+         @mongo_client[:nurseries]
+            .find({ :_id => nursery_id })
+            .update_one({ '$set' => { :name => nursery["name"], :type => nursery["type"], :description => nursery["description"] } })
+    end
 
     def delete(nursery_id)
         if ! exists?(nursery_id)
@@ -46,6 +57,16 @@ class Nurseries
         @mongo_client[:nurseries].find({ :_id => nursery_id }).delete_one
         nursery_id
     end
+
+    def change_water(nursery_id)
+        if ! exists?(nursery_id)
+            raise NotFoundException.new :nursery, nursery_id
+        end
+        #inserto el registro de cambio de agua
+         @mongo_client[:nurseries]
+            .find({ :_id => nursery_id })
+            .update_one({ '$push' => { :water_events => { :date => Time.new } } })               
+    end        
 
     def empty_bucket(nursery_id, nursery_position)
         nursery = get(nursery_id)

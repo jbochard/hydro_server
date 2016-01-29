@@ -3,7 +3,8 @@
   "required": [ "name", "type", "dimensions" ],
   "properties": {
     "name": { "type": "string" },
-    "type": { "enum": [ "nursery", "crisper" ] },
+    "description": { "type": "string" },
+    "type": { "enum": [ "nursery", "drawer", "plantpot" ] },
     "dimensions": {
       "type": "object",
       "required": [ "length", "width" ],

@@ -1,0 +1,37 @@
+<div style="container">
+	<h2>Editar contenedor</h2>
+    <div class="table">
+  		<div class="row" style="margin-bottom: 10px">
+      		<div class="col-lg-6">
+      			<label>Nombre</label>
+      			<input type="text" ng-model='sel_nursery.name' class="form-control" />
+      		</div>
+    	</div>
+      <div class="row" style="margin-bottom: 10px">
+          <div class="col-lg-6">
+            <label>Descripción</label>
+            <input type="text" ng-model='sel_nursery.description' class="form-control" />
+          </div>
+      </div>
+  		<div class="row" style="margin-bottom: 10px">
+      		<div class="col-lg-6">
+      			<label>Tipo</label>
+      			<select ng-model="sel_nursery.type" ng-options="nursery.type as nursery.name for nursery in nursery_types | orderBy: ['name']" class="form-control" />
+      		</div>
+    	</div>
+    </div>
+    <div class="table" style="padding-left: 20px">
+      <div class="row">
+        <table class="nursery">
+          <tbody>
+            <tr ng-repeat="r in range(sel_nursery.dimensions.width)">
+              <td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 10px; padding-left: 15px;">
+      <button ng-click='update_nursery()' class="btn-primary">Guardar</button>
+    </div>
+</div>

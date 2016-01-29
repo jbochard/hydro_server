@@ -28,6 +28,10 @@ class Hydroponic
         @nurseriesService.create(nursery)
 	end
 
+    def update_nursery(nursery_id, nursery)
+        @nurseriesService.update(nursery_id, nursery)
+    end
+
     def delete_nursery(nursery_id)
         nursery = @nurseriesService.get(nursery_id)
         nursery["buckets"].each do |bucket|
@@ -35,6 +39,11 @@ class Hydroponic
         end
         @nurseriesService.delete(nursery_id)
         nursery["_id"]
+    end
+
+    def change_water_nursery(nursery_id)
+        nursery = @nurseriesService.change_water(nursery_id)
+        nursery_id
     end
 
 	def set_plant_in_bucket(plant_id, nursery_id, nursery_position)

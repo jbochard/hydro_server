@@ -1,11 +1,26 @@
 <div class="row">
-	<div class="col-lg-5" style="padding-left: 20px;">
-		<div>
+	<div class="col-lg-5">
+		<div layout="row" class="layout-row">
 			<h2>{{sel_nursery.name}}</h2>
+			<button ng-click='edit_nursery()' class="btn-primary" style="margin-top: 15px; margin-bottom: 15px; margin-left: 5px;">
+				<i class="glyphicon glyphicon-pencil"></i>
+			</button>
+		</div>
+		<h5>{{sel_nursery.description}}</h5>
+		<div layout="row" class="layout-row">
 			<table class="nursery">
 				<tbody>
 					<tr ng-repeat="r in range(sel_nursery.dimensions.width)">
 						<td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-click="select_bucket(r, c)" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<tbody>
+					<tr>
+		    			<a ng-click='change_water()' style="padding-left: 10px;">
+	        				<img style="width: 30px;" src="/img/change_water.png"/>
+	        			</a>
 					</tr>
 				</tbody>
 			</table>
@@ -25,14 +40,10 @@
 	</div>
 	<div class="col-lg-6">
 		<div layout="row" class="layout-row">
-			<div>
-				<h2 >Plantas</h2>
-			</div>
-			<div>
-				<button ng-click='add_plant()' class="btn-primary">
-	            	<i class="glyphicon glyphicon-plus"></i>
-	            </button>
-	        </div>
+			<h2 >Plantas</h2>
+			<button ng-click='add_plant()' class="btn-primary" style="margin-top: 15px; margin-bottom: 15px; margin-left: 5px;">
+            	<i class="glyphicon glyphicon-plus"></i>
+            </button>
 		</div>
 		<div class="bodycontainer scrollable">
 			<table class="table table-hover table-condensed table-scrollable">
@@ -41,7 +52,7 @@
     					<th>Código</th>
      					<th>Tipo</th>
      					<th>Creación</th>
-     					<th>Cajón</th>
+     					<th>Contenedor</th>
      					<th>Posición</th>
      					<th></th>
   					</tr>
