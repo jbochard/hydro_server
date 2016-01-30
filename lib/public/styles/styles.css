@@ -39,15 +39,15 @@
   background-color: cornflowerblue;
 }
 
+.plant_selected {
+  background-color: cornflowerblue;  
+}
+
 .panel {
   background: #BFC7D8;
   padding-top: 50px;
   padding-left: 10px;
 }
-
-.bodycontainer { max-height: 450px; width: 100%; margin: 0; overflow-y: auto; }
-
-.table-scrollable { margin: 0; padding: 0; }
 
 /* Demo toolbar styles */
 .toolbar {

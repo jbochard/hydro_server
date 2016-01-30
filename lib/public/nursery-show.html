@@ -1,83 +1,85 @@
-<div class="row">
-	<div class="col-lg-5">
-		<div layout="row" class="layout-row">
-			<h2>{{sel_nursery.name}}</h2>
-			<button ng-click='edit_nursery()' class="btn-primary" style="margin-top: 15px; margin-bottom: 15px; margin-left: 5px;">
-				<i class="glyphicon glyphicon-pencil"></i>
-			</button>
-		</div>
-		<h5>{{sel_nursery.description}}</h5>
-		<div layout="row" class="layout-row">
-			<table class="nursery">
-				<tbody>
-					<tr ng-repeat="r in range(sel_nursery.dimensions.width)">
-						<td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-click="select_bucket(r, c)" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
-					</tr>
-				</tbody>
-			</table>
-			<table>
-				<tbody>
-					<tr>
-		    			<a ng-click='change_water()' style="padding-left: 10px;">
-	        				<img style="width: 30px;" src="/img/change_water.png"/>
-	        			</a>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div>
-			<h2>Medición</h2>
-			<div class="form-inline" style="padding-bottom: 40px;">
-				<div class="form-group">
-				    <select ng-model="sel_mesurement.type" ng-options="m.type as m.name for m in mesurements | orderBy: ['name']" class="form-control" /> 
-			   		<input type="number" ng-model='sel_mesurement.value' class="form-control" />
-					<button ng-click='register_mesurement()' class="btn-primary">
-		            	<i class="glyphicon glyphicon-plus"></i>
-		            </button>
-	            </div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-6">
+			<div layout="row" class="layout-row">
+				<h2>{{sel_nursery.name}}</h2>
+				<button ng-click='edit_nursery()' class="btn-primary" style="margin-top: 15px; margin-bottom: 15px; margin-left: 5px;">
+					<i class="glyphicon glyphicon-pencil"></i>
+				</button>
+			</div>
+			<h5>{{sel_nursery.description}}</h5>
+			<div layout="row" class="layout-row">
+				<table class="nursery">
+					<tbody>
+						<tr ng-repeat="r in range(sel_nursery.dimensions.width)">
+							<td ng-repeat="c in range(sel_nursery.dimensions.length)" class="bucket" ng-click="select_bucket(r, c)" ng-class="{ nursery_taken: is_bucket_taken(r, c), bucket_selected : sel_bucket_pos == calculate_idx(r, c) } ">{{ calculate_idx(r, c) }}</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+						<tr>
+			    			<a ng-click='change_water()' style="padding-left: 10px;">
+		        				<img style="width: 30px;" src="/img/change_water.png"/>
+		        			</a>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<h2>Medición</h2>
+				<div class="form-inline" style="padding-bottom: 40px;">
+					<div class="form-group">
+					    <select ng-model="sel_mesurement.type" ng-options="m.type as m.name for m in mesurements | orderBy: ['name']" class="form-control" /> 
+				   		<input type="number" ng-model='sel_mesurement.value' class="form-control" />
+						<button ng-click='register_mesurement()' class="btn-primary">
+			            	<i class="glyphicon glyphicon-plus"></i>
+			            </button>
+		            </div>
+				</div>	
 			</div>	
-		</div>	
-	</div>
-	<div class="col-lg-6">
-		<div layout="row" class="layout-row">
-			<h2 >Plantas</h2>
-			<button ng-click='add_plant()' class="btn-primary" style="margin-top: 15px; margin-bottom: 15px; margin-left: 5px;">
-            	<i class="glyphicon glyphicon-plus"></i>
-            </button>
 		</div>
-		<div class="bodycontainer scrollable">
-			<table class="table table-hover table-condensed table-scrollable">
-				<thead>
-  					<tr>
-    					<th>Código</th>
-     					<th>Tipo</th>
-     					<th>Creación</th>
-     					<th>Contenedor</th>
-     					<th>Posición</th>
-     					<th></th>
-  					</tr>
- 				</thead>
-			    <tbody>
-			    	<tr ng-repeat="plant in plants">
-			    		<td ng-click="show_plant(plant._id)">{{plant.code}}</td>
-			    		<td ng-click="show_plant(plant._id)">{{plant.type_name}}</td>
-			    		<td ng-click="show_plant(plant._id)">{{plant.creation_date | date: 'dd-MM-yyyy'}}</td>
-			    		<td ng-click="show_plant(plant._id)">{{plant.bucket.nursery_name}}</td>
-			    		<td ng-click="show_plant(plant._id)">{{plant.bucket.nursery_position}}</td>
-			    		<td>
-			    			<a ng-click='set_plant_in_bucket(plant._id)' style="padding-right: 5px;">
-	            				<img style="width: 30px;" src="/img/plantar.png"/>
-	            			</a>
-			    			<a ng-click='remove_plant_from_bucket(plant._id)' style="padding-right: 5px;">
-	            				<img style="width: 30px;" src="/img/desplantar.png"/>
-	            			</a>
-			    			<button ng-click='remove_plant(plant._id)' class="btn-primary">
-	            				<i class="glyphicon glyphicon-minus"></i>
-	            			</button>
-			    		</td>
-			    	</tr>
-			    </tbody>
-			</table>
+		<div class="col-lg-6">
+			<div layout="row" class="layout-row">
+				<h2 >Plantas</h2>
+				<button ng-click='add_plant()' class="btn-primary" style="margin-top: 15px; margin-bottom: 15px; margin-left: 5px;">
+	            	<i class="glyphicon glyphicon-plus"></i>
+	            </button>
+			</div>
+			<div style="max-height: 550px; width: 100%; overflow-y: auto">
+				<table class="table table-hover table-condensed table-scrollable">
+					<thead>
+	  					<tr>
+	    					<th>Código</th>
+	     					<th>Tipo</th>
+	     					<th>Creación</th>
+	     					<th>Contenedor</th>
+	     					<th>Posición</th>
+	     					<th></th>
+	  					</tr>
+	 				</thead>
+				    <tbody>
+				    	<tr ng-repeat="plant in plants | orderBy: ['bucket.nursery_name', 'bucket.nursery_position']" ng-class="{ plant_selected : plant_selected._id == plant._id }">
+				    		<td ng-click="show_plant(plant._id)">{{plant.code}}</td>
+				    		<td ng-click="show_plant(plant._id)">{{plant.type_name}}</td>
+				    		<td ng-click="show_plant(plant._id)">{{plant.creation_date | date: 'dd-MM-yyyy'}}</td>
+				    		<td ng-click="show_plant(plant._id)">{{plant.bucket.nursery_name}}</td>
+				    		<td ng-click="show_plant(plant._id)">{{plant.bucket.nursery_position}}</td>
+				    		<td>
+				    			<a ng-click='set_plant_in_bucket(plant._id)' style="padding-right: 5px;">
+		            				<img style="width: 20px;" src="/img/plantar.png"/>
+		            			</a>
+				    			<a ng-click='remove_plant_from_bucket(plant._id)' style="padding-right: 5px;">
+		            				<img style="width: 20px;" src="/img/desplantar.png"/>
+		            			</a>
+				    			<button ng-click='remove_plant(plant._id)' class="btn-primary">
+		            				<i class="glyphicon glyphicon-minus"></i>
+		            			</button>
+				    		</td>
+				    	</tr>
+				    </tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>
