@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "REGISTER_GROWTH" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "value" ],
+      "properties": {
+        "value": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

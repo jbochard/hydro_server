@@ -96,6 +96,14 @@ class Hydroponic
         @plantsService.create(plant)
     end
 
+    def split_plant(plant_id)
+        @plantsService.split(plant_id)
+    end
+
+    def register_growth_plant(plant_id, value)
+        @plantsService.register_growth(plant_id, value)
+    end
+
     def update_plant(plant_id, plant)
         @plantsService.update(plant_id, plant)
     end

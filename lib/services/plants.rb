@@ -54,6 +54,11 @@ class Plants
 		plant["_id"]
 	end
 
+	def split(plant_id)
+		plant = get(plant_id)
+		create({ :type_id => plant["type_id"], :parent => plant_id })
+	end
+
 	def update(plant_id, plant)
 		if ! exists?(plant_id)
 			raise NotFoundException.new :plant, plant_id
@@ -94,6 +99,16 @@ class Plants
          @mongo_client[:plants]
             .find({ :_id => plant_id })
             .update_one({ '$push' => { :mesurements => mesurement } })
+		plant_id
+	end
+
+	def register_growth(plant_id, value)
+		plant = get(plant_id)
+		value["date"] ||= Time.new
+
+         @mongo_client[:plants]
+            .find({ :_id => plant_id })
+            .update_one({ '$push' => { :growth => value } })
 		plant_id
 	end
 end

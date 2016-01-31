@@ -30,8 +30,8 @@
 				<h2>Medición</h2>
 				<div class="form-inline" style="padding-bottom: 40px;">
 					<div class="form-group">
-					    <select ng-model="sel_mesurement.type" ng-options="m.type as m.name for m in mesurements | orderBy: ['name']" class="form-control" /> 
-				   		<input type="number" ng-model='sel_mesurement.value' class="form-control" />
+					    <select ng-model="sel_nursery_mesurement.type" ng-options="m.type as m.name for m in mesurements | orderBy: ['name']" class="form-control" /> 
+				   		<input type="number" ng-model='sel_nursery_mesurement.value' class="form-control" />
 						<button ng-click='register_mesurement()' class="btn-primary">
 			            	<i class="glyphicon glyphicon-plus"></i>
 			            </button>
@@ -72,9 +72,8 @@
 				    			<a ng-click='remove_plant_from_bucket(plant._id)' style="padding-right: 5px;">
 		            				<img style="width: 20px;" src="/img/desplantar.png"/>
 		            			</a>
-				    			<button ng-click='remove_plant(plant._id)' class="btn-primary">
-		            				<i class="glyphicon glyphicon-minus"></i>
-		            			</button>
+		            			<i ng-click='split_plant(plant._id)' class="glyphicon glyphicon-scissors"></i>
+		            			<i ng-click='remove_plant(plant._id)' class="glyphicon glyphicon-minus"></i>
 				    		</td>
 				    	</tr>
 				    </tbody>
