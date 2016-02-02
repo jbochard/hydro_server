@@ -31,6 +31,18 @@
         </table>
       </div>
     </div>
+    <div>
+      <h2>Medición</h2>
+      <div class="form-inline" style="padding-bottom: 40px;">
+        <div class="form-group">
+            <select ng-model="sel_nursery_mesurement.type" ng-options="m.type as m.name for m in mesurements | orderBy: ['name']" class="form-control" /> 
+            <input type="number" ng-model='sel_nursery_mesurement.value' class="form-control" />
+            <button ng-click='register_mesurement()' class="btn-primary">
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </div>
+      </div>  
+    </div>  
     <div class="row" style="padding-top: 10px; padding-left: 15px;">
       <button ng-click='update_nursery()' class="btn-primary">Guardar</button>
       <button ng-click='show_nursery(sel_nursery._id)' class="btn-primary">Cancelar</button>
