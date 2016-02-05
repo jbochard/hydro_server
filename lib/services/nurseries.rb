@@ -25,7 +25,9 @@ class Nurseries
 		if ! exists?(nursery_id)
 			raise NotFoundException.new :nursery, nursery_id
 		end
-        @mongo_client[:nurseries].find({ :_id => nursery_id }).to_a.first
+        nursery = @mongo_client[:nurseries].find({ :_id => nursery_id }).to_a.first
+        nursery["time_change_water"] = ((Time.new - nursery["water_events"].map { |r| r["date"] }.max).to_i / 86400).floor if nursery.has_key?("water_events")
+        nursery
 	end
 
 	def create(nursery)
