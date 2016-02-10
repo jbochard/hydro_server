@@ -71,6 +71,10 @@ class Hydroponic
         plant_id
     end
 
+    def fumigation_plant(plant_id, value)
+        @plantsService.fumigation_plant(plant_id, value)
+    end
+
     def register_mesurement(nursery_id, mesurement)
         nursery = @nurseriesService.get(nursery_id)
  

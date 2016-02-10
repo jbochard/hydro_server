@@ -111,4 +111,15 @@ class Plants
             .update_one({ '$push' => { :growth => value } })
 		plant_id
 	end
+
+	def fumigation_plant(plant_id, value)
+		plant = get(plant_id)
+		value["type"] = :FUMIGATION
+		value["date"] ||= Time.new
+
+         @mongo_client[:plants]
+            .find({ :_id => plant_id })
+            .update_one({ '$push' => { :actions => value } })
+		plant_id
+	end
 end

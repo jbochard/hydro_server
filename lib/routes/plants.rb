@@ -7,6 +7,7 @@ set :plant_patch_add_mesurement_schema, 			JSON.parse(File.read("lib/schemas/pla
 set :plant_patch_remove_plant_from_bucket_schema, 	JSON.parse(File.read("lib/schemas/plant_patch_remove_plant_from_bucket.schema"))
 set :plant_patch_set_plant_in_bucket_schema, 		JSON.parse(File.read("lib/schemas/plant_patch_set_plant_in_bucket.schema"))
 set :plant_patch_register_growth_schema, 			JSON.parse(File.read("lib/schemas/plant_patch_register_growth.schema"))
+set :plant_patch_fumigation_schema, 				JSON.parse(File.read("lib/schemas/plant_patch_fumigation.schema"))
 
 namespace '/plants' do
  
@@ -95,6 +96,9 @@ namespace '/plants' do
 		    when "REGISTER_GROWTH"
 				JSON::Validator.validate!(settings.plant_patch_register_growth_schema, body)
 				id = settings.hydroponicSerivces.register_growth_plant(plant_id, body["value"])
+		    when "FUMIGATION"
+				JSON::Validator.validate!(settings.plant_patch_fumigation_schema, body)
+				id = settings.hydroponicSerivces.fumigation_plant(plant_id, body["value"])								
 			end			
 			status 200
 			{ :_id => id }.to_json
