@@ -101,12 +101,16 @@ class Nurseries
         nursery["_id"]
 	end
 
-	def register_last_mesurement(nursery_id, mesurement)
+	def register_mesurement(nursery_id, mesurement)
         if ! @mesurementService.exists?(mesurement["type"])
             raise NotFoundException.new :mesurement, mesurement["type"]
         end
-        nursery = get(nursery_id)
-        @mongo_client[:nurseries].find({ :_id => nursery_id }).update_one({ "$set" => { :last_mesurement => mesurement } } )
+
+        if ! exists?(nursery_id)
+            raise NotFoundException.new :nursery, nursery_id
+        end        
+
+        @mongo_client[:nurseries].find({ :_id => nursery_id }).update_one({ "$push" => { :mesurement => mesurement } } )
 	    nursery_id
 	end
 end

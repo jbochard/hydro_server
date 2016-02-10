@@ -81,7 +81,7 @@ class Hydroponic
         # Seteo la fecha de medición a la que se pasó u hoy
         mesurement["date"] ||= Time.new
 
-        @nurseriesService.register_last_mesurement(nursery_id, mesurement)
+        @nurseriesService.register_mesurement(nursery_id, mesurement)
         nursery["buckets"].each do |bucket|
             @plantsService.register_mesurement(bucket["plant_id"], mesurement)
         end
