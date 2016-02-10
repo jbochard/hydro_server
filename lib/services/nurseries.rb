@@ -26,7 +26,8 @@ class Nurseries
 			raise NotFoundException.new :nursery, nursery_id
 		end
         nursery = @mongo_client[:nurseries].find({ :_id => nursery_id }).to_a.first
-        nursery["time_change_water"] = ((Time.new - nursery["water_events"].map { |r| r["date"] }.max).to_i / 86400).floor if nursery.has_key?("water_events")
+        last_time_change_water = nursery["actions"].select { |r| r["type"] == 'CHANGE_WATER' }.map { |r| r["date"] }.max if nursery.has_key?("actions") 
+        nursery["time_change_water"] = ((Time.new - last_time_change_water).to_i / 86400).floor if ! last_time_change_water.nil?
         nursery
 	end
 
@@ -67,7 +68,7 @@ class Nurseries
         #inserto el registro de cambio de agua
          @mongo_client[:nurseries]
             .find({ :_id => nursery_id })
-            .update_one({ '$push' => { :water_events => { :date => Time.new } } })               
+            .update_one({ '$push' => { :actions => { :type => :CHANGE_WATER, :date => Time.new } } })               
     end        
 
     def empty_bucket(nursery_id, nursery_position)
