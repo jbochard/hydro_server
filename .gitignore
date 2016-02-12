@@ -10,7 +10,8 @@
 /test/version_tmp/
 /tmp/
 .DS_Store
-rubyponia.9390*
+hydro_server/hydro_*.9390*
+hydro_client/hydro_*.9390*
 
 ## Specific to RubyMotion:
 .dat*

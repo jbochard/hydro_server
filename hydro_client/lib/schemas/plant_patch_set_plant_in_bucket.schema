@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "SET_PLANT_IN_BUCKET" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "nursery_id", "nursery_position" ],
+      "properties": {
+        "nursery_position": {
+          "type": "integer",
+           "minimum": 1
+       },
+        "nursery_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

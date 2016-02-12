@@ -39,3 +39,158 @@ Listening on 0.0.0.0:9390, CTRL+C to stop
 WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
 127.0.0.1 - - [12/Feb/2016:00:57:09 -0300] "GET /web/ HTTP/1.1" 200 4048 0.0223
 127.0.0.1 - - [12/Feb/2016:00:58:02 -0300] "GET /web/ HTTP/1.1" 200 4048 0.0063
+Writing PID to hydro_server.9390.pid
+D, [2016-02-12T01:00:08.343820 #2599] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T01:00:08.353095 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-12T01:00:08.355340 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001974s
+D, [2016-02-12T01:00:08.355755 #2599] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T01:00:08.360282 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-12T01:00:08.373501 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.012895s
+D, [2016-02-12T01:00:08.373718 #2599] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T01:00:08.376435 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-12T01:00:08.380808 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.004224s
+D, [2016-02-12T01:00:08.381076 #2599] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T01:00:08.383908 #2599] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://servidor.davinci.lan/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
+192.168.1.2 - - [12/Feb/2016:01:00:25 -0300] "GET /web HTTP/1.1" 200 4048 0.0448
+192.168.1.2 - - [12/Feb/2016:01:00:25 -0300] "GET /styles/styles.css HTTP/1.1" 200 4249 0.0013
+192.168.1.2 - - [12/Feb/2016:01:00:25 -0300] "GET /js/services.js HTTP/1.1" 200 4996 0.0012
+192.168.1.2 - - [12/Feb/2016:01:00:25 -0300] "GET /js/controllers.js HTTP/1.1" 200 7119 0.0009
+D, [2016-02-12T01:00:26.233275 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1}}
+D, [2016-02-12T01:00:26.235802 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plants", "filter"=>{}, "projection"=>{"_id"=>1, "code"=>1, "type"=>1, "type_id"=>1, "creation_date"=>1, "bucket"=>1}}
+D, [2016-02-12T01:00:26.238030 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}, "sort"=>["order", 1]}
+D, [2016-02-12T01:00:26.244868 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.011221s
+192.168.1.2 - - [12/Feb/2016:01:00:26 -0300] "GET /nurseries/ HTTP/1.1" 200 224 0.0138
+D, [2016-02-12T01:00:26.256269 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0179s
+192.168.1.2 - - [12/Feb/2016:01:00:26 -0300] "GET /mesurements HTTP/1.1" 200 488 0.0202
+D, [2016-02-12T01:00:26.265368 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.029321s
+D, [2016-02-12T01:00:26.265713 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.271971 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.006115s
+D, [2016-02-12T01:00:26.272537 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.273089 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000377s
+D, [2016-02-12T01:00:26.273596 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.276545 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002751s
+D, [2016-02-12T01:00:26.277111 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.277718 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000395s
+D, [2016-02-12T01:00:26.278303 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.278895 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00039999999999999996s
+D, [2016-02-12T01:00:26.279561 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.280277 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000492s
+D, [2016-02-12T01:00:26.280902 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.281593 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00047s
+D, [2016-02-12T01:00:26.282185 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.283164 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0007319999999999999s
+D, [2016-02-12T01:00:26.283828 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.284761 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000643s
+D, [2016-02-12T01:00:26.285573 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.287537 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001679s
+D, [2016-02-12T01:00:26.288688 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.290108 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0012s
+D, [2016-02-12T01:00:26.290674 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.291372 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000484s
+D, [2016-02-12T01:00:26.291976 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.292762 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000569s
+D, [2016-02-12T01:00:26.293350 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.294920 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001214s
+D, [2016-02-12T01:00:26.295601 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.296246 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00043s
+D, [2016-02-12T01:00:26.296849 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.297499 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000414s
+D, [2016-02-12T01:00:26.298052 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.298630 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000389s
+D, [2016-02-12T01:00:26.299216 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.299918 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000491s
+D, [2016-02-12T01:00:26.300534 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.302070 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001302s
+D, [2016-02-12T01:00:26.302742 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.305972 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000615s
+D, [2016-02-12T01:00:26.307223 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.308259 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000424s
+D, [2016-02-12T01:00:26.308906 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.309585 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00043000000000000004s
+D, [2016-02-12T01:00:26.310710 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.311432 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00046699999999999997s
+D, [2016-02-12T01:00:26.312009 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.312623 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00042s
+D, [2016-02-12T01:00:26.313168 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.313805 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00039799999999999997s
+D, [2016-02-12T01:00:26.314380 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.315015 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000431s
+D, [2016-02-12T01:00:26.315682 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.316419 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000497s
+D, [2016-02-12T01:00:26.317066 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.317721 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000429s
+D, [2016-02-12T01:00:26.318364 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.319041 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000437s
+D, [2016-02-12T01:00:26.320100 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.320743 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000409s
+D, [2016-02-12T01:00:26.321356 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.322048 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000452s
+D, [2016-02-12T01:00:26.322659 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.323299 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000414s
+D, [2016-02-12T01:00:26.323861 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.324655 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005859999999999999s
+D, [2016-02-12T01:00:26.325249 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000003"}}
+D, [2016-02-12T01:00:26.325859 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00038700000000000003s
+D, [2016-02-12T01:00:26.326456 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.327093 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000433s
+D, [2016-02-12T01:00:26.327682 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.328294 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0004s
+D, [2016-02-12T01:00:26.329108 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.329877 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000554s
+D, [2016-02-12T01:00:26.330645 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000000"}}
+D, [2016-02-12T01:00:26.331279 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000577s
+D, [2016-02-12T01:00:26.332057 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.333334 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001002s
+D, [2016-02-12T01:00:26.334002 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.334669 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00045s
+D, [2016-02-12T01:00:26.335647 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.336739 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000494s
+D, [2016-02-12T01:00:26.337427 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.338402 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006820000000000001s
+D, [2016-02-12T01:00:26.339252 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.339826 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00037999999999999997s
+D, [2016-02-12T01:00:26.340354 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.340901 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00037s
+D, [2016-02-12T01:00:26.341470 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.342049 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000395s
+D, [2016-02-12T01:00:26.342572 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.343079 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000359s
+D, [2016-02-12T01:00:26.343560 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000001"}}
+D, [2016-02-12T01:00:26.344007 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000308s
+D, [2016-02-12T01:00:26.344399 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000005"}}
+D, [2016-02-12T01:00:26.344826 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000287s
+D, [2016-02-12T01:00:26.345347 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000005"}}
+D, [2016-02-12T01:00:26.345835 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000331s
+D, [2016-02-12T01:00:26.346341 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000005"}}
+D, [2016-02-12T01:00:26.346898 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00035s
+D, [2016-02-12T01:00:26.347471 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000005"}}
+D, [2016-02-12T01:00:26.348004 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000367s
+D, [2016-02-12T01:00:26.348543 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000004"}}
+D, [2016-02-12T01:00:26.349042 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000355s
+D, [2016-02-12T01:00:26.349582 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.350151 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000386s
+D, [2016-02-12T01:00:26.350692 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{"_id"=>"56a57ea9c695593a8c000002"}}
+D, [2016-02-12T01:00:26.351210 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000423s
+192.168.1.2 - - [12/Feb/2016:01:00:26 -0300] "GET /plants/ HTTP/1.1" 200 11024 0.1191
+D, [2016-02-12T01:00:29.658128 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>"56a6e28bc695595250000023"}}
+D, [2016-02-12T01:00:29.659411 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000985s
+D, [2016-02-12T01:00:29.675047 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>"56a6e28bc695595250000023"}}
+D, [2016-02-12T01:00:29.675800 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000553s
+192.168.1.2 - - [12/Feb/2016:01:00:29 -0300] "GET /nurseries/56a6e28bc695595250000023 HTTP/1.1" 200 1312 0.0197
+192.168.1.2 - - [12/Feb/2016:01:00:29 -0300] "GET /nursery-show.html HTTP/1.1" 200 3662 0.0008
+192.168.1.2 - - [12/Feb/2016:01:00:29 -0300] "GET /img/change_water.png HTTP/1.1" 200 1454 0.0007
+D, [2016-02-12T01:00:32.303266 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>"56b53641c695592fba00000a"}}
+D, [2016-02-12T01:00:32.304604 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0009339999999999999s
+D, [2016-02-12T01:00:32.305571 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{"_id"=>"56b53641c695592fba00000a"}}
+D, [2016-02-12T01:00:32.306471 #2599] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000665s
+192.168.1.2 - - [12/Feb/2016:01:00:32 -0300] "GET /nurseries/56b53641c695592fba00000a HTTP/1.1" 200 710 0.0063
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop

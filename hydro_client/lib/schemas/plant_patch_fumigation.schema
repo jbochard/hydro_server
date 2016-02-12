@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "FUMIGATION" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "type", "description" ],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

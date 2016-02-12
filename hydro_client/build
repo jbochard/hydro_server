@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -f files/*
+sed -i '.bak' 's/\#\!\/usr\/local\/bin\/ruby/\#\!\/usr\/bin\/ruby/g' ./bin/cars-proxy
+rm bin/hydro_server.bak
+
+gem build hydro_server.gemspec
+mv hydro_server*.gem files/

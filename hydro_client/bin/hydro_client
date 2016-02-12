@@ -1,0 +1,48 @@
+#!/usr/bin/ruby
+# coding: utf-8
+
+libdir = File.dirname(__FILE__) + "/../lib"
+$LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
+
+require 'fileutils'
+require 'json'
+require 'services/migration'
+
+command = (ARGV.empty?) ? "":ARGV.shift 
+
+begin
+	base_dir = Gem.bin_path('rubyponia', 'rubyponia').gsub("/bin/rubyponia", "")
+rescue
+	base_dir = "." 
+end
+if command.casecmp("install") == 0
+	FileUtils.mkdir("./config")
+	FileUtils.copy_file("#{base_dir}/lib/templates/configuration.json", 	"./config/configuration.json")
+	puts "Programa instalado."
+	exit
+end
+
+config = JSON.parse(File.read("config/configuration.json"))
+
+if command.casecmp("start") == 0
+	exec("thin start --port #{config['web']['port']} -C #{base_dir}/lib/thin.yml --rackup #{base_dir}/lib/config.ru")
+end
+
+if command.casecmp("stop") == 0
+	exec("thin stop --port #{config['web']['port']} -C #{base_dir}/lib/thin.yml --rackup #{base_dir}/lib/config.ru")
+end
+
+
+if command.casecmp("migrate") == 0
+	class Environment
+		class << self
+			attr_accessor :config
+		end
+	    @config = {}
+	end
+
+	Environment.config = JSON.parse(File.read("config/configuration.json"))
+	
+	Migration.new.migrate
+end
+
