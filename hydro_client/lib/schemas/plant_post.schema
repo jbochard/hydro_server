@@ -1,7 +1,0 @@
-{
-  "type": "object",
-  "required": [ "type_id" ],
-  "properties": {
-    "type": { "type_id": "string" }
-  }
-}

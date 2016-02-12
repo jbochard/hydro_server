@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": [ "type", "relay", "state" ],
+  "properties": {
+    "type":  { "type": "string" },
+    "relay": { "type": "string" },
+    "state": { "type": "string" }
+  }
+}

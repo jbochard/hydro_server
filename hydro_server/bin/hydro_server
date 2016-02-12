@@ -11,7 +11,7 @@ require 'services/migration'
 command = (ARGV.empty?) ? "":ARGV.shift 
 
 begin
-	base_dir = Gem.bin_path('rubyponia', 'rubyponia').gsub("/bin/rubyponia", "")
+	base_dir = Gem.bin_path('hydro_server', 'hydro_server').gsub("/bin/hydro_server", "")
 rescue
 	base_dir = "." 
 end
