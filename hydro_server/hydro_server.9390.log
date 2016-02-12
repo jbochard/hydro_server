@@ -19,3 +19,23 @@ Listening on 0.0.0.0:9390, CTRL+C to stop
 Thin web server (v1.6.4 codename Gob Bluth)
 Maximum connections set to 1024
 Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to hydro_server.9390.pid
+D, [2016-02-12T00:56:55.471789 #99000] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:56:55.516083 #99000] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-12T00:56:55.524294 #99000] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.007855000000000001s
+D, [2016-02-12T00:56:55.524796 #99000] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:56:55.527074 #99000] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-12T00:56:55.530921 #99000] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.003575s
+D, [2016-02-12T00:56:55.531365 #99000] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:56:55.533565 #99000] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-12T00:56:55.555494 #99000] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.021664999999999997s
+D, [2016-02-12T00:56:55.555985 #99000] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:56:55.559065 #99000] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://servidor.davinci.lan/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+WARN: tilt autoloading 'tilt/erb' in a non thread-safe way; explicit require 'tilt/erb' suggested.
+127.0.0.1 - - [12/Feb/2016:00:57:09 -0300] "GET /web/ HTTP/1.1" 200 4048 0.0223
+127.0.0.1 - - [12/Feb/2016:00:58:02 -0300] "GET /web/ HTTP/1.1" 200 4048 0.0063
