@@ -1,0 +1,21 @@
+Writing PID to hydro_server.9390.pid
+D, [2016-02-12T00:40:50.838474 #1142] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:40:50.844074 #1142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-12T00:40:50.851329 #1142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.006987s
+D, [2016-02-12T00:40:50.851601 #1142] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:40:50.854471 #1142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-12T00:40:50.868009 #1142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.013373999999999999s
+D, [2016-02-12T00:40:50.868332 #1142] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:40:50.871544 #1142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-12T00:40:50.874949 #1142] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.003258s
+D, [2016-02-12T00:40:50.875204 #1142] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-12T00:40:50.877808 #1142] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://servidor.davinci.lan/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+== Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop

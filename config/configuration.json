@@ -1,7 +1,7 @@
 {
 	"web": {
 		"port": 9390,
-		"host": "http://localhost"
+		"host": "http://servidor.davinci.lan"
 	},
 	"mongodb": {
 		"host": "127.0.0.1",

@@ -1,10 +1,10 @@
 # user: www-data
 # group: www-data
 servers: 1
-pid: rubyponia.pid
+pid: hydro_server.pid
 timeout: 30
 wait: 30
-log: rubyponia.log
+log: hydro_server.log
 max_conns: 1024
 require: []
 max_persistent_conns: 512
