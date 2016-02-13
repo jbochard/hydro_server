@@ -11,7 +11,7 @@
 /tmp/
 .DS_Store
 hydro_server/hydro_*.9390*
-hydro_client/hydro_*.9390*
+hydro_client/hydro_*.9190*
 
 ## Specific to RubyMotion:
 .dat*

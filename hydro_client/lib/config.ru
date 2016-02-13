@@ -7,6 +7,7 @@ require 'sinatra'
 require 'json'
 require 'json-schema'
 require 'services/sensors'
+require 'services/implementation'
 
 
 class Environment
