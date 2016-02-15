@@ -25,7 +25,7 @@ require 'serialport'
     def switch(relay, state)
         state = "on" if state.upcase == 'ON'
         state = "off" if state.upcase == 'OFF'
-        
+
         cmdObj = Environment.config["switch"].select { |cmd| cmd["name"].upcase == relay.upcase }.first
         if ! cmdObj.nil?
             @serial.write("#{cmdObj[state].upcase}\n")
@@ -42,11 +42,17 @@ require 'serialport'
     private
     def readLine
         c = nil
+        cont = 20
         result = ""
         while c != 13  do
             c = @serial.getbyte
-            result << c
-            sleep(0.1)
+            if c.nil? && count > 0
+                sleep(0.5)
+                count = count - 1
+            else
+                result << c
+                sleep(0.1)
+            end
         end
         result
     end          
