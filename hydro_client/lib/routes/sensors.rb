@@ -17,7 +17,7 @@ namespace '/hydro_client' do
 			body = JSON.parse(request.body.read)
 			JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			if body["type"] == "switch"
+			if body["type"].upcase == "SWITCH"
 				status 200
 				settings.sensorService.switch(body["relay"], body["state"]).to_json
 			end			
