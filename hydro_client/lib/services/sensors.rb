@@ -23,10 +23,20 @@ require 'serialport'
     end
 
     def switch(relay, state)
-        @serial.write("#{relay}_#{state}")
-        result = @serial.read
-        puts result
-        { :value => result }
+        state = "on" if state.upcase == 'ON'
+        state = "off" if state.upcase == 'OFF'
+        
+        cmdObj = Environment.config["switch"].select { |cmd| cmd["name"].upcase == relay.upcase }.first
+        if ! cmdObj.nil?
+            @serial.write("#{cmdObj[state].upcase}\n")
+            @serial.flush
+            sleep(1)
+            
+            line = readLine
+            value = line.scan(/#{cmdObj[state].upcase}\s*([^ ]+)\s*OK\s*/).last.first
+            return { :value => cmdObj[state].upcase }
+        end
+        { :error => "COMMAND (#{relay}, #{state}) NOT FOUND" }
     end
 
     private
