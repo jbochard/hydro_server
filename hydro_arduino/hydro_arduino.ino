@@ -11,8 +11,10 @@
 #define RELAY_2     8                        
 #define RELAY_3     12                        
 #define RELAY_4     13                       
-#define SOIL_PIN    A0
-#define PHOTO_PIN   A1
+#define SOIL_PIN1   A0
+#define SOIL_PIN2   A1
+#define SOIL_PIN3   A2
+#define PHOTO_PIN   A3
 
 #define DHTTYPE     DHT11
 
@@ -24,8 +26,10 @@ String command = "";                  // a string to hold incoming data
 boolean commandAvailable = false;     // whether the string is complete
 
 void setup() {
-  pinMode(SOIL_PIN,   INPUT);
-  pinMode(PHOTO_PIN,  INPUT);
+  pinMode(SOIL_PIN1,   INPUT);
+  pinMode(SOIL_PIN2,   INPUT);
+  pinMode(SOIL_PIN3,   INPUT);
+  pinMode(PHOTO_PIN,   INPUT);
   pinMode(RELAY_1,    OUTPUT);
   pinMode(RELAY_2,    OUTPUT);
   pinMode(RELAY_3,    OUTPUT);
@@ -57,8 +61,20 @@ void loop() {
       status("OK");
       return;
     }
-    if (command.equals("SOIL_MOISTURE")) {
-      int s = analogRead(SOIL_PIN);
+    if (command.equals("SOIL_MOISTURE_1")) {
+      int s = analogRead(SOIL_PIN1);
+      Serial.print(s);
+      status("OK");
+      return;
+    }
+    if (command.equals("SOIL_MOISTURE_2")) {
+      int s = analogRead(SOIL_PIN2);
+      Serial.print(s);
+      status("OK");
+      return;
+    }
+    if (command.equals("SOIL_MOISTURE_3")) {
+      int s = analogRead(SOIL_PIN3);
       Serial.print(s);
       status("OK");
       return;

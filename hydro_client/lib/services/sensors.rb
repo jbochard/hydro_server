@@ -9,7 +9,7 @@ require 'serialport'
     end
 
     def read(command)
-        cmdObj = Environment.config["read"].select { |cmd| cmd["name"].upcase == command.upcase }.first
+        cmdObj = Environment.sensors["read"].select { |cmd| cmd["name"].upcase == command.upcase }.first
         if ! cmdObj.nil?
             @serial.write("#{cmdObj['command'].upcase}\n")
             @serial.flush
@@ -23,7 +23,7 @@ require 'serialport'
     end
 
     def switch(relay, state)
-        cmdObj = Environment.config["switch"].select { |cmd| cmd["name"].upcase == relay.upcase }.first
+        cmdObj = Environment.sensors["switch"].select { |cmd| cmd["name"].upcase == relay.upcase }.first
         if ! cmdObj.nil?
             puts cmdObj.class
             command = cmdObj["on"].upcase if state.upcase == 'ON'

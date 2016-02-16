@@ -7,49 +7,5 @@
 		"baud_rate": 9600,
 		"data_bits": 8,
 		"stop_bits": 1
-	},
-	"read": [
-		{
-			"name":"TEMP_FLUID",
-			"command": "TEMP_FLUID"
-		},
-		{
-			"name":"SOIL_MOISTURE",
-			"command": "SOIL_MOISTURE"
-		},
-		{
-			"name":"PHOTO",
-			"command": "PHOTO"
-		},
-		{
-			"name":"HUMIDITY",
-			"command": "HUMIDITY"
-		},
-		{
-			"name":"TEMP_ENV",
-			"command": "TEMP_ENV"
-		}
-	],
-	"switch": [
-		{
-			"name": "RELAY_1",
-			"on": "RELAY_1_ON",
-			"off": "RELAY_1_OFF"			
-		},
-		{
-			"name": "RELAY_2",
-			"on": "RELAY_2_ON",
-			"off": "RELAY_2_OFF"			
-		},
-		{
-			"name": "RELAY_3",
-			"on": "RELAY_3_ON",
-			"off": "RELAY_3_OFF"			
-		},
-		{
-			"name": "RELAY_4",
-			"on": "RELAY_4_ON",
-			"off": "RELAY_4_OFF"			
-		}
-	]
+	}
 }
