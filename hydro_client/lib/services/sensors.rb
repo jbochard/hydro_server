@@ -46,12 +46,16 @@ require 'serialport'
         result = ""
         while c != 13  do
             c = @serial.getbyte
-            if c.nil? && count > 0
-                sleep(0.5)
-                count = count - 1
-            else
+            if ! c.nil?
                 result << c
                 sleep(0.1)
+            else
+                if count > 20
+                    sleep(0.5)
+                    count = count - 1
+                else
+                    return "ERROR I/O"
+                end 
             end
         end
         result
