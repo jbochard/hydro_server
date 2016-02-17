@@ -64,6 +64,18 @@ ang.service('nurseriesService', ['$http', function($http) {
 		);
 	};
 
+	this.fumigation = function(nursery_id, description, resultFn, errorFn) {
+		var url = host + '/nurseries/' + nursery_id;
+		$http.patch(url, { op: 'FUMIGATION', value: { description: description } }).then(
+			function(result) {
+			  	resultFn(result.data);
+			 },
+			function(data) {
+				errorFn(data);
+			}
+		);
+	};
+
 	this.register_mesurement = function(nursery_id, mesurement_type, mesurement_value, resultFn, errorFn) {
 		var url = host + '/nurseries/' + nursery_id;
 		$http.patch(url, { op: 'REGISTER_MESUREMENT', value: { type: mesurement_type, value: mesurement_value} }).then(

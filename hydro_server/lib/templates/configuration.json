@@ -1,12 +1,12 @@
 {
 	"web": {
 		"port": 9390,
-		"host": "http://localhost"
+		"host": "http://servidor.davinci.lan"
 	},
+	"cron": "*/1 * * * *",
 	"mongodb": {
 		"host": "127.0.0.1",
 		"port": 27017,
 		"db": "rubyponia"
 	}
-
 }

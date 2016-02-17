@@ -46,6 +46,15 @@ class Hydroponic
         nursery_id
     end
 
+    def fumigation_nursery(nursery_id, value)
+        nursery = @nurseriesService.get(nursery_id)
+
+        nursery["buckets"].each do |bucket|
+            @plantsService.fumigation_plant(bucket["plant_id"], value)
+        end
+        nursery_id
+    end
+
 	def set_plant_in_bucket(plant_id, nursery_id, nursery_position)
         plant = @plantsService.get(plant_id)
         nursery = @nurseriesService.get(nursery_id)

@@ -4,6 +4,7 @@ set :hydroponicSerivces, Implementation[:hydroponic]
 set :nursery_post_schema, 							JSON.parse(File.read("lib/schemas/nursery_post.schema"))
 set :nursery_patch_register_mesurement_schema, 		JSON.parse(File.read("lib/schemas/nursery_patch_register_mesurement.schema"))
 set :nursery_patch_change_water_schema, 			JSON.parse(File.read("lib/schemas/nursery_patch_change_water.schema"))
+set :nursery_patch_fumigation_schema, 				JSON.parse(File.read("lib/schemas/nursery_patch_fumigation.schema"))
 
 namespace '/nurseries' do
  
@@ -71,6 +72,10 @@ namespace '/nurseries' do
 		    when "CHANGE_WATER"
 				JSON::Validator.validate!(settings.nursery_patch_change_water_schema, body)
 				id = settings.hydroponicSerivces.change_water_nursery(nursery_id)
+		    when "FUMIGATION"
+				JSON::Validator.validate!(settings.plant_patch_fumigation_schema, body)
+				id = settings.hydroponicSerivces.fumigation_nursery(nursery_id, body["value"])	
+
 			end			
 			status 200
 			{ :_id => id }.to_json

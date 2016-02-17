@@ -26,8 +26,10 @@
 		        			</td>
 						</tr>
 						<tr>
-							<td>
-								
+							<td style="padding-left: 5px; padding-top: 5px">
+				    			<button ng-click='fumigation_nursery()'>
+			        				<img style="width: 30px;" src="/img/change_water.png"/>
+			        			</button>								
 							</td>
 						</tr>
 						<tr>
@@ -98,10 +100,36 @@
 	<script>
   		$(function() {
   			$( "#changeWaterDlg" ).dialog({ autoOpen: false});
+  			$( "#fumigationDlg" ).dialog({
+			      autoOpen: false,
+			      height: 300,
+			      width: 350,
+			      modal: true,
+			      buttons: {
+			        "Registrar": function() {
+			        	$scope.fumigationReg();
+			        }
+			      },
+			      close: function() {
+			        form[ 0 ].reset();
+			        allFields.removeClass( "ui-state-error" );
+			      }
+			    });
   		});
   	</script>
 
 	<div id="changeWaterDlg" title="Atención">
   		<p>Se registró cambio de nutrientes correctamente.</p>
-</div>
+	</div>
+
+	<div id="fumigationDlg" title="Fumigación">
+	  <form>
+	    <fieldset>
+	      <label for="name">Descripción</label>
+          <input type="text" ng-model='sel_nursery.description' class="form-control" />
+	      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+	      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+	    </fieldset>
+	  </form>
+	</div>	
 </div>

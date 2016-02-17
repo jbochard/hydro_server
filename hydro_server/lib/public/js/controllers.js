@@ -148,6 +148,14 @@ ang.controller('HydroponicController', function($scope, $location, $filter, nurs
       });    
   }
 
+  $scope.fumigation_nursery = function() {
+    $( "#fumigationDlg" ).dialog("open");
+  }
+
+  $scope.fumigationReg = function() {
+    $( "#fumigationDlg" ).dialog("close");
+  }
+
   $scope.register_mesurement = function() {
     nurseriesService.register_mesurement($scope.sel_nursery._id, $scope.sel_nursery_mesurement.type, $scope.sel_nursery_mesurement.value, 
       function(result) {

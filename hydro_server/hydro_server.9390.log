@@ -25025,3 +25025,78 @@ Connection refused - connect(2)
 Thin web server (v1.6.4 codename Gob Bluth)
 Maximum connections set to 1024
 Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to hydro_server.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- rufus-scheduler (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/schedulerManager.rb:3:in `<top (required)>'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:16:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to hydro_server.9390.pid
+Exiting!
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- rufus-scheduler (LoadError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/schedulerManager.rb:3:in `<top (required)>'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from ./lib/config.ru:16:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'
+Writing PID to hydro_server.9390.pid
+D, [2016-02-17T11:42:28.838921 #99680] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-17T11:42:28.864897 #99680] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-17T11:42:28.870913 #99680] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.004595s
+D, [2016-02-17T11:42:28.872001 #99680] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-17T11:42:28.879571 #99680] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-17T11:42:28.886513 #99680] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.005914s
+D, [2016-02-17T11:42:28.887443 #99680] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-17T11:42:28.891310 #99680] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-17T11:42:28.894489 #99680] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002982s
+D, [2016-02-17T11:42:28.894793 #99680] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-17T11:42:28.896620 #99680] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: http://servidor.davinci.lan/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+Exiting!
+/Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:534:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:534:in `start_server'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/backends/tcp_server.rb:16:in `connect'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/backends/base.rb:63:in `block in start'
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:193:in `call'
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:193:in `run_machine'
+	from /Library/Ruby/Gems/2.0.0/gems/eventmachine-1.0.9.1/lib/eventmachine.rb:193:in `run'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/backends/base.rb:73:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/server.rb:162:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:87:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'

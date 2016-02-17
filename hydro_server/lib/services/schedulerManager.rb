@@ -11,7 +11,7 @@ class SchedulerManager
 	end
 
 	def start
-		@scheduler.cron "*/1 * * * *" do
+		@scheduler.cron Environment.config["cron"] do
 			begin
 				@nurseries.get_all('client').each do |reg|
 					if reg.has_key?("client_url")
