@@ -1,6 +1,6 @@
 {
 	"web": {
-		"port": 9290,
+		"port": 9390,
 		"host": "servidor.davinci.lan"
 	},
 	"cron": "*/1 * * * *",
