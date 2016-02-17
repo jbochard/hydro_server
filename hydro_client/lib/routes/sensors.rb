@@ -5,6 +5,18 @@ set :sensor_post_schema, 	JSON.parse(File.read("#{$libdir}/schemas/sensor_post.s
 
 namespace '/hydro_client' do
  
+ 	get '/measures' do
+		content_type :json
+		status 200
+		settings.sensorService.measures.to_json
+	end
+
+	get '/switches' do
+		content_type :json
+		status 200
+		settings.sensorService.switches.to_json
+	end
+	
 	get '/:command' do |command|
 		content_type :json
 		status 200

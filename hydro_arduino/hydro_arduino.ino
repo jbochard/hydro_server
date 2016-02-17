@@ -53,105 +53,132 @@ void setup() {
 void loop() {
   if (commandAvailable) {
     command.toUpperCase();
-    Serial.print(command);
-    Serial.print(" ");
     if (command.equals("TEMP_FLUID")) {
-      sensors.requestTemperatures(); //Prepara el sensor para la lectura
-      Serial.print(sensors.getTempCByIndex(0)); //Se lee e imprime la temperatura en grados Celsius
-      status("OK");
+      sensors.requestTemperatures();            //Prepara el sensor para la lectura
+      float value = sensors.getTempCByIndex(0); //Se lee e imprime la temperatura en grados Celsius
+      status_ok(command, value);
       return;
     }
     if (command.equals("SOIL_MOISTURE_1")) {
       int s = analogRead(SOIL_PIN1);
-      Serial.print(s);
-      status("OK");
+      status_ok(command, s);
       return;
     }
     if (command.equals("SOIL_MOISTURE_2")) {
       int s = analogRead(SOIL_PIN2);
-      Serial.print(s);
-      status("OK");
+      status_ok(command, s);
       return;
     }
     if (command.equals("SOIL_MOISTURE_3")) {
       int s = analogRead(SOIL_PIN3);
-      Serial.print(s);
-      status("OK");
+      status_ok(command, s);
       return;
     }
     if (command.equals("PHOTO")) {
       int s = analogRead(PHOTO_PIN );
-      Serial.print(s);
-      status("OK");
+      status_ok(command, s);
       return;
     }
     if (command.equals("HUMIDITY")) {
       float h = dht.readHumidity();
       if (isnan(h)) {
-        status("ERROR");
+        status_err(command);
       } else {
-        Serial.print(h);
-        status("OK");        
+        status_ok(command, h);        
       }
       return;
     }
     if (command.equals("TEMP_ENV")) {
       float t = dht.readTemperature();
       if (isnan(t)) {
-        status("ERROR");
+        status_err(command);
       } else {
-        Serial.print(t);
-        status("OK");
+         status_ok(command, t);
       }
       return;
     }    
     if (command.equals("RELAY_1_ON")) {
       digitalWrite(RELAY_1,LOW);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }
     if (command.equals("RELAY_1_OFF")) {
       digitalWrite(RELAY_1,HIGH);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }
     if (command.equals("RELAY_2_ON")) {
       digitalWrite(RELAY_2,LOW);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }
     if (command.equals("RELAY_2_OFF")) {
       digitalWrite(RELAY_2,HIGH);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }    
     if (command.equals("RELAY_3_ON")) {
       digitalWrite(RELAY_3,LOW);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }
     if (command.equals("RELAY_3_OFF")) {
       digitalWrite(RELAY_3,HIGH);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }    
     if (command.equals("RELAY_4_ON")) {
       digitalWrite(RELAY_4,LOW);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }
     if (command.equals("RELAY_4_OFF")) {
       digitalWrite(RELAY_4,HIGH);           // Turns ON Relays 1
-      status("OK");
+      status_ok(command);
       return;
     }
-    status("COMMAND_NOT_EXISTS ERROR");
+    status_err(command, "COMMAND_NOT_EXISTS");
     return;
   }  
 }
 
-void status(String msg) {
-  Serial.print(" ");
+void status_ok(String cmd, float value) {
+  Serial.print(cmd);
+  Serial.print(" OK ");
+  Serial.println(value);
+  command = "";
+  commandAvailable = false;
+  digitalWrite(LED, LOW);
+}
+
+void status_ok(String cmd, int value) {
+  Serial.print(cmd);
+  Serial.print(" OK ");
+  Serial.println(value);
+  command = "";
+  commandAvailable = false;
+  digitalWrite(LED, LOW);
+}
+
+void status_ok(String cmd) {
+  Serial.print(cmd);
+  Serial.println(" OK");
+  command = "";
+  commandAvailable = false;
+  digitalWrite(LED, LOW);
+}
+
+void status_err(String cmd) {
+  Serial.print(cmd);
+  Serial.println(" ERROR");
+  command = "";
+  commandAvailable = false;
+  digitalWrite(LED, LOW);
+}
+
+void status_err(String cmd, String msg) {
+  Serial.print(cmd);
+  Serial.print(" ERROR ");
   Serial.println(msg);
   command = "";
   commandAvailable = false;

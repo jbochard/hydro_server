@@ -17,8 +17,8 @@ class Nurseries
         @mongo_client[:nurseries].find({ :name => nursery_name }).to_a.length > 0
     end
 
-	def get_all
-        @mongo_client[:nurseries].find.projection({ _id: 1, name: 1, type: 1, creation_date: 1 }).to_a
+	def get_all(query=nil)
+        @mongo_client[:nurseries].find.projection({ _id: 1, name: 1, type: 1, creation_date: 1, client_url: query == 'client'}).to_a
 	end
 
 	def get(nursery_id)

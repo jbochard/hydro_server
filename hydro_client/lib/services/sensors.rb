@@ -8,6 +8,14 @@ require 'serialport'
         @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], 8, 1, SerialPort::NONE)
     end
 
+    def measures
+        Environment.sensors["read"].map { |measure| measure["name"] }        
+    end
+
+    def switches
+        Environment.sensors["switch"].map { |switch| switch["name"] }
+    end
+
     def read(command)
         cmdObj = Environment.sensors["read"].select { |cmd| cmd["name"].upcase == command.upcase }.first
         if ! cmdObj.nil?
@@ -16,10 +24,13 @@ require 'serialport'
             sleep(1)
             
             line = readLine
-            value = line.scan(/#{cmdObj['command'].upcase}\s*([^ ]+)\s*OK\s*/).last.first
-             return { :value => value }
+            res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
+            puts "Result: #{res}"
+            state = res[0]
+            value = res[1]
+            return { :state => state, :value => value }
         end
-        { :error => "COMMAND #{command} NOT FOUND" }
+        { :state => "ERROR", :description => "COMMAND #{command} NOT FOUND" }
     end
 
     def switch(relay, state)
