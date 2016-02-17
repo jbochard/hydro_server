@@ -1,10 +1,12 @@
 
 require 'services/exceptions'
+require 'thread'
 require 'serialport'
 
  class Sensors
 
     def initialize
+        @semaphore = Mutex.new
         @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], 8, 1, SerialPort::NONE)
     end
 
@@ -19,16 +21,15 @@ require 'serialport'
     def read(command)
         cmdObj = Environment.sensors["read"].select { |cmd| cmd["name"].upcase == command.upcase }.first
         if ! cmdObj.nil?
-            @serial.write("#{cmdObj['command'].upcase}\n")
-            @serial.flush
-            sleep(1)
-            
-            line = readLine
-            res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
-            puts "Result: #{res}"
-            state = res[0]
-            value = res[1]
-            return { :state => state, :value => value }
+            @semaphore.synchronize {
+                @serial.write("#{cmdObj['command'].upcase}\n")
+                @serial.flush            
+                line = readLine
+                res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
+                state = res[0]
+                value = res[1].strip
+                return { :state => state, :value => value }
+            }
         end
         { :state => "ERROR", :description => "COMMAND #{command} NOT FOUND" }
     end
@@ -36,16 +37,17 @@ require 'serialport'
     def switch(relay, state)
         cmdObj = Environment.sensors["switch"].select { |cmd| cmd["name"].upcase == relay.upcase }.first
         if ! cmdObj.nil?
-            puts cmdObj.class
-            command = cmdObj["on"].upcase if state.upcase == 'ON'
-            command = cmdObj["off"].upcase if state.upcase == 'OFF'
+            @semaphore.synchronize {
+                command = cmdObj["on"].upcase if state.upcase == 'ON'
+                command = cmdObj["off"].upcase if state.upcase == 'OFF'
 
-            @serial.write("#{command}\n")
-            @serial.flush
-            sleep(1)
-            
-            line = readLine
+                @serial.write("#{command}\n")
+                @serial.flush
+                sleep(1)
+                
+                line = readLine
             return { :value => line }
+            }
         end
         { :error => "COMMAND (#{relay}, #{state}) NOT FOUND" }
     end
