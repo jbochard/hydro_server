@@ -27,7 +27,7 @@ require 'serialport'
                 line = readLine
                 res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
                 state = res[0]
-                value = res[1].strip
+                value = res[1]
                 return { :state => state, :value => value }
             }
         end
@@ -54,12 +54,22 @@ require 'serialport'
 
     private
     def readLine
-        c = nil
+        state = :char
         count = 20
         result = ""
-        while c != 13  do
+        while state != :cr  do
             c = @serial.getbyte
             if ! c.nil?
+                if c == 10
+                    state = :lf
+                    next
+                end
+                if state == :lf  && c == 13
+                    state = :cr
+                    next
+                else
+                    state = :char
+                end
                 result << c
                 sleep(0.1)
             else
