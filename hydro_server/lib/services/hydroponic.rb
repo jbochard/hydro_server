@@ -3,9 +3,10 @@ require 'services/exceptions'
 
 class Hydroponic
 
-	def initialize(nurseriesService, plantsService)
+	def initialize(nurseriesService, plantsService, sensorService)
         @plantsService = plantsService
         @nurseriesService = nurseriesService
+        @sensorService = sensorService
 	end
 
     def exists_nursery?(nursery_id)
@@ -127,5 +128,35 @@ class Hydroponic
             @nurseriesService.empty_bucket(plant["bucket"]["nursery_id"], plant["bucket"]["nursery_position"])
         end
         @plantsService.delete(plant_id)
+    end
+
+    def get_all_sensors
+        @sensorService.get_all
+    end
+
+    def get_sensor(sensor_id)
+        @sensorService.get(sensor_id)
+    end
+
+    def create_sensor(sensor_url)
+        @sensorService.create(sensor_url)
+    end
+
+    def update_sensor(sensor_id, sensor)
+        @sensorService.update(sensor_id, sensor)
+    end
+
+    def join_nursery_sensor(sensor_id, value)
+        if ! @nurseriesService.exists?(value["nursery_id"])
+            raise NotFoundException.new :nursery, value["nursery_id"]
+        end
+        @sensorService.join_nursery(sensor_id, value)
+    end
+
+    def join_plant_sensor(sensor_id, value)
+        if ! @plantsService.exists?(value["plant_id"])
+            raise NotFoundException.new :plant, value["plant_id"]
+        end
+        @sensorService.join_plant(sensor_id, value)
     end
 end

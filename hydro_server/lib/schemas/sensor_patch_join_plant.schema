@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "JOIN_PLANT" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "plant_id", "measure" ],
+      "properties": {
+        "plant_id": { "type": "string" },
+        "measure": { "type": "string" }
+      }
+    }
+  }
+}

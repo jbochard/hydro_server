@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [ "op", "value" ],
+  "properties": {
+    "op": { "type": { "enum": [ "JOIN_NURSERY" ] } },
+    "value": {
+      "type": "object",
+      "required": [ "nursery_id", "measure" ],
+      "properties": {
+        "nursery_id": { "type": "string" },
+        "measure": { "type": "string" }
+      }
+    }
+  }
+}
