@@ -26,6 +26,7 @@ String command = "";                  // a string to hold incoming data
 boolean commandAvailable = false;     // whether the string is complete
 
 void setup() {
+  analogReference(DEFAULT);
   pinMode(SOIL_PIN1,   INPUT);
   pinMode(SOIL_PIN2,   INPUT);
   pinMode(SOIL_PIN3,   INPUT);
@@ -56,7 +57,11 @@ void loop() {
     if (command.equals("TEMP_FLUID")) {
       sensors.requestTemperatures();            //Prepara el sensor para la lectura
       float value = sensors.getTempCByIndex(0); //Se lee e imprime la temperatura en grados Celsius
-      status_ok(command, value);
+      if (value == -127) {
+        status_err(command);
+      } else {
+        status_ok(command, value);
+      }
       return;
     }
     if (command.equals("SOIL_MOISTURE_1")) {

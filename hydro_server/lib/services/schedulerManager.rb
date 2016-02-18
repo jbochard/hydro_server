@@ -4,10 +4,9 @@ require 'rufus-scheduler'
 
 class SchedulerManager
 
-	def initialize(sensorsService, hydroponicService)
+	def initialize(sensorsService)
 		@scheduler = Rufus::Scheduler.new
 		@sensors = sensorsService
-		@hydroponicService = hydroponicService
 	end
 
 	def start

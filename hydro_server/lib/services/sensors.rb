@@ -36,14 +36,20 @@ class Sensors
   	end
 
   	def read(sensor_id)
+  		puts "Read sensor: #{sensor_id}"
   		sensor = get(sensor_id)
   		sensor["measures"].each do |measure|
   			value = read_measure(sensor["url"], measure["measure"])
-  			measure["date"] = Time.new
-  			measure["value"] = value
+  			if value.nil?
+  				measure.delete("date")
+  				measure.delete("value")
+  			else
+  				measure["date"] = Time.new
+  				measure["value"] = value
+  			end
   		end
 		@mongo_client[:sensors]
-            .find({ :_id => sensor_id)  		
+            .find({ :_id => sensor_id })  		
             .update_many({ '$set' => { "measures" => sensor["measures"] } })
         sensor["measures"]
   	end
@@ -114,12 +120,18 @@ class Sensors
 	end
 
 	def read_measure(client_url, measure)
-		url = URI.parse("#{client_url}/#{measure}")
-		req = Net::HTTP::Get.new(url.to_s)
-		res = Net::HTTP.start(url.host, url.port) { |http|
-			http.request(req)
-		}
-		JSON.parse(res.body)
+		begin
+			puts "GET #{client_url}/#{measure}"
+			url = URI.parse("#{client_url}/#{measure}")
+			req = Net::HTTP::Get.new(url.to_s)
+			res = Net::HTTP.start(url.host, url.port) { |http|
+				http.request(req)
+			}
+			result  = JSON.parse(res.body)
+			return result["value"] if result["state"] == 'OK'
+		rescue Exception => e
+			puts "Error: #{e}"
+		end
 	end
 
 end

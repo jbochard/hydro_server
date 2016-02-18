@@ -25,13 +25,15 @@ require 'serialport'
                 @serial.write("#{cmdObj['command'].upcase}\n")
                 @serial.flush            
                 line = readLine
+                return { :state => 'ERROR', :value => 'I/O ERROR' } if line.nil?
+
                 res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
                 state = res[0]
-                value = res[1]
+                value = res[1] if res.length > 1
                 return { :state => state, :value => value }
             }
         end
-        { :state => "ERROR", :description => "COMMAND #{command} NOT FOUND" }
+        { :state => "ERROR", :value => "#{command} NOT FOUND" }
     end
 
     def switch(relay, state)
@@ -43,13 +45,17 @@ require 'serialport'
 
                 @serial.write("#{command}\n")
                 @serial.flush
-                sleep(1)
                 
                 line = readLine
-            return { :value => line }
+                return { :state => 'ERROR', :value => 'I/O ERROR' } if line.nil?
+
+                res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
+                state = res[0]
+                value = res[1] if res.length > 1
+                return { :state => state, :value => value }
             }
         end
-        { :error => "COMMAND (#{relay}, #{state}) NOT FOUND" }
+        { :state => "ERROR", :value => "#{relay}-#{state} NOT FOUND" }
     end
 
     private
@@ -59,12 +65,12 @@ require 'serialport'
         result = ""
         while state != :cr  do
             c = @serial.getbyte
-            if ! c.nil?
-                if c == 10
+             if ! c.nil?
+                if c == 13
                     state = :lf
                     next
                 end
-                if state == :lf  && c == 13
+                if state == :lf  && c == 10
                     state = :cr
                     next
                 else
@@ -77,7 +83,7 @@ require 'serialport'
                     sleep(0.5)
                     count = count - 1
                 else
-                    return "ERROR I/O"
+                    return nil
                 end 
             end
         end
