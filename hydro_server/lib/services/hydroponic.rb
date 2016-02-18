@@ -84,7 +84,7 @@ class Hydroponic
         @plantsService.fumigation_plant(plant_id, value)
     end
 
-    def register_mesurement(nursery_id, mesurement)
+    def register_mesurement_nursery(nursery_id, mesurement)
         nursery = @nurseriesService.get(nursery_id)
  
         # Seteo la fecha de medición a la que se pasó u hoy
@@ -116,6 +116,13 @@ class Hydroponic
     def register_growth_plant(plant_id, value)
         @plantsService.register_growth(plant_id, value)
     end
+
+    def register_mesurement_plant(plant_id, mesurement) 
+        # Seteo la fecha de medición a la que se pasó u hoy
+        mesurement["date"] ||= Time.new
+        @plantService.register_mesurement(plant_id, mesurement)
+        plant_id
+    end 
 
     def update_plant(plant_id, plant)
         @plantsService.update(plant_id, plant)

@@ -68,7 +68,7 @@ namespace '/nurseries' do
 			case body["op"].upcase			
 		    when "REGISTER_MESUREMENT"
 				JSON::Validator.validate!(settings.nursery_patch_register_mesurement_schema, body)
-				id = settings.hydroponicSerivces.register_mesurement(nursery_id, body["value"])
+				id = settings.hydroponicSerivces.register_mesurement_nursery(nursery_id, body["value"])
 		    when "CHANGE_WATER"
 				JSON::Validator.validate!(settings.nursery_patch_change_water_schema, body)
 				id = settings.hydroponicSerivces.change_water_nursery(nursery_id)

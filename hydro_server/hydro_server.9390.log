@@ -226,3 +226,70 @@ D, [2016-02-18T09:17:00.074255 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rub
 D, [2016-02-18T09:17:00.075331 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000865s
 D, [2016-02-18T09:18:00.252541 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
 D, [2016-02-18T09:18:00.253418 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000655s
+D, [2016-02-18T09:19:00.093751 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:19:00.095201 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001043s
+D, [2016-02-18T09:20:00.248720 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:20:00.250642 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00149s
+D, [2016-02-18T09:21:00.134016 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:21:00.135237 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001108s
+D, [2016-02-18T09:22:00.274685 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:22:00.276189 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001225s
+D, [2016-02-18T09:23:00.105104 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:23:00.106612 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0012020000000000002s
+D, [2016-02-18T09:24:00.298092 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:24:00.299126 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000841s
+D, [2016-02-18T09:25:00.110467 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:25:00.111846 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001042s
+D, [2016-02-18T09:26:00.264583 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:26:00.265481 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006879999999999999s
+D, [2016-02-18T09:27:00.082895 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:27:00.083959 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000719s
+D, [2016-02-18T09:28:00.212213 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:28:00.213350 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000867s
+D, [2016-02-18T09:29:00.095785 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:29:00.096595 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000658s
+D, [2016-02-18T09:30:00.302797 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:30:00.303788 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000593s
+D, [2016-02-18T09:31:00.220067 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:31:00.221776 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001215s
+D, [2016-02-18T09:32:00.118064 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"nurseries", "filter"=>{}, "projection"=>{"_id"=>1, "name"=>1, "type"=>1, "creation_date"=>1, "client_url"=>1}}
+D, [2016-02-18T09:32:00.121187 #2720] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0026839999999999998s
+== Sinatra (v1.4.7) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to hydro_server.9390.pid
+D, [2016-02-18T09:32:18.577129 #11621] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T09:32:18.579526 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-18T09:32:18.580614 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000879s
+D, [2016-02-18T09:32:18.580902 #11621] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T09:32:18.584358 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-18T09:32:18.585525 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000916s
+D, [2016-02-18T09:32:18.585793 #11621] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T09:32:18.587638 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-18T09:32:18.588605 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000775s
+D, [2016-02-18T09:32:18.589306 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"mesurements", "documents"=>[{:_id=>"56c5b9d2c4b32d2d65edacb9", :order=>0, :type=>"ELECTRICAL_CONDUC_HAND", :name=>"Conductividad eléctrica"}, {:_id=>"56c5b9d2c4b32d2d65edacba", :order=>1, :type=>"PH", :name=>"PH"}, {:_id=>"56c5b9d2c4b32d2d...
+D, [2016-02-18T09:32:18.604270 #11621] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.014700999999999999s
+D, [2016-02-18T09:32:18.604920 #11621] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T09:32:18.607113 #11621] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T09:32:18.610628 #11621] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Exiting!
+/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/schedulerManager.rb:7:in `initialize': wrong number of arguments (1 for 2) (ArgumentError)
+	from ./lib/config.ru:36:in `new'
+	from ./lib/config.ru:36:in `block (2 levels) in <main>'
+	from /Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/implementation.rb:7:in `call'
+	from /Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/implementation.rb:7:in `register'
+	from ./lib/config.ru:28:in `block in <main>'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /Library/Ruby/Gems/2.0.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from ./lib/config.ru:1:in `new'
+	from ./lib/config.ru:1:in `<main>'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+	from /Library/Ruby/Gems/2.0.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+	from /usr/local/bin/thin:23:in `load'
+	from /usr/local/bin/thin:23:in `<main>'

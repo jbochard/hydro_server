@@ -4,9 +4,10 @@ require 'rufus-scheduler'
 
 class SchedulerManager
 
-	def initialize(sensorsService)
+	def initialize(sensorsService, hydroponicService)
 		@scheduler = Rufus::Scheduler.new
 		@sensors = sensorsService
+		@hydroponicService = hydroponicService
 	end
 
 	def start
@@ -15,7 +16,14 @@ class SchedulerManager
 				@sensors.get_all("joined").each do |sensor|
 					sensor.measures.each do |measure|
 						value = @sensors.read_measure(sensor["url"], measure["measure"])
-						puts "#{measure} = #{value}"						
+						measure["join"].each do |join|
+							if join["type"] == "nuresery"
+								@hydroponicService.register_mesurement_nursery(join["_id"], { :type => measure["measure"], :value => value })
+							end
+							if join["type"] == "plant"
+								@hydroponicService.register_mesurement_plant(join["_id"], { :type => measure["measure"], :value => value })
+							end
+						end
 					end
 				end
 			rescue Exception => e 
