@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"end",
+				"end_line"
+			],
+			[
 				"sel",
 				"sel_nursery"
 			],
@@ -163,6 +171,79 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "hydro_server/hydro_server.gemspec",
+			"settings":
+			{
+				"buffer_size": 1666,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/lib/services/schedulerManager.rb",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Unix",
+				"name": "# coding: utf-8"
+			}
+		},
+		{
+			"file": "hydro_server/lib/routes/nurseries.rb",
+			"settings":
+			{
+				"buffer_size": 3076,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/lib/services/nurseries.rb",
+			"settings":
+			{
+				"buffer_size": 4423,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/lib/services/hydroponic.rb",
+			"settings":
+			{
+				"buffer_size": 3683,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/lib/public/js/services.js",
+			"settings":
+			{
+				"buffer_size": 5313,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/lib/public/js/controllers.js",
+			"settings":
+			{
+				"buffer_size": 7293,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/config/configuration.json",
+			"settings":
+			{
+				"buffer_size": 167,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hydro_server/lib/schemas/nursery_patch_fumigation.schema",
+			"settings":
+			{
+				"buffer_size": 368,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -196,10 +277,31 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jbochard/Desarrollo/ruby/hydroponic"
+		"/Users/jbochard/Documents/workspace/hydroponics",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/bin",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/config",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public/js",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/templates",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/views"
 	],
 	"file_history":
 	[
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public/nursery-show.html",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/config.json",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/mesurements.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/schemas/plant_patch_fumigate.schema",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services/sensors.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/config.ru",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/mesurements.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/templates/configuration.json",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/config/configuration.json",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/plants.rb",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/public/js/services.js",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/views/index.erb",
@@ -316,8 +418,276 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "hydro_server/hydro_server.gemspec",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1651,
+								1651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "hydro_server/lib/services/schedulerManager.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								607,
+								607
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# coding: utf-8",
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "hydro_server/lib/routes/nurseries.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								774,
+								774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "hydro_server/lib/services/nurseries.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								819,
+								819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "hydro_server/lib/services/hydroponic.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 398.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "hydro_server/lib/public/js/services.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1446,
+								1446
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2915.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "hydro_server/lib/public/js/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7293,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4360,
+								4360
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2291.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "hydro_server/config/configuration.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "hydro_server/lib/schemas/nursery_patch_fumigation.schema",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
 			]
 		}
 	],

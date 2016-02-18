@@ -1,6 +1,6 @@
 # coding: utf-8
 
-set :hydroponicSerivces, 					Implementation[:hydroponic]
+set :sensorSerivces, 						Implementation[:sensors]
 set :sensor_post_schema, 					JSON.parse(File.read("lib/schemas/sensor_post.schema"))
 set :sensor_patch_join_nursery_schema, 		JSON.parse(File.read("lib/schemas/sensor_patch_join_nursery.schema"))
 set :sensor_patch_join_plant_schema, 		JSON.parse(File.read("lib/schemas/sensor_patch_join_plant.schema"))
@@ -10,14 +10,14 @@ namespace '/sensors' do
 	get '/?' do
 		content_type :json
 		status 200
-		settings.hydroponicSerivces.get_all_sensors.to_json
+		settings.sensorSerivces.get_all(params[:query]).to_json
 	end
 
 	get '/:sensor_id' do |sensor_id|
 		content_type :json
 		begin
 			status 200
-			settings.hydroponicSerivces.get_sensor(sensor_id).to_json
+			settings.sensorSerivces.get(sensor_id).to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
@@ -30,7 +30,7 @@ namespace '/sensors' do
 			body = JSON.parse(request.body.read)
 			JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.hydroponicSerivces.create_sensor(body["url"])
+			id = settings.sensorSerivces.create(body["url"])
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -49,7 +49,7 @@ namespace '/sensors' do
 			body = JSON.parse(request.body.read)
 			JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.hydroponicSerivces.update_sensor(sensor_id, body)
+			id = settings.sensorSerivces.update(sensor_id, body)
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -69,10 +69,10 @@ namespace '/sensors' do
 			case body["op"].upcase		
 			when "JOIN_NURSERY"
 				JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				id = settings.hydroponicSerivces.join_nursery_sensor(sensor_id, body["value"])				
+				id = settings.sensorSerivces.join_nursery(sensor_id, body["value"])				
 		    when "JOIN_PLANT"
 				JSON::Validator.validate!(settings.sensor_patch_join_plant_schema, body)
-				id = settings.hydroponicSerivces.join_plant_sensor(sensor_id, body["value"])				
+				id = settings.sensorSerivces.join_plant(sensor_id, body["value"])				
 			end			
 			status 200
 			{ :_id => id }.to_json

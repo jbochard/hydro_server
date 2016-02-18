@@ -4,23 +4,20 @@ require 'rufus-scheduler'
 
 class SchedulerManager
 
-	def initialize(nurseriesService, sensorsService)
+	def initialize(sensorsService)
 		@scheduler = Rufus::Scheduler.new
-		@nurseries = nurseriesService
 		@sensors = sensorsService
 	end
 
 	def start
 		@scheduler.cron Environment.config["cron"] do
 			begin
-				@nurseries.get_all('client').each do |reg|
-					if reg.has_key?("client_url")
-						@sensors.get_measures(reg["client_url"]).each do |measure|
-							value = @sensors.read_measure(reg["client_url"], measure)
-							puts "#{measure} = #{value}"
-						end
+				@sensors.get_all("joined").each do |sensor|
+					sensor.measures.each do |measure|
+						value = @sensors.read_measure(sensor["url"], measure["measure"])
+						puts "#{measure} = #{value}"						
 					end
-				end 
+				end
 			rescue Exception => e 
 				puts e
 			end

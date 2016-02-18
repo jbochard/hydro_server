@@ -31,9 +31,9 @@ Implementation.register do |i|
   i[:mesurements] 	= Mesurements.new
   i[:plants] 		    = Plants.new(i[:configuration], i[:mesurements], i[:plant_types])
   i[:nurseries] 	  = Nurseries.new
-  i[:sensors]       = Sensors.new
-  i[:hydroponic]	  = Hydroponic.new(i[:nurseries], i[:plants], i[:sensors])
-  i[:scheduler]     = SchedulerManager.new(i[:nurseries], i[:sensors])
+  i[:sensors]       = Sensors.new(i[:nurseries], i[:plants])
+  i[:hydroponic]	  = Hydroponic.new(i[:nurseries], i[:plants])
+  i[:scheduler]     = SchedulerManager.new(i[:sensors])
 end
 
 Implementation[:scheduler].start
