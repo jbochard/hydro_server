@@ -11,25 +11,23 @@ class SchedulerManager
 	end
 
 	def start
-		@scheduler.cron Environment.config["cron"] do
+		@scheduler.cron Environment.config["measures_cron"] do
 			begin
-				@sensors.get_all("joined").each do |sensor|
-					sensor.measures.each do |measure|
-						value = @sensors.read_measure(sensor["url"], measure["measure"])
-						measure["join"].each do |join|
-							if join["type"] == "nuresery"
-								@hydroponicService.register_mesurement_nursery(join["_id"], { :type => measure["measure"], :value => value })
-							end
-							if join["type"] == "plant"
-								@hydroponicService.register_mesurement_plant(join["_id"], { :type => measure["measure"], :value => value })
-							end
-						end
-					end
+				@sensors.get_all.each do |sensor|
+					measures = @sensors.read(sensor["_id"])
 				end
 			rescue Exception => e 
 				puts e
 			end
 		end
+
+		@scheduler.cron Environment.config["rules_cron"] do
+			begin
+				
+			rescue Exception => e 
+				puts e
+			end
+		end		
 	end
 
 	def stop

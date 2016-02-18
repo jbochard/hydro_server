@@ -35,6 +35,19 @@ class Sensors
         @mongo_client[:sensors].find({ :_id => sensor_id }).to_a.first
   	end
 
+  	def read(sensor_id)
+  		sensor = get(sensor_id)
+  		sensor["measures"].each do |measure|
+  			value = read_measure(sensor["url"], measure["measure"])
+  			measure["date"] = Time.new
+  			measure["value"] = value
+  		end
+		@mongo_client[:sensors]
+            .find({ :_id => sensor_id)  		
+            .update_many({ '$set' => { "measures" => sensor["measures"] } })
+        sensor["measures"]
+  	end
+
 	def create(client_url)
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
@@ -76,14 +89,6 @@ class Sensors
 		.update_one({ '$set' => sensor })		
 	end
 
-	def read_measure(client_url, measure)
-		url = URI.parse("#{client_url}/#{measure}")
-		req = Net::HTTP::Get.new(url.to_s)
-		res = Net::HTTP.start(url.host, url.port) { |http|
-			http.request(req)
-		}
-		JSON.parse(res.body)
-	end
 
 	private
 	def get_joinded
@@ -107,4 +112,14 @@ class Sensors
 		}
 		JSON.parse(res.body)
 	end
+
+	def read_measure(client_url, measure)
+		url = URI.parse("#{client_url}/#{measure}")
+		req = Net::HTTP::Get.new(url.to_s)
+		res = Net::HTTP.start(url.host, url.port) { |http|
+			http.request(req)
+		}
+		JSON.parse(res.body)
+	end
+
 end
