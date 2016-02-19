@@ -6,9 +6,7 @@ require 'services/exceptions'
 
 class Sensors
 
-	def initialize(nurseriesService, plantsService)
-		@nurseriesService = nurseriesService
-		@plantsService = plantsService
+	def initialize
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
 	end
 
@@ -69,33 +67,13 @@ class Sensors
 		client_url
 	end
 
-	def join_nursery(sensor_id, value)
-        if ! @nurseriesService.exists?(value["nursery_id"])
-            raise NotFoundException.new :nursery, value["nursery_id"]
-        end		
-		@mongo_client[:sensors]
-            .find({ :_id => sensor_id, "measures.measure" => value["measure"] })
-            .update_many({ '$push' => { "measures.$.join" => {  :type => :nursery, :_id => value["nursery_id"] } } })
-        sensor_id
-	end
-
-	def join_plant(sensor_id, value)
-	    if ! @plantsService.exists?(value["plant_id"])
-            raise NotFoundException.new :plant, value["plant_id"]
-        end
-		@mongo_client[:sensors]
-            .find({ :_id => sensor_id, "measures.measure" => value["measure"] })
-            .update_many({ '$push' => { "measures.$.join" => {  :type => :plant, :_id => value["plant_id"] } } })
-        sensor_id
-	end
-
 	def update(sensor_id, sensor)
        	if ! exists?(sensor_id)
 			raise NotFoundException.new :sensor, sensor_id
     	end
 		@mongo_client[:sensors]
-		.find({ :_id => sensor_id })
-		.update_one({ '$set' => sensor })		
+			.find({ :_id => sensor_id })
+			.update_one({ '$set' => sensor })		
 	end
 
 	private

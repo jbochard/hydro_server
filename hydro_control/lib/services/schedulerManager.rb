@@ -23,8 +23,7 @@ class SchedulerManager
 					measures = @sensors.read(sensor["_id"])
 				end
 			rescue Exception => e 
-				puts e.message 
-				puts e.backtrace
+				puts e
 			end
 		end
 
@@ -32,9 +31,8 @@ class SchedulerManager
 		@scheduler.cron Environment.config["rules_cron"] do
 			begin
 				@rules.evaluate_active
-			rescue Exception => e
-				puts e.message 
-				puts e.backtrace
+			rescue Exception => e 
+				puts e
 			end
 		end		
 	end

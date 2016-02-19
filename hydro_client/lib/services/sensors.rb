@@ -6,20 +6,21 @@ require 'serialport'
  class Sensors
 
     def initialize
+        @name = Environment.config["server"]["name"]
         @semaphore = Mutex.new
         @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], 8, 1, SerialPort::NONE)
     end
 
     def measures
-        Environment.sensors["read"].map { |measure| measure["name"] }        
+        Environment.sensors["read"].map { |measure| { :name => @name, :sensor => measure["sensor"] } }        
     end
 
     def switches
-        Environment.sensors["switch"].map { |switch| switch["name"] }
+        Environment.sensors["switch"].map { |switch| { :name => @name, :switch => switch["switch"] } }
     end
 
     def read(command)
-        cmdObj = Environment.sensors["read"].select { |cmd| cmd["name"].upcase == command.upcase }.first
+        cmdObj = Environment.sensors["read"].select { |cmd| cmd["sensor"].upcase == command.upcase }.first
         if ! cmdObj.nil?
             @semaphore.synchronize {
                 @serial.write("#{cmdObj['command'].upcase}\n")
@@ -37,7 +38,7 @@ require 'serialport'
     end
 
     def switch(relay, state)
-        cmdObj = Environment.sensors["switch"].select { |cmd| cmd["name"].upcase == relay.upcase }.first
+        cmdObj = Environment.sensors["switch"].select { |cmd| cmd["switch"].upcase == relay.upcase }.first
         if ! cmdObj.nil?
             @semaphore.synchronize {
                 command = cmdObj["on"].upcase if state.upcase == 'ON'

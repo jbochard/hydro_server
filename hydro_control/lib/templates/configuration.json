@@ -1,7 +1,7 @@
 {
 	"web": {
 		"port": 9390,
-		"host": "localhost"
+		"host": "http://servidor.davinci.lan"
 	},
 	"measures_cron": "*/1 * * * *",
 	"rules_cron": "*/1 * * * *",

@@ -1,0 +1,17 @@
+
+<div style="padding-bottom: 40px;">
+	<div class="form-group">
+		<label style="padding-right: 5px;" for="plant_code">Código: </label>
+   		<input id="plant_code" type="text" ng-model='plant_selected.code' class="form-control" />
+    </div>
+	<div class="form-group">
+		<label style="padding-right: 5px;" for="plant_date">Fecha: </label>
+   		<input id="plant_date" type="datetime-local" ng-model='plant_selected.creation_date' class="form-control" />
+    </div>
+	<div class="form-group">
+		<label style="padding-right: 5px;" for="plant_type">Tipo: </label>
+    <select ng-model="plant_selected.type_id" ng-options="plant_type._id as plant_type.name for plant_type in plant_types | orderBy: ['name']" class="form-control" /> 
+  </div>
+  <button ng-click='save_plant()' class="btn-primary">Guardar</button>
+  <button ng-click='show_nursery(sel_nursery._id)' class="btn-primary">Cancelar</button>
+</div>

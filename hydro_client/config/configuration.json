@@ -1,6 +1,7 @@
 {
 	"server": {
-		"port": 9190
+		"port": 9190,
+		"name": "CLIENT_1"
 	},
 	"serial": {
 		"serial_port": "/dev/cu.usbmodem1414131",

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -f files/*
+
+gem build hydro_control.gemspec
+mv hydro_control*.gem files/
