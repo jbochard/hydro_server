@@ -12,7 +12,7 @@ class SchedulerManager
 	def start
 		@scheduler.cron Environment.config["measures_cron"] do
 			begin
-				@sensors.get_all.each do |sensor|
+				@sensors.get_all({ :type => 'INPUT'}).each do |sensor|
 					measures = @sensors.read(sensor["_id"])
 				end
 			rescue Exception => e 

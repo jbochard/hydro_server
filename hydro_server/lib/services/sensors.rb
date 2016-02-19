@@ -20,12 +20,8 @@ class Sensors
         @mongo_client[:sensors].find({ :url => client_url }).to_a.length > 0
 	end
 
-	def get_all(query = "")
-		if !query.nil? && query.upcase =~ /JOINED/
-			get_joinded
-		else
-    		@mongo_client[:sensors].find.projection({ _id: 1, url: 1 }).to_a
-    	end
+	def get_all(query = {})
+    	@mongo_client[:sensors].find(query).projection({ _id: 1 }).to_a
 	end
 
 	def get(sensor_id)
@@ -38,32 +34,35 @@ class Sensors
   	def read(sensor_id)
   		puts "Read sensor: #{sensor_id}"
   		sensor = get(sensor_id)
-  		sensor["measures"].each do |measure|
-  			value = read_measure(sensor["url"], measure["measure"])
-  			if value.nil?
-  				measure.delete("date")
-  				measure.delete("value")
-  			else
-  				measure["date"] = Time.new
-  				measure["value"] = value
-  			end
+		value = read_measure(sensor["url"], sensor["name"])
+		if value.nil?
+			sensor.delete("date")
+			sensor.delete("value")
+		else
+			sensor["date"] = Time.new
+			sensor["value"] = value
   		end
-		@mongo_client[:sensors]
-            .find({ :_id => sensor_id })  		
-            .update_many({ '$set' => { "measures" => sensor["measures"] } })
-        sensor["measures"]
+  		update(sensor_id, sensor)
+        sensor_id
+  	end
+
+  	def switch(switch_id, value)
+  		switch = get(switch_id)
+  		puts "Switch #{switch['name']}_#{value}"
+		switch(sensor["url"], switch['name'], value)
+        switch_id
   	end
 
 	def create(client_url)
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
 		end
+		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :type => 'OUTPUT', :name => measure, :join => [] }}
+		@mongo_client[:sensors].insert_many(sensors)
 
-		sensor = { :_id => BSON::ObjectId.new.to_s, :url => client_url }
-		sensor["measures"] = get_measures(client_url).map { |measure| { :measure => measure, :join => [] }}
-		
-		@mongo_client[:sensors].insert_one(sensor)
-		sensor[:_id]
+		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :type => 'INPUT', :name => switch }}
+		@mongo_client[:sensors].insert_many(switches)	
+		client_url
 	end
 
 	def join_nursery(sensor_id, value)
@@ -97,21 +96,17 @@ class Sensors
 
 
 	private
-	def get_joinded
-		result = []
-    	@mongo_client[:sensors].find.to_a.each do |sensor|
-    		measures = sensor["measures"].select { |measure| measure["join"].length > 0 } 
-    		result << {
-    			:_id => sensor["_id"],
-    			:url => sensor["url"],
-    			:measures => measures
-    		} if measures.length > 0
-    	end
-    	result
-	end
-
 	def get_measures(client_url)
 		url = URI.parse("#{client_url}/measures")
+		req = Net::HTTP::Get.new(url.to_s)
+		res = Net::HTTP.start(url.host, url.port) { |http|
+			http.request(req)
+		}
+		JSON.parse(res.body)
+	end
+
+	def get_switches(client_url)
+		url = URI.parse("#{client_url}/switches")
 		req = Net::HTTP::Get.new(url.to_s)
 		res = Net::HTTP.start(url.host, url.port) { |http|
 			http.request(req)
@@ -134,4 +129,7 @@ class Sensors
 		end
 	end
 
+	def switch(client_url, switch, value)
+		
+	end
 end

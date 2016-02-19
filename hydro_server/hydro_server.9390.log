@@ -9738,3 +9738,134 @@ D, [2016-02-18T20:10:24.195217 #45480] DEBUG -- : MONGODB | 127.0.0.1:27017 | ru
 Thin web server (v1.6.4 codename Gob Bluth)
 Maximum connections set to 1024
 Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to hydro_server.9390.pid
+D, [2016-02-18T20:14:34.084685 #46095] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:14:34.088215 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-18T20:14:34.089710 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001306s
+D, [2016-02-18T20:14:34.089980 #46095] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:14:34.092677 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-18T20:14:34.094153 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001302s
+D, [2016-02-18T20:14:34.094422 #46095] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:14:34.097142 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-18T20:14:34.111181 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.011460999999999999s
+D, [2016-02-18T20:14:34.111421 #46095] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:14:34.114457 #46095] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:14:34.117303 #46095] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: servidor.davinci.lan/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-02-18T20:15:00.121352 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{}, "projection"=>{"_id"=>1, "url"=>1}}
+D, [2016-02-18T20:15:00.124076 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002046s
+D, [2016-02-18T20:15:18.247104 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"url"=>"http://localhost:9190/hydro_client"}}
+D, [2016-02-18T20:15:18.247926 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000521s
+D, [2016-02-18T20:15:18.292837 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | STARTED | {"insert"=>"sensors", "documents"=>[{:_id=>"56c65086970811b40f88a68b", :url=>"http://localhost:9190/hydro_client", :measure=>"TEMP_FLUID", :join=>[]}, {:_id=>"56c65086970811b40f88a68c", :url=>"http://localhost:9190/hydro_client", :measure=>"SOIL_MOIST...
+D, [2016-02-18T20:15:18.293576 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.insert | SUCCEEDED | 0.000504s
+127.0.0.1 - - [18/Feb/2016:20:15:18 -0300] "POST /sensors HTTP/1.1" 200 44 0.0524
+D, [2016-02-18T20:16:00.119998 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{}, "projection"=>{"_id"=>1, "url"=>1}}
+D, [2016-02-18T20:16:00.121368 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00074s
+Read sensor: 56c65086970811b40f88a68b
+D, [2016-02-18T20:16:00.121964 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68b"}}
+D, [2016-02-18T20:16:00.122614 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000457s
+D, [2016-02-18T20:16:00.123276 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68b"}}
+D, [2016-02-18T20:16:00.123989 #46095] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000489s
+undefined method `each' for nil:NilClass
+== Sinatra (v1.4.7) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop
+Writing PID to hydro_server.9390.pid
+D, [2016-02-18T20:23:52.347016 #46788] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:23:52.365278 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"configuration", "filter"=>{"key"=>"plant_code"}}
+D, [2016-02-18T20:23:52.374083 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.008492s
+D, [2016-02-18T20:23:52.374677 #46788] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:23:52.379686 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"plant_types", "filter"=>{}}
+D, [2016-02-18T20:23:52.382047 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.002061s
+D, [2016-02-18T20:23:52.382450 #46788] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:23:52.386894 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"mesurements", "filter"=>{}}
+D, [2016-02-18T20:23:52.399361 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.012307s
+D, [2016-02-18T20:23:52.399624 #46788] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:23:52.402597 #46788] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+D, [2016-02-18T20:23:52.405389 #46788] DEBUG -- : MONGODB | Adding 127.0.0.1:27017 to the cluster.
+Iniciando servidor...
+Acceda al servidor web a traves de: servidor.davinci.lan/web
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9390, CTRL+C to stop
+D, [2016-02-18T20:24:00.284539 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{}, "projection"=>{"_id"=>1}}
+D, [2016-02-18T20:24:00.289308 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00369s
+Read sensor: 56c65086970811b40f88a68b
+D, [2016-02-18T20:24:00.290195 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68b"}}
+D, [2016-02-18T20:24:00.291839 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.001356s
+D, [2016-02-18T20:24:00.292510 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68b"}}
+D, [2016-02-18T20:24:00.293196 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000472s
+GET http://localhost:9190/hydro_client/TEMP_FLUID
+D, [2016-02-18T20:24:04.171293 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68b"}}
+D, [2016-02-18T20:24:04.172096 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000513s
+D, [2016-02-18T20:24:04.172918 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a68b"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a68b", "url"=>"http://localhost:9190/hydro_client", "measure"=>"TEMP_FLUID", "join"=>[]}}, "multi"=>false, "upsert"=>false}], "orde...
+D, [2016-02-18T20:24:04.173985 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.000823s
+Read sensor: 56c65086970811b40f88a68c
+D, [2016-02-18T20:24:04.174970 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68c"}}
+D, [2016-02-18T20:24:04.175920 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000611s
+D, [2016-02-18T20:24:04.176804 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68c"}}
+D, [2016-02-18T20:24:04.177669 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000567s
+GET http://localhost:9190/hydro_client/SOIL_MOISTURE_1
+D, [2016-02-18T20:24:08.443499 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68c"}}
+D, [2016-02-18T20:24:08.444403 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000565s
+D, [2016-02-18T20:24:08.445300 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a68c"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a68c", "url"=>"http://localhost:9190/hydro_client", "measure"=>"SOIL_MOISTURE_1", "join"=>[], "date"=>2016-02-18 20:24:08 -0300, "v...
+D, [2016-02-18T20:24:08.448269 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.002773s
+Read sensor: 56c65086970811b40f88a68d
+D, [2016-02-18T20:24:08.448912 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68d"}}
+D, [2016-02-18T20:24:08.449503 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000407s
+D, [2016-02-18T20:24:08.450036 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68d"}}
+D, [2016-02-18T20:24:08.450748 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00048s
+GET http://localhost:9190/hydro_client/SOIL_MOISTURE_2
+D, [2016-02-18T20:24:12.741123 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68d"}}
+D, [2016-02-18T20:24:12.741923 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00055s
+D, [2016-02-18T20:24:12.742557 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a68d"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a68d", "url"=>"http://localhost:9190/hydro_client", "measure"=>"SOIL_MOISTURE_2", "join"=>[], "date"=>2016-02-18 20:24:12 -0300, "v...
+D, [2016-02-18T20:24:12.743310 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.000585s
+Read sensor: 56c65086970811b40f88a68e
+D, [2016-02-18T20:24:12.743928 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68e"}}
+D, [2016-02-18T20:24:12.744588 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00047400000000000003s
+D, [2016-02-18T20:24:12.745115 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68e"}}
+D, [2016-02-18T20:24:12.745738 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000433s
+GET http://localhost:9190/hydro_client/SOIL_MOISTURE_3
+D, [2016-02-18T20:24:17.034715 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68e"}}
+D, [2016-02-18T20:24:17.035453 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000496s
+D, [2016-02-18T20:24:17.036077 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a68e"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a68e", "url"=>"http://localhost:9190/hydro_client", "measure"=>"SOIL_MOISTURE_3", "join"=>[], "date"=>2016-02-18 20:24:17 -0300, "v...
+D, [2016-02-18T20:24:17.036839 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.0005920000000000001s
+Read sensor: 56c65086970811b40f88a68f
+D, [2016-02-18T20:24:17.037452 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68f"}}
+D, [2016-02-18T20:24:17.038362 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000584s
+D, [2016-02-18T20:24:17.039358 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68f"}}
+D, [2016-02-18T20:24:17.040645 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.00099s
+GET http://localhost:9190/hydro_client/PHOTO
+D, [2016-02-18T20:24:20.282528 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a68f"}}
+D, [2016-02-18T20:24:20.283330 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0005549999999999999s
+D, [2016-02-18T20:24:20.283960 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a68f"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a68f", "url"=>"http://localhost:9190/hydro_client", "measure"=>"PHOTO", "join"=>[], "date"=>2016-02-18 20:24:20 -0300, "value"=>"26...
+D, [2016-02-18T20:24:20.284744 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.0006140000000000001s
+Read sensor: 56c65086970811b40f88a690
+D, [2016-02-18T20:24:20.285415 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a690"}}
+D, [2016-02-18T20:24:20.286196 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000519s
+D, [2016-02-18T20:24:20.286851 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a690"}}
+D, [2016-02-18T20:24:20.287603 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000522s
+GET http://localhost:9190/hydro_client/HUMIDITY
+D, [2016-02-18T20:24:24.017436 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a690"}}
+D, [2016-02-18T20:24:24.018280 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000543s
+D, [2016-02-18T20:24:24.018944 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a690"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a690", "url"=>"http://localhost:9190/hydro_client", "measure"=>"HUMIDITY", "join"=>[]}}, "multi"=>false, "upsert"=>false}], "ordere...
+D, [2016-02-18T20:24:24.020093 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.00084s
+Read sensor: 56c65086970811b40f88a691
+D, [2016-02-18T20:24:24.021187 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a691"}}
+D, [2016-02-18T20:24:24.022289 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.0006479999999999999s
+D, [2016-02-18T20:24:24.023297 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a691"}}
+D, [2016-02-18T20:24:24.024100 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000527s
+GET http://localhost:9190/hydro_client/TEMP_ENV
+D, [2016-02-18T20:24:27.745678 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | STARTED | {"find"=>"sensors", "filter"=>{"_id"=>"56c65086970811b40f88a691"}}
+D, [2016-02-18T20:24:27.746447 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.find | SUCCEEDED | 0.000523s
+D, [2016-02-18T20:24:27.746938 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | STARTED | {"update"=>"sensors", "updates"=>[{"q"=>{"_id"=>"56c65086970811b40f88a691"}, "u"=>{"$set"=>{"_id"=>"56c65086970811b40f88a691", "url"=>"http://localhost:9190/hydro_client", "measure"=>"TEMP_ENV", "join"=>[]}}, "multi"=>false, "upsert"=>false}], "ordere...
+D, [2016-02-18T20:24:27.747721 #46788] DEBUG -- : MONGODB | 127.0.0.1:27017 | rubyponia.update | SUCCEEDED | 0.0006000000000000001s
+== Sinatra (v1.4.7) has taken the stage on 4567 for development with backup from Thin
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:4567, CTRL+C to stop

@@ -30,9 +30,9 @@ namespace '/sensors' do
 			body = JSON.parse(request.body.read)
 			JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.sensorSerivces.create(body["url"])
+			url = settings.sensorSerivces.create(body["url"])
 			status 200
-			{ :_id => id }.to_json
+			{ :url => url }.to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
