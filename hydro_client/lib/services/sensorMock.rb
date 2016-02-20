@@ -8,11 +8,11 @@ class SensorMock
     end
 
     def measures
-        Environment.sensors["read"].map { |measure| { :name => @name, :sensor => measure["sensor"] } }        
+        Environment.sensors["read"].map { |measure| { :name => @name, :type => measure["type"], :sensor => measure["sensor"] } }        
     end
 
     def switches
-        Environment.sensors["switch"].map { |switch| { :name => @name, :switch => switch["switch"] } }
+        Environment.sensors["write"].map { |switch| { :name => @name, :type => switch["type"], :switch => switch["switch"] } }
     end
 
     def read(command)

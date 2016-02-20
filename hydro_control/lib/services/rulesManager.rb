@@ -4,12 +4,13 @@ require 'services/exceptions'
 
 class RulesManager
 
-	def initialize(sensorService)
+	def initialize(sensorService, paramService)
         @mongo_client = Mongo::Client.new([ "#{Environment.config['mongodb']['host']}:#{Environment.config['mongodb']['port']}" ], :database => "#{Environment.config['mongodb']['db']}")
         @sensorService = sensorService
+        @paramService = paramService
         @rules = {}
         get_all.each do |rule|
-        	@rules[rule["_id"]] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], sensorService)
+        	@rules[rule["_id"]] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], self)
         end
 	end
 
@@ -30,7 +31,7 @@ class RulesManager
 
 	def create(name, condition, action, active = false)
 		id = BSON::ObjectId.new.to_s
-		rule = Rule.new(name, condition, action, active, @sensorService)
+		rule = Rule.new(name, condition, action, active, self)
 		@rules[id] = rule
 		@mongo_client[:rules].insert_one({ :_id => id, :name => name, :active => active, :condtion => condition, :action => action })
 		id
@@ -43,7 +44,8 @@ class RulesManager
 		@mongo_client[:rules]
 		.find({ :_id => rule_id })
 		.update_one({ '$set' => rule })
-		@rules[rule_id] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], @sensorService)
+		@rules[rule_id] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], self)
+		rule_id
 	end
 
 	def enableRule(rule_id, active)
@@ -75,15 +77,26 @@ class RulesManager
 			end
 		end
 	end
+
+	def get_context
+		context = @sensorService.get_context
+		context["now"] = Time.new
+		context.merge!(@paramService.get_context)
+		context
+	end
+
+	def switch(sensor_id, value)
+		@sensorService.switch(sensor_id, value)
+	end
 end
 
 class Rule
 	attr_reader :name, :condition, :action
 	attr_accessor :active
 
-	def initialize(name, condition, action, active, sensorService)
+	def initialize(name, condition, action, active, rulesManager)
 		@name = name
-		@sensorService = sensorService
+		@rulesManager = rulesManager
 		@condition = condition
 		@context = {}
 		@action = action
@@ -92,12 +105,12 @@ class Rule
  
 	def evaluate
 		puts "Evaluando regla #{@name}"
-		@context = @sensorService.get_context
+		@context = @rulesManager.get_context
 		b = binding		
 		b.eval(@action) if b.eval(@condition)
 	end
 
 	def switch(name, value)
-		@sensorService.switch(@context[name][:_id], value)
+		@rulesManager.switch(@context[name][:_id], value)
 	end
 end

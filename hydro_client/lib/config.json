@@ -2,51 +2,62 @@
 	"read": [
 		{
 			"sensor":"TEMP_FLUID",
+			"type": "TERMOMETER",
 			"command": "TEMP_FLUID"
 		},
 		{
 			"sensor":"SOIL_MOISTURE_1",
+			"type": "SOIL_MOISTURE",
 			"command": "SOIL_MOISTURE_1"
 		},
 		{
 			"sensor":"SOIL_MOISTURE_2",
+			"type": "SOIL_MOISTURE",
 			"command": "SOIL_MOISTURE_2"
 		},
 		{
 			"sensor":"SOIL_MOISTURE_3",
+			"type": "SOIL_MOISTURE",
 			"command": "SOIL_MOISTURE_3"
 		},
 		{
 			"sensor":"PHOTO",
+			"type": "PHOTOMETER",
 			"command": "PHOTO"
 		},
 		{
 			"sensor":"HUMIDITY",
+			"type": "HUMIDITY",
 			"command": "HUMIDITY"
 		},
 		{
 			"sensor":"TEMP_ENV",
+			"type": "TERMOMETER",
 			"command": "TEMP_ENV"
 		}
 	],
-	"switch": [
+	"write": [
 		{
 			"switch": "RELAY_1",
+			"type": "RELAY",
 			"on": "RELAY_1_ON",
 			"off": "RELAY_1_OFF"			
 		},
 		{
 			"switch": "RELAY_2",
+			"type": "RELAY",
 			"on": "RELAY_2_ON",
 			"off": "RELAY_2_OFF"			
 		},
 		{
 			"switch": "RELAY_3",
+			"type": "RELAY",
 			"on": "RELAY_3_ON",
 			"off": "RELAY_3_OFF"			
 		},
 		{
 			"switch": "RELAY_4",
+			"type": "RELAY",
 			"on": "RELAY_4_ON",
 			"off": "RELAY_4_OFF"			
 		}

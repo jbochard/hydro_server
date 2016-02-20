@@ -11,6 +11,7 @@ require 'services/implementation'
 require 'services/schedulerManager'
 require 'services/rulesManager'
 require 'services/sensors'
+require 'services/parameters'
 
 class Environment
 	class << self
@@ -26,7 +27,8 @@ Environment.config = JSON.parse(File.read("config/configuration.json"))
 
 Implementation.register do |i|
   i[:sensors]       = Sensors.new
-  i[:rules]         = RulesManager.new(i[:sensors])
+  i[:parameters]    = Parameters.new
+  i[:rules]         = RulesManager.new(i[:sensors], i[:parameters])
   i[:scheduler]     = SchedulerManager.new(i[:sensors], i[:rules])
 end
 

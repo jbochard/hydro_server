@@ -59,4 +59,24 @@ namespace '/sensors' do
 
 		end
 	end
+
+	patch '/:sensor_id' do |sensor_id|
+		content_type :json
+		begin
+			body = JSON.parse(request.body.read)
+			case body["op"].upcase		
+			when "ENABLE_SENSOR"
+				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
+				settings.sensorSerivces.enableSensor(sensor_id, body["active"])				
+			end			
+			status 200
+			{ :_id => sensor_id }.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json			
+		end
+	end
 end

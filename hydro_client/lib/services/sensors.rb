@@ -12,11 +12,11 @@ require 'serialport'
     end
 
     def measures
-        Environment.sensors["read"].map { |measure| { :name => @name, :sensor => measure["sensor"] } }        
+        Environment.sensors["read"].map { |measure| { :name => @name, :type => measure["type"], :sensor => measure["sensor"] } }        
     end
 
     def switches
-        Environment.sensors["switch"].map { |switch| { :name => @name, :switch => switch["switch"] } }
+        Environment.sensors["write"].map { |switch| { :name => @name, :type => switch["type"], :switch => switch["switch"] } }
     end
 
     def read(command)
@@ -38,7 +38,7 @@ require 'serialport'
     end
 
     def switch(relay, state)
-        cmdObj = Environment.sensors["switch"].select { |cmd| cmd["switch"].upcase == relay.upcase }.first
+        cmdObj = Environment.sensors["write"].select { |cmd| cmd["switch"].upcase == relay.upcase }.first
         if ! cmdObj.nil?
             @semaphore.synchronize {
                 command = cmdObj["on"].upcase if state.upcase == 'ON'
@@ -50,7 +50,7 @@ require 'serialport'
                 line = readLine
                 return { :state => 'ERROR', :value => 'I/O ERROR' } if line.nil?
 
-                res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
+                res = line.scan(/#{command}\s+([^ ]+)\s*([^ ]*)$/).last
                 state = res[0]
                 value = res[1] if res.length > 1
                 return { :state => state, :value => value }

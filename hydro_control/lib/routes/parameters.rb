@@ -1,20 +1,18 @@
-# coding: utf-8
+set :parameters, 							Implementation[:parameters]
 
-set :rulesManager, 							Implementation[:rules]
-
-namespace '/rules' do
+namespace '/parameters' do
  
 	get '/?' do
 		content_type :json
 		status 200
-		settings.rulesManager.get_all.to_json
+		settings.parameters.get_all.to_json
 	end
 
-	get '/:rule_id' do |rule_id|
+	get '/:param_id' do |param_id|
 		content_type :json
 		begin
 			status 200
-			settings.rulesManager.get(rule_id).to_json
+			settings.parameters.get(param_id).to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
@@ -27,7 +25,7 @@ namespace '/rules' do
 			body = JSON.parse(request.body.read)
 			# JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.rulesManager.create(body["name"], body["condition"], body["action"], body["active"])
+			id = settings.parameters.create(body["name"], body["value"])
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -40,13 +38,13 @@ namespace '/rules' do
 		end
 	end
 
-	put '/:rule_id' do |rule_id| 
+	put '/:param_id' do |param_id| 
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
 			# JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.rulesManager.update(rule_id, body)
+			id = settings.parameters.update(param_id, body)
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -59,23 +57,22 @@ namespace '/rules' do
 		end
 	end
 
-	patch '/:rule_id' do |rule_id|
+	delete '/:param_id' do |param_id|
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			case body["op"].upcase		
-			when "ENABLE_RULE"
-				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				settings.rulesManager.enableRule(rule_id, body["active"])				
-			end			
+			# JSON::Validator.validate!(settings.sensor_post_schema, body)
+
+			id = settings.parameters.delete(param_id)
 			status 200
-			{ :_id => rule_id }.to_json
+			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
 		rescue JSON::Schema::ValidationError => e
 			status 400
-			{ :error => e.message }.to_json			
+			{ :error => e.message }.to_json
+
 		end
 	end
 end

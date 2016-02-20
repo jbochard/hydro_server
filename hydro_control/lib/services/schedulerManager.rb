@@ -19,7 +19,7 @@ class SchedulerManager
 		puts "Iniciando cron de medidas"
 		@scheduler.cron Environment.config["measures_cron"] do
 			begin
-				@sensors.get_all({ :type => 'OUTPUT' }).each do |sensor|
+				@sensors.get_all({ :category => 'OUTPUT', :enable => true }).each do |sensor|
 					measures = @sensors.read(sensor["_id"])
 				end
 			rescue Exception => e 

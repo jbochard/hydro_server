@@ -19,13 +19,14 @@ class Sensors
 	end
 
 	def get_all(query = {})
-    	@mongo_client[:sensors].find(query).projection({ _id: 1, name: 1 }).to_a
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, enable: 1, name: 1, value: 1 }).to_a
 	end
 
 	def get_context
-    	Hash[@mongo_client[:sensors].find
+    	context = Hash[@mongo_client[:sensors].find
     		.map { |sensor| [ sensor["name"], { :_id => sensor["_id"], :value => sensor["value"], :date => sensor["date"] } ] }
     	]
+    	context
 	end
 
 	def get(sensor_id)
@@ -59,10 +60,10 @@ class Sensors
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
 		end
-		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :type => 'OUTPUT', :name => "#{measure['name']}_#{measure['sensor']}", :sensor => measure['sensor'], :join => [] }}
+		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => "#{measure['name']}_#{measure['sensor']}", :type => measure['type'], :enable => false, :sensor => measure['sensor'] } }
 		@mongo_client[:sensors].insert_many(sensors)
 
-		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :type => 'INPUT', :name => "#{switch['name']}_#{switch['switch']}", :switch => switch['switch'] } }
+		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => "#{switch['name']}_#{switch['switch']}", :type => switch['type'], :enable => false, :switch => switch['switch'] } }
 		@mongo_client[:sensors].insert_many(switches)	
 		client_url
 	end
@@ -74,6 +75,16 @@ class Sensors
 		@mongo_client[:sensors]
 			.find({ :_id => sensor_id })
 			.update_one({ '$set' => sensor })		
+	end
+
+	def enableSensor(sensor_id, value)
+      	if ! exists?(sensor_id)
+			raise NotFoundException.new :sensor, sensor_id
+    	end
+		@mongo_client[:sensors]
+			.find({ :_id => sensor_id })
+			.update_one({ '$set' => { :enable => value } })
+		sensor_id
 	end
 
 	private
