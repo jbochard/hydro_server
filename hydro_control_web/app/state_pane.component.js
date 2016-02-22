@@ -25,6 +25,7 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
                 }
                 StatePane.prototype.updateSensors = function () {
                     var _this = this;
+                    this.errorMessage = "";
                     this._sensorService
                         .getAll()
                         .subscribe(function (sensors) { return _this.sensors = sensors; }, function (error) { return _this.errorMessage = error; });
@@ -35,7 +36,7 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
                 StatePane = __decorate([
                     core_1.Component({
                         selector: 'state-pane',
-                        template: "\n     <ul>\n      <li *ngFor=\"#sensor of sensors\">\n        {{ sensor.name }}\n        {{ sensor.value }}\n      </li>\n    </ul>\n    ",
+                        template: "\n  \t<span *ngIf='errorMessage != null'>{{errorMessage}}</span>\n     <div class='list-group' *ngFor=\"#sensor of sensors\">\n      <a href='#' class='list-group-item'>\n        <h4 class='list-group-item-heading'>{{ sensor.name }}</h4>\n        <p class='list-group-item-text'>{{ sensor.value }}</p>\n      </a>\n    </div>\n    ",
                         providers: [sensor_service_1.SensorService]
                     }), 
                     __metadata('design:paramtypes', [sensor_service_1.SensorService])
