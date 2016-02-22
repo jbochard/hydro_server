@@ -1,75 +1,31 @@
-<!DOCTYPE HTML>
-<html ng-app="hydroponicApp" lang="es">
+<html>
     <head>
-        <title>Hidroponia</title>
-        <meta http-equiv="Cache-Control" content="no-store" />        
-        <meta http-equiv="x-ua-compatible" content="IE=edge" />
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-touch-fullscreen" content="yes">
+        <title>Hydro-control</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
 
-        <script type="text/javascript">
-            host = "<%= @host %>"
+        <script src="https://code.angularjs.org/2.0.0-beta.6/angular2-polyfills.js"></script>
+        <script src="https://code.angularjs.org/tools/system.js"></script>
+        <script src="https://code.angularjs.org/tools/typescript.js"></script>
+        <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
+        <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script>
+        <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+        <!-- 2. Configure SystemJS -->
+        <script>
+            System.config({
+                transpiler: 'typescript',
+                typescriptOptions:  { emitDecoratorMetadata: true },
+                packages:           {'app': {defaultExtension: 'ts'} }
+            });
+            System.import('app/main').then(null, console.error.bind(console));
         </script>
-
-        <link rel="icon" type="image/png" href="<%= @host %>/img/favicon.png" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="<%= @host %>/styles/snap.css">
-        <link rel="stylesheet" href="<%= @host %>/styles/styles.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>        
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="<%= @host %>/js/ui-bootstrap-0.13.0.js"></script>
- 
-        <script src="<%= @host %>/js/snap.js"></script>
-        <script src="<%= @host %>/js/app.js"></script>
-        <script src="<%= @host %>/js/services.js"></script>
-        <script src="<%= @host %>/js/controllers.js"></script>
     </head>
-    <body  ng-controller="HydroponicController">
-        <div class="snap-drawers">
-            <div class="snap-drawer snap-drawer-left">
-                <div>
-                    <div class="search">
-                        <input id="search" type="text" ng-model='queryNursery' class="form-control" placeholder="Buscar cajones"/>
-                    </div>
-                    <div>
-                        <h4>Contenedores</h4>
-                        <table style="width: 100%">
-                            <tbody>
-                                <tr class="list" ng-repeat="n in nurseries | orderBy: ['name']">
-                                    <td>
-                                        <span class="list-item" ng-click="show_nursery(n._id)">{{n.name}}</span>  
-                                    </td>
-                                    <td>
-                                        <span class="list-item-remove" ng-click="remove_nursery(n._id)">-</span>                                    
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div style="padding: 10px;">
-                        <button ng-click='add_nursery()' class="btn-primary">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div id="content" class="snap-content">
-            <div id="do-drag" class="toolbar">
-                <a ng-click="open_left()" class="open-left"></a>
-                <h1></h1>
-            </div>
-            <div class="panel" ng-include="template"></div>
-        </div>
-
-        <script src="<%= @host %>/js/index.js"></script>
+    <!-- 3. Display the application -->
+    <body>
+        <hydro_control class="container" style="display: block">Cargando...</hydro_control>
     </body>
 </html>
