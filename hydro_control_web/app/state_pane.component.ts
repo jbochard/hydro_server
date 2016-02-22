@@ -1,5 +1,5 @@
-import {Component}      from 'angular2/core';
-import {SensorService}  from './sensor.service.ts';
+import {Component, OnInit}      from 'angular2/core'
+import {SensorService}  		from './sensor.service'
 
 @Component({
   selector: 'state-pane',
@@ -12,13 +12,15 @@ import {SensorService}  from './sensor.service.ts';
 
 export class StatePane implements OnInit {
 
-  constructor(private _sensorService: SensorService) { }
+	sensors: Object;
 
-  updateSensors() {
-     this._sensorService.getAll();
-  }
+  	constructor(private _sensorService: SensorService) { }
 
-  ngOnInit() {
-    this.updateSensors();
-  }
+	updateSensors() {
+		this.sensors = this._sensorService.getAll();
+	}
+
+	ngOnInit() {
+		this.updateSensors();
+	}
 }

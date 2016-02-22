@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/http'], function(exports_1) {
+System.register(['angular2/core', 'angular2/http', 'rxjs/Rx'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17,15 +17,18 @@ System.register(['angular2/core', 'angular2/http'], function(exports_1) {
             },
             function (http_1_1) {
                 http_1 = http_1_1;
-            }],
+            },
+            function (_1) {}],
         execute: function() {
             SensorService = (function () {
                 function SensorService(http) {
                     this.http = http;
                 }
                 SensorService.prototype.getAll = function () {
-                    var path = '/sensors';
-                    return this.http.get(path);
+                    var path = 'http://localhost:9490/sensors';
+                    return this.http
+                        .get(path)
+                        .map(function (res) { return res.json(); });
                 };
                 SensorService = __decorate([
                     core_1.Injectable(), 

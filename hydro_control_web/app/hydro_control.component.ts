@@ -10,10 +10,8 @@ import {StatePane}      from './state_pane.component';
       <template ui-pane title='Estado' active="true">
         <state-pane></state-pane>
       </template>
-      <template ui-pane title="Parámetros">
-      </template>
-      <template ui-pane title="Reglas">
-      </template>    
+      <template ui-pane title="Parámetros"></template>
+      <template ui-pane title="Reglas"></template>    
     </ui-tabs>
     <hr>
     `,

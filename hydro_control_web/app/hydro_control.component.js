@@ -28,7 +28,7 @@ System.register(['angular2/core', './ui_tabs', './state_pane.component'], functi
                 HydroControl = __decorate([
                     core_1.Component({
                         selector: 'hydro_control',
-                        template: "\n    <h4>Hydro-Control</h4>\n    <ui-tabs>\n      <template ui-pane title='Estado' active=\"true\">\n        <state-pane></state-pane>\n      </template>\n      <template ui-pane title=\"Par\u00E1metros\">\n      </template>\n      <template ui-pane title=\"Reglas\">\n      </template>    \n    </ui-tabs>\n    <hr>\n    ",
+                        template: "\n    <h4>Hydro-Control</h4>\n    <ui-tabs>\n      <template ui-pane title='Estado' active=\"true\">\n        <state-pane></state-pane>\n      </template>\n      <template ui-pane title=\"Par\u00E1metros\"></template>\n      <template ui-pane title=\"Reglas\"></template>    \n    </ui-tabs>\n    <hr>\n    ",
                         directives: [ui_tabs_1.UiTabs, ui_tabs_1.UiPane, state_pane_component_1.StatePane]
                     }), 
                     __metadata('design:paramtypes', [])
