@@ -24,7 +24,10 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
                     this._sensorService = _sensorService;
                 }
                 StatePane.prototype.updateSensors = function () {
-                    this.sensors = this._sensorService.getAll();
+                    var _this = this;
+                    this._sensorService
+                        .getAll()
+                        .subscribe(function (sensors) { return _this.sensors = sensors; }, function (error) { return _this.errorMessage = error; });
                 };
                 StatePane.prototype.ngOnInit = function () {
                     this.updateSensors();
@@ -32,7 +35,7 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
                 StatePane = __decorate([
                     core_1.Component({
                         selector: 'state-pane',
-                        template: "\n    Hola\n    ",
+                        template: "\n     <ul>\n      <li *ngFor=\"#sensor of sensors\">\n        {{ sensor.name }}\n        {{ sensor.value }}\n      </li>\n    </ul>\n    ",
                         providers: [sensor_service_1.SensorService]
                     }), 
                     __metadata('design:paramtypes', [sensor_service_1.SensorService])

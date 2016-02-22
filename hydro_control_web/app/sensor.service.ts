@@ -9,10 +9,16 @@ export class SensorService {
 
 	constructor(private http: Http) {}
 
-	getAll() {
+	getAll(response, errors) {
 		var path = 'http://localhost:9490/sensors';
 		return this.http
 			.get(path)
-			.map(res => res.json());
+			.map(res => res.json())
+			.catch(this.handleError);
+   	}
+
+   	private handleError(error: Response) {
+   		console.error(error);
+   		return Observable.throw(error.json().error || 'Server error');
    	}
 }

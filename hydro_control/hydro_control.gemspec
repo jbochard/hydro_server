@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "mongo",            "~> 2.1"
   spec.add_runtime_dependency "json-schema",      "~> 2.6"
   spec.add_runtime_dependency "rufus-scheduler",  "~> 3.1"  
+  spec.add_runtime_dependency "sinatra-cross_origin", "~> 0.3"
 end

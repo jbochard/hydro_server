@@ -1,8 +1,5 @@
 {
-	"web": {
-		"port": 9490,
-		"host": "localhost"
-	},
+	"port": 9490,
 	"measures_cron": "*/1 * * * *",
 	"rules_cron": "*/1 * * * *",
 	"mongodb": {

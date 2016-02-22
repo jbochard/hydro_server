@@ -24,9 +24,9 @@ end
 config = JSON.parse(File.read("config/configuration.json"))
 
 if command.casecmp("start") == 0
-	exec("thin start --port #{config['web']['port']} -C #{base_dir}/lib/thin.yml --rackup #{base_dir}/lib/config.ru")
+	exec("thin start --port #{config['port']} -C #{base_dir}/lib/thin.yml --rackup #{base_dir}/lib/config.ru")
 end
 
 if command.casecmp("stop") == 0
-	exec("thin stop --port #{config['web']['port']} -C #{base_dir}/lib/thin.yml --rackup #{base_dir}/lib/config.ru")
+	exec("thin stop --port #{config['port']} -C #{base_dir}/lib/thin.yml --rackup #{base_dir}/lib/config.ru")
 end

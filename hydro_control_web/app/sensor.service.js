@@ -24,11 +24,16 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx'], function(exports_
                 function SensorService(http) {
                     this.http = http;
                 }
-                SensorService.prototype.getAll = function () {
+                SensorService.prototype.getAll = function (response, errors) {
                     var path = 'http://localhost:9490/sensors';
                     return this.http
                         .get(path)
-                        .map(function (res) { return res.json(); });
+                        .map(function (res) { return res.json(); })
+                        .catch(this.handleError);
+                };
+                SensorService.prototype.handleError = function (error) {
+                    console.error(error);
+                    return Observable.throw(error.json().error || 'Server error');
                 };
                 SensorService = __decorate([
                     core_1.Injectable(), 

@@ -4,7 +4,12 @@ import {SensorService}  		from './sensor.service'
 @Component({
   selector: 'state-pane',
   template: `
-    Hola
+     <ul>
+      <li *ngFor="#sensor of sensors">
+        {{ sensor.name }}
+        {{ sensor.value }}
+      </li>
+    </ul>
     `,
      providers: [ SensorService ]
 
@@ -13,11 +18,16 @@ import {SensorService}  		from './sensor.service'
 export class StatePane implements OnInit {
 
 	sensors: Object;
+	errorMessage: string;
 
   	constructor(private _sensorService: SensorService) { }
 
 	updateSensors() {
-		this.sensors = this._sensorService.getAll();
+		this._sensorService
+			.getAll()
+			.subscribe(
+				sensors => this.sensors = sensors,
+				error => this.errorMessage = error);
 	}
 
 	ngOnInit() {
