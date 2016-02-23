@@ -19,12 +19,13 @@ class Sensors
 	end
 
 	def get_all(query = {})
-    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, enable: 1, name: 1, value: 1 }).to_a
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client:1, name: 1, enable: 1,  value: 1 }).to_a
 	end
 
 	def get_context
-    	context = Hash[@mongo_client[:sensors].find
-    		.map { |sensor| [ sensor["name"], { :_id => sensor["_id"], :value => sensor["value"], :date => sensor["date"] } ] }
+    	context = Hash[@mongo_client[:sensors].find.projection({ _id: 1, type: 1, category: 1, client:1, name: 1, enable: 1,  value: 1 })
+    		.to_a
+    		.group_by { |s| s[:client] } 
     	]
     	context
 	end
@@ -38,7 +39,7 @@ class Sensors
 
   	def read(sensor_id)
   		sensor = get(sensor_id)
- 		value = read_measure(sensor["url"], sensor["sensor"])
+ 		value = read_measure(sensor["url"], sensor["name"])
 		if value.nil?
 			sensor.delete("date")
 			sensor.delete("value")
@@ -52,7 +53,7 @@ class Sensors
 
   	def switch(switch_id, value)
   		switch = get(switch_id)
-		execute_switch(switch["url"], switch['switch'], value)
+		execute_switch(switch["url"], switch['name'], value)
         switch_id
   	end
 
@@ -60,10 +61,10 @@ class Sensors
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
 		end
-		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => "#{measure['name']}_#{measure['sensor']}", :type => measure['type'], :enable => false, :sensor => measure['sensor'] } }
+		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => measure['sensor'], :client => measure['name'], :type => measure['type'], :enable => false } }
 		@mongo_client[:sensors].insert_many(sensors)
 
-		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => "#{switch['name']}_#{switch['switch']}", :type => switch['type'], :enable => false, :switch => switch['switch'] } }
+		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :enable => false } }
 		@mongo_client[:sensors].insert_many(switches)	
 		client_url
 	end

@@ -42,8 +42,8 @@ class RulesManager
 			raise NotFoundException.new :rules, rule_id
     	end
 		@mongo_client[:rules]
-		.find({ :_id => rule_id })
-		.update_one({ '$set' => rule })
+			.find({ :_id => rule_id })
+			.update_one({ '$set' => rule })
 		@rules[rule_id] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], self)
 		rule_id
 	end
@@ -110,7 +110,8 @@ class Rule
 		b.eval(@action) if b.eval(@condition)
 	end
 
-	def switch(name, value)
-		@rulesManager.switch(@context[name][:_id], value)
+	def switch(client, name, value)
+		s = @context[client].select {|s| s[:category] == 'INPUT' && s[:name] == name}.first
+		@rulesManager.switch(s[:_id], value) if ! s.nil?
 	end
 end

@@ -30,13 +30,11 @@ export class UiPane {
 @Component({
   selector: 'ui-tabs',
   template: `
-    <ul class="nav nav-tabs">
-      <li *ngFor="var pane of panes"
-          (click)="select(pane)"
-          role="presentation" [class.active]="pane.active">
-        <a>{{pane.title}}</a>
-      </li>
-    </ul>
+    <nav class="navbar navbar-dark bg-inverse">
+      <div class="nav navbar-nav">
+        <a *ngFor="var pane of panes" class="nav-item nav-link"  (click)="select(pane)" [class.active]="pane.active" href="#">{{pane.title}}</a>
+      </div>
+    </nav>
     <ng-content></ng-content>
     `,
     styles:['a { cursor: pointer; cursor: hand; }']

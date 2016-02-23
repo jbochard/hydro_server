@@ -22,13 +22,27 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
             StatePane = (function () {
                 function StatePane(_sensorService) {
                     this._sensorService = _sensorService;
+                    this.colums = 3;
                 }
                 StatePane.prototype.updateSensors = function () {
                     var _this = this;
                     this.errorMessage = "";
                     this._sensorService
                         .getAll()
-                        .subscribe(function (sensors) { return _this.sensors = sensors; }, function (error) { return _this.errorMessage = error; });
+                        .subscribe(function (sensors) {
+                        _this.sensors = [];
+                        var tmp = [];
+                        var idx = 1;
+                        for (var _i = 0; _i < sensors.length; _i++) {
+                            var sensor = sensors[_i];
+                            if (idx % _this.colums == 0) {
+                                _this.sensors.push(tmp);
+                                tmp = [];
+                            }
+                            tmp.push(sensor);
+                            idx++;
+                        }
+                    }, function (error) { return _this.errorMessage = error; });
                 };
                 StatePane.prototype.ngOnInit = function () {
                     this.updateSensors();
@@ -36,7 +50,7 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
                 StatePane = __decorate([
                     core_1.Component({
                         selector: 'state-pane',
-                        template: "\n  \t<span *ngIf='errorMessage != null'>{{errorMessage}}</span>\n     <div class='list-group' *ngFor=\"#sensor of sensors\">\n      <a href='#' class='list-group-item'>\n        <h4 class='list-group-item-heading'>{{ sensor.name }}</h4>\n        <p class='list-group-item-text'>{{ sensor.value }}</p>\n      </a>\n    </div>\n    ",
+                        template: "\n  \t<span *ngIf='errorMessage != null'>{{errorMessage}}</span>\n    <div *ngFor=\"#rows of sensors\" class=\"row\">\n      <div *ngFor=\"#col of rows\" class=\"col-xs-3\">\n        <div class=\"card card-inverse text-xs-center\" [class.card-success]=\"col.enable\" [class.card-warning]=\"! col.enable\">\n          <div class=\"card-block\">\n            <blockquote class=\"card-blockquote\">\n              <p>{{col.name}}</p>\n              <footer>{{col.value}}</footer>\n              <a href=\"#\" class=\"btn btn-primary\">Habilitar</a>\n            </blockquote>\n          </div>\n        </div>\n      </div>\n    </div>\n    ",
                         providers: [sensor_service_1.SensorService]
                     }), 
                     __metadata('design:paramtypes', [sensor_service_1.SensorService])

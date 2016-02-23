@@ -71,7 +71,7 @@ System.register(['angular2/core'], function(exports_1) {
                 UiTabs = __decorate([
                     core_1.Component({
                         selector: 'ui-tabs',
-                        template: "\n    <ul class=\"nav nav-tabs\">\n      <li *ngFor=\"var pane of panes\"\n          (click)=\"select(pane)\"\n          role=\"presentation\" [class.active]=\"pane.active\">\n        <a>{{pane.title}}</a>\n      </li>\n    </ul>\n    <ng-content></ng-content>\n    ",
+                        template: "\n    <nav class=\"navbar navbar-dark bg-inverse\">\n      <div class=\"nav navbar-nav\">\n        <a *ngFor=\"var pane of panes\" class=\"nav-item nav-link\"  (click)=\"select(pane)\" [class.active]=\"pane.active\" href=\"#\">{{pane.title}}</a>\n      </div>\n    </nav>\n    <ng-content></ng-content>\n    ",
                         styles: ['a { cursor: pointer; cursor: hand; }']
                     }), 
                     __metadata('design:paramtypes', [])
