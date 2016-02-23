@@ -23,17 +23,13 @@ class SchedulerManager
 					measures = @sensors.read(sensor["_id"])
 				end
 			rescue Exception => e 
-				puts e
+				puts e.backtrace
 			end
 		end
 
 		puts "Iniciando cron de reglas"
 		@scheduler.cron Environment.config["rules_cron"] do
-			begin
-				@rules.evaluate_active
-			rescue Exception => e 
-				puts e
-			end
+			@rules.get_all.each {|r| @rules.evaluateRule(r["_id"]) }
 		end		
 	end
 

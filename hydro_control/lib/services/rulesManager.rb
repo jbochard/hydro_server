@@ -10,7 +10,7 @@ class RulesManager
         @paramService = paramService
         @rules = {}
         get_all.each do |rule|
-        	@rules[rule["_id"]] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], self)
+        	@rules[rule["_id"]] = Rule.new(rule["_id"], rule["name"], rule["condition"], rule["action"], rule["enable"], self)
         end
 	end
 
@@ -29,11 +29,11 @@ class RulesManager
 		@mongo_client[:rules].find({ :_id => rule_id }).to_a.first
 	end
 
-	def create(name, condition, action, active = false)
+	def create(name, description, condition, action, enable = false)
 		id = BSON::ObjectId.new.to_s
-		rule = Rule.new(name, condition, action, active, self)
+		rule = Rule.new(id, name, condition, action, enable, self)
 		@rules[id] = rule
-		@mongo_client[:rules].insert_one({ :_id => id, :name => name, :active => active, :condtion => condition, :action => action })
+		@mongo_client[:rules].insert_one({ :_id => id, :name => name, :description => description, :enable => enable, :condition => condition, :action => action })
 		id
 	end
 
@@ -44,38 +44,19 @@ class RulesManager
 		@mongo_client[:rules]
 			.find({ :_id => rule_id })
 			.update_one({ '$set' => rule })
-		@rules[rule_id] = Rule.new(rule["name"], rule["condition"], rule["action"], rule["active"], self)
+		@rules[rule_id] = Rule.new(rule_id, rule["name"], rule["condition"], rule["action"], rule["enable"], self)
 		rule_id
 	end
 
-	def enableRule(rule_id, active)
+	def enableRule(rule_id, enable)
        	if ! exists?(rule_id)
 			raise NotFoundException.new :rules, rule_id
     	end		
     	@mongo_client[:rules]
             .find({ :_id => rule_id })
-            .update_one({ '$set' => { :active => active } })
-            @rules[rule_id].active = active
+            .update_one({ '$set' => { :enable => enable } })
+            @rules[rule_id].enable = enable
         rule_id
-	end
-
-	def registerEvaluation(rule_id)
-       	if ! exists?(rule_id)
-			raise NotFoundException.new :rules, rule_id
-    	end		
-    	@mongo_client[:rules]
-            .find({ :_id => rule_id })
-            .update_one({ '$set' => { :last_evaluation => Time.new } })
-        rule_id
-   	end
-
-	def evaluate_active
-		@rules.each do |k, r|
-			if r.active
-				r.evaluate
-				registerEvaluation(k)
-			end
-		end
 	end
 
 	def get_context
@@ -88,26 +69,61 @@ class RulesManager
 	def switch(sensor_id, value)
 		@sensorService.switch(sensor_id, value)
 	end
+
+	def evaluateRule(rule_id)
+		@rules[rule_id].evaluate
+	end
+
+	def registerEvaluationOk(rule_id, context)
+       	if ! exists?(rule_id)
+			raise NotFoundException.new :rules, rule_id
+    	end		
+    	@mongo_client[:rules]
+            .find({ :_id => rule_id })
+            .update_one({ '$set' => { :status => { :last_evaluation => Time.new, :context => context, :status => 'OK' } } })
+        rule_id
+   	end	
+
+	def registerEvaluationError(rule_id, context, e)
+       	if ! exists?(rule_id)
+			raise NotFoundException.new :rules, rule_id
+    	end		
+    	@mongo_client[:rules]
+            .find({ :_id => rule_id })
+            .update_one({ '$set' => { :status => { :last_evaluation => Time.new, :context => context, :status => 'ERROR', :backtrace => e.backtrace } } })
+        rule_id
+   	end	
 end
 
 class Rule
 	attr_reader :name, :condition, :action
-	attr_accessor :active
+	attr_accessor :enable
 
-	def initialize(name, condition, action, active, rulesManager)
+	def initialize(id, name, condition, action, enable, rulesManager)
+		@id = id
 		@name = name
-		@rulesManager = rulesManager
+		@enable = enable
 		@condition = condition
-		@context = {}
 		@action = action
-		@active = active
+		@context = {}
+
+		@rulesManager = rulesManager
 	end
  
 	def evaluate
-		puts "Evaluando regla #{@name}"
-		@context = @rulesManager.get_context
-		b = binding		
-		b.eval(@action) if b.eval(@condition)
+		if @enable
+			begin
+				puts "Evaluando regla #{@name}"
+				@context = @rulesManager.get_context
+				b = binding		
+				if b.eval(@condition)
+					b.eval(@action) 
+					@rulesManager.registerEvaluationOk(@id, @context)
+				end
+			rescue Exception => e 
+				@rulesManager.registerEvaluationError(@id, @context, e)
+			end
+		end
 	end
 
 	def switch(client, name, value)

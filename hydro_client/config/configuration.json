@@ -1,4 +1,5 @@
 {
+	"test": true,
 	"server": {
 		"port": 9190,
 		"name": "CLIENT_1"

@@ -26,11 +26,20 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable', 'rxjs/Rx']
             SensorService = (function () {
                 function SensorService(http) {
                     this.http = http;
+                    this.url = 'http://localhost:9490/sensors';
                 }
-                SensorService.prototype.getAll = function (response, errors) {
-                    var path = 'http://localhost:9490/sensors';
+                SensorService.prototype.getAll = function () {
                     return this.http
-                        .get(path)
+                        .get(this.url)
+                        .map(function (res) { return res.json(); })
+                        .catch(this.handleError);
+                };
+                SensorService.prototype.setEnableSensor = function (id, value) {
+                    var body = JSON.stringify({ op: 'ENABLE_SENSOR', enable: value });
+                    var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+                    var options = new http_1.RequestOptions({ headers: headers });
+                    return this.http
+                        .patch(this.url + '/' + id, body, options)
                         .map(function (res) { return res.json(); })
                         .catch(this.handleError);
                 };

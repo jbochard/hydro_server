@@ -7,12 +7,11 @@ import {SensorService}  		from './sensor.service'
   	<span *ngIf='errorMessage != null'>{{errorMessage}}</span>
     <div *ngFor="#rows of sensors" class="row">
       <div *ngFor="#col of rows" class="col-xs-3">
-        <div class="card card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
-          <div class="card-block">
+        <div class="sensor card card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
+          <div class="card-block" (click)="switchSensor(col)">
             <blockquote class="card-blockquote">
               <p>{{col.name}}</p>
               <footer>{{col.value}}</footer>
-              <a href="#" class="btn btn-primary">Habilitar</a>
             </blockquote>
           </div>
         </div>
@@ -24,9 +23,9 @@ import {SensorService}  		from './sensor.service'
 
 export class StatePane implements OnInit {
 
-	sensors: Object;
+	sensors: Object[];
 	errorMessage: string;
-  colums: integer;
+  private colums: number;
 
 	constructor(private _sensorService: SensorService) { 
     this.colums = 3;
@@ -39,7 +38,7 @@ export class StatePane implements OnInit {
 			.subscribe(
 				sensors => {
           this.sensors = [];
-          var tmp = [];
+          var tmp: Object[] = [];
           var idx = 1;
           for (var sensor of sensors) {
             if (idx % this.colums == 0) {
@@ -53,7 +52,15 @@ export class StatePane implements OnInit {
 				error => this.errorMessage = error);
 	}
 
+  switchSensor(sensor) {
+    this._sensorService.setEnableSensor(sensor._id, !sensor.enable)
+      .subscribe(
+        response => sensor.enable = response.enable,
+        error => this.errorMessage = error
+      );
+  }
+
 	ngOnInit() {
-		this.updateSensors();
+    setInterval(_ => this.updateSensors(), 5000);
 	}
 }

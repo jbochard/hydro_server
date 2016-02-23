@@ -23,8 +23,7 @@ Environment.config  = JSON.parse(File.read("config/configuration.json"))
 Environment.sensors = JSON.parse(File.read("#{$libdir}/config.json"))
 
 Implementation.register do |i|
-  i[:sensors] 	     = Sensors.new
-#  i[:sensors] 	     = SensorMock.new
+  i[:sensors] 	     = (Environment.config.has_key?('test') && Environment.config['test'])? SensorMock.new: Sensors.new
 end
 
 load 'app.rb'

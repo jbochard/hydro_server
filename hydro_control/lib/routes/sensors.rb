@@ -67,10 +67,10 @@ namespace '/sensors' do
 			case body["op"].upcase		
 			when "ENABLE_SENSOR"
 				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				settings.sensorSerivces.enableSensor(sensor_id, body["active"])				
+				enable = settings.sensorSerivces.enableSensor(sensor_id, body["enable"])				
 			end			
 			status 200
-			{ :_id => sensor_id }.to_json
+			{ :_id => sensor_id, :enable => enable }.to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json

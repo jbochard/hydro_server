@@ -44,13 +44,19 @@ System.register(['angular2/core', './sensor.service'], function(exports_1) {
                         }
                     }, function (error) { return _this.errorMessage = error; });
                 };
+                StatePane.prototype.switchSensor = function (sensor) {
+                    var _this = this;
+                    this._sensorService.setEnableSensor(sensor._id, !sensor.enable)
+                        .subscribe(function (response) { return sensor.enable = response.enable; }, function (error) { return _this.errorMessage = error; });
+                };
                 StatePane.prototype.ngOnInit = function () {
-                    this.updateSensors();
+                    var _this = this;
+                    setInterval(function (_) { return _this.updateSensors(); }, 5000);
                 };
                 StatePane = __decorate([
                     core_1.Component({
                         selector: 'state-pane',
-                        template: "\n  \t<span *ngIf='errorMessage != null'>{{errorMessage}}</span>\n    <div *ngFor=\"#rows of sensors\" class=\"row\">\n      <div *ngFor=\"#col of rows\" class=\"col-xs-3\">\n        <div class=\"card card-inverse text-xs-center\" [class.card-success]=\"col.enable\" [class.card-warning]=\"! col.enable\">\n          <div class=\"card-block\">\n            <blockquote class=\"card-blockquote\">\n              <p>{{col.name}}</p>\n              <footer>{{col.value}}</footer>\n              <a href=\"#\" class=\"btn btn-primary\">Habilitar</a>\n            </blockquote>\n          </div>\n        </div>\n      </div>\n    </div>\n    ",
+                        template: "\n  \t<span *ngIf='errorMessage != null'>{{errorMessage}}</span>\n    <div *ngFor=\"#rows of sensors\" class=\"row\">\n      <div *ngFor=\"#col of rows\" class=\"col-xs-3\">\n        <div class=\"sensor card card-inverse text-xs-center\" [class.card-success]=\"col.enable\" [class.card-warning]=\"! col.enable\">\n          <div class=\"card-block\" (click)=\"switchSensor(col)\">\n            <blockquote class=\"card-blockquote\">\n              <p>{{col.name}}</p>\n              <footer>{{col.value}}</footer>\n            </blockquote>\n          </div>\n        </div>\n      </div>\n    </div>\n    ",
                         providers: [sensor_service_1.SensorService]
                     }), 
                     __metadata('design:paramtypes', [sensor_service_1.SensorService])

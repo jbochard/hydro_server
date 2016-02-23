@@ -4,13 +4,12 @@ import {Observable} 								from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 @Injectable()
-export class SensorService {
+export class RuleService {
 
-	sensors: Object;
 	url: string;
 
 	constructor(private http: Http) {
-		this.url = 'http://localhost:9490/sensors';
+		this.url = 'http://localhost:9490/rules';
 	}
 
 	getAll() {
@@ -19,14 +18,14 @@ export class SensorService {
 			.map(res => res.json())
 			.catch(this.handleError);
    	}
-
-	setEnableSensor(id, value) {
-		let body = JSON.stringify({ op: 'ENABLE_SENSOR', enable: value });
+   	
+   	put(rule) {
+		let body = JSON.stringify(rule);
     	let headers = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: headers });
 
-    	return this.http
-    		.patch(this.url + '/' + id, body, options)
+		return this.http
+    		.put(this.url + '/' + rule._id, body, options)
             .map(res => res.json())
             .catch(this.handleError)
    	}

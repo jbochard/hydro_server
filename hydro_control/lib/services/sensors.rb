@@ -23,7 +23,7 @@ class Sensors
 	end
 
 	def get_context
-    	context = Hash[@mongo_client[:sensors].find.projection({ _id: 1, type: 1, category: 1, client:1, name: 1, enable: 1,  value: 1 })
+    	context = Hash[@mongo_client[:sensors].find({ :enable => true }).projection({ _id: 1, type: 1, category: 1, client:1, name: 1, enable: 1,  value: 1 })
     		.to_a
     		.group_by { |s| s[:client] } 
     	]
@@ -85,7 +85,7 @@ class Sensors
 		@mongo_client[:sensors]
 			.find({ :_id => sensor_id })
 			.update_one({ '$set' => { :enable => value } })
-		sensor_id
+		value
 	end
 
 	private

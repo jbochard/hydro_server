@@ -27,7 +27,7 @@ namespace '/rules' do
 			body = JSON.parse(request.body.read)
 			# JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.rulesManager.create(body["name"], body["condition"], body["action"], body["active"])
+			id = settings.rulesManager.create(body["name"], body["description"], body["condition"], body["action"], body["enable"])
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e
@@ -66,7 +66,7 @@ namespace '/rules' do
 			case body["op"].upcase		
 			when "ENABLE_RULE"
 				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				settings.rulesManager.enableRule(rule_id, body["active"])				
+				settings.rulesManager.enableRule(rule_id, body["enable"])				
 			end			
 			status 200
 			{ :_id => rule_id }.to_json
