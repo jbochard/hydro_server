@@ -27,7 +27,7 @@ export class SensorService {
 
     	return this.http
     		.patch(this.url + '/' + id, body, options)
-            .map(res => res.json())
+            .map(res => res.json() )
             .catch(this.handleError)
    	}
 
