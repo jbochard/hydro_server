@@ -1,5 +1,6 @@
 require 'mongo'
 require 'json'
+require 'thread'
 require 'services/exceptions'
 
 class RulesManager
@@ -52,12 +53,28 @@ class RulesManager
        	if ! exists?(rule_id)
 			raise NotFoundException.new :rules, rule_id
     	end		
+        @rules[rule_id].enableState(enable)
+
     	@mongo_client[:rules]
             .find({ :_id => rule_id })
             .update_one({ '$set' => { :enable => enable } })
-            @rules[rule_id].enable = enable
         rule_id
 	end
+
+	def delete(rule_id)
+       	if ! exists?(rule_id)
+			raise NotFoundException.new :rules, rule_id
+    	end
+        @rules[rule_id].enableState(enable)
+    	@rules.delete(rule_id)
+
+		@mongo_client[:rules]
+			.find({ :_id => rule_id })
+			.delete_one
+		param_id
+	end
+
+ 	# ---------------------- Métodos de evaluación de reglas ---------------------
 
 	def get_context
 		context = @sensorService.get_context
@@ -106,24 +123,33 @@ class Rule
 		@condition = condition
 		@action = action
 		@context = {}
+        @semaphore = Mutex.new
 
 		@rulesManager = rulesManager
 	end
  
 	def evaluate
-		if @enable
-			begin
-				puts "Evaluando regla #{@name}"
-				@context = @rulesManager.get_context
-				b = binding		
-				if b.eval(@condition)
-					b.eval(@action) 
-					@rulesManager.registerEvaluationOk(@id, @context)
+		@semaphore.synchronize {
+			if @enable
+				begin
+					puts "Evaluando regla #{@name}"
+					@context = @rulesManager.get_context
+					b = binding		
+					if b.eval(@condition)
+						b.eval(@action) 
+						@rulesManager.registerEvaluationOk(@id, @context)
+					end
+				rescue Exception => e 
+					@rulesManager.registerEvaluationError(@id, @context, e)
 				end
-			rescue Exception => e 
-				@rulesManager.registerEvaluationError(@id, @context, e)
 			end
-		end
+		}
+	end
+
+	def enableState(enable)
+		@semaphore.synchronize {
+			@enable = enable
+		}
 	end
 
 	def switch(client, name, value)

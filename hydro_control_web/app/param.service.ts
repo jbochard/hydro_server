@@ -1,15 +1,15 @@
-import {Injectable} 								from 'angular2/core'
+import {Injectable} 								              from 'angular2/core'
 import {Http, Response, Headers, RequestOptions}	from 'angular2/http'
-import {Observable} 								from 'rxjs/Observable';
+import {Observable} 								              from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 @Injectable()
-export class RuleService {
+export class ParamService {
 
 	url: string;
 
 	constructor(private http: Http) {
-		this.url = 'http://localhost:9490/rules';
+		this.url = 'http://localhost:9490/parameters';
 	}
 
 	getAll() {
@@ -19,19 +19,19 @@ export class RuleService {
 			.catch(this.handleError);
    	}
    	
-  put(rule) {
-		let body = JSON.stringify(rule);
+  put(param) {
+		let body = JSON.stringify(param);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
 		return this.http
-    		.put(this.url + '/' + rule._id, body, options)
+    		.put(this.url + '/' + param._id, body, options)
             .map(res => res.json())
             .catch(this.handleError)
   }
 
-  post(rule) {
-    let body = JSON.stringify(rule);
+  post(param) {
+    let body = JSON.stringify(param);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
@@ -41,9 +41,9 @@ export class RuleService {
             .catch(this.handleError)
   }
 
-  delete(rule) {
+  delete(param) {
     return this.http
-      .delete(this.url + '/' + rule._id)
+      .delete(this.url + '/' + param._id)
       .map(res => res.json())
       .catch(this.handleError);
     }

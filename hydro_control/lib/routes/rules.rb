@@ -78,4 +78,20 @@ namespace '/rules' do
 			{ :error => e.message }.to_json			
 		end
 	end
+
+	delete '/:rule_id' do |rule_id|
+		content_type :json
+		begin
+			id = settings.rulesManager.delete(rule_id)
+			status 200
+			{ :_id => id }.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json
+
+		end
+	end
 end

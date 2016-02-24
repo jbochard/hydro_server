@@ -23,7 +23,10 @@ import {RuleService} 	 		from './rule.service'
 	      <td>{{rule.description}}</td>
 	      <td>{{rule.status.last_evaluation}}</td>
 	      <td style="cursor: pointer" (click)="showStatusRule(rule)" data-toggle="modal" data-target="#statusRuleModal">{{rule.status.status}}</td>
-	      <td><a style="cursor: pointer" (click)="editRule(rule)" data-toggle="modal" data-target="#editRuleModal"><i class="fa fa-pencil-square-o"></i></a></td>
+	      <td>
+	      	<a style="cursor: pointer" (click)="editRule(rule)" data-toggle="modal" data-target="#editRuleModal"><i class="fa fa-pencil-square-o"></i></a>
+	      	<a style="cursor: pointer" (click)="deleteRule(rule)"><i class="fa fa-times"></i></a>
+	      </td>
 	    </tr>
 	  </tbody>
 	</table>
@@ -134,13 +137,14 @@ import {RuleService} 	 		from './rule.service'
      providers: [ RuleService ]
 })
 
-export class RulePane {
+export class RulePane implements OnInit {
 
 	rules: Object;
 	selectedRule: Object;
 	statusRule: Object;
 	selectedRuleMode = "create";
 	errorMessage: string;
+	private timer: Object; 
 
 	constructor(private _ruleService: RuleService) { 
 		this.updateRules();
@@ -206,5 +210,22 @@ export class RulePane {
 				);
 			return;
 		}	
+	}
+
+	deleteRule(rule) {
+		this._ruleService
+			.delete(rule)
+			.subscribe(
+				res => this.updateRules(),
+				error => this.errorMessage = error
+			);
+	}
+
+	ngOnInit() {
+    	this.timer = setInterval(_ => this.updateRules(), 10000);
+	}
+
+	ngOnDestroy() {
+    	clearInterval(this.timer);
 	}
 }

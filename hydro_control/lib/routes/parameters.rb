@@ -60,9 +60,6 @@ namespace '/parameters' do
 	delete '/:param_id' do |param_id|
 		content_type :json
 		begin
-			body = JSON.parse(request.body.read)
-			# JSON::Validator.validate!(settings.sensor_post_schema, body)
-
 			id = settings.parameters.delete(param_id)
 			status 200
 			{ :_id => id }.to_json

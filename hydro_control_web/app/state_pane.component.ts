@@ -1,4 +1,4 @@
-import {Component, OnInit}      from 'angular2/core'
+import {Component, OnInit}  from 'angular2/core'
 import {SensorService}  		from './sensor.service'
 
 @Component({
@@ -26,9 +26,11 @@ export class StatePane implements OnInit {
 	sensors: Object[];
 	errorMessage: string;
   private colums: number;
+  private timer: Object; 
 
 	constructor(private _sensorService: SensorService) { 
     this.colums = 3;
+    this.updateSensors();
   }
 
 	updateSensors() {
@@ -61,6 +63,10 @@ export class StatePane implements OnInit {
   }
 
 	ngOnInit() {
-    setInterval(_ => this.updateSensors(), 5000);
+    this.timer = setInterval(_ => this.updateSensors(), 5000);
 	}
+
+  ngOnDestroy() {
+    clearInterval(this.timer);
+  }
 }
