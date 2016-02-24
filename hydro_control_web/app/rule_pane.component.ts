@@ -27,6 +27,9 @@ import {RuleService} 	 		from './rule.service'
 	    </tr>
 	  </tbody>
 	</table>
+	<button type="button" (click)="addRule()" class="btn btn-primary" data-toggle="modal" data-target="#editRuleModal">
+		Crear
+	</button>
 
 	<div class="modal fade" id="editRuleModal" tabindex="-1" role="dialog" aria-labelledby="editLabelRuleLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
@@ -136,11 +139,12 @@ export class RulePane {
 	rules: Object;
 	selectedRule: Object;
 	statusRule: Object;
+	selectedRuleMode = "create";
 	errorMessage: string;
 
 	constructor(private _ruleService: RuleService) { 
 		this.updateRules();
-		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", status: {} };
+		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "" };
 		this.statusRule = { status: "", last_evaluation: "", context: [], backtrace: [] };
 	}
 
@@ -154,26 +158,53 @@ export class RulePane {
 			);
 	}
 
+	addRule() {
+		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", status: {} };
+		this.selectedRuleMode = "create";		
+	}
+
 	showStatusRule(rule) {
-		this.statusRule = { 
-			status: rule.status.status, 
-			last_evaluation: rule.status.last_evaluation, 
-			context: beautify(rule.status.context, null, 2, 100), 
-			backtrace: JSON.stringify(rule.status.backtrace) 
-		};
+		if (rule.status != null) {
+			this.statusRule = { 
+				status: (rule.status.status != null)?rule.status.status: "", 
+				last_evaluation: (rule.status.hasOwnProperty('last_evaluation'))?rule.status.last_evaluation: "", 
+				context: (rule.status.context != null)?JSON.stringify(rule.status.context, null, 100): "{}", 
+				backtrace: (rule.status.backtrace != null)?JSON.stringify(rule.status.backtrace, null, 80):"{}"
+			};
+		} else {
+			this.statusRule = { 
+				status: "NO", 
+				last_evaluation: "", 
+				context: "{}", 
+				backtrace: "{}"
+			};
+		}
 	}
 
 	editRule(rule) {
 		this.selectedRule = rule;
+		this.selectedRuleMode = "edit";
 	}
 
 	saveRule() {
-		// $('#editRuleModal').modal('hide');
-		this._ruleService
-			.put(this.selectedRule)
-			.subscribe(
-				rules => this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", status: {} },
-				error => this.errorMessage = error
-			);	
+		$('#editRuleModal').modal('hide');
+		if (this.selectedRuleMode == "edit") {
+			this._ruleService
+				.put(this.selectedRule)
+				.subscribe(
+					res => this.updateRules(),
+					error => this.errorMessage = error
+				);
+			return;
+		}
+		if (this.selectedRuleMode == "create") {
+			this._ruleService
+				.post(this.selectedRule)
+				.subscribe(
+					res => this.updateRules(),
+					error => this.errorMessage = error
+				);
+			return;
+		}	
 	}
 }

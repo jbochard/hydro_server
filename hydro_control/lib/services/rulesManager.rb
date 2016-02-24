@@ -33,7 +33,7 @@ class RulesManager
 		id = BSON::ObjectId.new.to_s
 		rule = Rule.new(id, name, condition, action, enable, self)
 		@rules[id] = rule
-		@mongo_client[:rules].insert_one({ :_id => id, :name => name, :description => description, :enable => enable, :condition => condition, :action => action })
+		@mongo_client[:rules].insert_one({ :_id => id, :name => name, :description => description, :enable => enable, :condition => condition, :action => action, :status => { :status => 'NO', :last_evaluation => nil } })
 		id
 	end
 
