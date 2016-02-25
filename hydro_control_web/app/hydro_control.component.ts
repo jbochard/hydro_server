@@ -9,7 +9,7 @@ import {ParamPane}      from './param_pane.component';
   template: `
     <h4>Hydro-Control</h4>
     <ui-tabs>
-      <template ui-pane title='Estado' active="true">
+      <template ui-pane title='Sensoresmo' active="true">
         <state-pane></state-pane>
       </template>
       <template ui-pane title="Parámetros">

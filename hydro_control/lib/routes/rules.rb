@@ -2,7 +2,7 @@
 
 set :rulesManager, 							Implementation[:rules]
 
-namespace '/rules' do
+namespace '/hydro_control/rules' do
  
 	get '/?' do
 		content_type :json

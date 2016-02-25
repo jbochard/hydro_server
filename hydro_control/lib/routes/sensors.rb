@@ -3,7 +3,7 @@
 set :sensorSerivces, 						Implementation[:sensors]
 set :sensor_post_schema, 					JSON.parse(File.read("lib/schemas/sensor_post.schema"))
 
-namespace '/sensors' do
+namespace '/hydro_control/sensors' do
  
 	get '/?' do
 		content_type :json

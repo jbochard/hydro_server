@@ -1,6 +1,6 @@
 set :parameters, 							Implementation[:parameters]
 
-namespace '/parameters' do
+namespace '/hydro_control/parameters' do
  
 	get '/?' do
 		content_type :json
