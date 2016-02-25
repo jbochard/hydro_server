@@ -1,7 +1,7 @@
 # coding: utf-8
 
 set :sensorSerivces, 						Implementation[:sensors]
-set :sensor_post_schema, 					JSON.parse(File.read("lib/schemas/sensor_post.schema"))
+set :sensor_post_schema, 					JSON.parse(File.read("#{$libdir}/schemas/sensor_post.schema"))
 
 namespace '/hydro_control/sensors' do
  

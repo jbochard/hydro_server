@@ -1,8 +1,5 @@
 {
-	"web": {
-		"port": 9390,
-		"host": "http://servidor.davinci.lan"
-	},
+	"port": 9490,
 	"measures_cron": "*/1 * * * *",
 	"rules_cron": "*/1 * * * *",
 	"mongodb": {
