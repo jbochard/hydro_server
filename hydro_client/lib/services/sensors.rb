@@ -8,7 +8,7 @@ require 'serialport'
     def initialize
         @name = Environment.config["server"]["name"]
         @semaphore = Mutex.new
-        @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], 8, 1, SerialPort::NONE)
+        @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
     end
 
     def measures

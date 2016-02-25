@@ -17,7 +17,7 @@ namespace '/hydro_client' do
 		settings.sensorService.switches.to_json
 	end
 	
-	get '/:command' do |command|
+	get '/value/:command' do |command|
 		content_type :json
 		status 200
 		settings.sensorService.read(command).to_json

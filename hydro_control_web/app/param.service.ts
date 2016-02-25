@@ -9,7 +9,7 @@ export class ParamService {
 	url: string;
 
 	constructor(private http: Http) {
-		this.url = 'http://localhost:9490/parameters';
+    this.url = server_url + '/parameters';  
 	}
 
 	getAll() {

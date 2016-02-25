@@ -9,7 +9,7 @@ export class RuleService {
 	url: string;
 
 	constructor(private http: Http) {
-		this.url = 'http://localhost:9490/rules';
+ 		this.url = server_url + '/rules';
 	}
 
 	getAll() {

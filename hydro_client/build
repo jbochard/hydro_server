@@ -1,7 +1,6 @@
 #!/bin/bash
 
 rm -f files/*
-rm bin/hydro_client.bak
 
 gem build hydro_client.gemspec
 mv hydro_client*.gem files/

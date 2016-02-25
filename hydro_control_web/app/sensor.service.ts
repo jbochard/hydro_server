@@ -10,7 +10,7 @@ export class SensorService {
 	url: string;
 
 	constructor(private http: Http) {
-		this.url = 'http://localhost:9490/sensors';
+	    this.url = server_url + '/sensors';  
 	}
 
 	getAll() {
