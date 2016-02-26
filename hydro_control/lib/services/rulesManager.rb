@@ -84,7 +84,7 @@ class RulesManager
 	end
 
 	def switch(sensor_id, value)
-		@sensorService.switch(sensor_id, value)
+		@sensorService.switch(sensor_id, value, :rule)
 	end
 
 	def evaluateRule(rule_id)

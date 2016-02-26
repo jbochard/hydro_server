@@ -19,11 +19,20 @@ import {SensorService}  		from './sensor.service'
           <div *ngFor="#rows of client.value" class="row">
             <div *ngFor="#col of rows" class="col-xs-2">
               <div class="sensor card card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
-                <div class="card-block" (click)="switchSensor(col)">
-                  <blockquote class="card-blockquote">
+                <div class="card-block" (click)="enableSensor(col)">
+                  <blockquote *ngIf="col.category == 'OUTPUT'" class="card-blockquote">
                     <p>{{col.name}}</p>
                     <footer>{{col.value}}</footer>
                   </blockquote>
+                  <blockquote *ngIf="col.category == 'INPUT'" class="card-blockquote">
+                    <p>{{col.name}}</p>
+                    <footer>{{col.value}}</footer>
+                  </blockquote>
+
+                  <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+  Single toggle
+</button>
+
                 </div>
               </div>
             </div>
@@ -43,7 +52,7 @@ export class StatePane implements OnInit {
 
 	constructor(private _sensorService: SensorService) { 
     this.updateSensors();
-  }kill
+  }
 
 	updateSensors() {
 		this.errorMessage = "";
@@ -54,10 +63,33 @@ export class StatePane implements OnInit {
 				error => this.errorMessage = error);
 	}
 
-  switchSensor(sensor) {
+  enableSensor(sensor) {
     this._sensorService.setEnableSensor(sensor._id, !sensor.enable)
       .subscribe(
-        response => sensor.enable = response.enable,
+        response => sensor.enable = response.state,
+        error => this.errorMessage = error
+      );
+  }
+
+  controlSensor(sensor) {
+    var type = sensor.control;
+    if (type == "rule") {
+      type = "manual";
+    } else {
+      type = "rule";
+    } 
+    this._sensorService.controlSensor(sensor._id, type)
+      .subscribe(
+        response => sensor.control = response.control,
+        error => this.errorMessage = error
+      );
+  }
+
+
+  switchSensor(sensor, value) {
+    this._sensorService.switchSensor(sensor._id, value)
+      .subscribe(
+        response => sensor.value = response.state,
         error => this.errorMessage = error
       );
   }

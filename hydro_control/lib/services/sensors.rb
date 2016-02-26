@@ -76,10 +76,14 @@ class Sensors
         sensor_id
   	end
 
-  	def switch(switch_id, value)
+  	def switch(switch_id, value, origin)
   		switch = get(switch_id)
-		execute_switch(switch["url"], switch['name'], value)
-        switch_id
+  		if (switch["control"] == :rule && origin == :rule) || (switch["control"] == :manual && origin == :manual)
+			res = execute_switch(switch["url"], switch['name'], value)
+			switch["state"] = res["value"]
+			update(sensor_id, switch)
+		end
+        switch["state"]
   	end
 
 	def create(client_url)
@@ -89,7 +93,7 @@ class Sensors
 		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => measure['sensor'], :client => measure['name'], :type => measure['type'], :enable => false } }
 		@mongo_client[:sensors].insert_many(sensors)
 
-		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :enable => false } }
+		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :control => :rule, :enable => false } }
 		@mongo_client[:sensors].insert_many(switches)	
 		client_url
 	end
@@ -111,6 +115,16 @@ class Sensors
 			.find({ :_id => sensor_id })
 			.update_one({ '$set' => { :enable => value } })
 		value
+	end
+
+	def controlSensor(sensor_id, type)
+      	if ! exists?(sensor_id)
+			raise NotFoundException.new :sensor, sensor_id
+    	end
+		@mongo_client[:sensors]
+			.find({ :_id => sensor_id })
+			.update_one({ '$set' => { :control => type } })
+		type
 	end
 
 	private
@@ -139,8 +153,7 @@ class Sensors
 			res = Net::HTTP.start(url.host, url.port) { |http|
 				http.request(req)
 			}
-			result  = JSON.parse(res.body)
-			return result["value"] if result["state"] == 'OK'
+			return JSON.parse(res.body)
 		rescue Exception => e
 			puts "Error: #{e}"
 		end
@@ -155,8 +168,7 @@ class Sensors
 			res = Net::HTTP.start(url.host, url.port) { |http|
 				http.request(req)
 			}
-			result  = JSON.parse(res.body)
-			return result["state"]
+			return JSON.parse(res.body)
 		rescue Exception => e
 			puts "Error: #{e}"
 		end		

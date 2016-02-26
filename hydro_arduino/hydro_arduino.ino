@@ -104,42 +104,42 @@ void loop() {
     }    
     if (command.equals("RELAY_1_ON")) {
       digitalWrite(RELAY_1,LOW);           // Turns ON Relays 1
-      status_ok(command);
+      status_ok(command, "ON");
       return;
     }
     if (command.equals("RELAY_1_OFF")) {
       digitalWrite(RELAY_1,HIGH);           // Turns ON Relays 1
-      status_ok(command);
+      status_ok(command, "OFF");
       return;
     }
     if (command.equals("RELAY_2_ON")) {
-      digitalWrite(RELAY_2,LOW);           // Turns ON Relays 1
-      status_ok(command);
+      digitalWrite(RELAY_2,LOW);           // Turns ON Relays 2
+      status_ok(command, "ON");
       return;
     }
     if (command.equals("RELAY_2_OFF")) {
-      digitalWrite(RELAY_2,HIGH);           // Turns ON Relays 1
-      status_ok(command);
+      digitalWrite(RELAY_2,HIGH);           // Turns ON Relays 2
+      status_ok(command, "OFF");
       return;
     }    
     if (command.equals("RELAY_3_ON")) {
-      digitalWrite(RELAY_3,LOW);           // Turns ON Relays 1
-      status_ok(command);
+      digitalWrite(RELAY_3,LOW);           // Turns ON Relays 3
+      status_ok(command, "ON");
       return;
     }
     if (command.equals("RELAY_3_OFF")) {
-      digitalWrite(RELAY_3,HIGH);           // Turns ON Relays 1
-      status_ok(command);
+      digitalWrite(RELAY_3,HIGH);           // Turns ON Relays 3
+      status_ok(command, "OFF");
       return;
     }    
     if (command.equals("RELAY_4_ON")) {
-      digitalWrite(RELAY_4,LOW);           // Turns ON Relays 1
-      status_ok(command);
+      digitalWrite(RELAY_4,LOW);           // Turns ON Relays 4
+      status_ok(command, "ON");
       return;
     }
     if (command.equals("RELAY_4_OFF")) {
-      digitalWrite(RELAY_4,HIGH);           // Turns ON Relays 1
-      status_ok(command);
+      digitalWrite(RELAY_4,HIGH);           // Turns ON Relays 4
+      status_ok(command, "OFF");
       return;
     }
     status_err(command, "COMMAND_NOT_EXISTS");
@@ -157,6 +157,15 @@ void status_ok(String cmd, float value) {
 }
 
 void status_ok(String cmd, int value) {
+  Serial.print(cmd);
+  Serial.print(" OK ");
+  Serial.println(value);
+  command = "";
+  commandAvailable = false;
+  digitalWrite(LED, LOW);
+}
+
+void status_ok(String cmd, String value) {
   Serial.print(cmd);
   Serial.print(" OK ");
   Serial.println(value);

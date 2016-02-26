@@ -73,10 +73,20 @@ namespace '/hydro_control/sensors' do
 			case body["op"].upcase		
 			when "ENABLE_SENSOR"
 				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				enable = settings.sensorSerivces.enableSensor(sensor_id, body["enable"])				
+				state = settings.sensorSerivces.enableSensor(sensor_id, body["enable"])				
+				status 200
+				{ :_id => sensor_id, :state => state }.to_json
+			when "CONTROL"
+				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
+				cont = settings.sensorSerivces.controlSensor(sensor_id, body["type"])				
+				status 200
+				{ :_id => sensor_id, :control => cont }.to_json
+			when "SWITCH"
+				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
+				state = settings.sensorSerivces.switch(sensor_id, body["value"], :manual)				
+				status 200
+				{ :_id => sensor_id, :state => state }.to_json
 			end			
-			status 200
-			{ :_id => sensor_id, :enable => enable }.to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json

@@ -25,7 +25,7 @@ class SensorMock
     def switch(relay, state)
         @semaphore.synchronize {
         	puts "DEBUG: Switch #{relay}_#{state}"
-            return { :state => "OK", :value => nil }
+            return { :state => "OK", :value => state }
         }
     end
 end
