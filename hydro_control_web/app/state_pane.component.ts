@@ -50,6 +50,7 @@ export class StatePane implements OnInit {
             tmp.push(sensor);
             idx++;
           }
+          this.sensors.push(tmp);
         },
 				error => this.errorMessage = error);
 	}
