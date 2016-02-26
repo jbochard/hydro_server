@@ -5,15 +5,29 @@ import {SensorService}  		from './sensor.service'
   selector: 'state-pane',
   template: `
   	<span *ngIf='errorMessage != null'>{{errorMessage}}</span>
-    <div *ngFor="#rows of sensors" class="row">
-      <div *ngFor="#col of rows" class="col-xs-3">
-        <div class="sensor card card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
-          <div class="card-block" (click)="switchSensor(col)">
-            <blockquote class="card-blockquote">
-              <p>{{col.name}}</p>
-              <footer>{{col.value}}</footer>
-            </blockquote>
-          </div>
+
+    <div id="accordion" role="tablist" aria-multiselectable="true" *ngFor="#client of clients">
+       <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              {{client.name}}
+            </a>
+          </h4>
+        </div>   
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div *ngFor="#rows of client.value" class="row">
+            <div *ngFor="#col of rows" class="col-xs-2">
+              <div class="sensor card card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
+                <div class="card-block" (click)="switchSensor(col)">
+                  <blockquote class="card-blockquote">
+                    <p>{{col.name}}</p>
+                    <footer>{{col.value}}</footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>     
         </div>
       </div>
     </div>
@@ -23,35 +37,20 @@ import {SensorService}  		from './sensor.service'
 
 export class StatePane implements OnInit {
 
-	sensors: Object[];
+	clients: Object;
 	errorMessage: string;
-  private colums: number;
   private timer: number; 
 
 	constructor(private _sensorService: SensorService) { 
-    this.colums = 3;
     this.updateSensors();
-  }
+  }kill
 
 	updateSensors() {
 		this.errorMessage = "";
 		this._sensorService
-			.getAll()
+			.getAllByClient()
 			.subscribe(
-				sensors => {
-          this.sensors = [];
-          var tmp: Object[] = [];
-          var idx = 1;
-          for (var sensor of sensors) {
-            if (idx % this.colums == 0) {
-              this.sensors.push(tmp);
-              tmp = [];
-            }
-            tmp.push(sensor);
-            idx++;
-          }
-          this.sensors.push(tmp);
-        },
+				clients => this.clients = clients,
 				error => this.errorMessage = error);
 	}
 

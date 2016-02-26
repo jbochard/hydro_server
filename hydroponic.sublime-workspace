@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"sens",
+				"sensor"
+			],
+			[
+				"ena",
+				"enableRule"
+			],
+			[
 				"act",
 				"active"
 			],
@@ -34,10 +42,6 @@
 			[
 				"ru",
 				"rule_id"
-			],
-			[
-				"sens",
-				"sensor_id"
 			],
 			[
 				"mong",
@@ -216,66 +220,26 @@
 	"buffers":
 	[
 		{
-			"file": "hydro_control_web/package.json",
-			"settings":
-			{
-				"buffer_size": 662,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "hydro_control_web/app/state_pane.component.ts",
 			"settings":
 			{
-				"buffer_size": 668,
+				"buffer_size": 2191,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "hydro_control/.gitignore",
+			"file": "hydro_control_web/app/config.js",
 			"settings":
 			{
-				"buffer_size": 29,
+				"buffer_size": 509,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "hydro_control/lib/routes/init.rb",
+			"file": "hydro_control_web/app/sensor.service.ts",
 			"settings":
 			{
-				"buffer_size": 99,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "hydro_control/lib/app.rb",
-			"settings":
-			{
-				"buffer_size": 292,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "hydro_control/bin/hydro_control",
-			"settings":
-			{
-				"buffer_size": 896,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "hydro_control/lib/routes/sensors.rb",
-			"settings":
-			{
-				"buffer_size": 2008,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "hydro_control/lib/config.ru",
-			"settings":
-			{
-				"buffer_size": 968,
+				"buffer_size": 1173,
 				"line_ending": "Unix"
 			}
 		}
@@ -313,35 +277,51 @@
 	"expanded_folders":
 	[
 		"/Users/jbochard/Documents/workspace/hydroponics",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/config",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/files",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/routes",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/templates",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/bin",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/config",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/schemas",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/templates",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/bin",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/config",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/templates",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/views"
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/node_modules"
 	],
 	"file_history":
 	[
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/dictionary.d.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/sensor.service.js",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/config.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/sensors.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/sensors.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/package.json",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/dictionary.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/rule_pane.component.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/param_pane.component.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/rules.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/implementation.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/rulesManager.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/parameters.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/param.service.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/rule.service.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services/sensors.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/hydro_control.component.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/index.html",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/schedulerManager.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/sensor.service.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/index.html",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/state_pane.component.ts",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/node_modules/angular2/bundles/angular2-all.umd.dev.js",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/node_modules/angular2/es6/dev/examples/facade/ts/async/observable_pure.js",
+		"/Users/jbochard/Downloads/startbootstrap-sb-admin-2-1.0.8/bower.json",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/css/style.css",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/app.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/config/configuration.json",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/config.ru",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/bin/hydro_control",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/init.rb",
+		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/config.ru",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/hydro_control.gemspec",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/config/configuration.json",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/.gitignore",
@@ -350,32 +330,21 @@
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/sensor.ts",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/state_pane.component.js",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/main.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/state_pane.component.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/bin/hydro_control",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/rules.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/schedulerManager.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/rulesManager.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/sensors.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/config.ru",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/rulesManager.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/sensors.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/build",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/thin.yml",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/init.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/sensors.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/web.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/config.ru",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services/sensors.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services/sensorMock.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/hydroponic.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/config/configuration.json",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/templates/configuration.json",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/config.json",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/init.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/rules.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/sensors.rb",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/config/configuration.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/config.ru",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/hydro_server.gemspec",
 		"/Users/jbochard/Documents/workspace/hydroponics/.gitignore",
 		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/templates/configuration.json",
@@ -441,7 +410,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -456,6 +425,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Mutex",
+			"Rule.new",
+			"rule[\"_id\"], ",
+			"setInte",
+			"setInterval",
 			"no encontrado",
 			"name",
 			"sel_mesu",
@@ -508,59 +482,31 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "hydro_control_web/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 662,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "hydro_control_web/app/state_pane.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 668,
+						"buffer_size": 2191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								255,
-								255
+								725,
+								726
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -570,12 +516,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "hydro_control/.gitignore",
+					"buffer": 1,
+					"file": "hydro_control_web/app/config.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 29,
+						"buffer_size": 509,
 						"regions":
 						{
 						},
@@ -588,7 +534,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -598,138 +544,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "hydro_control/lib/routes/init.rb",
+					"buffer": 2,
+					"file": "hydro_control_web/app/sensor.service.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 99,
+						"buffer_size": 1173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								99,
-								99
+								422,
+								422
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "hydro_control/lib/app.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 292,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								153,
-								153
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "hydro_control/bin/hydro_control",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 896,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								895,
-								895
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "hydro_control/lib/routes/sensors.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								155,
-								155
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "hydro_control/lib/config.ru",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 968,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								287,
-								287
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

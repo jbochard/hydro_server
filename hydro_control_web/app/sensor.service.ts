@@ -21,6 +21,13 @@ export class SensorService {
 			.catch(this.handleError);
    	}
 
+	getAllByClient() {
+		return this.http
+			.get(this.url+'?byClient=1')
+			.map(res => res.json())
+			.catch(this.handleError);
+   	}
+
 	setEnableSensor(id, value) {
 		let body = JSON.stringify({ op: 'ENABLE_SENSOR', enable: value });
     	let headers = new Headers({ 'Content-Type': 'application/json' });

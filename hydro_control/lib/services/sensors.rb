@@ -19,11 +19,36 @@ class Sensors
 	end
 
 	def get_all(query = {})
-    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client:1, name: 1, enable: 1,  value: 1 }).to_a
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 }).to_a
+	end
+
+	def get_all_by_client(query = {}, columns = 3)
+		query = {} 	if query.nil? || query == ''
+		columns = 3 if columns.nil? ||columns == ''
+
+		result = {}
+		col = []
+		idx = 0
+		sensor = {}
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 }).to_a.each do |s|
+    		sensor = s
+    		if idx % columns == 0 && col.length > 0
+    			result[sensor['client']] = { :name => sensor['client'], :value => [] } if ! result.has_key?(sensor['client'])
+				result[sensor['client']][:value].insert(-1, col)
+				col = []
+			end
+			col.insert(-1, sensor)
+			idx = idx + 1
+    	end
+    	if col.length > 0
+ 			result[sensor['client']] = { :name => sensor['client'], :value => [] } if ! result.has_key?(sensor['client'])
+			result[sensor['client']][:value].insert(-1, col)
+    	end
+    	result.values.to_a
 	end
 
 	def get_context
-    	context = Hash[@mongo_client[:sensors].find({ :enable => true }).projection({ _id: 1, type: 1, category: 1, client:1, name: 1, enable: 1,  value: 1 })
+    	context = Hash[@mongo_client[:sensors].find({ :enable => true }).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 })
     		.to_a
     		.group_by { |s| s[:client] } 
     	]

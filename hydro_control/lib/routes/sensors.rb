@@ -8,7 +8,13 @@ namespace '/hydro_control/sensors' do
 	get '/?' do
 		content_type :json
 		status 200
-		settings.sensorSerivces.get_all(params[:query]).to_json
+
+		if params[:byClient].nil?
+			settings.sensorSerivces.get_all(params[:query]).to_json
+		else
+			puts params
+			settings.sensorSerivces.get_all_by_client(params[:query], params[:columns]).to_json			
+		end
 	end
 
 	get '/:sensor_id' do |sensor_id|
