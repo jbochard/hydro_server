@@ -1,6 +1,7 @@
 import {Injectable} 								              from 'angular2/core'
 import {Http, Response, Headers, RequestOptions}	from 'angular2/http'
 import {Observable} 								              from 'rxjs/Observable';
+import {Config}                                   from './config'
 import 'rxjs/Rx';
 
 @Injectable()
@@ -9,7 +10,7 @@ export class ParamService {
 	url: string;
 
 	constructor(private http: Http) {
-    this.url = server_url + '/parameters';  
+    this.url = Config.server_url + '/parameters';  
 	}
 
 	getAll() {

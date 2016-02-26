@@ -1,3 +1,5 @@
+/// <reference path="./bootstrap.d.ts"/>
+
 import {Component, OnInit}      from 'angular2/core'
 import {RuleService} 	 		from './rule.service'
 
@@ -144,7 +146,7 @@ export class RulePane implements OnInit {
 	statusRule: Object;
 	selectedRuleMode = "create";
 	errorMessage: string;
-	private timer: Object; 
+	private timer: number; 
 
 	constructor(private _ruleService: RuleService) { 
 		this.updateRules();
@@ -226,6 +228,6 @@ export class RulePane implements OnInit {
 	}
 
 	ngOnDestroy() {
-    	clearInterval(this.timer);
+    	clearTimeout(this.timer);
 	}
 }

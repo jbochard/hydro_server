@@ -1,6 +1,8 @@
-import {Injectable} 								from 'angular2/core'
+
+import {Injectable} 								              from 'angular2/core'
 import {Http, Response, Headers, RequestOptions}	from 'angular2/http'
-import {Observable} 								from 'rxjs/Observable';
+import {Observable} 								              from 'rxjs/Observable';
+import {Config}                                   from './config'
 import 'rxjs/Rx';
 
 @Injectable()
@@ -9,7 +11,7 @@ export class RuleService {
 	url: string;
 
 	constructor(private http: Http) {
- 		this.url = server_url + '/rules';
+ 		this.url = Config.server_url + '/rules';
 	}
 
 	getAll() {

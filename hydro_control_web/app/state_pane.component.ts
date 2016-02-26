@@ -26,7 +26,7 @@ export class StatePane implements OnInit {
 	sensors: Object[];
 	errorMessage: string;
   private colums: number;
-  private timer: Object; 
+  private timer: number; 
 
 	constructor(private _sensorService: SensorService) { 
     this.colums = 3;
@@ -67,6 +67,6 @@ export class StatePane implements OnInit {
 	}
 
   ngOnDestroy() {
-    clearInterval(this.timer);
+    clearTimeout(this.timer);
   }
 }

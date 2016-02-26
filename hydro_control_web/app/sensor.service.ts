@@ -1,6 +1,7 @@
 import {Injectable} 								from 'angular2/core'
 import {Http, Response, Headers, RequestOptions}	from 'angular2/http'
 import {Observable} 								from 'rxjs/Observable';
+import {Config}                                   	from './config'
 import 'rxjs/Rx';
 
 @Injectable()
@@ -10,7 +11,7 @@ export class SensorService {
 	url: string;
 
 	constructor(private http: Http) {
-	    this.url = server_url + '/sensors';  
+	    this.url = Config.server_url + '/sensors';  
 	}
 
 	getAll() {

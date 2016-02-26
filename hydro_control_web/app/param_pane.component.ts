@@ -68,6 +68,7 @@ export class ParamPane {
 
 	params: Object;
 	selectedParam: Object;
+	selectedMode: string;
 	errorMessage: string;
 
 	constructor(private _paramService: ParamService) { 
