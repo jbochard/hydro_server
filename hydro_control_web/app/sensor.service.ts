@@ -21,15 +21,36 @@ export class SensorService {
 			.catch(this.handleError);
    	}
 
-	getAllByClient() {
+	getAllByClient(cols) {
 		return this.http
-			.get(this.url+'?byClient=1')
+			.get(this.url+'?byClient=1&columns='+cols)
 			.map(res => res.json())
 			.catch(this.handleError);
    	}
 
-	setEnableSensor(id, value) {
-		let body = JSON.stringify({ op: 'ENABLE_SENSOR', enable: value });
+	create(url) {
+		let body = JSON.stringify({ url: url });
+    	let headers = new Headers({ 'Content-Type': 'application/json' });
+    	let options = new RequestOptions({ headers: headers });
+
+    	return this.http
+    		.post(this.url, body, options)
+            .map(res => res.json() )
+            .catch(this.handleError)
+   	}
+
+   	delete(url) {
+    	let headers = new Headers({ 'Content-Type': 'application/json' });
+    	let options = new RequestOptions({ headers: headers });
+
+    	return this.http
+    		.delete(this.url+'?url="'+url+'"', options)
+            .map(res => res.json() )
+            .catch(this.handleError)
+   	}
+
+	  setEnableSensor(id, value) {
+		  let body = JSON.stringify({ op: 'ENABLE_SENSOR', enable: value });
     	let headers = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: headers });
 
@@ -38,6 +59,28 @@ export class SensorService {
             .map(res => res.json() )
             .catch(this.handleError)
    	}
+
+    switchSensor(id, value) {
+      let body = JSON.stringify({ op: 'SWITCH', value: value });
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+
+      return this.http
+        .patch(this.url + '/' + id, body, options)
+            .map(res => res.json() )
+            .catch(this.handleError)
+    }
+
+    controlSensor(id, value) {
+      let body = JSON.stringify({ op: 'CONTROL', type: value });
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+
+      return this.http
+        .patch(this.url + '/' + id, body, options)
+            .map(res => res.json() )
+            .catch(this.handleError)
+    }
 
    	private handleError(error: Response) {
    		return Observable.throw(error.json().error || 'Server error');

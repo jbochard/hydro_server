@@ -12,8 +12,7 @@ namespace '/hydro_control/sensors' do
 		if params[:byClient].nil?
 			settings.sensorSerivces.get_all(params[:query]).to_json
 		else
-			puts params
-			settings.sensorSerivces.get_all_by_client(params[:query], params[:columns]).to_json			
+			settings.sensorSerivces.get_all_by_client(params[:query], params[:columns].to_i).to_json			
 		end
 	end
 
@@ -93,6 +92,24 @@ namespace '/hydro_control/sensors' do
 		rescue JSON::Schema::ValidationError => e
 			status 400
 			{ :error => e.message }.to_json			
+		end
+	end
+
+	delete '/?' do
+		content_type :json
+		begin
+			# body = JSON.parse(request.body.read)
+			url = params[:url][1..-2]
+			url = settings.sensorSerivces.delete(url)
+			status 200
+			{ :url => url }.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json
+
 		end
 	end
 end

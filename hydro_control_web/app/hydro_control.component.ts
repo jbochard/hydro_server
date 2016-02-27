@@ -7,7 +7,7 @@ import {ParamPane}      from './param_pane.component';
 @Component({
   selector: 'hydro_control',
   template: `
-    <h4>Hydro-Control</h4>
+    <h4 style="padding-top:10px; padding-bottom:10px">Hydro-Control</h4>
     <ui-tabs>
       <template ui-pane title='Sensores' active="true">
         <state-pane></state-pane>

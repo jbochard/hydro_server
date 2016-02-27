@@ -2,7 +2,7 @@
 	"test": true,
 	"server": {
 		"port": 9190,
-		"name": "CLIENT_1"
+		"name": "inndor"
 	},
 	"serial": {
 		"serial_port": "/dev/cu.usbmodem1414131",

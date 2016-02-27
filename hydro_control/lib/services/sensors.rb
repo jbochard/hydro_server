@@ -30,10 +30,10 @@ class Sensors
 		col = []
 		idx = 0
 		sensor = {}
-    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 }).to_a.each do |s|
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, url: 1, category: 1, client: 1, name: 1, enable: 1, control: 1, value: 1 }).to_a.each do |s|
     		sensor = s
     		if idx % columns == 0 && col.length > 0
-    			result[sensor['client']] = { :name => sensor['client'], :value => [] } if ! result.has_key?(sensor['client'])
+    			result[sensor['client']] = { :name => sensor['client'], :url => sensor['url'], :value => [] } if ! result.has_key?(sensor['client'])
 				result[sensor['client']][:value].insert(-1, col)
 				col = []
 			end
@@ -64,13 +64,13 @@ class Sensors
 
   	def read(sensor_id)
   		sensor = get(sensor_id)
- 		value = read_measure(sensor["url"], sensor["name"])
-		if value.nil?
+  		res = read_measure(sensor["url"], sensor["name"])
+		if res.nil? ||  res["state"] == 'ERROR'
 			sensor.delete("date")
 			sensor.delete("value")
 		else
 			sensor["date"] = Time.new
-			sensor["value"] = value
+			sensor["value"] = res["value"]
   		end
   		update(sensor_id, sensor)
         sensor_id
@@ -78,23 +78,31 @@ class Sensors
 
   	def switch(switch_id, value, origin)
   		switch = get(switch_id)
-  		if (switch["control"] == :rule && origin == :rule) || (switch["control"] == :manual && origin == :manual)
+  		if (switch["control"] == "rule" && origin == :rule) || (switch["control"] == "manual" && origin == :manual)
 			res = execute_switch(switch["url"], switch['name'], value)
-			switch["state"] = res["value"]
-			update(sensor_id, switch)
+			switch["value"] = res["value"]
+			update(switch_id, switch)
 		end
-        switch["state"]
+        switch["value"]
   	end
 
 	def create(client_url)
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
 		end
-		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => measure['sensor'], :client => measure['name'], :type => measure['type'], :enable => false } }
+		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => measure['sensor'], :client => measure['name'], :type => measure['type'], :enable => false, :value => 0 } }
 		@mongo_client[:sensors].insert_many(sensors)
 
-		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :control => :rule, :enable => false } }
+		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :control => :rule, :enable => false, :value => 'OFF' } }
 		@mongo_client[:sensors].insert_many(switches)	
+		client_url
+	end
+
+	def delete(client_url)
+       	if ! exists_by_url?(client_url)
+			raise NotFoundException.new :sensor, sensor_id
+    	end
+   		@mongo_client[:sensors].find({ :url => client_url }).delete_many
 		client_url
 	end
 
@@ -148,7 +156,7 @@ class Sensors
 
 	def read_measure(client_url, measure)
 		begin
-			url = URI.parse("#{client_url}/#{measure}")
+			url = URI.parse("#{client_url}/value/#{measure}")
 			req = Net::HTTP::Get.new(url.to_s)
 			res = Net::HTTP.start(url.host, url.port) { |http|
 				http.request(req)
