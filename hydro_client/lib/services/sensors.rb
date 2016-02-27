@@ -33,10 +33,11 @@ require 'serialport'
                     state = res[0]
                     value = res[1] if res.length > 1
                     return { :state => state, :value => value }
-                rescue Excpetion => e
-                    puts "Restore connection: #{e}"
+                rescue Exception => e
+                    puts e
                     puts e.backtrace
 
+                    puts "Restore connection:"
                     @serial.close
                     @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
                 end                
@@ -63,10 +64,11 @@ require 'serialport'
                     state = res[0]
                     value = res[1] if res.length > 1
                     return { :state => state, :value => value }
-                rescue Excpetion => e
-                    puts "Restore connection: #{e}"
+                rescue Exception => e
+                    puts e
                     puts e.backtrace
 
+                    puts "Restore connection:"
                     @serial.close
                     @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
                 end
@@ -78,7 +80,7 @@ require 'serialport'
     private
     def readLine
         state = :char
-        count = 40
+        count = 20
         result = ""
         while state != :cr  do
             c = @serial.getbyte
