@@ -20,7 +20,9 @@ class SchedulerManager
 		@scheduler.cron Environment.config["measures_cron"] do
 			begin
 				@sensors.get_all({ :category => 'OUTPUT', :enable => true }).each do |sensor|
+					puts "Midiendo: #{sensor['client']} - #{sensor['name']}"
 					measures = @sensors.read(sensor["_id"])
+					sleep(10)
 				end
 			rescue Exception => e 
 				puts e.backtrace

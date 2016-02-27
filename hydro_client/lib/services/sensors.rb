@@ -62,7 +62,7 @@ require 'serialport'
     private
     def readLine
         state = :char
-        count = 20
+        count = 40
         result = ""
         while state != :cr  do
             c = @serial.getbyte
@@ -80,8 +80,8 @@ require 'serialport'
                 result << c
                 sleep(0.1)
             else
-                if count > 20
-                    sleep(0.5)
+                if count > 0
+                    sleep(1)
                     count = count - 1
                 else
                     return nil
