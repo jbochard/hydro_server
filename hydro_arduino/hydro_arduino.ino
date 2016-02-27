@@ -148,8 +148,7 @@ void loop() {
 }
 
 void status_ok(String cmd, float value) {
-  Serial.print(cmd);
-  Serial.print(" OK ");
+  Serial.print("OK ");
   Serial.println(value);
   command = "";
   commandAvailable = false;
@@ -157,8 +156,7 @@ void status_ok(String cmd, float value) {
 }
 
 void status_ok(String cmd, int value) {
-  Serial.print(cmd);
-  Serial.print(" OK ");
+  Serial.print("OK ");
   Serial.println(value);
   command = "";
   commandAvailable = false;
@@ -166,8 +164,7 @@ void status_ok(String cmd, int value) {
 }
 
 void status_ok(String cmd, String value) {
-  Serial.print(cmd);
-  Serial.print(" OK ");
+  Serial.print("OK ");
   Serial.println(value);
   command = "";
   commandAvailable = false;
@@ -175,24 +172,21 @@ void status_ok(String cmd, String value) {
 }
 
 void status_ok(String cmd) {
-  Serial.print(cmd);
-  Serial.println(" OK");
+  Serial.println("OK");
   command = "";
   commandAvailable = false;
   digitalWrite(LED, LOW);
 }
 
 void status_err(String cmd) {
-  Serial.print(cmd);
-  Serial.println(" ERROR");
+  Serial.println("ERROR");
   command = "";
   commandAvailable = false;
   digitalWrite(LED, LOW);
 }
 
 void status_err(String cmd, String msg) {
-  Serial.print(cmd);
-  Serial.print(" ERROR ");
+  Serial.print("ERROR ");
   Serial.println(msg);
   command = "";
   commandAvailable = false;

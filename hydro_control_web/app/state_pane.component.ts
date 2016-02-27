@@ -34,15 +34,19 @@ import {SensorService}  		from './sensor.service'
             <div *ngFor="#col of rows" class="col-xs-2">
               <div class="sensor card card-block card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
                 <div>
-                  <a (click)="controlSensor(col)" *ngIf="col.control == 'manual'"><i class="fa fa-hand-pointer-o"></i></a>
-                  <a (click)="controlSensor(col)" *ngIf="col.control == 'rule'"><i class="fa fa-cog"></i></a>
+                  <i class="fa fa-hand-pointer-o" *ngIf="col.control == 'manual' && ! col.enable"></i>
+                  <i class="fa fa-cog" *ngIf="col.control == 'rule' && ! col.enable"></i>
+                  <a (click)="controlSensor(col)" *ngIf="col.control == 'manual' && col.enable"><i class="fa fa-hand-pointer-o"></i></a>
+                  <a (click)="controlSensor(col)" *ngIf="col.control == 'rule' && col.enable"><i class="fa fa-cog"></i></a>
                 </div>
                 <div (click)="enableSensor(col)">
                   <h6 class="card-title">{{col.name}}</h6>
-                  <p class="card-text">{{col.value}}</p>
+                  <p class="card-text" *ngIf="col.category == 'OUTPUT'">{{col.value}}</p>
                 </div>
-                <button type="button" class="btn btn-primary" *ngIf="col.category == 'INPUT' && col.value == 'OFF'" (click)="switchSensor(col, 'ON')">ON</button>
-                <button type="button" class="btn btn-primary" *ngIf="col.category == 'INPUT' && col.value == 'ON'" (click)="switchSensor(col, 'OFF')">OFF</button>                
+                <div class="btn-group btn-group-sm" role="group">
+                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'ON'" [class.btn-primary]="col.value == 'OFF'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'ON')">ON</button>
+                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'OFF'" [class.btn-primary]="col.value == 'ON'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'OFF')">OFF</button>
+                </div>                
               </div>
             </div>
           </div>     

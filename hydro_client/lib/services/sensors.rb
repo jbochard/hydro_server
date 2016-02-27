@@ -22,16 +22,20 @@ require 'serialport'
     def read(command)
         cmdObj = Environment.sensors["read"].select { |cmd| cmd["sensor"].upcase == command.upcase }.first
         if ! cmdObj.nil?
+            puts "waitting for read(#{command})" if Environment.debug            
             @semaphore.synchronize {
                 begin
+                    puts "write: #{cmdObj['command'].upcase}" if Environment.debug
                     @serial.write("#{cmdObj['command'].upcase}\n")
-                    @serial.flush            
+                    @serial.flush 
+
                     line = readLine
                     return { :state => 'ERROR', :value => 'READ ERROR' } if line.nil?
 
-                    res = line.scan(/#{cmdObj['command'].upcase}\s+([^ ]+)\s*([^ ]*)$/).last
+                    res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
                     state = res[0]
                     value = res[1] if res.length > 1
+                    puts "read return: #{value}" if Environment.debug
                     return { :state => state, :value => value }
                 rescue Exception => e
                     puts e
@@ -52,20 +56,23 @@ require 'serialport'
     def switch(relay, state)
         cmdObj = Environment.sensors["write"].select { |cmd| cmd["switch"].upcase == relay.upcase }.first
         if ! cmdObj.nil?
+            puts "waitting for switch(#{relay}, #{state})" if Environment.debug            
             @semaphore.synchronize {
                 begin
                     command = cmdObj["on"].upcase if state.upcase == 'ON'
                     command = cmdObj["off"].upcase if state.upcase == 'OFF'
 
+                    puts "write: #{command}" if Environment.debug
                     @serial.write("#{command}\n")
                     @serial.flush
                     
                     line = readLine
                     return { :state => 'ERROR', :value => 'READ ERROR' } if line.nil?
 
-                    res = line.scan(/#{command}\s+([^ ]+)\s*([^ ]*)$/).last
+                    res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
                     state = res[0]
                     value = res[1] if res.length > 1
+                    puts "switch return: #{value}" if Environment.debug
                     return { :state => state, :value => value }
                 rescue Exception => e
                     puts e
@@ -85,11 +92,15 @@ require 'serialport'
 
     private
     def readLine
+        puts "readLine:" if Environment.debug
+
         state = :char
         count = 20
         result = ""
         while state != :cr  do
             c = @serial.getbyte
+            puts "char: #{c}" if Environment.debug
+
              if ! c.nil?
                 if c == 13
                     state = :lf
@@ -102,8 +113,8 @@ require 'serialport'
                     state = :char
                 end
                 result << c
-                sleep(0.1)
             else
+                puts "char: nil - count: #{count}" if Environment.debug
                 if count > 0
                     sleep(1)
                     count = count - 1
@@ -112,6 +123,7 @@ require 'serialport'
                 end 
             end
         end
+        puts "readLine result: #{result}" if Environment.debug
         result
     end          
 end

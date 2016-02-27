@@ -13,17 +13,19 @@ require 'services/implementation'
 
 class Environment
 	class << self
-		attr_accessor :config, :sensors
+		attr_accessor :config, :sensors, :debug
 	end
     @config = {}
     @sensors = {}
+    @debug = false
 end
 
 Environment.config  = JSON.parse(File.read("config/configuration.json"))
 Environment.sensors = JSON.parse(File.read("#{$libdir}/config.json"))
+Environment.debug = Environment.config.has_key?('debug') && Environment.config['debug']
 
 Implementation.register do |i|
-  i[:sensors] 	     = (Environment.config.has_key?('test') && Environment.config['test'])? SensorMock.new: Sensors.new
+  i[:sensors] 	     = (Environment.config.has_key?('mock') && Environment.config['mock'])? SensorMock.new: Sensors.new
 end
 
 load 'app.rb'

@@ -1,8 +1,9 @@
 {
-	"test": true,
+	"mock": false,
+	"debug": true,
 	"server": {
 		"port": 9190,
-		"name": "inndor"
+		"name": "test"
 	},
 	"serial": {
 		"serial_port": "/dev/cu.usbmodem1414131",

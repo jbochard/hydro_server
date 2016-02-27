@@ -1,5 +1,6 @@
 {
-	"test": true,
+	"mock": true,
+	"debug": false,
 	"server": {
 		"port": 9190,
 		"name": "CLIENT_1"
