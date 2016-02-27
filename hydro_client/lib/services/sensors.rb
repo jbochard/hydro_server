@@ -38,7 +38,10 @@ require 'serialport'
                     puts e.backtrace
 
                     puts "Restore connection:"
-                    @serial.close
+                    begin
+                        @serial.close
+                    rescue Exception => e
+                    end
                     @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
                 end                
             }
@@ -69,7 +72,10 @@ require 'serialport'
                     puts e.backtrace
 
                     puts "Restore connection:"
-                    @serial.close
+                    begin
+                        @serial.close
+                    rescue Exception => e
+                    end
                     @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
                 end
             }
