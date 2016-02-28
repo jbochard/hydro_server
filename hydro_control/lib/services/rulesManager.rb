@@ -50,6 +50,19 @@ class RulesManager
 		rule_id
 	end
 
+	def test(condition, action, else_action = "")
+		context = get_context
+		begin
+			rule = Rule.new("test", "test", condition, action, else_action, true, RuleManagerMock.new)
+        	status = rule.evaluate(context)
+	        { :status => status, :context => context, :result => [ status ]}
+		rescue Exception => e 
+			puts e.message
+			puts e.backtrace
+	        { :status => status, :context => context, :result => ([ e.message ] + e.backtrace) }
+		end		
+	end
+
 	def enableRule(rule_id, enable)
        	if ! exists?(rule_id)
 			raise NotFoundException.new :rules, rule_id
@@ -89,7 +102,15 @@ class RulesManager
 	end
 
 	def evaluateRule(rule_id)
-		@rules[rule_id].evaluate
+		begin
+			context = get_context
+			result = @rules[rule_id].evaluate(context)
+			registerEvaluationOk(rule_id, context, result)
+		rescue Exception => e 
+			puts e.message
+			puts e.backtrace
+			registerEvaluationError(rule_id, context, e)
+		end
 	end
 
 	def registerEvaluationOk(rule_id, context, st)
@@ -118,7 +139,7 @@ class Rule
 	attr_reader :name, :condition, :action
 	attr_accessor :enable
 
-	def initialize(id, name, condition, action, else_action, enable, rulesManager)
+	def initialize(id, name, condition, action, else_action, enable, ruleManager)
 		@id = id
 		@name = name
 		@enable = enable
@@ -126,40 +147,28 @@ class Rule
 		@action = action
 		@else_action = else_action
 		@context = {}
-        @semaphore = Mutex.new
-
-		@rulesManager = rulesManager
+		@ruleManager = ruleManager
 	end
  
-	def evaluate
-		@semaphore.synchronize {
-			if @enable
-				begin
-					puts "Evaluando regla #{@name}"
-					@context = @rulesManager.get_context
-					b = binding		
-					eval_condition = b.eval(@condition)
-					if eval_condition
-						b.eval(@action) 
-						@rulesManager.registerEvaluationOk(@id, @context, 'OK')
-					end
-					if ! @else_action.nil? && @else_action.length > 0 && ! eval_condition
-						b.eval(@else_action) 
-						@rulesManager.registerEvaluationOk(@id, @context, 'OK_ELSE')						
-					end
-				rescue Exception => e 
-					puts e.message
-					puts e.backtrace
-					@rulesManager.registerEvaluationError(@id, @context, e)
-				end
+	def evaluate(context)
+		if @enable
+			@context = context
+			puts "Evaluando regla #{@name}"
+			b = binding		
+			eval_condition = b.eval(@condition)
+			if eval_condition
+				b.eval(@action) 
+				return 'OK'
 			end
-		}
+			if ! @else_action.nil? && @else_action.length > 0 && ! eval_condition
+				b.eval(@else_action) 
+				return 'OK_ELSE'
+			end
+		end
 	end
 
 	def enableState(enable)
-		@semaphore.synchronize {
-			@enable = enable
-		}
+		@enable = enable
 	end
 
 	def param(name)
@@ -167,7 +176,7 @@ class Rule
 		if s.nil?
 			raise RuleExecutionException.new "Parámetro #{name} no encontrado."
 		else
-			s['value']
+			s[:value]
 		end
 	end
 
@@ -185,7 +194,13 @@ class Rule
 		if s.nil?
 			raise RuleExecutionException.new "Switch #{client}_#{name} no encontrado."
 		else
-			@rulesManager.switch(s[:_id], value) if ! s.nil?
+			@ruleManager.switch(s[:_id], value)
 		end
+	end
+end
+
+class RuleManagerMock
+	def switch(sensor_id, value)
+		puts "Exec. switch(#{sensor_id}, #{value})"
 	end
 end

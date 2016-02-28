@@ -40,6 +40,23 @@ namespace '/hydro_control/rules' do
 		end
 	end
 
+	post '/test/?' do
+		content_type :json
+		begin
+			body = JSON.parse(request.body.read)
+			result = settings.rulesManager.test(body["condition"], body["action"], body["else_action"])
+			status 200
+			result.to_json
+		rescue AbstractApplicationExcpetion => e
+			status e.code
+			{ :error => e.message }.to_json
+		rescue JSON::Schema::ValidationError => e
+			status 400
+			{ :error => e.message }.to_json
+
+		end
+	end
+
 	put '/:rule_id' do |rule_id| 
 		content_type :json
 		begin

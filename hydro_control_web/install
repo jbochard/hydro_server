@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cur=`pwd`
+DEST=/Users/jbochard/hydro_control_web
+echo "Borrando instalación anterior"
+rm -f -R $DEST/*
+
+echo "Instalando nueva versión"
+cp -R app $DEST/
+cp -R css $DEST/
+cp index.html package.* bs-config.* tsconfig.json typings.json $DEST/
+
+echo "Configurando para prod"
+mv $DEST/app/config.ts.prod $DEST/app/config.ts
+mv $DEST/bs-config.json.prod $DEST/bs-config.json
+mv $DEST/package.json.prod $DEST/package.json
+
+cd $DEST
+npm install
+

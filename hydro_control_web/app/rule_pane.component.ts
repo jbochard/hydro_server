@@ -72,6 +72,7 @@ import {RuleService} 	 		from './rule.service'
 			</fieldset>
 	      </div>
 	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" (click)="testRule()">Probar</button>
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
 	        <button type="button" class="btn btn-primary" (click)="saveRule()">Guardar</button>
 	      </div>
@@ -214,6 +215,16 @@ export class RulePane implements OnInit {
 				);
 			return;
 		}	
+	}
+
+	testRule() {
+		this._ruleService
+			.test(this.selectedRule)
+			.subscribe(
+				res => this.updateRules(),
+				error => this.errorMessage = error
+			);
+		return;
 	}
 
 	deleteRule(rule) {

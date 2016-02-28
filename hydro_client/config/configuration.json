@@ -1,5 +1,5 @@
 {
-	"mock": false,
+	"mock": true,
 	"debug": true,
 	"server": {
 		"port": 9190,
