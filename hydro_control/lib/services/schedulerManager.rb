@@ -25,6 +25,7 @@ class SchedulerManager
 					sleep(10)
 				end
 			rescue Exception => e 
+				puts e.message
 				puts e.backtrace
 			end
 		end

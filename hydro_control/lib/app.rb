@@ -16,7 +16,7 @@ enable :cross_origin
 options "*" do
 	response.headers["Access-Control-Allow-Methods"] 	= "GET, PUT, POST, DELETE, OPTIONS, PATCH"
 	response.headers["Access-Control-Allow-Headers"] 	= "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
-	200
+	status 200
 end
 
 require_relative 'routes/init'

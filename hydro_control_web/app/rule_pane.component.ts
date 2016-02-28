@@ -7,11 +7,10 @@ import {RuleService} 	 		from './rule.service'
   selector: 'rule-pane',
   template: `
   	<span *ngIf='errorMessage != null'>{{errorMessage}}</span>
-	<table class="table table-xs">
+	<table class="table table-xs table-bordered" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
 	  <thead>
 	    <tr>
 	      <th>Nombre</th>
-	      <th>Condición</th>
 	      <th>Descripción</th>
 	      <th>Última ejecución</th>
 	      <th>Estado</th>
@@ -19,9 +18,8 @@ import {RuleService} 	 		from './rule.service'
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr *ngFor="#rule of rules" [class.table-warning]="rule.active">
+	    <tr *ngFor="#rule of rules" [class.table-danger]="rule.status.status == 'ERROR'">
 	      <td>{{rule.name}}</td>
-	      <td>{{rule.condition}}</td>
 	      <td>{{rule.description}}</td>
 	      <td>{{rule.status.last_evaluation}}</td>
 	      <td style="cursor: pointer" (click)="showStatusRule(rule)" data-toggle="modal" data-target="#statusRuleModal">{{rule.status.status}}</td>
@@ -65,6 +63,10 @@ import {RuleService} 	 		from './rule.service'
 				<textarea [(ngModel)]="selectedRule.action" class="form-control" id="editRuleModalAction" rows="3"></textarea>
 			</fieldset>
 			<fieldset class="form-group">
+				<label for="editRuleModalAction">Else</label>
+				<textarea [(ngModel)]="selectedRule.else_action" class="form-control" id="editRuleModalAction" rows="3"></textarea>
+			</fieldset>
+			<fieldset class="form-group">
 				<label for="editRuleModalEnable">Habilitada</label>
 				<input id="editRuleModalEnable" type="checkbox" [(ngModel)]="selectedRule.enable">
 			</fieldset>
@@ -103,26 +105,26 @@ import {RuleService} 	 		from './rule.service'
 				<div id="accordion" role="tablist" aria-multiselectable="true">
 				  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
+				      <h6 class="panel-title">
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 				          Contexto
 				        </a>
-				      </h4>
+				      </h6>
 				    </div>
 				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				    	<h6>{{statusRule.context}}</h6>
+				    	<p>{{statusRule.context}}</p>
 				    </div>
 				  </div>
 	 			  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				    <div class="panel-heading" role="tab" id="headingTwo">
+				      <h6 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
 				          Error
 				        </a>
-				      </h4>
+				      </h6>
 				    </div>
-				    <div *ngIf="selectedRule.status?.backtrace != null" id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				    	<h6>{{statusRule.backtrace}}</h6>
+				    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+				    	<p>{{statusRule.backtrace}}</p>
 				    </div>
 				  </div>			  
 				</div>
@@ -150,7 +152,7 @@ export class RulePane implements OnInit {
 
 	constructor(private _ruleService: RuleService) { 
 		this.updateRules();
-		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "" };
+		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", else_action: "" };
 		this.statusRule = { status: "", last_evaluation: "", context: [], backtrace: [] };
 	}
 
@@ -165,7 +167,7 @@ export class RulePane implements OnInit {
 	}
 
 	addRule() {
-		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", status: {} };
+		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", else_action: "", status: {} };
 		this.selectedRuleMode = "create";		
 	}
 

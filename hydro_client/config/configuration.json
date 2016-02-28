@@ -3,7 +3,7 @@
 	"debug": true,
 	"server": {
 		"port": 9190,
-		"name": "test"
+		"name": "indoor"
 	},
 	"serial": {
 		"serial_port": "/dev/cu.usbmodem1414131",

@@ -36,3 +36,10 @@ class WrongIndexException < AbstractApplicationExcpetion
       super("Indice de cubeta incorrecto en #{element} #{name}.", 400)
     end
 end
+
+class RuleExecutionException < Exception
+
+  def initialize(msg)
+      super("#{msg}")
+    end
+end

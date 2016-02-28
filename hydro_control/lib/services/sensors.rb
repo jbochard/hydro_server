@@ -48,10 +48,7 @@ class Sensors
 	end
 
 	def get_context
-    	context = Hash[@mongo_client[:sensors].find({ :enable => true }).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 })
-    		.to_a
-    		.group_by { |s| s[:client] } 
-    	]
+    	context = @mongo_client[:sensors].find({ :enable => true }).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1,  value: 1 }).to_a
     	context
 	end
 
@@ -100,7 +97,7 @@ class Sensors
 
 	def delete(client_url)
        	if ! exists_by_url?(client_url)
-			raise NotFoundException.new :sensor, sensor_id
+			raise NotFoundException.new :sensor, client_url
     	end
    		@mongo_client[:sensors].find({ :url => client_url }).delete_many
 		client_url
@@ -164,6 +161,7 @@ class Sensors
 			return JSON.parse(res.body)
 		rescue Exception => e
 			puts "Error: #{e}"
+			puts e.backtrace
 		end
 	end
 
@@ -179,6 +177,7 @@ class Sensors
 			return JSON.parse(res.body)
 		rescue Exception => e
 			puts "Error: #{e}"
+			puts e.backtrace
 		end		
 	end
 end

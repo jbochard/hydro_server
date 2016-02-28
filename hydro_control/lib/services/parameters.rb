@@ -17,11 +17,7 @@ class Parameters
 	end
 
 	def get_context
-    	context = Hash[
-    		@mongo_client[:parameters]
-    			.find
-    			.map { |param| [ param["name"], param["value"] ] }
-    	]
+    	context = @mongo_client[:parameters].find.map { |p| p[:category] = 'PARAM'; p }.to_a
     	context
 	end
 
@@ -43,8 +39,8 @@ class Parameters
 			raise NotFoundException.new :parameters, param_id
     	end
 		@mongo_client[:parameters]
-		.find({ :_id => param_id })
-		.update_one({ '$set' => param })
+			.find({ :_id => param_id })
+			.update_one({ '$set' => param })
 		param_id
 	end
 

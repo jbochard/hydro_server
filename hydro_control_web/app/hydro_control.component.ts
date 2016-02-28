@@ -3,6 +3,7 @@ import {UiTabs, UiPane} from './ui_tabs';
 import {StatePane}      from './state_pane.component';
 import {RulePane}       from './rule_pane.component';
 import {ParamPane}      from './param_pane.component';
+import {HTTP_PROVIDERS} from 'angular2/http';
 
 @Component({
   selector: 'hydro_control',
@@ -21,7 +22,8 @@ import {ParamPane}      from './param_pane.component';
     </ui-tabs>
     <hr>
     `,
-    directives: [UiTabs, UiPane, StatePane, RulePane, ParamPane]
+    directives: [UiTabs, UiPane, StatePane, RulePane, ParamPane],
+    providers: [HTTP_PROVIDERS]
 })
 
 export class HydroControl {

@@ -27,7 +27,7 @@ namespace '/hydro_control/rules' do
 			body = JSON.parse(request.body.read)
 			# JSON::Validator.validate!(settings.sensor_post_schema, body)
 
-			id = settings.rulesManager.create(body["name"], body["description"], body["condition"], body["action"], body["enable"])
+			id = settings.rulesManager.create(body["name"], body["description"], body["condition"], body["action"], body["else_action"], body["enable"])
 			status 200
 			{ :_id => id }.to_json
 		rescue AbstractApplicationExcpetion => e

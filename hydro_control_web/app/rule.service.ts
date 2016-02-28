@@ -28,8 +28,8 @@ export class RuleService {
 
 		return this.http
     		.put(this.url + '/' + rule._id, body, options)
-            .map(res => res.json())
-            .catch(this.handleError)
+        .map(res => res.json())
+        .catch(this.handleError)
   }
 
   post(rule) {
