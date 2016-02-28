@@ -1,5 +1,6 @@
 {
 	"port": 9490,
+	"debug": true,
 	"measures_cron": "*/1 * * * *",
 	"rules_cron": "*/1 * * * *",
 	"mongodb": {

@@ -15,15 +15,17 @@ require 'services/parameters'
 
 class Environment
 	class << self
-		attr_accessor :config
+		attr_accessor :config, :debug
 	end
     @config = {}
+    @debug = false
 end
 
 Mongo::Logger.logger       = ::Logger.new('mongo.log')
 Mongo::Logger.logger.level = ::Logger::INFO
 
 Environment.config = JSON.parse(File.read("config/configuration.json"))
+Environment.debug = Environment.config.has_key?('debug') && Environment.config['debug']
 
 Implementation.register do |i|
   i[:sensors]       = Sensors.new

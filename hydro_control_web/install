@@ -16,5 +16,7 @@ mv $DEST/bs-config.json.prod $DEST/bs-config.json
 mv $DEST/package.json.prod $DEST/package.json
 
 cd $DEST
+rm $DEST/app/*.js
+rm $DEST/app/*.js.map
 npm install
 

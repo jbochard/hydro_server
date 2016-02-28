@@ -82,7 +82,7 @@ namespace '/hydro_control/sensors' do
 				{ :_id => sensor_id, :control => cont }.to_json
 			when "SWITCH"
 				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				state = settings.sensorSerivces.switch(sensor_id, body["value"], :manual)				
+				state = settings.sensorSerivces.switch(sensor_id, body["value"], "manual")				
 				status 200
 				{ :_id => sensor_id, :state => state }.to_json
 			end			

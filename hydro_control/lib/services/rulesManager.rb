@@ -98,7 +98,7 @@ class RulesManager
 	end
 
 	def switch(sensor_id, value)
-		@sensorService.switch(sensor_id, value, :rule)
+		@sensorService.switch(sensor_id, value, "rule")
 	end
 
 	def evaluateRule(rule_id)
@@ -154,6 +154,9 @@ class Rule
 		if @enable
 			@context = context
 			puts "Evaluando regla #{@name}"
+			puts "Condición: #{@condition}" if Environment.debug
+			puts "Acción: #{@action}" 		if Environment.debug
+			puts "Else: #{@else_action}" 	if Environment.debug
 			b = binding		
 			eval_condition = b.eval(@condition)
 			if eval_condition
@@ -190,10 +193,13 @@ class Rule
 	end
 
 	def switch(client, name, value)
+		puts "Ejecutando switch (#{client}, #{name}, #{value}) " if Environment.debug
 		s = @context.select {|s| s[:category] == 'INPUT' && s[:client] == client && s[:name] == name}.first
+		puts "Switch: #{s}" if Environment.debug
 		if s.nil?
 			raise RuleExecutionException.new "Switch #{client}_#{name} no encontrado."
 		else
+			puts "Ejecutando switch en: #{@ruleManager.class}"
 			@ruleManager.switch(s[:_id], value)
 		end
 	end

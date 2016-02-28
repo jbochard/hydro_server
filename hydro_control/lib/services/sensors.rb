@@ -75,7 +75,7 @@ class Sensors
 
   	def switch(switch_id, value, origin)
   		switch = get(switch_id)
-  		if (switch["control"] == "rule" && origin == :rule) || (switch["control"] == "manual" && origin == :manual)
+  		if (switch["control"] == "rule" && origin == "rule") || (switch["control"] == "manual" && origin == "manual")
 			res = execute_switch(switch["url"], switch['name'], value)
 			switch["value"] = res["value"]
 			update(switch_id, switch)
@@ -90,7 +90,7 @@ class Sensors
 		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => measure['sensor'], :client => measure['name'], :type => measure['type'], :enable => false, :value => 0 } }
 		@mongo_client[:sensors].insert_many(sensors)
 
-		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :control => :rule, :enable => false, :value => 'OFF' } }
+		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :control => "rule", :enable => false, :value => 'OFF' } }
 		@mongo_client[:sensors].insert_many(switches)	
 		client_url
 	end
@@ -167,6 +167,7 @@ class Sensors
 
 	def execute_switch(client_url, switch, value)
 		begin
+			puts "Ejecutando switch de: #{client_url}, #{switch}, #{value}" if Environment.debug
 			body = { :type => 'SWITCH', :relay => switch, :state => value }.to_json
 			url = URI.parse("#{client_url}")
 			req = Net::HTTP::Post.new(url.to_s, initheader = { 'Content-Type' => 'application/json'})
