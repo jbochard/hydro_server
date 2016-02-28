@@ -2,6 +2,7 @@ require 'mongo'
 require 'json'
 require 'thread'
 require 'services/exceptions'
+require 'time'
 
 class RulesManager
 
@@ -78,7 +79,7 @@ class RulesManager
 
 	def get_context
 		context = @sensorService.get_context
-		context = context + [{ :category => 'PARAM', :name => 'now', :value => Time.new }]
+		context = context + [{ :category => 'PARAM', :name => 'now', :value => Time.new.getlocal }]
 		context = context + @paramService.get_context
 		context
 	end
@@ -97,7 +98,7 @@ class RulesManager
     	end		
     	@mongo_client[:rules]
             .find({ :_id => rule_id })
-            .update_one({ '$set' => { :status => { :last_evaluation => Time.new, :context => context, :status => st } } })
+            .update_one({ '$set' => { :status => { :last_evaluation => Time.new.getlocal, :context => context, :status => st } } })
         rule_id
    	end	
 
@@ -108,7 +109,7 @@ class RulesManager
     	backtrace = [ e.message ] + e.backtrace
     	@mongo_client[:rules]
             .find({ :_id => rule_id })
-            .update_one({ '$set' => { :status => { :last_evaluation => Time.new, :context => context, :status => 'ERROR', :backtrace => backtrace } } })
+            .update_one({ '$set' => { :status => { :last_evaluation => Time.new.getlocal, :context => context, :status => 'ERROR', :backtrace => backtrace } } })
         rule_id
    	end	
 end

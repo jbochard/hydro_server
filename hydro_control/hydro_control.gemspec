@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "hydro_control"
-  spec.version       = "1.6.0"
+  spec.version       = "1.6.1"
   spec.authors       = ["Juan Pablo Bochard"]
   spec.email         = ["jbochard@despegar.com"]
   spec.summary       = %q{Sistema de seguimiento de hidroponia}
