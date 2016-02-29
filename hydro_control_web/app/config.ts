@@ -1,5 +1,5 @@
 
 export class Config {
 
-	static server_url = "http://servidor.davinci.lan:9490/hydro_control";
+	static server_url = "http://localhost:3020/hydro_control";
 }

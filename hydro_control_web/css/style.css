@@ -1,3 +1,26 @@
 .sensor {
 	cursor: pointer;
 }
+
+.card h6 {
+	font-size: 0.8rem;
+}
+
+td .col-buttons {
+	min-width: 40px;
+}
+
+td .col-date {
+	min-width: 195px;
+}
+
+body .modal-dialog {
+  width: 90%; /* desired relative width */
+  height: 80%;
+  left: 2%; /* (100%-width)/2 */
+  right: 2%;
+  /* place center */
+  margin-left:auto;
+  margin-right:auto; 
+}
+

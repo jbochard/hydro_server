@@ -14,7 +14,7 @@ import {SensorService}  		from './sensor.service'
     </div>
 
     <div id="accordion" role="tablist" aria-multiselectable="true" *ngFor="#client of clients">
-      <div class="panel panel-default">
+       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="client1">
           <div class="row">
             <div class="col-xs-11">
@@ -29,26 +29,27 @@ import {SensorService}  		from './sensor.service'
             </div>
           </div>
         </div>   
-        <div id="collapseOne" class="container-fluid panel-collapse collapse in" role="tabpanel" aria-labelledby="client1">
-          <div class="row">
-          <div *ngFor="#col of client.value" class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
-            <div class="sensor card card-block card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
-              <div>
-                <i class="fa fa-hand-pointer-o" *ngIf="col.control == 'manual' && ! col.enable"></i>
-                <i class="fa fa-cog" *ngIf="col.control == 'rule' && ! col.enable"></i>
-                <a (click)="controlSensor(col)" *ngIf="col.control == 'manual' && col.enable"><i class="fa fa-hand-pointer-o"></i></a>
-                <a (click)="controlSensor(col)" *ngIf="col.control == 'rule' && col.enable"><i class="fa fa-cog"></i></a>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="client1">
+          <div *ngFor="#rows of client.value" class="row">
+            <div *ngFor="#col of rows" class="col-xs-2">
+              <div class="sensor card card-block card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
+                <div>
+                  <i class="fa fa-hand-pointer-o" *ngIf="col.control == 'manual' && ! col.enable"></i>
+                  <i class="fa fa-cog" *ngIf="col.control == 'rule' && ! col.enable"></i>
+                  <a (click)="controlSensor(col)" *ngIf="col.control == 'manual' && col.enable"><i class="fa fa-hand-pointer-o"></i></a>
+                  <a (click)="controlSensor(col)" *ngIf="col.control == 'rule' && col.enable"><i class="fa fa-cog"></i></a>
+                </div>
+                <div (click)="enableSensor(col)">
+                  <h6 class="card-title">{{col.name}}</h6>
+                  <p class="card-text" *ngIf="col.category == 'OUTPUT'">{{col.value}}</p>
+                </div>
+                <div class="btn-group btn-group-sm" role="group">
+                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'ON'" [class.btn-primary]="col.value == 'OFF'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'ON')">ON</button>
+                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'OFF'" [class.btn-primary]="col.value == 'ON'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'OFF')">OFF</button>
+                </div>                
               </div>
-              <div (click)="enableSensor(col)">
-                <h6 class="card-title">{{col.name}}</h6>
-                <p class="card-text" *ngIf="col.category == 'OUTPUT'">{{col.value}}</p>
-              </div>
-              <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'ON'" [class.btn-primary]="col.value == 'OFF'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'ON')">ON</button>
-                <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'OFF'" [class.btn-primary]="col.value == 'ON'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'OFF')">OFF</button>
-              </div>                
             </div>
-          </div>
+          </div>     
         </div>
       </div>
     </div>
@@ -65,14 +66,15 @@ export class StatePane implements OnInit {
   private columns: number;
 
 	constructor(private _sensorService: SensorService) {
-     this.updateSensors();
+    this.columns = 5; 
+    this.updateSensors();
 
   }
 
 	updateSensors() {
 		this.errorMessage = "";
 		this._sensorService
-			.getAllByClient()
+			.getAllByClient(this.columns)
 			.subscribe(
 				clients => this.clients = clients,
 				error => this.errorMessage = error);

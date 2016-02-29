@@ -2,7 +2,7 @@
 	"mock": true,
 	"debug": true,
 	"server": {
-		"port": 9190,
+		"port": 3010,
 		"name": "indoor"
 	},
 	"serial": {

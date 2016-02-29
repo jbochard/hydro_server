@@ -1,5 +1,5 @@
 {
-	"port": 9490,
+	"port": 3020,
 	"debug": true,
 	"measures_cron": "*/1 * * * *",
 	"rules_cron": "*/1 * * * *",

@@ -21,12 +21,12 @@ export class SensorService {
 			.catch(this.handleError);
    	}
 
-	getAllByClient(cols) {
-		return this.http
-			.get(this.url+'?byClient=1&columns='+cols)
-			.map(res => res.json())
-			.catch(this.handleError);
-   	}
+  getAllByClient() {
+    return this.http
+      .get(this.url+'?byClient=1')
+      .map(res => res.json())
+      .catch(this.handleError);
+    }
 
 	create(url) {
 		let body = JSON.stringify({ url: url });

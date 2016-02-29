@@ -7,7 +7,7 @@ import {RuleService} 	 		from './rule.service'
   selector: 'rule-pane',
   template: `
   	<span *ngIf='errorMessage != null'>{{errorMessage}}</span>
-	<table class="table table-xs table-bordered" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
+	<table class="table table-responsive table-bordered table-sm">
 	  <thead>
 	    <tr>
 	      <th>Nombre</th>
@@ -21,11 +21,13 @@ import {RuleService} 	 		from './rule.service'
 	    <tr *ngFor="#rule of rules" [class.table-danger]="rule.status.status == 'ERROR'">
 	      <td>{{rule.name}}</td>
 	      <td>{{rule.description}}</td>
-	      <td>{{rule.status.last_evaluation}}</td>
+	      <td> <div class="col-date">{{rule.status.last_evaluation}}</div></td>
 	      <td style="cursor: pointer" (click)="showStatusRule(rule)" data-toggle="modal" data-target="#statusRuleModal">{{rule.status.status}}</td>
 	      <td>
-	      	<a style="cursor: pointer" (click)="editRule(rule)" data-toggle="modal" data-target="#editRuleModal"><i class="fa fa-pencil-square-o"></i></a>
-	      	<a style="cursor: pointer" (click)="deleteRule(rule)"><i class="fa fa-times"></i></a>
+	      	<div class="col-buttons">
+		      	<a style="cursor: pointer" (click)="editRule(rule)" data-toggle="modal" data-target="#editRuleModal"><i class="fa fa-pencil-square-o"></i></a>
+		      	<a style="cursor: pointer" (click)="deleteRule(rule)"><i class="fa fa-times"></i></a>
+		    </div>
 	      </td>
 	    </tr>
 	  </tbody>
@@ -93,12 +95,12 @@ import {RuleService} 	 		from './rule.service'
 	      <div class="container-fluid"> 
 	      	<div class="row">
 	      	  <div class="col-xs-12">
-	      	  	Ultima ejecución: {{statusRule.last_evaluation}}
+	      	  	<b>Ultima ejecución:</b> {{statusRule.last_evaluation}}
 	      	  </div>
 	      	</div>
 	      	<div class="row">
 	      	  <div class="col-xs-12">
-	      	  	Estado: {{statusRule.status }}
+	      	  	<b>Estado:</b> {{statusRule.status }}
 	      	  </div>
 	      	</div>
 	      	<div class="row">
@@ -112,20 +114,20 @@ import {RuleService} 	 		from './rule.service'
 				        </a>
 				      </h6>
 				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				    	<p>{{statusRule.context}}</p>
+				    <div id="collapseOne" class="pre-scrollable panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+				    	<pre>{{statusRule.context}}</pre>
 				    </div>
 				  </div>
 	 			  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingTwo">
 				      <h6 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 				          Error
 				        </a>
 				      </h6>
 				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-				    	<p>{{statusRule.backtrace}}</p>
+				    <div id="collapseTwo" class="pre-scrollable panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+				    	<pre>{{statusRule.backtrace}}</pre>
 				    </div>
 				  </div>			  
 				</div>
@@ -237,10 +239,10 @@ export class RulePane implements OnInit {
 	}
 
 	ngOnInit() {
-    	this.timer = setInterval(_ => this.updateRules(), 10000);
+    	// this.timer = setInterval(_ => this.updateRules(), 10000);
 	}
 
 	ngOnDestroy() {
-    	clearTimeout(this.timer);
+    	// clearTimeout(this.timer);
 	}
 }

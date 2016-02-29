@@ -127,7 +127,7 @@ class RulesManager
        	if ! exists?(rule_id)
 			raise NotFoundException.new :rules, rule_id
     	end
-    	backtrace = [ e.message ] + e.backtrace
+ 		backtrace = [ e.message ] + e.backtrace
     	@mongo_client[:rules]
             .find({ :_id => rule_id })
             .update_one({ '$set' => { :status => { :last_evaluation => Time.new.getlocal, :context => context, :status => 'ERROR', :backtrace => backtrace } } })

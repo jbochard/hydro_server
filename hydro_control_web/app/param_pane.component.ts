@@ -5,7 +5,7 @@ import {ParamService} 	 		from './param.service'
   selector: 'param-pane',
   template: `
   	<span *ngIf='errorMessage != null'>{{errorMessage}}</span>
-	<table class="table table-xs">
+	<table class="table table-responsive table-bordered table-sm">
 	  <thead>
 	    <tr>
 	      <th>Nombre</th>
@@ -18,12 +18,10 @@ import {ParamService} 	 		from './param.service'
 	      <td>{{param.name}}</td>
 	      <td>{{param.value}}</td>
 	      <td>
-	      	<a style="cursor: pointer" (click)="editParam(param)" data-toggle="modal" data-target="#editParamModal">
-	      		<i class="fa fa-pencil-square-o"></i>
-	      	</a>
-	      	<a style="cursor: pointer" (click)="deleteParam(param)">
-	      		<i class="fa fa-times"></i>
-	      	</a>
+	      	<div class="col-buttons">
+		      	<a style="cursor: pointer" (click)="editParam(param)" data-toggle="modal" data-target="#editParamModal"><i class="fa fa-pencil-square-o"></i></a>
+		      	<a style="cursor: pointer" (click)="deleteParam(param)"><i class="fa fa-times"></i></a>
+	      	</div>
 	      </td>
 	    </tr>
 	  </tbody>
