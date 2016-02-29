@@ -239,10 +239,10 @@ export class RulePane implements OnInit {
 	}
 
 	ngOnInit() {
-    	// this.timer = setInterval(_ => this.updateRules(), 10000);
+    	this.timer = setInterval(_ => this.updateRules(), 10000);
 	}
 
 	ngOnDestroy() {
-    	// clearTimeout(this.timer);
+    	clearTimeout(this.timer);
 	}
 }

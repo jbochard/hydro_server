@@ -1,5 +1,13 @@
 import {Component, OnInit}  from 'angular2/core'
+import {Pipe, PipeTransform} from 'angular2/core';
 import {SensorService}  		from './sensor.service'
+
+@Pipe({name: 'category'})
+export class CategoryPipe implements PipeTransform {
+    transform(items: any[], args: any[]): any {
+        return items.filter(item => item.category == args[0]);
+    }
+}
 
 @Component({
   selector: 'state-pane',
@@ -31,29 +39,45 @@ import {SensorService}  		from './sensor.service'
         </div>   
         <div id="collapseOne" class="container-fluid panel-collapse collapse in" role="tabpanel" aria-labelledby="client1">
           <div class="row">
-          <div *ngFor="#col of client.value" class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
-            <div class="sensor card card-block card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
-              <div>
-                <i class="fa fa-hand-pointer-o" *ngIf="col.control == 'manual' && ! col.enable"></i>
-                <i class="fa fa-cog" *ngIf="col.control == 'rule' && ! col.enable"></i>
-                <a (click)="controlSensor(col)" *ngIf="col.control == 'manual' && col.enable"><i class="fa fa-hand-pointer-o"></i></a>
-                <a (click)="controlSensor(col)" *ngIf="col.control == 'rule' && col.enable"><i class="fa fa-cog"></i></a>
-              </div>
-              <div (click)="enableSensor(col)">
-                <h6 class="card-title">{{col.name}}</h6>
-                <p class="card-text" *ngIf="col.category == 'OUTPUT'">{{col.value}}</p>
-              </div>
-              <div class="btn-group btn-group-sm" role="group">
-                <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'ON'" [class.btn-primary]="col.value == 'OFF'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'ON')">ON</button>
-                <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'OFF'" [class.btn-primary]="col.value == 'ON'" *ngIf="col.category == 'INPUT'" (click)="switchSensor(col, 'OFF')">OFF</button>
-              </div>                
+            <div *ngFor="#col of client.value | category:'OUTPUT'" class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="sensor card card-block card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
+                <div (click)="enableSensor(col)">
+                  <h6 class="card-title">{{col.name}}</h6>
+                  <p class="card-text">{{col.value}}</p>
+                </div>
+               </div>
             </div>
           </div>
+          <div class="row">
+            <div *ngFor="#col of client.value | category:'INPUT'" class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="sensor card card-block card-inverse text-xs-center" [class.card-success]="col.enable" [class.card-warning]="! col.enable">
+                <div>
+                  <i class="fa fa-hand-pointer-o" *ngIf="col.control == 'manual'  && ! col.enable"></i>
+                  <i class="fa fa-cog"            *ngIf="col.control == 'rule'    && ! col.enable"></i>
+                  <a (click)="controlSensor(col)" *ngIf="col.control == 'manual'  && col.enable"><i class="fa fa-hand-pointer-o"></i></a>
+                  <a (click)="controlSensor(col)" *ngIf="col.control == 'rule'    && col.enable"><i class="fa fa-cog"></i></a>
+                </div>
+                <div (click)="enableSensor(col)">
+                  <h6 class="card-title">{{col.name}}</h6>
+                </div>
+                <div class="btn-group btn-group-sm" role="group">
+                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'ON'" 
+                          [class.btn-primary]="col.value == 'OFF'" (click)="switchSensor(col, 'ON')">
+                      ON
+                  </button>
+                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'OFF'" 
+                          [class.btn-primary]="col.value == 'ON'" (click)="switchSensor(col, 'OFF')">
+                      OFF
+                  </button>
+                </div>                
+              </div>
+            </div>           
+          </div>
         </div>
-      </div>
     </div>
     `,
-     providers: [ SensorService ]
+     providers: [ SensorService ],
+     pipes: [ CategoryPipe ]
 })
 
 export class StatePane implements OnInit {
@@ -125,10 +149,10 @@ export class StatePane implements OnInit {
   }
 
 	ngOnInit() {
-    this.timer = setInterval(_ => this.updateSensors(), 5000);
+    // this.timer = setInterval(_ => this.updateSensors(), 5000);
 	}
 
   ngOnDestroy() {
-    clearTimeout(this.timer);
+    // clearTimeout(this.timer);
   }
 }
