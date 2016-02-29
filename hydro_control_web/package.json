@@ -20,7 +20,8 @@
     "zone.js":                "0.5.14",
     "bootstrap":              "^4.0.0-alpha.2",
     "jquery":                 "^2.2",
-    "tether":                 "^1.2"
+    "tether":                 "^1.2",
+    "angular2-modal":         "^0.0"
   },
   "devDependencies": {
     "concurrently": "^1.0.0",
