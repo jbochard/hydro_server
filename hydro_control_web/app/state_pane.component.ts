@@ -74,6 +74,34 @@ export class CategoryPipe implements PipeTransform {
             </div>           
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" 
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="confirmDialogLabel">{{confirmDialog.title}}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid"> 
+              <div class="row">
+                <div class="col-xs-12">
+                  {{confirmDialog.message}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="confirmDialogAccept()">Aceptar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
     `,
      providers: [ SensorService ],
@@ -83,14 +111,31 @@ export class CategoryPipe implements PipeTransform {
 export class StatePane implements OnInit {
 
 	clients: Object;
+  confirmDialog: Object;
 	errorMessage: string;
   clientUrl: string;
+
   private timer: number; 
   private columns: number;
 
-	constructor(private _sensorService: SensorService) {
+	constructor( private _sensorService: SensorService ) {
      this.updateSensors();
+     this.confirmDialog = { title: "", message: "", accept: function() {} };
+  }
 
+  openConfirmDialog(title, message, acceptFn) {
+    this.confirmDialog.title = title;
+    this.confirmDialog.message = message;
+    this.confirmDialog.accept = acceptFn;
+
+    $('#confirmDialog').modal('show');
+  }
+
+  confirmDialogAccept() {
+    $('#confirmDialog').modal('hide');  
+    this.confirmDialog.title = "";
+    this.confirmDialog.message = "";
+    this.confirmDialog.accept();
   }
 
 	updateSensors() {
@@ -107,15 +152,19 @@ export class StatePane implements OnInit {
       .subscribe(
         response => sensor.enable = response.state,
         error => this.errorMessage = error
-      );
+    );
   }
 
-  deleteAllSensors(url) {
-   this._sensorService.delete(url)
-      .subscribe(
-        response => this.updateSensors(),
-        error => this.errorMessage = error
-      );
+  deleteAllSensors(deleteUrl) {
+    let sensorService = this._sensorService;
+    let url = deleteUrl;
+    this.openConfirmDialog("Atención", "Esta seguro que desea eliminar los sensores?", function() {
+      sensorService.delete(url)
+        .subscribe(
+          response => this.updateSensors(),
+          error => this.errorMessage = error
+        );
+    });
   }
 
   createSensors() {
@@ -149,10 +198,10 @@ export class StatePane implements OnInit {
   }
 
 	ngOnInit() {
-    // this.timer = setInterval(_ => this.updateSensors(), 5000);
+    this.timer = setInterval(_ => this.updateSensors(), 5000);
 	}
 
   ngOnDestroy() {
-    // clearTimeout(this.timer);
+    clearTimeout(this.timer);
   }
 }
