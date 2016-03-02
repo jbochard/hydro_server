@@ -111,8 +111,8 @@ export class CategoryPipe implements PipeTransform {
 export class StatePane implements OnInit {
 
 	clients: Object;
-  confirmDialog: Object;
-	errorMessage: string;
+  confirmDialog = { title: "", message: "", accept: function() {} };
+	errorMessage = "";
   clientUrl: string;
 
   private timer: number; 
@@ -120,7 +120,6 @@ export class StatePane implements OnInit {
 
 	constructor( private _sensorService: SensorService ) {
      this.updateSensors();
-     this.confirmDialog = { title: "", message: "", accept: function() {} };
   }
 
   openConfirmDialog(title, message, acceptFn) {
@@ -155,16 +154,14 @@ export class StatePane implements OnInit {
     );
   }
 
-  deleteAllSensors(deleteUrl) {
-    let sensorService = this._sensorService;
-    let url = deleteUrl;
-    this.openConfirmDialog("Atención", "Esta seguro que desea eliminar los sensores?", function() {
-      sensorService.delete(url)
+  deleteAllSensors(url) {
+    this.openConfirmDialog("Atención", "Esta seguro que desea eliminar los sensores?", 
+      () => this._sensorService.delete(url)
         .subscribe(
           response => this.updateSensors(),
           error => this.errorMessage = error
-        );
-    });
+      )
+    );
   }
 
   createSensors() {

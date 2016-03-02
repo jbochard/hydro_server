@@ -140,7 +140,7 @@ import {RuleService} 	 		from './rule.service'
 	    </div>
 	  </div>
 	</div>
-
+	</div>
     <div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" 
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -174,17 +174,15 @@ import {RuleService} 	 		from './rule.service'
 export class RulePane implements OnInit {
 
 	rules: Object;
-	selectedRule: Object;
-	statusRule: Object;
+	selectedRule = { name: "", description: "", enable: false, condition: "", action: "", else_action: "", status: {} };
+	statusRule= { status: "", last_evaluation: "", context: "[]", backtrace: "[]" };
 	selectedRuleMode = "create";
-	errorMessage: string;
+	errorMessage = "";
+	confirmDialog = { title: "", message: "", accept: function() {} };
 	private timer: number; 
 
 	constructor(private _ruleService: RuleService) { 
 		this.updateRules();
-		this.selectedRule = { name: "", description: "", enable: false, condition: "", action: "", else_action: "" };
-		this.statusRule = { status: "", last_evaluation: "", context: [], backtrace: [] };
- 	    this.confirmDialog = { title: "", message: "", accept: function() {} };
   	}
 
 	openConfirmDialog(title, message, acceptFn) {
@@ -222,15 +220,15 @@ export class RulePane implements OnInit {
 			this.statusRule = { 
 				status: (rule.status.status != null)?rule.status.status: "", 
 				last_evaluation: (rule.status.hasOwnProperty('last_evaluation'))?rule.status.last_evaluation: "", 
-				context: (rule.status.context != null)?JSON.stringify(rule.status.context, null, 100): "{}", 
-				backtrace: (rule.status.backtrace != null)?JSON.stringify(rule.status.backtrace, null, 80):"{}"
+				context: (rule.status.context != null)?JSON.stringify(rule.status.context, null, 100): "[]", 
+				backtrace: (rule.status.backtrace != null)?JSON.stringify(rule.status.backtrace, null, 80):"[]"
 			};
 		} else {
 			this.statusRule = { 
 				status: "NO", 
 				last_evaluation: "", 
-				context: "{}", 
-				backtrace: "{}"
+				context: "[]", 
+				backtrace: "[]"
 			};
 		}
 	}
@@ -273,16 +271,14 @@ export class RulePane implements OnInit {
 	}
 
 	deleteRule(rule) {
-	    let sensorService = this._sensorService;
-	    let url = deleteUrl;
-	    this.openConfirmDialog("Atención", "Esta seguro que desea eliminar la regla?", function() {
-			this._ruleService
+	    this.openConfirmDialog("Atención", "Esta seguro que desea eliminar la regla?", 
+	    	() => this._ruleService
 				.delete(rule)
 				.subscribe(
-					res => this.updateRules(),
+					res =>  this.updateRules(),
 					error => this.errorMessage = error
-				);
-		});
+			)
+		);
 	}
 
 	ngOnInit() {

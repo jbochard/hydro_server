@@ -58,6 +58,33 @@ import {ParamService} 	 		from './param.service'
 	    </div>
 	  </div>
 	</div>	
+
+    <div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" 
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="confirmDialogLabel">{{confirmDialog.title}}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid"> 
+              <div class="row">
+                <div class="col-xs-12">
+                  {{confirmDialog.message}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="confirmDialogAccept()">Aceptar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>		
     `,
      providers: [ ParamService ]
 })
@@ -65,13 +92,28 @@ import {ParamService} 	 		from './param.service'
 export class ParamPane {
 
 	params: Object;
-	selectedParam: Object;
 	selectedMode: string;
-	errorMessage: string;
+	selectedParam = { name: "", value: 0.0 };
+	confirmDialog = { title: "", message: "", accept: function() {} };
+	errorMessage = "";
 
 	constructor(private _paramService: ParamService) { 
 		this.updateParams();
-		this.selectedParam = { name: "", value: 0.0 };
+  	}
+
+	openConfirmDialog(title, message, acceptFn) {
+		this.confirmDialog.title = title;
+		this.confirmDialog.message = message;
+		this.confirmDialog.accept = acceptFn;
+
+		$('#confirmDialog').modal('show');
+	}
+
+	confirmDialogAccept() {
+		$('#confirmDialog').modal('hide');  
+		this.confirmDialog.title = "";
+		this.confirmDialog.message = "";
+		this.confirmDialog.accept();
 	}
 
 	updateParams() {
@@ -117,11 +159,13 @@ export class ParamPane {
 	}
 
 	deleteParam(param) {
-		this._paramService
-			.delete(param)
-			.subscribe(
-				res => this.updateParams(),
-				error => this.errorMessage = error
-			);
+	    this.openConfirmDialog("Atención", "Esta seguro que desea eliminar el parámetro?", 
+	    	() => this._paramService
+				.delete(param)
+				.subscribe(
+					res => this.updateParams(),
+					error => this.errorMessage = error
+			)
+		);
 	}
 }
