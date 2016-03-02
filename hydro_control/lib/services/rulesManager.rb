@@ -167,6 +167,7 @@ class Rule
 				b.eval(@else_action) 
 				return 'OK_ELSE'
 			end
+			return 'NO'
 		end
 	end
 
