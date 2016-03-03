@@ -55,11 +55,11 @@ class RulesManager
 		begin
 			rule = Rule.new("test", "test", condition, action, else_action, true, RuleManagerMock.new)
         	status = rule.evaluate(context)
-	        { :status => status, :context => context, :result => [ status ]}
+	        { :status => { :status => status, :last_evaluation => Time.new.getlocal, :context => context }
 		rescue Exception => e 
 			puts e.message
 			puts e.backtrace
-	        { :status => status, :context => context, :result => ([ e.message ] + e.backtrace) }
+	        { :status => { :status => status, :last_evaluation => Time.new.getlocal, :context => context, :backtrace => [ e.message ] + e.backtrace } }
 		end		
 	end
 
