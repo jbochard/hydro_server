@@ -19,13 +19,13 @@ class Sensors
 	end
 
 	def get_all(query = {})
-    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 }).to_a
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, category: 1, client: 1, name: 1, enable: 1,  value: 1 }).sort({ client: 1, name: 1}).to_a
 	end
 
 	def get_all_by_client(query = {})
 		query = {} 	if query.nil? || query == ''
 		result = {}
-    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, url: 1, category: 1, client: 1, name: 1, enable: 1, control: 1, value: 1 }).to_a.each do |sensor|
+    	@mongo_client[:sensors].find(query).projection({ _id: 1, type: 1, url: 1, category: 1, client: 1, name: 1, enable: 1, control: 1, value: 1 }).sort({ client: 1, name: 1}).to_a.each do |sensor|
 			result[sensor['client']] = { :name => sensor['client'], :url => sensor['url'], :value => [] } if ! result.has_key?(sensor['client'])
 			result[sensor['client']][:value].insert(-1, sensor)
     	end

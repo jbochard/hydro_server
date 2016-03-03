@@ -13,7 +13,7 @@ class Parameters
 	end
 
 	def get_all
-		@mongo_client[:parameters].find.to_a
+		@mongo_client[:parameters].find.sort({ name: 1}).to_a
 	end
 
 	def get_context

@@ -21,7 +21,7 @@ class RulesManager
 	end
 
 	def get_all
-		@mongo_client[:rules].find.to_a
+		@mongo_client[:rules].find.sort({ name: 1}).to_a
 	end
 
 	def get(rule_id)
