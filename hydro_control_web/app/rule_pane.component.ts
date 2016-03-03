@@ -141,6 +141,7 @@ import {RuleService} 	 		from './rule.service'
 	  </div>
 	</div>
 	</div>
+
     <div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="confirmDialogLabel" 
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -217,20 +218,19 @@ export class RulePane implements OnInit {
 
 	showStatusRule(rule) {
 		if (rule.status != null) {
-			this.statusRule = { 
-				status: (rule.status.status != null)?rule.status.status: "", 
-				last_evaluation: (rule.status.hasOwnProperty('last_evaluation'))?rule.status.last_evaluation: "", 
-				context: (rule.status.context != null)?JSON.stringify(rule.status.context, null, 100): "[]", 
-				backtrace: (rule.status.backtrace != null)?JSON.stringify(rule.status.backtrace, null, 80):"[]"
-			};
+			setStatusRule(rule.status);
 		} else {
-			this.statusRule = { 
-				status: "NO", 
-				last_evaluation: "", 
-				context: "[]", 
-				backtrace: "[]"
-			};
+			setStatusRule({ status: "NO", context: [], backtrace: []});
 		}
+	}
+
+	setStatusRule(status) {
+		this.statusRule = { 
+			status: (status.status != null)?status.status: "", 
+			last_evaluation: (status.hasOwnProperty('last_evaluation'))?status.last_evaluation: "", 
+			context: (status.context != null)?JSON.stringify(status.context, null, 100): "[]", 
+			backtrace: (status.backtrace != null)?JSON.stringify(status.backtrace, null, 80):"[]"
+		};	
 	}
 
 	editRule(rule) {
@@ -264,7 +264,10 @@ export class RulePane implements OnInit {
 		this._ruleService
 			.test(this.selectedRule)
 			.subscribe(
-				res => this.updateRules(),
+				res => {
+					this.setStatusRule(res);
+					$('#statusRuleModal').modal('show');
+				},
 				error => this.errorMessage = error
 			);
 		return;
