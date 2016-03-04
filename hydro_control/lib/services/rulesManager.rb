@@ -184,6 +184,19 @@ class Rule
 		end
 	end
 
+	def now_in_range(hora_ini, hora_length)
+		hora = param('now').hour
+		if (hora_ini + hora_length) > 23
+			if hora >= hora_ini
+				return true
+			else
+				return hora < (hora_ini + hora_length) % 24
+			end
+		else
+			return hora >= hora_ini && hora < (hora_ini + hora_length)
+		end
+	end
+
 	def sensor(client, name)
 		s = @context.select {|s| s[:category] == 'OUTPUT' && s[:client] == client && s[:name] == name}.first
 		if s.nil?
