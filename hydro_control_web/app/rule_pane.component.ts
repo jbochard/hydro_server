@@ -18,15 +18,23 @@ import {RuleService} 	 		from './rule.service'
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr *ngFor="#rule of rules" [class.table-danger]="rule.status.status == 'ERROR'">
+	    <tr *ngFor="#rule of rules" [class.table-danger]="rule.status.status == 'ERROR'" [class.table-warning]="! rule.enable">
 	      <td>{{rule.name}}</td>
 	      <td>{{rule.description}}</td>
 	      <td> <div class="col-date">{{rule.status.last_evaluation}}</div></td>
 	      <td style="cursor: pointer" (click)="showStatusRule(rule)" data-toggle="modal" data-target="#statusRuleModal">{{rule.status.status}}</td>
 	      <td>
 	      	<div class="col-buttons">
-		      	<a style="cursor: pointer" (click)="editRule(rule)" data-toggle="modal" data-target="#editRuleModal"><i class="fa fa-pencil-square-o"></i></a>
-		      	<a style="cursor: pointer" (click)="deleteRule(rule)"><i class="fa fa-times"></i></a>
+			    <a style="cursor: pointer; padding-right: 5px;" (click)="enableRule(rule)">
+			    	<i *ngIf="rule.enable"  class="fa fa-pause-circle-o"></i>
+			    	<i *ngIf="!rule.enable" class="fa fa-play-circle-o"></i>
+			    </a>		      	
+		      	<a style="cursor: pointer; padding-right: 5px;" (click)="editRule(rule)" data-toggle="modal" data-target="#editRuleModal">
+		      		<i class="fa fa-pencil-square-o"></i>
+		      	</a>
+		      	<a style="cursor: pointer; padding-right: 5px;" (click)="deleteRule(rule)">
+		      		<i class="fa fa-times"></i>
+		      	</a>
 		    </div>
 	      </td>
 	    </tr>
@@ -236,6 +244,16 @@ export class RulePane implements OnInit {
 	editRule(rule) {
 		this.selectedRule = rule;
 		this.selectedRuleMode = "edit";
+	}
+
+	enableRule(rule) {
+		rule.enable = ! rule.enable;
+		this._ruleService
+			.enableRule(rule)
+			.subscribe(
+				res => rule.enable = res.enable,
+				error => this.errorMessage = error
+			);
 	}
 
 	saveRule() {

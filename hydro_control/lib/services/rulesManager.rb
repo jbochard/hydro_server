@@ -72,7 +72,7 @@ class RulesManager
     	@mongo_client[:rules]
             .find({ :_id => rule_id })
             .update_one({ '$set' => { :enable => enable } })
-        rule_id
+        enable
 	end
 
 	def delete(rule_id)

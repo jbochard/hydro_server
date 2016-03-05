@@ -61,14 +61,17 @@ export class CategoryPipe implements PipeTransform {
                   <h6 class="card-title">{{col.name}}</h6>
                 </div>
                 <div class="btn-group btn-group-sm" role="group">
-                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'ON'" 
-                          [class.btn-primary]="col.value == 'OFF'" (click)="switchSensor(col, 'ON')">
-                      ON
-                  </button>
-                  <button type="button" class="btn" [disabled]="!col.enable || col.control == 'rule'" [class.btn-secondary]="col.value == 'OFF'" 
-                          [class.btn-primary]="col.value == 'ON'" (click)="switchSensor(col, 'OFF')">
-                      OFF
-                  </button>
+                  <i class="fa fa-toggle-off" *ngIf="col.value == 'OFF' && col.control == 'rule' "></i>
+                  <i class="fa fa-toggle-on"  *ngIf="col.value == 'ON'  && col.control == 'rule' "></i>
+
+                  <a *ngIf="col.value == 'OFF' && col.enable && col.control == 'manual'"
+                        (click)="switchSensor(col, 'ON')" >
+                    <i class="fa fa-toggle-off"></i>
+                  </a>
+                  <a *ngIf="col.value == 'ON' && col.enable && col.control == 'manual'"
+                        (click)="switchSensor(col, 'OFF')" >
+                    <i class="fa fa-toggle-on"></i>
+                  </a>
                 </div>                
               </div>
             </div>           

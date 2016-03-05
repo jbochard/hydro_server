@@ -43,6 +43,17 @@ export class RuleService {
             .catch(this.handleError)
   }
 
+  enableRule(rule) {
+    let body = JSON.stringify({ op: 'ENABLE_RULE', enable: rule.enable });
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http
+        .patch(this.url + '/' + rule._id, body, options)
+            .map(res => res.json())
+            .catch(this.handleError)
+  }
+
   test(rule) {
     let body = JSON.stringify(rule);
     let headers = new Headers({ 'Content-Type': 'application/json' });

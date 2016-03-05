@@ -83,10 +83,10 @@ namespace '/hydro_control/rules' do
 			case body["op"].upcase		
 			when "ENABLE_RULE"
 				# JSON::Validator.validate!(settings.sensor_patch_join_nursery_schema, body)
-				settings.rulesManager.enableRule(rule_id, body["enable"])				
+				res = settings.rulesManager.enableRule(rule_id, body["enable"])				
 			end			
 			status 200
-			{ :_id => rule_id }.to_json
+			{ :enable => res }.to_json
 		rescue AbstractApplicationExcpetion => e
 			status e.code
 			{ :error => e.message }.to_json
