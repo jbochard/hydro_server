@@ -72,6 +72,10 @@ export class CategoryPipe implements PipeTransform {
                         (click)="switchSensor(col, 'OFF')" >
                     <i class="fa fa-toggle-on"></i>
                   </a>
+                  <a *ngIf="col.value != 'ON' && col.value != 'OFF' "
+                        (click)="switchSensor(col, 'OFF')" >
+                    <i class="fa fa-medkit"></i>
+                  </a>
                 </div>                
               </div>
             </div>           

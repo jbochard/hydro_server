@@ -226,9 +226,9 @@ export class RulePane implements OnInit {
 
 	showStatusRule(rule) {
 		if (rule.status != null) {
-			setStatusRule(rule.status);
+			this.setStatusRule(rule.status);
 		} else {
-			setStatusRule({ status: "NO", context: [], backtrace: []});
+			this.setStatusRule({ status: "NO", context: [], backtrace: []});
 		}
 	}
 
