@@ -21,7 +21,6 @@ class Environment
 end
 
 Environment.config  = JSON.parse(File.read("config/configuration.json"))
-Environment.sensors = JSON.parse(File.read("#{$libdir}/config.json"))
 Environment.debug = Environment.config.has_key?('debug') && Environment.config['debug']
 
 Implementation.register do |i|

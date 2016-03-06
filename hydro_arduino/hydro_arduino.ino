@@ -54,6 +54,10 @@ void setup() {
 void loop() {
   if (commandAvailable) {
     command.toUpperCase();
+    if (command.equals("LIST")) {
+      status_ok(command, "TEMP_FLUID;SENSOR|SOIL_MOISTURE_1;SENSOR|SOIL_MOISTURE_2;SENSOR|SOIL_MOISTURE_3;SENSOR|PHOTO;SENSOR|HUMIDITY;SENSOR|TEMP_ENV;SENSOR|RELAY_1;SWITCH|RELAY_2;SWITCH|RELAY_3;SWITCH|RELAY_4;SWITCH");
+      return;
+    }
     if (command.equals("TEMP_FLUID")) {
       sensors.requestTemperatures();            //Prepara el sensor para la lectura
       float value = sensors.getTempCByIndex(0); //Se lee e imprime la temperatura en grados Celsius

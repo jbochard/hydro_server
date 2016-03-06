@@ -72,11 +72,14 @@ class Sensors
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
 		end
-		sensors = get_measures(client_url).map { |measure| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => measure['sensor'], :client => measure['name'], :type => measure['type'], :enable => false, :value => 0 } }
+		sensors = get_sensors(client_url).map do |sensor| 
+			if sensor["type"] == "SENSOR"
+				{ :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => sensor['sensor'], :client => sensor['name'], :type => sensor['type'], :enable => false, :value => 0 }
+			else
+				{ :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT',  :name => sensor['sensor'], :client => sensor['name'], :type => sensor['type'], :enable => false, :control => 'manual', :value => 'OFF' }
+			end
+		end
 		@mongo_client[:sensors].insert_many(sensors)
-
-		switches = get_switches(client_url).map { |switch| { :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'INPUT', :name => switch['switch'], :client => switch['name'], :type => switch['type'], :control => "rule", :enable => false, :value => 'OFF' } }
-		@mongo_client[:sensors].insert_many(switches)	
 		client_url
 	end
 
@@ -118,17 +121,8 @@ class Sensors
 	end
 
 	private
-	def get_measures(client_url)
-		url = URI.parse("#{client_url}/measures")
-		req = Net::HTTP::Get.new(url.to_s)
-		res = Net::HTTP.start(url.host, url.port) { |http|
-			http.request(req)
-		}
-		JSON.parse(res.body)
-	end
-
-	def get_switches(client_url)
-		url = URI.parse("#{client_url}/switches")
+	def get_sensors(client_url)
+		url = URI.parse("#{client_url}/sensors")
 		req = Net::HTTP::Get.new(url.to_s)
 		res = Net::HTTP.start(url.host, url.port) { |http|
 			http.request(req)

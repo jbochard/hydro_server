@@ -8,25 +8,54 @@ require 'serialport'
     def initialize
         @name = Environment.config["server"]["name"]
         @semaphore = Mutex.new
-        @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
+        begin
+            @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
+        rescue Exception => e
+            puts e
+            puts e.backtrace
+        end                
     end
 
-    def measures
-        Environment.sensors["read"].map { |measure| { :name => @name, :type => measure["type"], :sensor => measure["sensor"] } }        
-    end
+    def sensors
+        begin
+            puts "write LIST" if Environment.debug
+            @serial.write("LIST\n")
+            @serial.flush 
 
-    def switches
-        Environment.sensors["write"].map { |switch| { :name => @name, :type => switch["type"], :switch => switch["switch"] } }
+            line = readLine
+            return { :state => 'ERROR', :value => 'READ ERROR' } if line.nil?
+
+            res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
+            state = res[0]
+            value = res[1] if res.length > 1
+            puts "read return: #{value}" if Environment.debug
+
+            sensors = []
+            value.split("|").map do |l| 
+                (name, type) = l.split(";") 
+                sensors << { :name => @name, :sensor => name, :type => type }
+            end
+            return sensors
+        rescue Exception => e
+            puts e
+            puts e.backtrace
+
+            puts "Restore connection:"
+            begin
+                @serial.close
+            rescue Exception => e
+            end
+            @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
+        end                
     end
 
     def read(command)
-        cmdObj = Environment.sensors["read"].select { |cmd| cmd["sensor"].upcase == command.upcase }.first
-        if ! cmdObj.nil?
+        if ! command.nil?
             puts "waitting for read(#{command})" if Environment.debug            
             @semaphore.synchronize {
                 begin
-                    puts "write: #{cmdObj['command'].upcase}" if Environment.debug
-                    @serial.write("#{cmdObj['command'].upcase}\n")
+                    puts "write: #{command.upcase}" if Environment.debug
+                    @serial.write("#{command.upcase}\n")
                     @serial.flush 
 
                     line = readLine
@@ -54,13 +83,12 @@ require 'serialport'
     end
 
     def switch(relay, state)
-        cmdObj = Environment.sensors["write"].select { |cmd| cmd["switch"].upcase == relay.upcase }.first
-        if ! cmdObj.nil?
+         if ! relay.nil? && ! state.nil?
             puts "waitting for switch(#{relay}, #{state})" if Environment.debug            
             @semaphore.synchronize {
                 begin
-                    command = cmdObj["on"].upcase if state.upcase == 'ON'
-                    command = cmdObj["off"].upcase if state.upcase == 'OFF'
+                    command = "#{relay}_ON".upcase  if state.upcase == 'ON'
+                    command = "#{relay}_OFF".upcase if state.upcase == 'OFF'
 
                     puts "write: #{command}" if Environment.debug
                     @serial.write("#{command}\n")
