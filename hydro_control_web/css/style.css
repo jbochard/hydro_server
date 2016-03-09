@@ -24,3 +24,10 @@ body .modal-dialog {
   margin-right:auto; 
 }
 
+body {
+  padding-right: 0px !important
+}
+
+.modal-open {
+  overflow-y: auto;
+}
