@@ -5,11 +5,10 @@
 
 
 #define TEMPERATURE 2
-#define LED         3 
 #define DHTPIN      5
 #define RELAY_1     7                        
 #define RELAY_2     8                        
-#define RELAY_3     12                        
+#define RELAY_3     11                        
 #define RELAY_4     13                       
 #define SOIL_PIN1   A0
 #define SOIL_PIN2   A1
@@ -35,7 +34,6 @@ void setup() {
   pinMode(RELAY_2,    OUTPUT);
   pinMode(RELAY_3,    OUTPUT);
   pinMode(RELAY_4,    OUTPUT);
-  pinMode(LED,        OUTPUT);
 
   command.reserve(15);
 
@@ -156,7 +154,6 @@ void status_ok(String cmd, float value) {
   Serial.println(value);
   command = "";
   commandAvailable = false;
-  digitalWrite(LED, LOW);
 }
 
 void status_ok(String cmd, int value) {
@@ -164,7 +161,6 @@ void status_ok(String cmd, int value) {
   Serial.println(value);
   command = "";
   commandAvailable = false;
-  digitalWrite(LED, LOW);
 }
 
 void status_ok(String cmd, String value) {
@@ -172,21 +168,18 @@ void status_ok(String cmd, String value) {
   Serial.println(value);
   command = "";
   commandAvailable = false;
-  digitalWrite(LED, LOW);
 }
 
 void status_ok(String cmd) {
   Serial.println("OK");
   command = "";
   commandAvailable = false;
-  digitalWrite(LED, LOW);
 }
 
 void status_err(String cmd) {
   Serial.println("ERROR");
   command = "";
   commandAvailable = false;
-  digitalWrite(LED, LOW);
 }
 
 void status_err(String cmd, String msg) {
@@ -194,7 +187,6 @@ void status_err(String cmd, String msg) {
   Serial.println(msg);
   command = "";
   commandAvailable = false;
-  digitalWrite(LED, LOW);
 }
 
 void serialEvent() {
@@ -202,7 +194,6 @@ void serialEvent() {
     command = Serial.readString();
     command.remove(command.length() - 1);
     commandAvailable = true;
-    digitalWrite(LED, HIGH);
     delay(1000);
   }
 }
