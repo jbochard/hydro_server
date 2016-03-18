@@ -15,7 +15,7 @@
 #define SOIL_PIN3   A2
 #define PHOTO_PIN   A3
 
-#define DHTTYPE     DHT11
+#define DHTTYPE     DHT22
 
 OneWire ourWire(TEMPERATURE);         //Se establece el pin declarado como bus para la comunicación OneWire
 DallasTemperature sensors(&ourWire);  //Se instancia la librería DallasTemperature
