@@ -7,121 +7,123 @@ require 'serialport'
 
     def initialize
         @name = Environment.config["server"]["name"]
+        @cache = {}
         @semaphore = Mutex.new
-        begin
-            @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
-        rescue Exception => e
-            puts e
-            puts e.backtrace
-        end                
-    end
+         end
 
     def sensors
+        connect(Environment.config["serial"]) if ! @connected  
+        return [] if ! @connected
+
+        @serial.write("LIST\n")
+        @serial.flush 
+        line = readLine
+        #line = execute("LIST")
+
+        res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
+        state = res[0]
+        value = res[1] if res.length > 1
+ 
+        @cache = {}
+        sensors = []
+        value.split("|").map do |l| 
+            (switch, type) = l.split(";") 
+            sensors              << { :name => @name, :sensor => switch, :type => type, :value => {} }
+            cache[switch.upcase]  = { :state => "OK", :value => "EMPTY" }
+        end
+        return sensors            
+    end
+
+    def read(command)
+        return { :state => "ERROR", :value => "COMMAND EMPTY" } if command.nil?
+        return @cache[command.upcase]
+    end
+
+
+    def switch(relay, state)
+        return { :state => "ERROR", :value => "#{relay}-#{state} NOT FOUND" } if relay.nil? || ! state.nil?
+
+        command = "#{relay}_ON"  if state.upcase == 'ON'
+        command = "#{relay}_OFF" if state.upcase == 'OFF'
+
+        line = execute(command)
+        res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
+        state = res[0]
+        value = res[1] if res.length > 1
+        @cache[relay.upcase] = { :state => state, :value => value }
+        return { :state => state, :value => value }
+    end
+
+    def real_read(command)
+        return { :state => "ERROR", :value => "COMMAND EMPTY" } if command.nil?
+
+        connect(Environment.config["serial"]) if ! @connected
+
+        line = execute(command)
+               
+        res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
+        state = res[0]
+        value = res[1] if res.length > 1
+        puts "read return: #{value}" if Environment.debug
+
+        @cache[command.upcase] = { :state => state, :value => value }
+        return { :state => state, :value => value } 
+    end
+
+    private
+    def execute(command)
+        tries = 3
         begin
-            puts "write LIST" if Environment.debug
-            @serial.write("LIST\n")
+            puts "write: #{command.upcase}" if Environment.debug
+       # @semaphore.synchronize {
+            @serial.write("#{command.upcase}\n")
             @serial.flush 
-
+            sleep(1)
             line = readLine
-            return { :state => 'ERROR', :value => 'READ ERROR' } if line.nil?
-
-            res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
-            state = res[0]
-            value = res[1] if res.length > 1
-            puts "read return: #{value}" if Environment.debug
-
-            sensors = []
-            value.split("|").map do |l| 
-                (name, type) = l.split(";") 
-                sensors << { :name => @name, :sensor => name, :type => type }
-            end
-            return sensors
+       # }
+        return line
         rescue Exception => e
             puts e
             puts e.backtrace
 
             puts "Restore connection:"
-            begin
-                @serial.close
-            rescue Exception => e
-            end
-            @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
+            disconnect
+            connect(Environment.config["serial"])
+            tries -= 1
+            retry unless tries == 0
         end                
+        return "ERROR READ_ERROR"
     end
 
-    def read(command)
-        if ! command.nil?
-            puts "waitting for read(#{command})" if Environment.debug            
-            @semaphore.synchronize {
-                begin
-                    puts "write: #{command.upcase}" if Environment.debug
-                    @serial.write("#{command.upcase}\n")
-                    @serial.flush 
-
-                    line = readLine
-                    return { :state => 'ERROR', :value => 'READ ERROR' } if line.nil?
-
-                    res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
-                    state = res[0]
-                    value = res[1] if res.length > 1
-                    puts "read return: #{value}" if Environment.debug
-                    return { :state => state, :value => value }
-                rescue Exception => e
-                    puts e
-                    puts e.backtrace
-
-                    puts "Restore connection:"
-                    begin
-                        @serial.close
-                    rescue Exception => e
-                    end
-                    @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
-                end                
-            }
+    def connect(data)
+        puts "Connecting..." if Environment.debug
+        #@semaphore.synchronize {
+        begin
+            @serial = SerialPort.new(data["serial_port"], data["baud_rate"], data["data_bits"], data["stop_bits"], SerialPort::NONE)
+            @connected = true
+            puts "Connected." if Environment.debug
+        rescue Exception => e
+            puts e
+            puts e.backtrace
+            @connected = false
         end
-        { :state => "ERROR", :value => "#{command} NOT FOUND" }
+        #}                
     end
 
-    def switch(relay, state)
-         if ! relay.nil? && ! state.nil?
-            puts "waitting for switch(#{relay}, #{state})" if Environment.debug            
-            @semaphore.synchronize {
-                begin
-                    command = "#{relay}_ON".upcase  if state.upcase == 'ON'
-                    command = "#{relay}_OFF".upcase if state.upcase == 'OFF'
-
-                    puts "write: #{command}" if Environment.debug
-                    @serial.write("#{command}\n")
-                    @serial.flush
-                    
-                    line = readLine
-                    return { :state => 'ERROR', :value => 'READ ERROR' } if line.nil?
-
-                    res = line.scan(/([^ ]+)\s*([^ ]*)$/).last
-                    state = res[0]
-                    value = res[1] if res.length > 1
-                    puts "switch return: #{value}" if Environment.debug
-                    return { :state => state, :value => value }
-                rescue Exception => e
-                    puts e
-                    puts e.backtrace
-
-                    puts "Restore connection:"
-                    begin
-                        @serial.close
-                    rescue Exception => e
-                    end
-                    @serial = SerialPort.new(Environment.config["serial"]["serial_port"], Environment.config["serial"]["baud_rate"], Environment.config["serial"]["data_bits"], Environment.config["serial"]["stop_bits"], SerialPort::NONE)
-                end
-            }
+    def disconnect
+        puts "Disconnecting..." if Environment.debug
+        #@semaphore.synchronize {
+        begin
+            @serial.close
+            @connected = false
+        rescue Exception => e
+            @connected = false
         end
-        { :state => "ERROR", :value => "#{relay}-#{state} NOT FOUND" }
+        #}
     end
 
-    private
     def readLine
         puts "readLine:" if Environment.debug
-
         state = :char
         count = 20
         result = ""

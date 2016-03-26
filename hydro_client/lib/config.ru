@@ -8,6 +8,7 @@ require 'json'
 require 'json-schema'
 require 'services/sensors'
 require 'services/sensorMock'
+require 'services/scheduler'
 require 'services/implementation'
 
 
@@ -25,8 +26,15 @@ Environment.debug = Environment.config.has_key?('debug') && Environment.config['
 
 Implementation.register do |i|
   i[:sensors] 	     = (Environment.config.has_key?('mock') && Environment.config['mock'])? SensorMock.new: Sensors.new
+  i[:scheduler]		 = Scheduler.new(i[:sensors])
 end
 
 load 'app.rb'
 
 run Sinatra::Application
+
+Implementation[:scheduler].start
+
+at_exit do
+  Implementation[:scheduler].stop
+end

@@ -1,8 +1,8 @@
 {
 	"port": 3020,
 	"debug": true,
-	"measures_cron": "*/1 * * * *",
-	"rules_cron": "*/1 * * * *",
+	"measures_cron": "*/5 * * * *",
+	"rules_cron": "*/5 * * * *",
 	"mongodb": {
 		"host": "127.0.0.1",
 		"port": 27017,
