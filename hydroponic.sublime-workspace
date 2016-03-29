@@ -4,12 +4,20 @@
 		"selected_items":
 		[
 			[
-				"min",
-				"min-width"
+				"conne",
+				"connected"
 			],
 			[
-				"sen",
-				"sensor"
+				"conn",
+				"connection"
+			],
+			[
+				"hora",
+				"hora_length"
+			],
+			[
+				"get",
+				"getlocal"
 			],
 			[
 				"sw",
@@ -17,71 +25,59 @@
 			],
 			[
 				"sens",
-				"sensor"
-			],
-			[
-				"ena",
-				"enableRule"
-			],
-			[
-				"act",
-				"active"
-			],
-			[
-				"se",
-				"sensorService"
-			],
-			[
-				"ac",
-				"active"
-			],
-			[
-				"eva",
-				"evaluate"
+				"sensor_id"
 			],
 			[
 				"rule",
-				"rule_id"
+				"ruleManager"
 			],
 			[
-				"rul",
-				"rule_id"
+				"else",
+				"else_action"
 			],
 			[
-				"ru",
-				"rule_id"
+				"res",
+				"result"
 			],
 			[
-				"mong",
-				"mongo_client"
+				"En",
+				"Environment"
 			],
 			[
-				"rules",
-				"rulesManager"
+				"clien",
+				"client_url"
 			],
 			[
-				"pl",
-				"plant_id"
+				"p",
+				"padding"
 			],
 			[
-				"nur",
-				"nurseryService"
+				"para",
+				"parameters"
 			],
 			[
-				"get",
-				"get_joinded"
+				"param",
+				"param_id"
 			],
 			[
-				"nu",
-				"nurseriesService"
+				"sensor",
+				"sensor_id"
 			],
 			[
-				"padd",
-				"padding-top"
+				"sen",
+				"sensor_post_schema"
 			],
 			[
-				"end",
-				"end_line"
+				"sched",
+				"SchedulerManager"
+			],
+			[
+				"up",
+				"upcase"
+			],
+			[
+				"cmd",
+				"cmdObj"
 			],
 			[
 				"sel",
@@ -124,6 +120,18 @@
 				"type_id"
 			],
 			[
+				"se",
+				"sel_bucket_pos"
+			],
+			[
+				"nu",
+				"nursery_id"
+			],
+			[
+				"nur",
+				"nurseriesService"
+			],
+			[
 				"me",
 				"mesurement_value"
 			],
@@ -138,6 +146,10 @@
 			[
 				"mesu",
 				"mesurementsService"
+			],
+			[
+				"pl",
+				"plant_types"
 			],
 			[
 				"type_",
@@ -224,50 +236,34 @@
 	"buffers":
 	[
 		{
-			"file": "hydro_control_web/app/rule_pane.component.ts",
+			"file": "hydro_client/lib/services/scheduler.rb",
 			"settings":
 			{
-				"buffer_size": 8414,
+				"buffer_size": 465,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "hydro_control_web/app/state_pane.component.ts",
+			"file": "hydro_client/lib/config.ru",
 			"settings":
 			{
-				"buffer_size": 7531,
+				"buffer_size": 918,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "hydro_control/hydro_control.gemspec",
+			"file": "hydro_client/hydro_client.gemspec",
 			"settings":
 			{
-				"buffer_size": 1731,
+				"buffer_size": 1637,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "hydro_control_web/package.json",
+			"file": "hydro_client/lib/services/sensors.rb",
 			"settings":
 			{
-				"buffer_size": 916,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "hydro_control/lib/services/rulesManager.rb",
-			"settings":
-			{
-				"buffer_size": 6192,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "hydro_control_web/css/style.css",
-			"settings":
-			{
-				"buffer_size": 332,
+				"buffer_size": 4489,
 				"line_ending": "Unix"
 			}
 		}
@@ -304,93 +300,119 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jbochard/Documents/workspace/hydroponics",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_arduino",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/config",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/templates",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/config",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/schemas",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/templates",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/css"
+		"/Users/jbochard/Desarrollo/ruby/hydroponic",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_arduino",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/bin",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/config",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/files",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/routes",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/schemas",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/services",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/templates",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/bin",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/config",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/routes",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/schemas",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/services",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/typings/browser/ambient",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/typings/browser/ambient/es6-shim",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/typings/main",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/typings/main/ambient",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/typings/main/ambient/es6-shim",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/config",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/routes",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/schemas",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/services"
 	],
 	"file_history":
 	[
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/param_pane.component.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/state_pane.component.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/css/style.css",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/sensor.service.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/sensors.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/sensors.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/state_pane.component.old",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/ui_tabs.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/config/configuration.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/config/configuration.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/hydro_control.component.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/rulesManager.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/config.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services/sensors.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/services/sensorMock.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_arduino/hydro_arduino.ino",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/.gitignore",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/dictionary.d.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/sensor.service.js",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/package.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/dictionary.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/rule_pane.component.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/rules.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/implementation.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/parameters.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/param.service.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/rule.service.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/services/schedulerManager.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/index.html",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/node_modules/angular2/bundles/angular2-all.umd.dev.js",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/node_modules/angular2/es6/dev/examples/facade/ts/async/observable_pure.js",
-		"/Users/jbochard/Downloads/startbootstrap-sb-admin-2-1.0.8/bower.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/app.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/config.ru",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/bin/hydro_control",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/init.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/config.ru",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/hydro_control.gemspec",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/.gitignore",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/hydro_control.9490.log",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/sensor.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/state_pane.component.js",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control_web/app/main.ts",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/schedulerManager.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/rulesManager.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/sensors.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/build",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/thin.yml",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_control/lib/routes/web.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/config.ru",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/hydroponic.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/templates/configuration.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_client/lib/config.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/init.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/rules.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/sensors.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/config/configuration.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/hydro_server.gemspec",
-		"/Users/jbochard/Documents/workspace/hydroponics/.gitignore",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/templates/configuration.json",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/mesurements.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/nurseries.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/services/nurseries.rb",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public/js/services.js",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/schemas/nursery_patch_fumigation.schema",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public/js/controllers.js",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/public/nursery-show.html",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/schemas/plant_patch_fumigate.schema",
-		"/Users/jbochard/Documents/workspace/hydroponics/hydro_server/lib/routes/mesurements.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/hydro_client.gemspec",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/config.ru",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/config/configuration.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/services/rulesManager.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/services/schedulerManager.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/services/implementation.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_arduino/hydro_arduino.ino",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/services/sensors.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/config/configuration.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/hydro_control.gemspec",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/css/style.css",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/services/sensors.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/config.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/package.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/config.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/routes/sensors.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/services/sensorMock.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/state_pane.component.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/rule_pane.component.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/rule.service.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/param_pane.component.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/routes/rules.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/services/parameters.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/state_pane.component.old",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/routes/sensors.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/package.json.prod",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/install",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/config.ru",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/config.ts.prod",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/bs-config.json.prod",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/bs-config.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/app.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/config.ts.desa",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/test.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/hydro_control.component.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/main.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/services/exceptions.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/templates/configuration.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/config.js.map",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/sensor.service.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/index.html",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/jquery.d.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/bootstrap.d.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/param.service.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/param.service.js",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/config/default.js",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/default.d.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/build",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/routes/parameters.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/templates/configuration.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/.gitignore",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/.gitignore",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/app/ui_tabs.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/index1.html",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/public/app/sensor.service.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/public/app/hydro_control.component.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/public/app/sensor.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/typings.json\n\n",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control_web/tsconfig.json",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/views/index.erb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/public/app/main.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/public/app/state_pane.component.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/public/app/ui_tabs.ts",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_control/lib/routes/init.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/services/schedulerManager.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/services/sensors.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/routes/sensors.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/services/hydroponic.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/schemas/sensor_patch_join_plant.schema",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/schemas/sensor_patch_join_nursery.schema",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/config.ru",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/schemas/plant_put.schema",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/schemas/sensor_post.schema",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/routes/init.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_server/lib/services/nurseries.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/bin/hydro_client",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/.gitignore",
+		"/Users/jbochard/Documents/Arduino/hidroponia/hidroponia.ino",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/test.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/routes/init.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/app.rb",
+		"/Users/jbochard/Desarrollo/ruby/hydroponic/hydro_client/lib/thin.yml",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/routes/plants.rb",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/public/js/services.js",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/views/index.erb",
@@ -436,11 +458,7 @@
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/lib/templates/environment.json",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/bin/rubiponia",
 		"/Users/jbochard/Desarrollo/ruby/rubyponia/config/environment.json",
-		"/Volumes/segura/claves.txt",
-		"/Volumes/4 TB Seagate Expansion Desk Media/segura/claves.txt",
-		"/Users/jbochard/.bash_profile",
-		"/Users/jbochard/Desarrollo/NetBeansProjects/GCP/trunk/GCP/src/main/java/gcp/tablas/gcpdump.backup",
-		"/Volumes/4 TB Seagate Expansion Desk Media/seriales.txt"
+		"/Volumes/segura/claves.txt"
 	],
 	"find":
 	{
@@ -451,7 +469,8 @@
 		"height": 93.0,
 		"where_history":
 		[
-			"<open folders>"
+			"*.rb",
+			""
 		]
 	},
 	"find_state":
@@ -459,13 +478,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Mutex",
+			"LED",
+			"configDialog",
+			":rule",
+			":manual",
+			":rule",
+			"puts",
 			"Rule.new",
-			"rule[\"_id\"], ",
-			"setInte",
-			"setInterval",
-			"no encontrado",
-			"name",
+			"puts",
+			"Inject",
+			"Rule.new",
+			"\"command\": \"([^\"]+)\"",
 			"sel_mesu",
 			"plant",
 			"(.*)\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s(.*)",
@@ -492,7 +515,9 @@
 		"regex": true,
 		"replace_history":
 		[
-			"sensor",
+			"confirmDialog",
+			"\"command\": \"/hydro_client/\\1\"",
+			"\"command\": \"/hydro_client/\\1",
 			"\\1\\t\\2",
 			"\\1\\t\\2\\3",
 			"\\1\\t\\2",
@@ -516,33 +541,33 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "hydro_control_web/app/rule_pane.component.ts",
+					"file": "hydro_client/lib/services/scheduler.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8414,
+						"buffer_size": 465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7687,
-								7687
+								177,
+								177
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3302.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -550,49 +575,47 @@
 				},
 				{
 					"buffer": 1,
-					"file": "hydro_control_web/app/state_pane.component.ts",
+					"file": "hydro_client/lib/config.ru",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7531,
+						"buffer_size": 918,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3900,
-								3900
+								880,
+								880
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 724.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "hydro_control/hydro_control.gemspec",
+					"file": "hydro_client/hydro_client.gemspec",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1731,
+						"buffer_size": 1637,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								1632,
+								1632
 							]
 						],
 						"settings":
@@ -605,93 +628,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "hydro_control_web/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 916,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								557
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "hydro_control/lib/services/rulesManager.rb",
+					"buffer": 3,
+					"file": "hydro_client/lib/services/sensors.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6192,
+						"buffer_size": 4489,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3813,
-								3813
+								547,
+								547
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1814.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "hydro_control_web/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 332,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								332,
-								332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -699,7 +666,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 26.0
 	},
 	"input":
 	{

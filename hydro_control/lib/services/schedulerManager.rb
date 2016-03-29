@@ -22,7 +22,7 @@ class SchedulerManager
 				@sensors.get_all({ :category => 'OUTPUT', :enable => true }).each do |sensor|
 					puts "Midiendo: #{sensor['client']} - #{sensor['name']}"
 					measures = @sensors.read(sensor["_id"])
-					sleep(30)
+					sleep(5)
 				end
 			rescue Exception => e 
 				puts e.message
@@ -34,7 +34,7 @@ class SchedulerManager
 		@scheduler.cron Environment.config["rules_cron"] do
 			@rules.get_all.each do |r|
 				@rules.evaluateRule(r["_id"])
-				sleep(30)
+				sleep(10)
 			end
 		end		
 	end

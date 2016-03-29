@@ -1,9 +1,9 @@
 {
-	"mock": true,
-	"debug": false,
+	"debug": true,
+	"read_frecuency": 3,
 	"server": {
-		"port": 9190,
-		"name": "CLIENT_1"
+		"port": 3010,
+		"name": "indoor"
 	},
 	"serial": {
 		"serial_port": "/dev/cu.usbmodem1414131",

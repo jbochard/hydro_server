@@ -14,27 +14,28 @@ require 'services/implementation'
 
 class Environment
 	class << self
-		attr_accessor :config, :sensors, :debug
+		attr_accessor :config, :sensors, :debug, :read_frecuency
 	end
     @config = {}
     @sensors = {}
     @debug = false
+    @read_frecuency = 2
+
+    def self.load(file)
+    	@config = JSON.parse(File.read("config/configuration.json"))
+    	@debug = @config['debug']
+    	@read_frecuency = @config['read_frecuency']    
+    end
 end
 
-Environment.config  = JSON.parse(File.read("config/configuration.json"))
-Environment.debug = Environment.config.has_key?('debug') && Environment.config['debug']
-
-Implementation.register do |i|
-  i[:sensors] 	     = (Environment.config.has_key?('mock') && Environment.config['mock'])? SensorMock.new: Sensors.new
-  i[:scheduler]		 = Scheduler.new(i[:sensors])
-end
+Environment.load("config/configuration.json")
 
 load 'app.rb'
 
 run Sinatra::Application
 
-Implementation[:scheduler].start
+Scheduler.instance.start
 
 at_exit do
-  Implementation[:scheduler].stop
+  Scheduler.instance.stop
 end

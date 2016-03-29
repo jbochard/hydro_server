@@ -1,6 +1,7 @@
 {
 	"mock": false,
 	"debug": true,
+	"read_frecuency": 3,
 	"server": {
 		"port": 3010,
 		"name": "indoor"

@@ -66,6 +66,10 @@ void loop() {
       }
       return;
     }
+    if (command.equals("SYNC")) {
+      status_ok("SYNC");
+      return;
+    }
     if (command.equals("SOIL_MOISTURE_1")) {
       int s = analogRead(SOIL_PIN1);
       status_ok(command, s);
@@ -184,6 +188,8 @@ void status_err(String cmd) {
 
 void status_err(String cmd, String msg) {
   Serial.print("ERROR ");
+  Serial.print(cmd);
+  Serial.print("_");
   Serial.println(msg);
   command = "";
   commandAvailable = false;

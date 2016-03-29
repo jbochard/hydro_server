@@ -1,6 +1,5 @@
 # coding: utf-8
 
-set :sensorService,		 	Implementation[:sensors]
 set :sensor_post_schema, 	JSON.parse(File.read("#{$libdir}/schemas/sensor_post.schema"))
 
 namespace '/hydro_client' do
@@ -8,13 +7,13 @@ namespace '/hydro_client' do
  	get '/sensors' do
 		content_type :json
 		status 200
-		settings.sensorService.sensors.to_json
+		Sensors.instance.sensors.to_json
 	end
 
 	get '/value/:command' do |command|
 		content_type :json
 		status 200
-		settings.sensorService.read(command).to_json
+		Sensors.instance.read(command).to_json
 	end
 
 	post '/?' do
@@ -25,7 +24,7 @@ namespace '/hydro_client' do
 
 			if body["type"].upcase == "SWITCH"
 				status 200
-				settings.sensorService.switch(body["relay"], body["state"]).to_json
+				Sensors.instance.switch(body["relay"], body["state"]).to_json
 			end			
 		rescue JSON::Schema::ValidationError => e
 			status 400

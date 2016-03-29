@@ -23,7 +23,6 @@ namespace '/hydro_control/parameters' do
 		content_type :json
 		begin
 			body = JSON.parse(request.body.read)
-			# JSON::Validator.validate!(settings.sensor_post_schema, body)
 
 			id = settings.parameters.create(body["name"], body["value"])
 			status 200
