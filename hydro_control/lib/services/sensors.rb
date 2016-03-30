@@ -47,32 +47,32 @@ class Sensors
   	def read(sensor_id)
   		sensor = get(sensor_id)
   		res = read_measure(sensor["url"], sensor["name"])
-		if res.nil? ||  res["state"] == 'ERROR'
-			sensor.delete("date")
-			sensor.delete("value")
-		else
-			sensor["date"] = Time.new
-			sensor["value"] = res["value"]
+			if res.nil? ||  res["state"] == 'ERROR'
+				sensor.delete("date")
+				sensor.delete("value")
+			else
+				sensor["date"] = Time.new
+				sensor["value"] = res["value"]
   		end
   		update(sensor_id, sensor)
-        sensor_id
+      sensor_id
   	end
 
   	def switch(switch_id, value, origin)
   		switch = get(switch_id)
   		if (switch["control"] == "rule" && origin == "rule") || (switch["control"] == "manual" && origin == "manual")
-			res = execute_switch(switch["url"], switch['name'], value)
-			switch["value"] = res["value"]
-			update(switch_id, switch)
-		end
-        switch["value"]
+				res = execute_switch(switch["url"], switch['name'], value)
+				switch["value"] = res["value"]
+				update(switch_id, switch)
+			end
+      switch["value"]
   	end
 
 	def create(client_url)
 		if exists_by_url?(client_url)
 			raise AlreadyExistException.new :sensor, client_url
 		end
-		sensors = get_sensors(client_url).map do |sensor| 
+		sensors = get_sensors(client_url).map do |sensor|
 			if sensor["type"] == "SENSOR"
 				{ :_id => BSON::ObjectId.new.to_s, :url => client_url, :category => 'OUTPUT', :name => sensor['sensor'], :client => sensor['name'], :type => sensor['type'], :enable => false, :value => 0 }
 			else
@@ -97,7 +97,7 @@ class Sensors
     	end
 		@mongo_client[:sensors]
 			.find({ :_id => sensor_id })
-			.update_one({ '$set' => sensor })		
+			.update_one({ '$set' => sensor })
 	end
 
 	def enableSensor(sensor_id, value)
@@ -158,6 +158,6 @@ class Sensors
 		rescue Exception => e
 			puts "Error: #{e}"
 			puts e.backtrace
-		end		
+		end
 	end
 end

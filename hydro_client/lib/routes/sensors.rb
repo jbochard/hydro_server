@@ -3,7 +3,7 @@
 set :sensor_post_schema, 	JSON.parse(File.read("#{$libdir}/schemas/sensor_post.schema"))
 
 namespace '/hydro_client' do
- 
+
  	get '/sensors' do
 		content_type :json
 		status 200
@@ -12,8 +12,14 @@ namespace '/hydro_client' do
 
 	get '/value/:command' do |command|
 		content_type :json
-		status 200
-		Sensors.instance.read(command).to_json
+    val = Sensors.instance.read(command)
+    if val.nil?
+      status 404
+      { :state => "ERROR", :value => "ERROR" }.to_json
+    else
+		    status 200
+		    val.to_json
+    end
 	end
 
 	post '/?' do
@@ -25,7 +31,7 @@ namespace '/hydro_client' do
 			if body["type"].upcase == "SWITCH"
 				status 200
 				Sensors.instance.switch(body["relay"], body["state"]).to_json
-			end			
+			end
 		rescue JSON::Schema::ValidationError => e
 			status 400
 			{ :error => e.message }.to_json

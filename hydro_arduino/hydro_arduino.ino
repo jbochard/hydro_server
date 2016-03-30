@@ -6,10 +6,10 @@
 
 #define TEMPERATURE 2
 #define DHTPIN      5
-#define RELAY_1     7                        
-#define RELAY_2     8                        
-#define RELAY_3     11                        
-#define RELAY_4     13                       
+#define RELAY_1     7
+#define RELAY_2     8
+#define RELAY_3     11
+#define RELAY_4     13
 #define SOIL_PIN1   A0
 #define SOIL_PIN2   A1
 #define SOIL_PIN3   A2
@@ -39,7 +39,7 @@ void setup() {
 
   sensors.begin();            //Se inician los sensores de temperatura
   dht.begin();                //Se inicia sensor de temperatura y humedad
-    
+
   digitalWrite(RELAY_1, HIGH);  // Desconecto relay 1
   digitalWrite(RELAY_2, HIGH);  // Desconecto relay 2
   digitalWrite(RELAY_3, HIGH);  // Desconecto relay 3
@@ -48,7 +48,7 @@ void setup() {
   Serial.begin(9600);
   delay(2000);
 }
- 
+
 void loop() {
   if (commandAvailable) {
     command.toUpperCase();
@@ -60,7 +60,7 @@ void loop() {
       sensors.requestTemperatures();            //Prepara el sensor para la lectura
       float value = sensors.getTempCByIndex(0); //Se lee e imprime la temperatura en grados Celsius
       if (value == -127) {
-        status_err(command);
+        status_err(command, "READ_ERROR");
       } else {
         status_ok(command, value);
       }
@@ -93,21 +93,21 @@ void loop() {
     if (command.equals("HUMIDITY")) {
       float h = dht.readHumidity();
       if (isnan(h)) {
-        status_err(command);
+        status_err(command, "READ_ERROR");
       } else {
-        status_ok(command, h);        
+        status_ok(command, h);
       }
       return;
     }
     if (command.equals("TEMP_ENV")) {
       float t = dht.readTemperature();
       if (isnan(t)) {
-        status_err(command);
+        status_err(command, "READ_ERROR");
       } else {
          status_ok(command, t);
       }
       return;
-    }    
+    }
     if (command.equals("RELAY_1_ON")) {
       digitalWrite(RELAY_1,LOW);           // Turns ON Relays 1
       status_ok(command, "ON");
@@ -127,7 +127,7 @@ void loop() {
       digitalWrite(RELAY_2,HIGH);           // Turns ON Relays 2
       status_ok(command, "OFF");
       return;
-    }    
+    }
     if (command.equals("RELAY_3_ON")) {
       digitalWrite(RELAY_3,LOW);           // Turns ON Relays 3
       status_ok(command, "ON");
@@ -137,7 +137,7 @@ void loop() {
       digitalWrite(RELAY_3,HIGH);           // Turns ON Relays 3
       status_ok(command, "OFF");
       return;
-    }    
+    }
     if (command.equals("RELAY_4_ON")) {
       digitalWrite(RELAY_4,LOW);           // Turns ON Relays 4
       status_ok(command, "ON");
@@ -150,7 +150,7 @@ void loop() {
     }
     status_err(command, "COMMAND_NOT_EXISTS");
     return;
-  }  
+  }
 }
 
 void status_ok(String cmd, float value) {
@@ -203,4 +203,3 @@ void serialEvent() {
     delay(1000);
   }
 }
-

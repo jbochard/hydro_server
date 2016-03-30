@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "hydro_control"
-  spec.version       = "1.9.0"
+  spec.version       = "1.9.1"
   spec.authors       = ["Juan Pablo Bochard"]
   spec.email         = ["jbochard@despegar.com"]
   spec.summary       = %q{Sistema de seguimiento de hidroponia}
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler",      "~> 1.3"
   spec.add_development_dependency "rspec",        "~> 2.13"
-  spec.add_development_dependency "byebug",       "~> 6.0" 
+  spec.add_development_dependency "byebug",       "~> 6.0"
 
   spec.add_runtime_dependency "hana",             "~> 1.3"
   spec.add_runtime_dependency "json",             "~> 1.8"
@@ -30,6 +30,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "watir-webdriver",  "~> 0.8"
   spec.add_runtime_dependency "mongo",            "~> 2.1"
   spec.add_runtime_dependency "json-schema",      "~> 2.6"
-  spec.add_runtime_dependency "rufus-scheduler",  "~> 3.1"  
+  spec.add_runtime_dependency "rufus-scheduler",  "~> 3.1"
   spec.add_runtime_dependency "sinatra-cross_origin", "~> 0.3"
 end
