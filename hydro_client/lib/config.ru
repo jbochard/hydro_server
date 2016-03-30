@@ -7,10 +7,7 @@ require 'sinatra'
 require 'json'
 require 'json-schema'
 require 'services/sensors'
-require 'services/sensorMock'
 require 'services/scheduler'
-require 'services/implementation'
-
 
 class Environment
 	class << self
@@ -24,7 +21,7 @@ class Environment
     def self.load(file)
     	@config = JSON.parse(File.read("config/configuration.json"))
     	@debug = @config['debug']
-    	@read_frecuency = @config['read_frecuency']    
+    	@read_frecuency = @config['read_frecuency']
     end
 end
 

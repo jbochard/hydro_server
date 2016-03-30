@@ -1,11 +1,11 @@
-{ 
-  "port": 8000,
+{
+  "port": 8020,
   "injectChanges": false,
   "files": [ "./**/*.{html,htm,css,js}" ],
-  "server": { 
+  "server": {
   	"baseDir": "./"
   },
   "ui": {
-  	"port": 8001
-  } 
+  	"port": 8021
+  }
 }

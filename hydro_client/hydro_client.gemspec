@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "hydro_client"
-  spec.version       = "2.3.0"
+  spec.version       = "2.3.3"
   spec.authors       = ["Juan Pablo Bochard"]
   spec.email         = ["jbochard@despegar.com"]
   spec.summary       = %q{Sistema de seguimiento de hidroponia}
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler",      "~> 1.3"
   spec.add_development_dependency "rspec",        "~> 2.13"
-  spec.add_development_dependency "byebug",       "~> 6.0" 
+  spec.add_development_dependency "byebug",       "~> 6.0"
 
   spec.add_runtime_dependency "hana",             "~> 1.3"
   spec.add_runtime_dependency "json",             "~> 1.8"
@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "sinatra-contrib",  "~> 1.4"
   spec.add_runtime_dependency "watir-webdriver",  "~> 0.8"
   spec.add_runtime_dependency "json-schema",      "~> 2.6"
-  spec.add_runtime_dependency "serialport",       "~> 1.1.0"
+  spec.add_runtime_dependency "serialport",       "~> 1.1"
 end
